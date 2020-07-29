@@ -1,0 +1,1409 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+    lang="en"
+    class="
+        no-js
+        playbar-masthead-release-shim
+        youtube-provider-not-ready
+    "
+>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwYPV15QGwYFXFlXDgU=",licenseKey:"0ed0ce50b0",applicationID:"5588594"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(21),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(22),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,e){var n=t[0];n instanceof x&&i("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return o.emit(n+"start",[t,a],c),c.then(function(t){return o.emit(n+"end",[null,t],c),t},function(t){throw o.emit(n+"end",[t],c),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);e.exports=o;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=o(h,m),v.traceContextStateHeader=i(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",c=1,s="",f="";return o+"@nr="+i+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(c.d.tk=i),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(19),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||c),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(21),c=t(22),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=o(l+e,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],18:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?s("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&s("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&s("lcp",[n[n.length-1]])}function i(t){if(t instanceof u&&!l){var e,n=Math.round(t.timeStamp);e=n>1e12?Date.now()-n:f.now()-n,l=!0,s("timing",["fi",n,{type:t.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,c,s=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),c=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),c.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<i.length;c++)o=i[c],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],20:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(o="Safari",i=s[1])}e.exports={agent:o,version:i,match:r}},{}],21:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],22:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],23:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!l.aborted||i){t&&t(n,r,o);for(var a=e(o),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(21),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+b.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-b.offset}var c=(new Date).getTime(),s=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1173.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:c,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),s("mark",["firstbyte",c],null,"api");var E=0,R=t(23)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,12,4,3]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0ed0ce50b0","applicationID":"5588594","transactionName":"Y1BRbUUFWkMEWxYMV1oadUxZB0BZClZNCV5ZG0RcVUpDRxIWFAxdQ0YdSkMFQFkGAhYASllG","queueTime":0,"applicationTime":53,"agent":""}</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title aria-live="assertive">Terms of Use | Last.fm</title>
+
+        
+    <link rel="canonical" href="https://www.last.fm/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="en" href="https://www.last.fm/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="de" href="https://www.last.fm/de/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="es" href="https://www.last.fm/es/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="fr" href="https://www.last.fm/fr/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="it" href="https://www.last.fm/it/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="ja" href="https://www.last.fm/ja/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="pl" href="https://www.last.fm/pl/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="pt" href="https://www.last.fm/pt/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="ru" href="https://www.last.fm/ru/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="sv" href="https://www.last.fm/sv/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="tr" href="https://www.last.fm/tr/legal/terms" data-replaceable-head-tag />
+    
+        <link rel="alternate" hreflang="zh" href="https://www.last.fm/zh/legal/terms" data-replaceable-head-tag />
+    
+    <link rel="alternate" hreflang="x-default" href="https://www.last.fm/legal/terms" data-replaceable-head-tag />
+
+
+        
+            
+                
+                
+                
+    <meta name="description" content="The world&#39;s largest online music service. Listen online, find out more about your favourite artists, and get music recommendations, only at Last.fm" data-replaceable-head-tag>
+
+    <meta property="og:title"           content="Terms of Use | Last.fm" data-replaceable-head-tag>
+    <meta property="og:description"     content="The world&#39;s largest online music service. Listen online, find out more about your favourite artists, and get music recommendations, only at Last.fm" data-replaceable-head-tag>
+    <meta property="og:type"            content="website" data-replaceable-head-tag>
+    <meta property="og:site_name"       content="Last.fm" data-replaceable-head-tag>
+    <meta property="og:url"             content="https://www.last.fm/legal/terms" data-replaceable-head-tag />
+    <meta property="og:image"           content="https://www.last.fm/static/images/lastfm_logo_facebook.15d8133be114.png" data-replaceable-head-tag>
+    <meta property="og:image:width"     content="1200" data-replaceable-head-tag>
+    <meta property="og:image:height"    content="630" data-replaceable-head-tag>
+
+    <meta name="twitter:title"          content="Terms of Use | Last.fm" data-replaceable-head-tag>
+    <meta name="twitter:description"    content="The world&#39;s largest online music service. Listen online, find out more about your favourite artists, and get music recommendations, only at Last.fm" data-replaceable-head-tag>
+    <meta name="twitter:image"          content="https://www.last.fm/static/images/lastfm_avatar_twitter.52a5d69a85ac.png" data-replaceable-head-tag>
+    <meta name="twitter:card"           content="summary" data-replaceable-head-tag>
+    <meta name="twitter:site"           content="@lastfm" data-replaceable-head-tag>
+
+    <link rel="apple-music-app-icon" href="https://www.last.fm/static/images/lastfm_avatar_applemusic.b06eb8ad89be.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://www.last.fm/static/images/lastfm_avatar_applemusic.b06eb8ad89be.png" />
+    <link rel="apple-touch-icon" href="https://www.last.fm/static/images/lastfm_avatar_applemusic.b06eb8ad89be.png" />
+
+    
+
+            
+        
+
+        
+
+        <script>(function(e) { e.className = e.className.replace(/\bno-js\b/,'js'); })(document.documentElement)</script>
+
+        
+
+        
+            
+<script
+    id="initial-tealium-data"
+    data-tealium-data="{&#34;siteSection&#34;: &#34;legal&#34;, &#34;pageType&#34;: &#34;legal_terms&#34;, &#34;pageName&#34;: &#34;legal/terms&#34;, &#34;nativeEventTracking&#34;: true, &#34;userState&#34;: &#34;not authenticated&#34;, &#34;userType&#34;: &#34;anon&#34;, &#34;deviceType&#34;: &#34;desktop&#34;, &#34;ipGeo&#34;: &#34;GB&#34;, &#34;pageViewGuid&#34;: &#34;4928a578-51ef-47e6-8310-f11756f5bd1e&#34;}"
+    data-tealium-environment="prod"
+></script>
+<script>
+    var initialTealiumElement = document.getElementById('initial-tealium-data');
+    window.utag_data = JSON.parse(initialTealiumElement.getAttribute('data-tealium-data'));
+</script>
+        
+
+        <link rel="icon" href="/static/images/favicon.702b239b6194.ico">
+
+        <link rel="stylesheet" href="/static/styles/build/2ab98905c6.2ab98905c68b.css" data-stylesheet-name="defaults" charset="utf-8">
+
+        
+            <link rel="stylesheet" href="/static/styles/build/ef759ef0ac.ef759ef0aceb.css" data-stylesheet-name="app" charset="utf-8">
+        
+
+        
+
+        <script
+            src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+            
+                data-domain-script="d9f750da-0271-4142-9b0e-43d9a3b334d1"
+            
+        ></script>
+
+        
+            
+    
+    
+        <script async data-main="/static/js-build/init.dd527cfeb319" src="/static/js-build/lib/require/require.53bc64c729e9.js"></script>
+    
+
+        
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body
+        class="
+            two-column-layout
+            anhv1
+            namespace--legal_terms
+            
+        "
+        data-require="ads/page-ads,ads/searchlinks,player/playlink-handler,dev/grid-overlay,dev/toggle-version,dev/debug-log,dev/debug-image-analysis,dev/js-log,dev/ads-toggle,components/link-block,components/ajax-form,core/media-size-events-v2"
+        data-player-supported="true"
+        data-country-code="GB"
+        data-initial-view-guid="4928a578-51ef-47e6-8310-f11756f5bd1e"data-cbsi-player-config="/static/config/video-player.015786d691c2.xml"data-sensitive-path-regex="^/(../)?(googlec3ea1b252774e1ab\.html|account_deleted|inbox|join|login|lostpassword(/confirm)?|staff|subscribe|support(?!/images|/shouts|/shout)|settings/(account|website|subscription|password|lostpassword)|user/.+?/support)(/.*)?/?$"
+        data-facebook-placement-id="195612451022080_220502155199776"
+        data-google-maps-api-key="AIzaSyBX6-IE3lz4PpJUSBVIo_dPb0BAyMgi-VE"
+        
+            data-onetrust-prod
+        
+    >
+        <div
+            data-require="components/loading-indicator"
+            data-loading-indicator-copy="Loading…"
+        ></div>
+        <div
+            data-require="components/open-modal,components/submit-to-modal,components/show-alert"
+            data-show-alert-ok-copy="Okay"
+        ></div>
+        
+
+    
+        <div class="top-bar">
+            
+                
+                    
+    <section
+        data-require="player/controls,player/status,player/tracking"
+        data-player-status-ad-playing="Ad playing"
+        data-player-status-inactive="&nbsp;"
+        data-player-status-loading-spotify="Connecting Spotify…"
+        data-player-status-spotify-auth-error="Could not authenticate with Spotify."
+
+        data-player-error-cannot-play-item="Cannot play that item."
+        data-player-error-track-unavailable="Track unavailable."
+        data-player-modal-title="Play video"
+
+        
+
+        class="
+            player-bar
+            inactive
+        "
+        aria-label="audio player"
+        aria-disabled="true"
+    >
+        <div class="player-bar-inner-wrap">
+            <a class="player-bar-artwork js-artwork">
+                <img class="" src="/static/images/defaults/player_default_album.430223706b14.png" alt="" />
+            </a>
+
+            <span class="
+                player-bar-source
+                player-bar-source--spotify
+            ">Playing via Spotify</span>
+
+            <span class="
+                player-bar-source
+                player-bar-source--youtube
+            ">Playing via YouTube</span>
+
+            <div class="source-info">
+                <button
+                    class="player-bar-playback-options-button"
+                    data-disclose-hover
+                    aria-controls="player-bar-playback-options"
+                >
+                    Playback options
+                </button>
+                <div
+                    id="player-bar-playback-options"
+                    class="
+                        player-bar-playback-options-wrap
+                        disclose-hide
+                    "
+                >
+                    <ul class="
+                        dropdown-menu-dark
+                        player-bar-playback-options-spotify
+                    ">
+                        <li class="dropdown-menu-non-interactive-item-dark">
+                            <span class="player-bar-listening-on-heading">Listening on…</span>
+                            <span class="
+                                player-bar-listening-on
+                                js-player-bar-listening-on
+                            "></span>
+                        </li>
+                        <li><button class="
+                            dropdown-menu-item-dark
+                            js-switch-device
+                            player-bar-playback-options-switch-device
+                        ">Switch Spotify device</button></li>
+                        <li><a
+                            class="
+                                js-source
+                                dropdown-menu-item-dark
+                                player-bar-playback-options-external-link
+                            "
+                            target="_blank"
+                        >Open in Spotify Web Player</a></li>
+                        
+    <li class="menu-separator--dark">
+        <a
+            
+                href="https://secure.last.fm/login?next=/settings/website"
+            
+            class="
+                dropdown-menu-item-dark
+                player-bar-playback-options-settings
+            "
+        >
+            Change playback source
+        </a>
+    </li>
+
+                    </ul>
+                    <ul class="
+                        dropdown-menu-dark
+                        player-bar-playback-options-youtube
+                    ">
+                        <li><a
+                            class="
+                                dropdown-menu-item-dark
+                                js-source
+                                player-bar-playback-options-external-link
+                            "
+                            target="_blank"
+                        >Open on YouTube website</a></li>
+                        
+    <li class="menu-separator--dark">
+        <a
+            
+                href="https://secure.last.fm/login?next=/settings/website"
+            
+            class="
+                dropdown-menu-item-dark
+                player-bar-playback-options-settings
+            "
+        >
+            Change playback source
+        </a>
+    </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            
+
+            <div class="player-bar-controls">
+
+                <ul aria-label="controls" class="media-controls">
+                    <li>
+                        <button
+                            disabled
+                            class="
+                                js-previous
+                                player-bar-btn
+                                player-bar-btn--previous
+                            "
+                            data-analytics-action="PlaybarBackTrack"
+                        >
+                            Previous
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            disabled
+                            class="
+                                js-play-pause
+                                player-bar-btn
+                                player-bar-btn--play
+                            "
+                            data-string-pause="Pause"
+                            data-analytics-action="PlaybarResumeTrack"
+                            data-analytics-action-pause="PlaybarPauseTrack"
+                        >
+                            Play
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            disabled
+                            class="
+                                js-next
+                                player-bar-btn
+                                player-bar-btn--next
+                            "
+                            data-analytics-action="PlaybarSkipTrack"
+                        >
+                            Next
+                        </button>
+                    </li>
+                    
+                </ul>
+
+                <a class="
+                        player-bar-skiplink
+                        player-bar-skiplink--youtube
+                    "
+                    href="#youtube-video"
+                >Skip to YouTube video</a>
+
+            </div>
+
+            <div class="player-bar-now-playing">
+                <div class="player-bar-now-playing-inner-wrap">
+                    <p
+                        class="player-bar-track js-player-status"
+                        aria-label="now playing"
+                        aria-live="polite"
+                        aria-atomic="true"
+                    >
+                        Loading player…
+                    </p>
+
+                    <p class="player-bar-error js-player-error player-bar-status--hide">
+                        <span class="player-bar-error-message js-player-error-message"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="player-bar-progress-wrap">
+            <div
+                class="player-bar-progress"
+                aria-label="progress"
+                role="timer"
+            >
+                <div
+                    class="
+                        js-progress-slug
+                        player-bar-progress-slug
+                    "
+                >
+                    <span
+                        class="
+                            js-progress-remaining
+                            player-bar-progress-remaining
+                        "
+                        aria-label="remaining"
+                    ></span>
+                </div>
+            </div>
+        </div>
+
+        <div data-require="player/scrobble-client"></div>
+    </section>
+
+                    
+    <div
+        class="
+            masthead-popup
+            masthead-popup--spotify-scrobbling
+            masthead-popup--hidden
+        "
+        data-require="components/spotify-scrobbling-prompt,components/alert-dismissable,components/spotify-scrobbling-banner"
+        data-spotify-scobbling-success-modal="/socialmodal/spotify-scrobbling-success"
+        data-spotify-scobbling-fail-modal="/socialmodal/spotify-scrobbling-fail"
+    >
+        <div class="masthead-popup-inner">
+            <h3>Scrobble from Spotify?</h3>
+            <p>Connect your Spotify account to your Last.fm account and scrobble everything you listen to, from any Spotify app on any device or platform.</p>
+            <p>
+                <a
+                    class="btn-primary js-setup-spotify-scrobbling"
+                    href="/settings/applications"
+                >
+                    Connect to Spotify
+                </a>
+            </p>
+            <a
+                href="/nagbar/dismiss/spotify-scrobbling-prompt?period=permanent"
+                class="masthead-popup-close js-alert-dismissable-close"
+                data-close-ajax
+            >
+                Dismiss
+            </a>
+        </div>
+    </div>
+
+                
+            
+        </div>
+    
+
+    <div id="content" class="main-content" role="main" aria-live="polite">
+        
+    
+
+    <div id="tlmdata" hidden class="hidden"
+         data-tealium-data='{&#34;siteSection&#34;: &#34;legal&#34;, &#34;pageType&#34;: &#34;legal_terms&#34;, &#34;pageName&#34;: &#34;legal/terms&#34;, &#34;nativeEventTracking&#34;: true, &#34;userState&#34;: &#34;not authenticated&#34;, &#34;userType&#34;: &#34;anon&#34;, &#34;deviceType&#34;: &#34;desktop&#34;, &#34;ipGeo&#34;: &#34;GB&#34;}'>
+     </div>
+
+        <div
+            
+                
+            
+            
+            >
+            
+    <div
+        data-require="components/disclose-base,components/disclose-autoclose-v2,components/disclose-dropdown-v2,components/disclose-dropdown-location-picker-v2,components/disclose-collapsing-nav-v2,components/disclose-artwork,components/disclose-remove,components/disclose-search,components/disclose-hover-v3,components/disclose-select,components/disclose-lazy-buylinks,components/focus-controls,components/prevent-resubmit-v2,components/edit-scrobble,components/toggle-buttons,components/click-proxy,components/bookmark-notification"
+    ></div>
+
+    
+        
+
+    <nav class="masthead"><div class="masthead-inner-wrap"><div class="masthead-logo"><span class="masthead-logo-loading"></span><a href="/"> Last.fm</a></div><a
+        class="masthead-search-toggle" href="/search" data-disclose-search aria-controls="masthead-search">Search</a><form
+        class=" masthead-search-form disclose-hide disclose-hide--js-only " id="masthead-search" action="/search" method="get"><div class="masthead-search-inner-wrap"><label for="masthead-search-field" class="sr-only">Search</label><input
+                id="masthead-search-field" class="masthead-search-field" type="text" name="q" placeholder="Search for music…" /><button class="masthead-search-submit" type="submit">Search</button></div></form><div class="visible-xs"><button
+                        class=" masthead-hamburger-toggle " data-disclose-autoclose aria-controls="masthead-nav">Toggle navigation</button><ul
+                        class=" masthead-nav disclose-hide disclose-hide--js-only " aria-label="Primary navigation" id="masthead-nav"><li class="masthead-nav-item masthead-nav-pro"><a
+                class="masthead-nav-control masthead-pro-text" href="/pro" data-analytics-label="subscribe" data-analytics-action="UserMenuClick">Upgrade to Pro</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/dashboard" data-analytics-action="NavigationLink" data-analytics-label="live">Live</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/music" data-analytics-action="NavigationLink" data-analytics-label="music">Music</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/charts" data-analytics-action="NavigationLink" data-analytics-label="charts">Charts</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/events" data-analytics-action="NavigationLink" data-analytics-label="events">Events</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/features" data-analytics-action="NavigationLink" data-analytics-label="features">Features</a></li>
+    
+        
+            <li class="masthead-nav-item">
+                <a
+                    class="masthead-nav-control"
+                    href="/pro"
+                    data-analytics-label="subscribe"
+                    data-analytics-action="UserMenuClick"
+                >Subscribe</a>
+            </li>
+        
+        <li class="masthead-nav-item">
+            <a
+                class="masthead-nav-control"
+                href="/join"
+                data-analytics-action="SignUpClick"
+            >Join</a>
+        </li>
+        <li class="masthead-nav-item">
+            <a
+                class="masthead-nav-control"
+                href="https://secure.last.fm/login"
+            >Login</a>
+        </li>
+    
+</ul></div><div
+                    class=" navlist navlist--more masthead-nav hidden-xs " data-require="components/primary-nav" data-more-string="More…"><ul
+                        class="js-navlist-items navlist-items" aria-label="Primary navigation"><li class="masthead-nav-item masthead-nav-pro"><a
+                class="masthead-nav-control masthead-pro-text" href="/pro" data-analytics-label="subscribe" data-analytics-action="UserMenuClick">Upgrade to Pro</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/dashboard" data-analytics-action="NavigationLink" data-analytics-label="live">Live</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/music" data-analytics-action="NavigationLink" data-analytics-label="music">Music</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/charts" data-analytics-action="NavigationLink" data-analytics-label="charts">Charts</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/events" data-analytics-action="NavigationLink" data-analytics-label="events">Events</a></li><li class="masthead-nav-item"><a
+                class=" masthead-nav-control " href="/features" data-analytics-action="NavigationLink" data-analytics-label="features">Features</a></li></ul></div><ul
+            class=" site-auth site-auth--anon hidden-xs ">
+    <li class="site-auth-item"><a
+                class="site-auth-control" href="/join" data-analytics-action="SignUpClick">Join</a></li><li class="site-auth-item"><a
+                class="site-auth-control" href="https://secure.last.fm/login">Login</a></li>
+</ul></div></nav>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+
+    
+
+    
+    <div
+        class="nag-bar nag-bar--plybar-masthead-release-warning "
+        
+        role="status"
+    >
+        <div class="container">
+            
+            <p class="nag-bar-message ">
+                
+        A new version of Last.fm is available, to keep everything running smoothly, please <a href="javascript:window.location.reload()">reload</a> the site.
+    
+            </p>
+        </div>
+    </div>
+
+
+    
+
+    
+
+    
+    
+
+    
+        
+    
+
+
+    
+
+    
+    <div id="mantle_skin" class="adaptive-skin-container">
+        <div class="adaptive-skin-wrapper">
+            <div id="adSkinLeft" class="adaptive-skin-left"></div>
+            <div id="adSkinRight" class="adaptive-skin-right"></div>
+        </div>
+        
+
+        
+
+        
+    <div class="content-top">
+        <div class="content-top-inner-wrap">
+            
+
+            <div class="container content-top-lower">
+                
+                    
+
+
+                
+
+                
+
+                
+                    
+                        <h1 class="content-top-header">
+                            
+    Terms of Use
+
+                        </h1>
+                    
+                
+
+                
+                    
+    
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+
+
+        
+    <div class="container page-content">
+        
+    <div class="row">
+        <div class="col-main">
+            <p>
+                <strong>Updated on:</strong> Tuesday 2 June 2015
+            </p>
+            <ul class="bulleted-list">
+                <li>Like most large-scale websites, we have some rules which you need to stick to when you use Last.fm. These rules aren’t just the “blahblahblah-yawn-small print” – these are the legal terms of use and so we recommend you read them carefully so you know what you’ve agreed to.</li>
+
+                <li>As with all websites, Last.fm, its services and software will change over time, both in terms of the content displayed and the functionality offered. We reserve the right to make those changes, and to change these terms in line with them. Software made available for download by Last.fm remains the property of Last.fm, and we reserve the right to update and change that too.</li>
+
+                <li>Please don’t reproduce any part of the website or content without our permission.</li>
+
+                <li>A lot of information and content on Last.fm is provided by third parties – both users and other third parties – and the accuracy and reliability of that information is entirely the responsibility of those parties. Likewise, you may sometimes find links on Last.fm to other websites; Last.fm cannot be held responsible for the content of those sites. Links, like everything else added by members of the Last.fm community, are entirely the responsibility of the individuals who have added them.</li>
+
+                <li>By using Last.fm, you also agree to our Privacy Policy - please read our <a href="/legal/privacy">Privacy Policy</a>.</li>
+
+                <li>If you’ve found content on the website that you own and that you believe is being used without your permission then please read <a href="#para10">Section 10</a> of these Terms of Use for a detailed description of what to do about it. We take infringement claims very seriously, so provide all the information set out in Section 10 and we will act swiftly to deal with any claims.</li>
+
+                <li>We have a detailed <a href="#para6">Acceptable Use policy</a>, but much like the <a href="/help/guidelines">Community Guidelines</a> they boil down into a few fairly simple concepts: play nicely, respect other members of the community and use common sense. If we believe someone isn’t playing fairly and within the spirit of the guidelines then we’re entitled to ban that user at our sole discretion. We don’t like doing it, but sometimes it’s the most appropriate response.</li>
+
+                <li>If you enter a competition or use software alongside Last.fm then make sure you read any accompanying Terms and Conditions carefully too, because they may have conditions in addition to this document.</li>
+
+                <li>When you use Last.fm and all of its software and services, you accept it “as is”. Like human beings, we have the odd fault or two and we’re constantly updating and improving every aspect of Last.fm, ironing out new-found bugs and making subtle changes to things like our recommendation algorithms. As a result, Last.fm should never be considered a “finished product”, and by using Last.fm you accept it – warts and all.</li>
+
+                <li>Last.fm is based in London – we quite like it here – and this document is to be interpreted in line with the laws governing England and Wales.</li>
+            </ul>
+            <h2>IMPORTANT</h2>
+            <p>PLEASE CAREFULLY READ THESE TERMS OF USE ("Terms of Use") BEFORE USING THE WEBSITE OR ANY OF THE OTHER PROPERTIES (AS DEFINED BELOW), AS THEY AFFECT YOUR LEGAL RIGHTS AND OBLIGATIONS.</p>
+            
+            <p>Last.fm Limited ("Last.fm" or "we" "our" or "us") owns or controls, and provides access to the Last.fm website, at the url www.last.fm and related properties (the "Website"), the Last.fm client software, the Last.fm widget, the Last.fm API and all proprietary services, software, data and materials accessed via the Website (the “Services”). The Website and the Services are referred to together in these Terms of Use as the “Properties”.</p>
+            
+            <p>THESE TERMS OF USE GOVERN YOUR USE OF THE PROPERTIES. </p>
+            
+            <p>These Terms of Use apply to the Properties and not to any other website or any offline activities of Last.fm (unless specifically stated). By accessing or using the Properties, registering for or receiving Services offered on the Website, or by accepting, uploading, submitting or downloading any information or content from or to the Website, you agree to be bound by these Terms of Use.</p>
+            
+            <p><strong>IF YOU DO NOT AGREE TO BE BOUND BY ALL OF THESE TERMS OF USE, DO NOT USE THE PROPERTIES.</strong></p>
+            
+            <h3>Contents</h3>
+            
+            <ol>
+                <li><a href="#para1">Changes to the Website and the Terms of Use</a></li> 
+                <li><a href="#para2">Description of Website Services</a></li>
+                <li><a href="#para3">Intellectual Property Ownership; Licence</a></li> 
+                <li><a href="#para4">Links To Other Websites</a></li>
+                <li><a href="#para5">Our Linking and Widget Policy</a></li>
+                <li><a href="#para6">Acceptable Use</a></li>
+                <li><a href="#para7">User Accounts, Additional Terms & End User Licence Agreements</a></li>
+                <li><a href="#para8">Competitions</a></li>
+                <li><a href="#para9">Software</a></li>
+                <li><a href="#para10">Copyrights & Copyright Agents</a></li>
+                <li><a href="#para11">Third Party Content and Information</a></li>
+                <li><a href="#para12">Information You Submit</a></li>
+                <li><a href="#para13">Disclaimer of Warranties</a></li>
+                <li><a href="#para14">Disclaimers/Limitation of Liability</a></li>
+                <li><a href="#para15">Indemnity</a></li>
+                <li><a href="#para16">Governing Law</a></li>
+                <li><a href="#para17">Miscellaneous</a></li>
+                <li><a href="#para18">Termination</a></li>
+                <li><a href="#para19">Privacy</a></li>
+            </ol>
+            
+            <h3 id="para1">1. Changes to the Properties and the Terms of Use</h3>
+            
+            <p>We reserve the right to add, delete, change or modify parts of these Terms of Use at our sole discretion and at any time without notice to you. If we do this, we will post the changes to the Terms of Use on this page and will indicate the effective date of the Terms of Use at the top of the page.  It is important for you to refer to these Terms of Use from time to time to make sure that you are aware of any additions, revisions, or modifications that we may have made to these Terms of Use. Your continued use of the Website constitutes your acceptance of the new Terms of Use.</p>
+            
+            <h3 id="para2">2. Description of Website and the Services</h3>
+
+            <p>Access to the Website currently provides users with access to the Services and a rich collection of online resources, including online forums, personalised content, interactive advertising messages, proprietary software (including updates, patches and new versions), audio, videos and other community and entertainment products. Unless explicitly stated otherwise, any new features which may be added to the Website or the Services, including without limitation, the release of new Last.fm services and software, are subject to these Terms of Use.</p>
+            
+            <p>In some instances, these Terms of Use and a separate end user licence or similar agreement may apply to a service or product offered by Last.fm via the Properties. We may add, change, remove, suspend or discontinue any aspect of the Website and/or the Services at any time without notice. We may also impose limits on certain features and/or restrict access to parts of or all of the Properties without notice or liability to you or any third party.</p>
+            
+            <p>In order to use the Website, you must obtain access to the Internet, either directly or through devices that access web-based content, and pay any service fees associated with such access. In addition, you must provide all equipment necessary to make such connection to the Internet, including a computer and modem or other access device.</p>
+            
+            <p>You acknowledge that the Services include certain elements which allow Last.fm proprietary software to be downloaded to your computer which interacts with other computer programs (including iTunes), the Last.fm computer servers and your iPod or other permitted devices.</p>
+            
+            <h3 id="para3">3. Intellectual Property Ownership; Licence</h3>
+
+            <p>The past, present and future content of the Properties, including, without limitation, software graphics, text, images, audio, videos, designs, compilations, databases, targeting information, advertising copy, and the trademarks, logos, domain names, trade names, service marks and trade identities; any and all copyright material (including source and object code); and all other materials related to the Properties, including without limitation, the "look and feel" of the Website (collectively, "Content") are protected by applicable copyrights, trademark rights, database rights and other proprietary (including, but not limited to, intellectual property) rights and are the property of Last.fm, its parent, subsidiaries, affiliates, or its licensors. Last.fm is licensed under U.S. Patent Nos. 7,346,472; 7,660,700; 7,949,494; and 8,214,175. Except as expressly set forth in these Terms of Use or otherwise expressly granted to you in writing by Last.fm, no rights (either by implication, estoppel or otherwise) in or to the Content are granted to you. </p>
+            
+            <p>The copying, reproduction, re-arrangement, sale, leasing, renting, lending, distribution, redistribution, modification or adaptation, downloading, sideloading, exchanging, creating of derivative works, uploading, posting, transmitting, communication to the public or publication by you, directly or indirectly, of the Content, including the removal or alteration of advertising, except pursuant to the express limited grant of rights hereunder, is strictly prohibited. You agree to abide by any and all additional notices, information or restrictions in respect of the Properties contained in any part of the Website. Exploiting any part of the Properties for a purpose that is not permitted by these Terms of Use is expressly prohibited without prior written permission from Last.fm or the applicable intellectual property rights holder as identified on the Website.</p>
+            
+            <p>Subject to your strict compliance with these Terms of Use, Last.fm grants you a limited, personal, non-exclusive, non-commercial, revocable, non-assignable and non-transferable licence to:</p>
+            
+            <ol style="list-style-type: lower-alpha">
+                <li>download and use the Last.fm client-based software in accordance with its pre-defined functionality only;</li>
+                <li>listen to music and view videos streamed from the Website and participate in the Last.fm community areas;</li>
+                <li>submit or upload music, video and other content to the Website strictly as permitted in accordance with these Terms of Use and any other terms posted on the Website;</li>
+                <li>embed the Last.fm widget on your personal website or profile pages for non-commercial and private use only; and</li>
+                <li>communicate with other members of the Last.fm community;</li>
+            </ol>
+            
+            <p>Provided that you:</p>
+            
+            <ol style="list-style-type: lower-roman">
+                <li>retain and do not alter or tamper with any trademark, copyright and other proprietary or legal notices contained in the original Content or any permitted copy you may make of the Content;</li>
+                <li>do not, and do not allow or aid or abet any third party (whether or not for your benefit) to, copy or adapt the object code of the Website or Services (including, without limitation, software, HTML, JavaScript, or other code); to reverse engineer, decompile, reverse assemble, modify or attempt to discover any source or object code, circumvent or attempt to circumvent or copy any copy protection mechanism or access any rights management information;</li>
+                <li>do not insert any code, product or material to manipulate the Content in any way that affects any user's experience;</li>
+                <li>do not copy or seek to copy or “rip” any audio and/or audiovisual content from the Website or any part of the Service (including, without limitation, the Last.fm widget);</li>
+                <li>do not embed or otherwise exploit the Last.fm widget for commercial gain (which includes, for example and without limitation, selling advertising on your site or otherwise monetising any element of your site which contains the Last.fm widget); and</li>
+                <li>do not adapt, copy, republish, communicate to the public, display, transfer, share, distribute or otherwise exploit the Content, except as under these Terms of Use.</li>
+            </ol>
+
+            <p>Last.fm alone shall be responsible for determining, in its discretion, whether any use of the Last.fm widget constitutes commercial use in each case.</p>
+            
+            <h3 id="para4">4. Links to Other Websites</h3>
+
+            <p>The Website may contain hyperlinks to other websites ("Other Sites"). If you use the hyperlinks to access these Other Sites, you will leave the Website and your browser will be re-directed to the Other Sites. The Other Sites may have their own terms of use and privacy policy and those Other Sites may have different practices and requirements than the Website. Last.fm may not have knowledge of, and is not responsible for, the content, information, services, products or advertisements presented by any Other Site which you use at your own risk. Last.fm does not warrant or make any representation regarding the legality, accuracy, quality or authenticity of content, information, services or products presented by Other Sites. The hyperlinks to Other Sites do not constitute an endorsement by Last.fm of any Other Site(s) or resources, or their content, information, services or products. The Website is only providing these links to you as a convenience. The terms of use and privacy policy of any Other Sites shall apply to your access and use of them. Last.fm accepts no responsibility for the content or conduct of Other Sites.</p>
+
+            <h3 id="para5">5. Our Linking and Widget Policy</h3>
+
+            <p>Any web site that links to the Website or on which you include the widget: (a) must not frame, surround, obfuscate or create a browser or border environment around any of the Content of the Website; (b) may link to, but not replicate, the Content; (c) must not imply that Last.fm or the Website or any artist or performer are endorsing or sponsoring it or its products, unless Last.fm has given its prior written consent; (d) must not present false information about Last.fm or its products or services; (e) must not use any Last.fm Services or trademarks except as expressly permitted in these Terms of Use or without the prior written permission from Last.fm; (f) must not contain content that is illegal, obscene or defamatory, or that could be construed as distasteful, offensive or controversial; and (g) must not support, endorse or encourage piracy or the unauthorised exploitation of intellectual property rights. By linking to the Website, you agree that you do and will continue to comply with the above linking requirements. Notwithstanding anything to the contrary contained in these Terms of Use, we reserve the right to deny permission to link to the Website for any reason in our sole and absolute discretion.</p>
+
+            <p>We provide the Last.fm widget to enable our users to share Last.fm with their friends. It is not provided for commercial use, distribution or exploitation. If you are the operator of a commercial website and would like to include the Last.fm widget in your website, or if you would like to use the widget for commercial purposes, please contact us by emailing <a href="mailto:partners@last.fm">partners@last.fm</a>.</p>
+         
+            <p>Last.fm reserves the right to remove links or block the Last.fm widget at any time and for any reason in its absolute discretion.</p>
+
+            <h3 id="para6">6. Acceptable Use</h3>
+            
+            <p>You will not use the Properties to:</p>
+            
+            <ol>
+                <li>
+                    Upload, post, e-mail, transmit, display, copy, distribute, promote, or otherwise communicate to the public:
+                    <ol style="list-style-type: lower-roman">
+                        <li>any material that is false, unlawful, threatening, tortious, disparaging (including disparaging of Last.fm, its parent, subsidiaries or affiliates), anything that adversely affects Last.fm such as discouraging any person or entity from advertising with, linking to or supplying Last.fm, abusive, libellous, defamatory, obscene, vulgar, offensive, pornographic, profane, racist, sexually explicit, ethnically or culturally offensive, indecent, or that promotes violence, racial hatred, terrorism, or illegal acts, or is otherwise objectionable in Last.fm's sole discretion;</li>
+                        
+                        <li>information, software, content or other material that violates, plagiarises, misappropriates or infringes the rights of third parties including, without limitation, copyright (including, offering pirated computer programs or links to such programs, information used to circumvent manufacturer-installed copy-protect devices, including serial registration numbers for software programs, rights management information or any type of cracker utilities), trademark, patent, trade secret, rights of privacy or publicity, confidential information or any other proprietary right;</li>
+                        
+                        <li>material of any kind that contains a virus, Trojan horse, time bombs, worms, spyware, adware, malware, bots, any automated use of the system, such as scripts, or other harmful component or restricts or inhibits any other user's uninhibited use and enjoyment of the Properties, interferes with, overburdens, impairs or disrupts the Properties or servers or networks connected to the Properties, or disobeys any requirements, procedures, policies or regulations of networks connected to the Properties;</li>
+                        
+                        <li>information or material of any kind that is false or misleading or that constitutes or contains false or misleading indications of origin or statements of fact, including, without limitation, by forging any TCP/IP packet header, any part of the header information in any transmission to the Website, or otherwise manipulating identifiers in order to disguise the origin of any content transmitted to or from the Website; or</li>
+                        
+                        <li>any unsolicited or unauthorised advertising, promotional materials, junk mail, spam, chain letters, pyramid schemes, requests for money, petitions for signature, or any other form of solicitation.</li>
+                    </ol>
+                </li>
+                
+                <li>Encourage, promote, solicit or commit conduct that would constitute a criminal offence, give rise to civil liability or otherwise violate any local, state, national or international law or otherwise make available any material that exploits or harms any individual, corporation or other entity.</li>
+                
+                <li>Impersonate any person or entity or falsely state or otherwise misrepresent your affiliation with a person or entity;</li>
+                
+                <li>Disrupt the normal flow of dialogue, cause a screen to scroll faster than other users of the Website are able to type, or otherwise act in a manner that negatively affects other users' ability to engage in real time exchanges on the Website;</li>
+                
+                <li>Stalk, abuse, sexually exploit, violently exploit, groom, act violently toward, threaten or otherwise harass another user;</li>
+                
+                <li>Use or attempt to use another's information, account, password, service or system except as expressly permitted;</li>
+                
+                <li>Solicit or collect personal data including telephone numbers, addresses, last names, email addresses, or any other kind of information about users, including without limitation, through such means as spidering, “screen scraping,” “database scraping,” harvesting of e-mail addresses, wireless addresses or other contact or personal information, or any other automatic means of accessing, logging-in or registering on the Website or for any services or features offered on or through the Website; and</li>
+                
+                <li>Undertake any commercial purpose or activity without the prior written consent of Last.fm, including, for example and without limitation, inserting your own or a third party’s advertising, branding or promotional content into any of the Website’s or Properties’ content, materials or services (for example, without limitation, in an RSS feed or a podcast received from Last.fm or otherwise available through the Properties).</li>
+            </ol>
+
+            <p>You represent, warrant and agree that you will comply with the above acceptable use requirements. Last.fm reserves the right, in its sole discretion, to terminate any user’s account or take such other action as Last.fm sees fit in relation to any user who breaches Last.fm’s acceptable use policy or any of the other terms set forth herein. In extreme cases or as required by law or regulation, Last.fm reserves the right to take court action and/or report users to the relevant authorities. Last.fm believes in building a caring community based around sharing music and will not tolerate antisocial or unlawful behaviour on the Website or in connection with any of the other Properties.</p>
+            
+            <h3 id="para7">7. User Accounts, Additional Terms, End User License Agreements & Subscriptions</h3>
+            
+            <p>Registration may be required for the use of certain Services and portions of the Website (e.g., e-mail, newsletters, competitions, forums, content downloads, promotions etc.). In some instances, these Terms of Use and separate end user licence agreements or terms of use that set forth additional conditions may apply to Services or products offered via the Website. To the extent there is a conflict between these Terms of Use and the terms of any applicable end user licence or similar agreement, the end user licence or similar agreement will prevail, unless the additional conditions expressly state that these Terms of Use will prevail. In cases where there are no additional terms or conditions stated for any such registrations, services or products, these Terms of Use will prevail.</p>
+            
+            <p>If you choose to provide information to the Website, you agree to provide only true, accurate, current and complete information. If you create a user account, you agree to accept responsibility for all activities that occur under your account or password, if any, and agree you will not sell, transfer or assign your user account. You are responsible for maintaining the confidentiality of your password, if any, and for restricting access to your computer so that others may not access any password-protected portion of the Website or other Properties using your name, user name or password in whole or in part.</p>
+            
+            <p>You may be able to purchase a subscription for certain additional features of the Website and Services.  You may only order subscriptions if you are considered capable of entering into an enforceable contract in the applicable jurisdiction.  You agree to pay in full the prices for any purchases you make either by credit/debit card concurrent with your online order or by other payment means acceptable to Last.fm.  You agree to pay all applicable taxes.  If payment is not received by us from your credit or debit card issuer or its agents, you agree to pay all amounts due upon demand by us.</p>
+            
+            <h3 id="para8">8. Competitions</h3>
+            
+            <p>Last.fm may decide to run competitions, promotions, prize draws and other opportunities on the Website and these will be governed by a separate set of terms and conditions. A link to these terms and conditions will be found on the Website, alongside details of the specific competition, promotion, prize draw and other opportunities. It is your responsibility to read those terms and conditions for details about the terms that shall apply and any eligibility requirements.</p>
+            
+            <h3 id="para9">9. Software</h3>
+            
+            <p>Any software that we make available for download or use from the Website and/or our servers (the "Software") is the intellectual property of Last.fm or its licensors or suppliers.  Any such “Software” shall be considered a “Service” or one of the “Properties” as such terms are defined and used herein.  Your use of the Software may be governed by the terms of an end user licence agreement that may accompany or that may be included with the Software (the "Licence Agreement"). Please carefully read any Licence Agreement and Paragraph 7 above to determine the full extent of the terms and conditions governing the use of such Software.</p>
+            
+            <p>WITHOUT LIMITING THE FOREGOING, COPYING OR REPRODUCTION OF THE SOFTWARE TO ANY OTHER SERVER OR LOCATION FOR FURTHER USE, REPRODUCTION, REDISTRIBUTION OR OTHER EXPLOITATION IS EXPRESSLY PROHIBITED, UNLESS SUCH USE, REPRODUCTION, REDISTRIBUTION OR EXPLOITATION IS EXPRESSLY PERMITTED BY THE LICENCE AGREEMENT APPLICABLE TO SUCH SOFTWARE.</p>
+            
+            <h3 id="para10">10. Copyrights and Copyright Agents</h3>
+            
+            <p>At Last.fm, we aim to respect the intellectual property rights of others.  If you believe that your work (or the work of a third party on whose behalf you are entitled to act) has been copied, used, or made available on or through the Last.fm Website in a way that constitutes copyright infringement of your intellectual property, please provide our copyright agent with a copyright infringement notice (“Notice”) which should include the following written information:</p>
+            
+            <ol style="list-style-type: lower-alpha">
+                <li>a statement that you have identified material on the Website which infringes your copyright (or infringes the copyright of a third party on whose behalf you are entitled to act, if applicable);</li>
+                
+                <li>identification of the copyrighted work claimed to have been infringed, or, if multiple copyrighted works at a single online site are covered by a single Notice, a representative list of such works at that site;</li>
+                
+                <li>identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit Last.fm to locate the material (including, for example, a URL and/or screen shot);</li>
+                
+                <li>your full name, email address, postal address and telephone number on which you can be contacted;</li>
+                
+                <li>a statement by you that you have a good-faith belief that use of the material in the manner complained of is not authorised by the copyright owner, its agent, or the law;</li>
+                
+                <li>a statement by you that the information in the Notice is accurate, and under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of the exclusive right that is allegedly infringed; and</li>
+                
+                <li>a physical or electronic signature (which may be a scanned copy) of a person authorized to act on behalf of owner of the work that is allegedly infringed.</li>
+            </ol>
+            
+            <p>Last.fm's agent for notice of claims of copyright infringement on or regarding the Website can be reached as follows:</p>
+            
+            <dl>
+                <dt>By mail:</dt>
+                <dd>
+                    <p>
+                        Copyright Agent, Legal Department
+                        <br />
+                        Last.fm Limited
+                        <br />
+                        The Warehouse, The Bower
+                        <br />
+                        207-211 Old Street
+                        <br />
+                        London, EC1V 9NR
+                        <br />
+                        United Kingdom
+                        <br />
+                        Phone: +44 207 021 1000
+                    </p>
+                </dd>
+                <dt>By email:</dt>
+                <dd><a href="mailto:infringementcomplaint@last.fm">infringementcomplaint@last.fm</a></dd>
+            </dl>
+            
+            <p>If you are unsure about your rights in respect of material, or whether there has been an infringement of your rights, we suggest you take legal advice before sending a Notice to Last.fm.</p>
+
+            <p>Please note that any video content made available on or through the Website which contains or displays the YouTube logo or which is provided via the YouTube player is provided to you by YouTube and from YouTube’s servers, and Last.fm thus does not have the ability to permanently remove all or any such content from YouTube’s servers. Therefore, if you have a complaint concerning any video content made available on the Website that is provided by YouTube, you should contact YouTube directly in accordance with copyright policies at: http://www.youtube.com/t/terms.  If you believe that your work is available on the Website via the YouTube player in a way that constitutes copyright infringement, please: (i) contact YouTube directly in accordance with copyright policies at: http://www.youtube.com/t/terms and (i) contact Last.fm by sending us a notice in accordance with the provisions of this Section 10.</p>
+            
+            <h3 id="para11">11. Third Party Content and Information</h3>
+            
+            <p>The Properties contain Content and information that is provided for your convenience and enjoyment. Third parties provide some of the Content and information. You should be aware that the Content might contain errors, omissions, inaccuracies, outdated information and inadequacies and that the Content may be subject to terms and conditions, which may be found on the Website or in the documents and policies of third parties. Last.fm makes no representations or warranties as to the completeness, accuracy, adequacy, currency or reliability of any Content and will not be liable for any lack of the foregoing.</p>
+            
+            <p>In addition, third party advertisers or commercial partners may offer goods, services and other materials to you on the Website. Your correspondence and business dealings with others found on or through the Website including, without limitation, the payment and delivery of products and services, the delivery of videos or other content, and any terms, conditions, warranties and representations associated with such dealings, are solely between you and the relevant third party. Last.fm will not be responsible or liable for any loss or damage of any sort incurred as the result of any such dealings or the offering of such products, services, and other Content on the Website. Under certain circumstances, we may permit third party users to upload content, in which event you, at your own risk, may be exposed to offensive, indecent or objectionable content.</p>
+            
+            <p>Descriptions of, or references to, products, services or publications within the Website do not imply endorsement of that product, service or publication.</p>
+            
+            <h3 id="para12">12. Information You Submit</h3>
+            
+            <p>From time to time, the Properties may contain functionality through which you can upload or submit information, data, software, messages, photographs, audio, video, text and other materials to, through or on the Website ("Your Upload Information"). For example, the Website may offer forums, bulletin boards, wikis, chat rooms, blogs or other interactive areas ("User Forums"). Last.fm, its parent, subsidiaries or affiliates or the directors, officers, employees, or other representatives of each of them do not endorse the content posted in User Forums. Last.fm reserves the right, but is not obligated, to delete, move or edit Your Upload Information, in whole or in part, submitted by you to a User Forum for any reason in their sole discretion. Last.fm reserves the right to suspend or terminate your access to the Website and pursue all legal remedies if we believe your Upload Information infringes another's rights or otherwise violates any law, rule or regulation. You acknowledge and agree that you are prohibited from accepting payment for Your Upload Information from any third party, including, without limitation, accepting payment for the inclusion of a logo, brand advertising or other commercial content, in Your Upload Information.</p>
+            
+            <p>All of Your Upload Information is your sole responsibility. This means that you, and not Last.fm, are entirely responsible for all of Your Upload Information that you upload, post, e-mail, transmit or otherwise make available via the Website. Last.fm actively discourages you from uploading information or content (including photographs) about your friends or other people without their express prior consent. If you post personal information in User Forums or on other publicly available areas of the Website, then you may receive unsolicited messages from third parties. Last.fm cannot ensure the security of any information you post in User Forums or on publicly available areas of the Website. Under no circumstances will Last.fm be liable in any way for any of Your Upload Information including, but not limited to, any errors or omissions in Your Upload Information, or for any loss or damage of any kind incurred as a result of Your Upload Information.</p>
+            
+            <p>You warrant and represent that Your Upload Information: (i) is an original work by you or you have all necessary rights, licenses and permissions in it and to submit it to Last.fm under the terms of these Terms of Use; (ii) is not defamatory; and (iii) does not infringe upon, misappropriate or violate the rights of any third parties, including, without limitation, any intellectual property rights, rights of publicity or privacy or any other proprietary rights or otherwise violate any law, rule, or regulation.</p>
+            
+            <p>Except as otherwise described in our Privacy Policy or other agreement on the Website at which you provide Your Upload Information, Your Upload Information will be treated as non-confidential and non-proprietary and we will not be liable for any use or disclosure to anyone, including but not limited to claimed intellectual property owners. When you upload Your Upload Information via the Website, you irrevocably grant to Last.fm, its parent, subsidiaries, affiliates, and partners, without any credit or compensation to you, a non-exclusive, worldwide, perpetual, unrestricted, irrevocable, royalty-free and fully transferable, assignable and sub-licensable right and licence to use, reuse, modify, adapt, alter, display, archive, publish, sub-license, perform, copy, reproduce, disclose, transmit, communicate to the public, post, sell, translate, create derivative works of, distribute, make and export Your Upload Information (in whole or in part), or to incorporate it in other works in any form, media, software or technology of any kind now known or developed in the future, for any purposes whatsoever including, without limitation,  for advertising, marketing, publicity and promotional purposes, such as developing, manufacturing and marketing products and targeted advertisements using such Uploaded Information. You hereby waive any moral rights (or any similar rights in any jurisdiction) you may have in and to any of Your Upload Information, even if such material is altered or changed in a manner not agreeable to you. You agree and understand that Last.fm, its parent, subsidiaries, affiliates, and partners are not obligated to use Your Upload Information submitted through the Website or otherwise, and may alternatively choose, in its sole discretion, to discard, refuse to post, limit or block access to Your Uploaded Information without any liability whatsoever.</p>
+            
+            <p>You acknowledge that the Web Site, through Last.fm, its parent, subsidiaries, affiliates, and partners undertakes no obligation to pre-screen Your Upload Information, but that it has the right, in its sole discretion to monitor, modify, transmit over various networks, refuse, move, block access to or remove any of Your Upload Information. You agree that you must evaluate, and bear all risks associated with, the use of any of Your Upload Information including, but not limited to, any reliance on the accuracy, completeness, or usefulness of Your Upload Information. Since Last.fm, its parent, subsidiaries, affiliates, and partners may not pre-screen user generated content, you may bear legal responsibility for others' exposure to any offensive indecent or objectionable content in Your Upload Information.</p>
+            
+            <h3 id="para13">13. Disclaimer of Warranties</h3>
+            
+            <p>THE PROPERTIES, INCLUDING, WITHOUT LIMITATION, ALL CONTENT, SOFTWARE, AND FUNCTIONS MADE AVAILABLE ON OR ACCESSED THROUGH OR SENT FROM THE WEBSITE, ARE PROVIDED "AS IS," "AS AVAILABLE, " AND "WITH ALL FAULTS." TO THE FULLEST EXTENT PERMISSIBLE BY LAW, LAST.FM AND ITS PARENTS, SUBSIDIARIES AND AFFILIATES MAKE NO REPRESENTATION OR WARRANTIES OR ENDORSEMENTS OF ANY KIND WHATSOEVER (EXPRESS OR IMPLIED) ABOUT: (A) THE PROPERTIES; (B) THE CONTENT AND SOFTWARE ON AND PROVIDED THROUGH THE PROPERTIES; (C) THE FUNCTIONS MADE ACCESSIBLE ON OR ACCESSED THROUGH THE PROPERTIES; (D) THE MESSAGES, CONTENT AND INFORMATION SENT FROM OR THROUGH THE PROPERTIES BY USERS; (E) ANY PRODUCTS OR SERVICES OFFERED VIA THE WEBSITE OR HYPERTEXT LINKS TO THIRD PARTIES; AND/OR (F) THE TREATMENT OF ANY INFORMATION, CONTENT, MATERIAL OR DATA TRANSMITTED BY USERS TO THE PROPERTIES; (G) SECURITY ASSOCIATED WITH THE TRANSMISSION OF SENSITIVE INFORMATION THROUGH THE PROPERTIES OR ANY LINKED SITE. LAST.FM DOES NOT WARRANT THAT THE PROPERTIES, ANY OF THE PROPERTIES' FUNCTIONS OR ANY CONTENT CONTAINED THEREIN WILL BE UNINTERRUPTED OR ERROR-FREE; THAT DEFECTS WILL BE CORRECTED; OR THAT THE PROPERTIES OR THE SERVERS THAT MAKE THEM AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</p>
+            
+            <p>LAST.FM DOES NOT WARRANT THAT YOUR ACTIVITIES IN CONNECTION WITH OR USE OF THE PROPERTIES IS LAWFUL IN ANY PARTICULAR JURISDICTION AND, IN ANY EVENT, LAST.FM SPECIFICALLY DISCLAIMS SUCH WARRANTIES TO THE FULLEST EXTENT PERMITTED BY LAW. YOU UNDERSTAND THAT BY USING ANY OF THE FEATURES OF THE PROPERTIES, YOU ACT AT YOUR OWN RISK, AND YOU REPRESENT AND WARRANT THAT YOUR ACCESS AND ACTIVITIES ARE LAWFUL IN EVERY JURISDICTION WHERE YOU ACCESS OR USE THE WEBSITE, THE SERVICES OR THE CONTENT. FURTHER, LAST.FM AND ITS SUBSIDIARIES AND AFFILIATES DISCLAIM, TO THE FULLEST EXTENT PERMITTED BY LAW, ANY EXPRESS OR IMPLIED WARRANTIES INCLUDING, WITHOUT LIMITATION, NONINFRINGEMENT, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND TITLE.</p>
+            
+            <p>LAST.FM, ITS PARENT, SUBSIDIARIES OR AFFILIATES OR THE DIRECTORS, OFFICERS, EMPLOYEES, OR OTHER REPRESENTATIVES OF EACH OF THEM SHALL NOT BE LIABLE IN ANY EVENT FOR THE USE OF THE WEBSITE OR OTHER PROPERTIES, INCLUDING, WITHOUT LIMITATION, THE CONTENT AND ANY ERRORS CONTAINED THEREIN.  WHERE ANY JURISDICTIONS LIMIT OR DO NOT ALLOW THE DISCLAIMER OF IMPLIED OR OTHER WARRANTIES AS SET OUT ABOVE, THE DISCLAIMER MAY NOT APPLY TO THE EXTENT THE LAW OF SUCH JURISDICTION IS APPLICABLE TO THIS AGREEMENT.</p>
+            
+            <p>YOU AGREE THAT YOUR USE OF THE PROPERTIES IS ENTIRELY AT YOUR OWN RISK.</p>
+            
+            <h3 id="para14">14. Disclaimers/Limitation of Liability</h3>
+            
+            <p>WITHOUT LIMITATION OF ANYTHING ELSE SET FORTH IN THESE TERMS OF USE, YOU UNDERSTAND AND AGREE THAT LAST.FM FURTHER LIMITS ITS LIABILITY IN CONNECTION WITH YOUR USE OF THE PROPERTIES AS SET FORTH BELOW:</p>
+                
+            <p>UNDER NO CIRCUMSTANCES SHALL LAST.FM, ITS PARENT, SUBSIDIARIES, OR AFFILIATES OR THE DIRECTORS, OFFICERS, EMPLOYEES, OR OTHER REPRESENTATIVES OF EACH OF THEM (COLLECTIVELY, THE "LAST.FM ENTITIES AND INDIVIDUALS") BE LIABLE TO YOU FOR ANY LOSS OR DAMAGES OF ANY KIND, INCLUDING, WITHOUT LIMITATION, FOR ANY SPECIAL, DIRECT, INDIRECT, INCIDENTAL, EXEMPLARY, ECONOMIC, PUNITIVE, OR CONSEQUENTIAL DAMAGES THAT ARE DIRECTLY OR INDIRECTLY RELATED TO (1) THE PROPERTIES, THE CONTENT, OR YOUR UPLOAD INFORMATION; (2) THE USE OF, INABILITY TO USE, OR PERFORMANCE OF THE PROPERTIES OR ANY OF THE CONTENT OR FEATURES THEREON; (3) ANY ACTION TAKEN IN CONNECTION WITH AN INVESTIGATION BY LAST.FM OR LAW ENFORCEMENT AUTHORITIES REGARDING YOUR USE OF THE PROPERTIES OR CONTENT; (4) ANY ACTION TAKEN IN CONNECTION WITH COPYRIGHT OWNERS; (5) ANY ERRORS OR OMISSIONS IN THE PROPERTIES’ TECHNICAL OPERATION, EVEN IF FORESEEABLE OR EVEN IF THE LAST.FM ENTITIES AND INDIVIDUALS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE, STRICT LIABILITY TORT (INCLUDING, WITHOUT LIMITATION, WHETHER CAUSED IN WHOLE OR IN PART BY NEGLIGENCE, ACTS OF GOD, TELECOMMUNICATIONS FAILURE, OR THEFT OR DESTRUCTION OF THE PROPERTIES).  NOTHING IN THESE TERMS OF USE LIMITS OR EXCLUDES LAST.FM’S LIABILITY FOR: (A) DEATH OR PERSONAL INJURY CAUSED BY ITS PROVEN NEGLIGENCE; (B) THE TORT OF DECEIT; OR (C) ANY LIABILITY WHICH CANNOT BE LIMITED OR EXCLUDED BY LAW.</p>
+            
+            <p>IF ANY OF THESE TERMS OF USE ARE DETERMINED TO BE ILLEGAL, INVALID OR OTHERWISE UNENFORCEABLE BY REASON OF THE LAWS OF ANY STATE OR COUNTRY IN WHICH THESE TERMS OF USE ARE INTENDED TO BE EFFECTIVE, THEN TO THE EXTENT AND WITHIN THE JURISDICTION IN WHICH THAT TERM IS ILLEGAL, INVALID OR UNENFORCEABLE, IT SHALL BE SEVERED AND DELETED FROM THESE TERMS OF USE AND THE REMAINING TERMS SHALL SURVIVE AND CONTINUE TO BE BINDING AND ENFORCEABLE.</p>
+            
+            <p>THE LAST.FM ENTITIES AND INDIVIDUALS ARE NOT RESPONSIBLE FOR ANY DAMAGE TO ANY USER'S COMPUTER, HARDWARE, COMPUTER SOFTWARE, OR OTHER EQUIPMENT OR TECHNOLOGY INCLUDING, WITHOUT LIMITATION, DAMAGE FROM ANY SECURITY BREACH OR FROM ANY VIRUS, BUGS, TAMPERING, FRAUD, ERROR, OMISSION, INTERRUPTION, DEFECT, DELAY IN OPERATION OR TRANSMISSION, COMPUTER LINE OR NETWORK FAILURE OR ANY OTHER TECHNICAL OR OTHER MALFUNCTION.</p>
+            
+            <p>YOUR ACCESS TO AND USE OF THIS THE PROPERTIES IS AT YOUR RISK. IF YOU ARE DISSATISFIED WITH THE PROPERTIES OR ANY OF THE CONTENT, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE ACCESSING AND USING THE PROPERTIES OR THE CONTENT.</p>
+            
+            <p>YOU RECOGNISE AND CONFIRM THAT IN THE EVENT YOU INCUR ANY DAMAGES, LOSSES OR INJURIES THAT ARISE OUT OF LAST.FM'S ACTS OR OMISSIONS, THE DAMAGES, IF ANY, CAUSED TO YOU ARE NOT IRREPARABLE OR SUFFICIENT TO ENTITLE YOU TO AN INJUNCTION PREVENTING ANY EXPLOITATION OF ANY WEB SITE, PROPERTY, PRODUCT, PROGRAM, TELEVISION SHOW, MOTION PICTURE OR OTHER AUDIO/VISUAL CONTENT OWNED OR CONTROLLED BY LAST.FM AND/OR ITS PARENTS, SUBSIDIARIES, AND/OR AFFILIATES OR YOUR UPLOAD INFORMATION, AND YOU WILL HAVE NO RIGHTS TO ENJOIN OR RESTRAIN THE DEVELOPMENT, PRODUCTION, DISTRIBUTION, ADVERTISING, EXHIBITION OR EXPLOITATION OF ANY LAST.FM WEB SITE, SERVICES, PROPERTIES, PRODUCT, PROGRAM, MUSIC, TELEVISION SHOW, MOTION PICTURE OR OTHER AUDIO/VISUAL CONTENT OR YOUR UPLOAD INFORMATION OR ANY AND ALL ACTIVITIES OR ACTIONS RELATED THERETO.</p>
+            
+            <h3 id="para15">15. Indemnity</h3>
+            
+            <p>You agree to indemnify, hold harmless, and keep Last.fm, its parents, subsidiaries and affiliates, and their respective owners, officers, managers, members, agents and employees, fully and effectively indemnified with respect to any and all costs, claims, demands, investigations, liabilities, losses, damages, judgments, settlements, costs and expenses, including attorneys' fees arising out of or in connection with this Terms of Use, including, without limitation: (a) your use of the Properties; (b) your violation of these Terms of Use or any law, rule or regulation; (c) your use of the Content; or (d) your placement or transmission of any of Your Upload Information or any other content or materials on or through the Properties. You will cooperate as fully and reasonably as required by Last.fm in the defence of any claim. Notwithstanding the foregoing, Last.fm retains the exclusive right to settle, compromise and pay any and all claims, demands, proceedings, suits, actions or causes of actions which are brought against Last.fm herein under the terms and provisions of this Section 15 and in no event shall you settle any such claim without Last.fm's prior written approval.</p>
+            
+            <h3 id="para16">16. Governing Law</h3>
+            
+            <p>These Terms of Use and the interpretation of these Terms of Use shall be governed by and construed in accordance with the laws of England.</p> 
+            
+            <h3 id="para17">17. Miscellaneous</h3>
+            
+            <p>Any other rules, restrictions, guidelines and terms and conditions that may be posted or made available in connection with a particular feature on the Website or Service are incorporated by this reference into these Terms of Use for all purposes.</p>
+            
+            <p>You are solely responsible for compliance with applicable laws, rules, and regulations in connection with your use of the Properties and the Content, including, without limitation, those governing your transmission or use of any software or data.</p>
+            
+            <p>These Terms of Use and any applicable end user licence or similar agreements contain the sole and entire agreement between the parties with respect to the Properties, the Content and Your Upload Information and supersedes any and all other prior written or oral agreements between them. The section titles in these Terms of Use are for your convenience only and do not have any legal or contractual effect. You agree that these Terms of Use will not be construed against Last.fm by virtue of having drafted these Terms of Use. If any provision of these Terms of Use shall be held invalid or unenforceable by any court of competent jurisdiction or as a result of future legislative action, such holding or action shall be strictly construed and shall not affect the validity or effect of any other provision of these Terms of Use. No waiver on the part of Last.fm of any of these Terms of Use will be of any force or effect unless made in writing and signed by a duly authorized officer of Last.fm.</p>
+            
+            <p>Nothing in these Terms of Use are intended to confer on any third party (whether referred to in the Terms of Use by name, class, description or otherwise) any benefit or any right under any legislation in any country to enforce any provisions of these Terms of Use.</p> 
+            
+            
+            <h3 id="para18">18. Termination</h3>
+            
+            <p>You understand and agree that Last.fm will determine your compliance with these Terms of Use in its sole discretion. Last.fm reserves the right to restrict, suspend, deny or terminate access to all or part of the Website or any Service and to deny access to any person in its sole discretion without notice or liability of any kind.  Last.fm maintains a policy that provides for the termination in appropriate circumstances of the Website use privileges of users who are repeat infringers of intellectual property rights.  Any violation of these Terms of Use may be referred to law enforcement authorities. Upon termination of your user account or access to the Web Site, or upon demand by Last.fm, you must destroy all materials obtained from the Properties and all related documentation.</p>
+            
+            <h3 id="para19">19. Privacy</h3>
+            
+            <p>Registration data and certain other information about you are subject to our <a href="/legal/privacy">Privacy Policy</a>. Please read the <a href="/legal/privacy">Privacy Policy</a> for information on how your personal data and other information about you will be handled. By accepting these Terms of Use you are also accepting the terms of the Privacy Policy, which is incorporated herein by reference for all purposes.</p>
+
+        </div>
+    </div>
+
+    </div>
+
+
+        
+
+
+        
+
+        
+    </div>
+
+    <div id="qa-page-load"></div>
+
+    
+
+    
+    <footer class="footer" itemscope itemtype="http://schema.org/Organization">
+        <link itemprop="url" href="https://www.last.fm">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-top-row">
+                    <div class="footer-top-col">
+                        <h2 class="footer-heading">Company</h2>
+                        <ul class="footer-links">
+                            <li><a href="/about">About Last.fm</a></li>
+                            <li><a href="/about/contact">Contact Us</a></li>
+                            <li><a href="/about/jobs">Jobs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-top-col">
+                        <h2 class="footer-heading">Help</h2>
+                        <ul class="footer-links">
+                            <li><a href="/about/trackmymusic">Track My Music</a></li>
+                            
+                                <li><a href="https://support.last.fm/" target="_BLANK">Community Support</a></li>
+                            
+                            <li><a href="/help/guidelines">Community Guidelines</a></li>
+                            
+                                <li><a href="http://cbsi.force.com/CBSi/lastfm" target="_BLANK">Help</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="footer-top-col">
+                        <h2 class="footer-heading">Goodies</h2>
+                        <ul class="footer-links">
+                            <li><a href="/about/trackmymusic">Download Scrobbler</a></li>
+                            <li><a href="/api">Developer API</a></li>
+                            <li><a href="/music/+free-music-downloads">Free Music Downloads</a></li>
+                            <li><a href="https://store.last.fm">Merchandise</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-top-col">
+                        <h2 class="footer-heading">Account</h2>
+                        <ul class="footer-links">
+                            
+                                <li><a href="/join">Join</a></li>
+                                <li><a href="https://secure.last.fm/login">Login</a></li>
+                                <li><a href="/pro">Subscribe</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="footer-top-col">
+                        <h2 class="footer-heading">Follow Us</h2>
+                        <ul class="footer-links">
+                            <li><a itemprop="sameAs" target="_blank" href="https://www.facebook.com/lastfm">Facebook</a></li>
+                            <li><a itemprop="sameAs" target="_blank" href="https://twitter.com/lastfm">Twitter</a></li>
+                            <li><a itemprop="sameAs" target="_blank" href="https://www.instagram.com/last_fm">Instagram</a></li>
+                            <li><a itemprop="sameAs" target="_blank" href="https://www.youtube.com/user/lastfm">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-9">
+                        <ul id="language-selector">
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                            footer-language--active
+                                        
+                                    "
+                                >
+                                    
+                                        <strong>English</strong><span class="sr-only">current language</span>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="de" />
+                                            <button class="mimic-link" name="de" type="submit">Deutsch</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="es" />
+                                            <button class="mimic-link" name="es" type="submit">Español</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="fr" />
+                                            <button class="mimic-link" name="fr" type="submit">Français</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="it" />
+                                            <button class="mimic-link" name="it" type="submit">Italiano</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="ja" />
+                                            <button class="mimic-link" name="ja" type="submit">日本語</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="pl" />
+                                            <button class="mimic-link" name="pl" type="submit">Polski</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="pt" />
+                                            <button class="mimic-link" name="pt" type="submit">Português</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="ru" />
+                                            <button class="mimic-link" name="ru" type="submit">Русский</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="sv" />
+                                            <button class="mimic-link" name="sv" type="submit">Svenska</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="tr" />
+                                            <button class="mimic-link" name="tr" type="submit">Türkçe</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                                
+                                <li
+                                    class="
+                                        footer-language
+                                        
+                                    "
+                                >
+                                    
+                                        <form class="footer-language-form" action="/i18n/setlang/" method="post">
+                                            <input type='hidden' name='csrfmiddlewaretoken' value='bo4IBd9C5HKEcYXldxOkOx7JwCYXCjUK' />
+                                            <input type="hidden" name="language" value="zh" />
+                                            <button class="mimic-link" name="zh" type="submit">简体中文</button>
+                                        </form>
+                                    
+                                </li>
+                            
+                        </ul>
+                        
+                        <p class="footer-timezone">
+                            
+                                Time zone: <strong>Europe/London</strong>
+                            
+                        </p>
+
+                        <div class="footer-legal">
+                            <ul>
+                                <li class="footer-legal-item"><a rel="nofollow" href="http://www.cbsinteractive.com/">CBS Interactive</a> © 2020 <span itemprop="name">Last.fm</span> Ltd. All rights reserved</li>
+                                <li class="footer-legal-item"><a href="/legal/terms">Terms of Use</a></li>
+                                <li class="footer-legal-item"><a href="/legal/privacy">Privacy Policy</a></li>
+                                <li class="footer-legal-item"><a href="/legal">Legal Policies</a></li>
+                                
+                                    <li class="footer-legal-item"><a href="https://ca.privacy.cbs">California Privacy/Info We Collect</a></li>
+                                    <li class="footer-legal-item"><a href="https://ca.privacy.cbs/donotsell">California Do Not Sell My Info</a></li>
+                                
+                                <li class="footer-legal-item"><a target="_blank" href="http://www.cbsinteractive.com/careers">Jobs at CBSi</a></li>
+                                <li class="footer-legal-item"><a rel="nofollow" href="http://www.last.fm">Last.fm Music</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="logo col-xs-12 col-sm-3">
+                        <p>Audioscrobbler</p>
+                        <img src="/static/images/footer_logo@2x.49ca51948b0a.png" width="37" height="20" alt="Last.fm 'as' logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-message">
+    <div class="feedback-message-inner">
+        <p>
+            <span class="hidden-xs">
+                Let us know what you think of the Last.fm website.
+            </span>
+            <a href="http://cbsi.force.com/CBSi/template_lfmfbk?p_userid=" target="_blank">Leave feedback</a>
+        </p>
+    </div>
+</div>
+    </footer>
+
+
+    <section class="debug-log">
+    <h2 class="debug-log-heading">API Calls</h2>
+    
+</section>
+
+
+        </div>
+        
+    </div>
+
+    
+        <div
+            data-require="player/providers/spotify/spotify-provider"
+            data-spotify-auth-modal="/player/modal/spotify"
+            data-spotify-premium-modal="/player/modal/spotify-premium"
+            data-spotify-inactive-modal="/player/modal/spotify-inactive"
+            data-spotify-initial-device-modal="/player/modal/spotify-initial-device-detection"
+        ></div>
+
+        <div
+            data-require="player/providers/youtube/youtube-provider"
+            class="video-player"
+            aria-hidden="true"
+            id="youtube-video"
+        >
+            <div class="video-player-inner-wrap">
+                <div class="video-player-embed js-player"></div>
+                <button class="
+                    video-player-close
+                    js-close-player
+                ">Close</button>
+            </div>
+        </div>
+    
+
+
+        
+            
+        
+        
+
+        <script class="js-modal-template" type="text/template">
+            <div class="modal-dialog" role="dialog" aria-labelledby="modal-label">
+                <div class="modal-content">
+                    <button class="modal-dismiss js-close">Close</button>
+                    <h2
+                        id="modal-label"
+                        class="modal-title js-modal-title"
+                    ></h2>
+                    <div class="modal-body js-modal-body"></div>
+                </div>
+            </div>
+        </script>
+
+        
+        
+            <script class="js-adblock-message-template" type="text/template">
+                
+    
+    <div><div>
+        <section class="
+            adblock-message
+            adblock-message--adfree
+            link-block
+            js-link-block
+        ">
+            <p class="adblock-message-body">
+                
+                    <strong>Browse ad-free</strong> with a premium Last.fm account
+                
+            </p>
+            
+            <a
+                class="adblock-message-button link-block-target"
+                href="/pro"
+                data-analytics-action="SubscribeClick"
+                data-analytics-label="AdblockMessageAdfree"
+            >Find out more</a>
+            <a
+                href="/pro"
+                class="
+                    js-link-block-cover-link
+                    link-block-cover-link
+                "
+                tabindex="-1"
+                aria-hidden="true"
+                data-analytics-action="SubscribeClick"
+                data-analytics-label="AdblockMessageAdfree"
+            ></a>
+        </section>
+    </div></div>
+
+            </script>
+            <script class="js-adblock-message-template" type="text/template">
+                
+    
+    <div><div>
+        <section class="
+            adblock-message
+            adblock-message--support
+            link-block
+            js-link-block
+        ">
+            <p class="adblock-message-body">
+                
+                    <strong>Show your support</strong> with a premium Last.fm account
+                
+            </p>
+            
+            <a
+                class="adblock-message-button link-block-target"
+                href="/pro"
+                data-analytics-action="SubscribeClick"
+                data-analytics-label="AdblockMessageSupport"
+            >Find out more</a>
+            <a
+                href="/pro"
+                class="
+                    js-link-block-cover-link
+                    link-block-cover-link
+                "
+                tabindex="-1"
+                aria-hidden="true"
+                data-analytics-action="SubscribeClick"
+                data-analytics-label="AdblockMessageSupport"
+            ></a>
+        </section>
+    </div></div>
+
+            </script>
+            <script class="js-adblock-message-template" type="text/template">
+                
+    
+    <div><div>
+        <section class="
+            adblock-message
+            adblock-message--benefits
+            link-block
+            js-link-block
+        ">
+            <p class="adblock-message-body">
+                
+                    <strong>Get exclusive benefits</strong> with a premium Last.fm account
+                
+            </p>
+            
+            <a
+                class="adblock-message-button link-block-target"
+                href="/pro"
+                data-analytics-action="SubscribeClick"
+                data-analytics-label="AdblockMessageBenefits"
+            >Find out more</a>
+            <a
+                href="/pro"
+                class="
+                    js-link-block-cover-link
+                    link-block-cover-link
+                "
+                tabindex="-1"
+                aria-hidden="true"
+                data-analytics-action="SubscribeClick"
+                data-analytics-label="AdblockMessageBenefits"
+            ></a>
+        </section>
+    </div></div>
+
+            </script>
+        
+
+        <script>
+            window.lfmDomReadyCallback && window.lfmDomReadyCallback();
+            window.lfmDomReady = true;
+        </script>
+        
+            <link
+                href="/static/styles/build/99599f6990.99599f69904d.css"
+                rel="preload"
+                as="style"
+                charset="utf-8"
+                data-require="shim/rel-preload"
+                media="(min-width: 768px)" 
+            >
+        
+    </body>
+</html>

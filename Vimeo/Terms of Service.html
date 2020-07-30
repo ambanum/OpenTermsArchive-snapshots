@@ -23,9 +23,9 @@
             <link rel="canonical" href="/terms">
         <link rel="apple-touch-icon-precomposed" href="https://i.vimeocdn.com/favicon/main-touch_180">
 
-<link rel="mask-icon" href="https://f.vimeocdn.com/svg/legacy_view_support/iris_icon_v_64.svg?79fe3ba5ab9ae6ce68f935296cd13220366ebbc8" color="#17272e">
+<link rel="mask-icon" href="https://f.vimeocdn.com/svg/legacy_view_support/iris_icon_v_64.svg?0da93c7183ff6fbb2e00048703d801234e7b467e" color="#17272e">
 
-    <link rel="shortcut icon" href="https://f.vimeocdn.com/images_v6/favicon.ico?79fe3ba5ab9ae6ce68f935296cd13220366ebbc8" data-play="https://i.vimeocdn.com/favicon/play_32" data-pause="https://i.vimeocdn.com/favicon/pause_32">
+    <link rel="shortcut icon" href="https://f.vimeocdn.com/images_v6/favicon.ico?0da93c7183ff6fbb2e00048703d801234e7b467e" data-play="https://i.vimeocdn.com/favicon/play_32" data-pause="https://i.vimeocdn.com/favicon/pause_32">
 
 <meta name="msapplication-TileImage" content="https://i.vimeocdn.com/favicon/main-touch_144">
 <meta name="msapplication-TileColor" content="#00adef">
@@ -52,7 +52,7 @@
                                     
                                                     
                 
-                                                        <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global/icon_fonts.min.css?79fe3ba5ab9ae6ce68f935296cd13220366ebbc8">
+                                                        <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global/icon_fonts.min.css?0da93c7183ff6fbb2e00048703d801234e7b467e">
 
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global_main_combined.min.css?a398d758">
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global_combined.min.css?37e55105">
@@ -1757,7 +1757,7 @@ New York, New York 10011</p>
 
                 <aside id="footer_tip" class="footer_v2__tip" aria-live="polite">
             <h4 class="footer_v2__tip-header">Did you know?</h4>
-            <p class="active footer_v2__tip-content">Vimeo is an amazing video service for original creative work, but it’s also a company with real human employees. <a href="/jobs" data-fatal-attraction="container:did_you_know_box|component:product">You could be one!</a></p>
+            <p class="active footer_v2__tip-content">We can help you avoid severe migraines by gently walking you through <a href="/help/compression" data-fatal-attraction="container:did_you_know_box|component:product">video compression best practices</a> with our friendly tutorials.</p>
         </aside>
     </section>
     
@@ -1828,20 +1828,6 @@ New York, New York 10011</p>
     /**
      * Add server side ABLincoln experiments to GTM data layer.
      */
-            (function () {
-            if (window._gtm) {
-                var ablincoln_assignments = JSON.parse('[{"namespace_id":513,"parameter_name":"show_screen_record","parameter_value":"control","user_saw_experiment":false}]');
-                var user_seen_assignments = ablincoln_assignments.filter(function(assignment) {
-                    return assignment.user_saw_experiment;
-                });
-                window._gtm.push({
-                    'ablincoln_assignments': user_seen_assignments,
-                });
-                window._gtm.push({
-                    event: 'ablincoln_assignments_complete',
-                });
-            }
-        })();
     
         var _extend = function(){for(var r=arguments[0],n=1,e=arguments.length;e>n;n++){var t=arguments[n];for(var a in t)t.hasOwnProperty(a)&&(r[a]=t[a])}return r};
 
@@ -1850,7 +1836,7 @@ New York, New York 10011</p>
         IMAGE_DIR = 'https://f.vimeocdn.com/images_v6/',
         FONT_DIR = 'https://f.vimeocdn.com/fonts/',
         SVG_DIR = 'https://f.vimeocdn.com/svg/',
-                BUILD_HASH = '78ab6';
+                BUILD_HASH = '1ffef';
 
     
         var vimeo = _extend((window.vimeo || {}), {"app_version":"v6","domain":"vimeo.com","url":"vimeo.com","cur_user":false,"origin_user_id":null,"origin_user":false,"is_mobile":false});

@@ -23,19 +23,19 @@
             <link rel="canonical" href="/privacy">
         <link rel="apple-touch-icon-precomposed" href="https://i.vimeocdn.com/favicon/main-touch_180">
 
-<link rel="mask-icon" href="https://f.vimeocdn.com/svg/legacy_view_support/iris_icon_v_64.svg?4f267cc62992a93bc575068b3413c5571b2e6517" color="#17272e">
+<link rel="mask-icon" href="https://f.vimeocdn.com/svg/legacy_view_support/iris_icon_v_64.svg?9f02b406041a17fd39ced2fb157fcaad416c542a" color="#17272e">
 
-    <link rel="shortcut icon" href="https://f.vimeocdn.com/images_v6/favicon.ico?4f267cc62992a93bc575068b3413c5571b2e6517" data-play="https://i.vimeocdn.com/favicon/play_32" data-pause="https://i.vimeocdn.com/favicon/pause_32">
+    <link rel="shortcut icon" href="https://f.vimeocdn.com/images_v6/favicon.ico?9f02b406041a17fd39ced2fb157fcaad416c542a" data-play="https://i.vimeocdn.com/favicon/play_32" data-pause="https://i.vimeocdn.com/favicon/pause_32">
 
 <meta name="msapplication-TileImage" content="https://i.vimeocdn.com/favicon/main-touch_144">
 <meta name="msapplication-TileColor" content="#00adef">
         <title>Privacy Policy on Vimeo</title>
-                    <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global/icon_fonts.min.css?4f267cc62992a93bc575068b3413c5571b2e6517">
+                    <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global/icon_fonts.min.css?9f02b406041a17fd39ced2fb157fcaad416c542a">
 
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global_legacy_combined.min.css?bccd41ba">
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global_legacy_shared_combined.min.css?7518cd8f">
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/topnav_cart_button_combined.min.css?a20a7566">
-    <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/pages/legal.min.css?28752747">
+    <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/pages/legal.min.css?6757ff22">
 
 
 
@@ -1191,7 +1191,7 @@ window.addEventListener('load', handleGDPR);
 
                 <aside id="footer_tip" class="footer_v2__tip" aria-live="polite">
             <h4 class="footer_v2__tip-header">Did you know?</h4>
-            <p class="active footer_v2__tip-content">Update a video without losing your URL or stats. How? <a href="https://help.vimeo.com/hc/en-us/articles/224818047-Video-settings-overview" data-fatal-attraction="container:did_you_know_box|component:help">Replace your video file</a> quickly and easily.</p>
+            <p class="active footer_v2__tip-content">Our panel for Adobe Premiere Pro uploads to Vimeo and <a href="https://join.vimeo.com/adobe-premiere-panel/" data-fatal-attraction="container:did_you_know_box|component:upgrade_link">simplifies your workflow.</a></p>
         </aside>
     </section>
     
@@ -1272,7 +1272,7 @@ window.addEventListener('load', handleGDPR);
         IMAGE_DIR = 'https://f.vimeocdn.com/images_v6/',
         FONT_DIR = 'https://f.vimeocdn.com/fonts/',
         SVG_DIR = 'https://f.vimeocdn.com/svg/',
-                BUILD_HASH = '79c9f';
+                BUILD_HASH = '2db40';
 
     
         var vimeo = _extend((window.vimeo || {}), {"app_version":"v6","domain":"vimeo.com","url":"vimeo.com","cur_user":false,"origin_user_id":null,"origin_user":false,"is_mobile":false});
@@ -1339,17 +1339,33 @@ window.addEventListener('load', handleGDPR);
     <script>
         function onVimeoDomReady(e) {
                                                 
+        function updateFocusToHashAnchor() {
+            if (location.hash != "") {
+                let desiredLocationHash = location.hash;
+                location.hash = "";
+                location.hash = desiredLocationHash;
+            }
+        }
 
         function renameOneTrustHeaderTags() {
             const ONETRUST_CLASS_SELECTOR = '.otnotice'
             const punctuationRegex = /[ '"`.,\/\\><#!$%?@\^&\*+;:{}=\~()-]/g;
             const allHeaderTagsQuerySelector = 'h1, h2, h3, h4, h5, h6';
             const regexForNumericPrefix = /^[0-9]+[.][0-9]* /;
+            const regexForDuplicateUnderscores = /[_]{2,}/g;
+            const regexForLeadingUnderscores = /^_+/g;
+            const regexForTrailingUnderscores = /_+$/g;
             document.querySelector(ONETRUST_CLASS_SELECTOR).querySelectorAll(allHeaderTagsQuerySelector).forEach(
                 (node) => {
-                    let newNameForTag = node.textContent.replace(regexForNumericPrefix, "").replace(punctuationRegex, "_").toLowerCase();
+                    let newNameForTag = node.textContent
+                        .replace(regexForNumericPrefix, "")
+                        .replace(punctuationRegex, "_")
+                        .replace(regexForDuplicateUnderscores, "_")
+                        .replace(regexForLeadingUnderscores, "")
+                        .replace(regexForTrailingUnderscores, "")
+                        .toLowerCase();
                     node.setAttribute(
-                        "name",
+                        "id",
                         newNameForTag
                     );
                 }
@@ -1358,7 +1374,7 @@ window.addEventListener('load', handleGDPR);
 
         (function fetchPolicyDocumentFromOneTrust() {
             OneTrust.NoticeApi.Initialized.then(function() {
-                                    OneTrust.NoticeApi.LoadNotices(["https://appds8093.blob.core.windows.net/c7e704ed-33be-4f93-85f9-373c45916aeb/privacy-notices/a4ee449f-2400-479a-98b7-ba27050904b4.json"]).then(renameOneTrustHeaderTags);
+                                    OneTrust.NoticeApi.LoadNotices(["https://appds8093.blob.core.windows.net/c7e704ed-33be-4f93-85f9-373c45916aeb/privacy-notices/a4ee449f-2400-479a-98b7-ba27050904b4.json"]).then(renameOneTrustHeaderTags).then(updateFocusToHashAnchor);
                             });
         })();
 

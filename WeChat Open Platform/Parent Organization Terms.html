@@ -458,37 +458,6 @@
 <link rel="stylesheet" type="text/css" href="/css/rem.css"/>
 <link rel="stylesheet" type="text/css" href="/css/rem-2.css"/>
 <script>
-  function GetQueryString(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
-    if (r != null) return unescape(r[2]); return null;
-  }
-
-  if (GetQueryString('page')) {
-    $.get(GetQueryString('page') + '.html', function (data) {
-      data = data.split('<script>');
-      $('.null_content').append(data[0]);
-      if (data[1]) {
-        data = data[1].split('<\/script>');
-        eval(data[0]);
-      }
-      for (var k in windowLoadList) {
-        windowLoadList[k]();
-      }
-
-      if (window.location.hash) {
-        console.log(window.location.hash);
-        setTimeout(function () {
-          var t = $(window.location.hash).offset().top;
-          console.log(t);
-          $("html,body").animate({ scrollTop: t + "px" }, 0);
-        }, 50)
-      }
-    })
-  }
-
-
-
   /* 获取一年后今日的时间戳 */
   var date = new Date();
   var y = date.getFullYear() + 1;

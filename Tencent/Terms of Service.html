@@ -534,52 +534,65 @@
 
   var _locale = 'zh-cn';
   var pop_ind = 0;
-  if(localStorage.getItem("browserSign") != null){
-    _locale = localStorage.getItem("browserSign");
-    if (_locale.split('/')[0] == 'zh-hk') {
-      pop_ind = 1;
-    } else if (_locale.indexOf("zh") >= 0 || _locale.indexOf("ZH") >= 0) {
-      pop_ind = 0;
-    } else {
-      pop_ind = 2;
-    }
+  if(window.location.pathname.indexOf("zh-cn") >= 0){
+    console.log('带zh-cn后缀');
+    _locale = 'zh-cn/';
+  }else if(window.location.pathname.indexOf("zh-hk") >= 0){
+    console.log('带zh-hk后缀');
+    _locale = 'zh-hk/';
+  }else if(window.location.pathname.indexOf("en-us") >= 0){
+    console.log('带en-us后缀');
+    _locale = 'en-us/';
+    pop_ind = 2;
   }else{
-    /* 获取浏览器语言 */
-    console.log('浏览器语言: '+navigator.language)
-    var lang_nav = navigator.language;
+    console.log('不带lang后缀')
+    if(localStorage.getItem("browserSign") != null){
+      _locale = localStorage.getItem("browserSign");
+      if (_locale.split('/')[0] == 'zh-hk') {
+        pop_ind = 1;
+      } else if (_locale.indexOf("zh") >= 0 || _locale.indexOf("ZH") >= 0) {
+        pop_ind = 0;
+      } else {
+        pop_ind = 2;
+      }
+    }else{
+      /* 获取浏览器语言 */
+      console.log('浏览器语言: '+navigator.language)
+      var lang_nav = navigator.language;
 
-    if (lang_nav == 'zh-HK') {
-      _locale = 'zh-hk/';
-      pop_ind = 1;
-    } else if (lang_nav.indexOf("zh") >= 0 || lang_nav.indexOf("ZH") >= 0) {
-      _locale = 'zh-cn/';
-      pop_ind = 0;
-    } else {
-      _locale = 'en-us/';
-      pop_ind = 2;
+      if (lang_nav == 'zh-HK') {
+        _locale = 'zh-hk/';
+        pop_ind = 1;
+      } else if (lang_nav.indexOf("zh") >= 0 || lang_nav.indexOf("ZH") >= 0) {
+        _locale = 'zh-cn/';
+        pop_ind = 0;
+      } else {
+        _locale = 'en-us/';
+        pop_ind = 2;
+      }
+    }
+
+    if (window.location.pathname.indexOf(_locale.split('/')[0]) >= 0) {
+
+    }else{
+      console.log('与当前语言不同就跳转');
+      console.log(window.location.pathname.split('/'))
+      if(window.location.pathname.split('/')[1] == 'tencent_com_ui' || window.location.pathname.split('/')[2] == 'tencent_com_ui'){
+        console.log('符合')
+        window.location.pathname = window.location.pathname.replace(/^\/(zh\-(cn|hk)|en\-us)?/, '/' + _locale);
+      }else{
+        console.log('不符合')
+        window.location.pathname = window.location.pathname.replace(/^\/(zh\-(cn|hk)|en\-us)?/, '/' + _locale.split('/')[0]);
+      }
+
     }
   }
-
-
 
   $('.lang_area a').removeClass('current');
   $('.wrap').addClass(_locale.split('/')[0]);
   $('.lang_area a[lang="' + _locale.split('/')[0] + '"]').addClass('current');
 
-  if (window.location.pathname.indexOf(_locale.split('/')[0]) >= 0) {
 
-  }else{
-    console.log('与当前语言不同就跳转');
-    console.log(window.location.pathname.split('/'))
-    if(window.location.pathname.split('/')[1] == 'tencent_com_ui' || window.location.pathname.split('/')[2] == 'tencent_com_ui'){
-      console.log('符合')
-      window.location.pathname = window.location.pathname.replace(/^\/(zh\-(cn|hk)|en\-us)?/, '/' + _locale);
-    }else{
-      console.log('不符合')
-      window.location.pathname = window.location.pathname.replace(/^\/(zh\-(cn|hk)|en\-us)?/, '/' + _locale.split('/')[0]);
-    }
-
-  }
 
   /* 中文/繁体/英文路由状态控制 */
   var host = window.location.host;

@@ -31,14 +31,14 @@
     
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
       
-      <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/developers/css/app.css">
+      <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/developers/css/app.css">
     
 
     <noscript>
       
     </noscript>
-    <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/developers/images/favicon.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.com/adwords/api/docs/terms"><link rel="search" type="application/opensearchdescription+xml"
+    <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.com/adwords/api/docs/terms"><link rel="search" type="application/opensearchdescription+xml"
             title="Google Developers" href="https://developers.google.com/s/opensearch.xml">
       
 
@@ -54,7 +54,7 @@
 
 
 
-  <meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/developers/images/opengraph/google-blue.png">
+  <meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/developers/images/opengraph/google-blue.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="675">
 
@@ -144,7 +144,7 @@
 
 
 
-<div class="devsite-header--inner">
+<div class="devsite-header--inner nocontent">
   <div class="devsite-top-logo-row-wrapper-wrapper">
     <div class="devsite-top-logo-row-wrapper">
       <div class="devsite-top-logo-row">
@@ -164,7 +164,10 @@
     
   <div class="devsite-product-logo-container"
        
-       >
+       
+       
+    size="medium"
+  >
   
     <img class="devsite-product-logo"
          alt="AdWords API"
@@ -206,6 +209,14 @@
       
         data-value="1"
       
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="AdWords API"
+      
     >
     
           AdWords API
@@ -226,6 +237,8 @@
            </div>
           
 <devsite-search
+    aria-expanded="false"
+    aria-haspopup="listbox"
     enable-signin
     enable-search
     enable-suggestions
@@ -236,22 +249,28 @@
     project-scope="/adwords/api/docs/guides/start"
     url-scoped="https://developers.google.com/s/results/adwords/api/docs/guides/start"
     
-    >
+    
+    
+    role="combobox">
   <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
     <div class="devsite-search-container">
       <div class="devsite-searchbox">
         <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
           
           aria-label="Search"
           aria-haspopup="false"
+          aria-multiline="false"
+          aria-label="Search box"
           autocomplete="off"
           class="devsite-search-field devsite-search-query"
           name="q"
           
           placeholder="Search"
-          role="combobox"
           type="text"
-          value="">
+          value=""
+          >
         <div class="devsite-search-image material-icons" aria-hidden="true"></div>
       </div>
       <button type="button"
@@ -598,7 +617,10 @@
     
   <div class="devsite-product-logo-container"
        
-       >
+       
+       
+    size="medium"
+  >
   
     <img class="devsite-product-logo"
          alt="AdWords API"
@@ -639,6 +661,14 @@
         data-label="Upper Header"
       
         data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="AdWords API"
       
     >
     
@@ -923,9 +953,8 @@
 
 
 
-<article class="devsite-article">
-  <article class="devsite-article-inner"><style>
-        /* Styles inlined from /adwords/api/css/local_extensions_apireference.css */
+<article class="devsite-article"><style>
+      /* Styles inlined from /adwords/api/css/local_extensions_apireference.css */
 /* <code/> elements should match link color */
 a:link code {
   color: #0000CC;
@@ -1041,8 +1070,8 @@ td hr {
   border-top: none;
 }
 
-        </style><style>
-        /* Styles inlined from /adwords/api/css/local_extensions.css */
+      </style><style>
+      /* Styles inlined from /adwords/api/css/local_extensions.css */
 /* Removes the border and background from h2s used for semantics. */
 #gc-pagecontent h2.normalsize {
   border: none;
@@ -1318,15 +1347,15 @@ img.screenshot {
 }
 
 
-        </style>
-    
-    
-    
+      </style>
+  
+  
+  
 
-    <div class="devsite-article-meta">
-      
-      
-      <ul class="devsite-breadcrumb-list"
+  <div class="devsite-article-meta">
+    
+    
+    <ul class="devsite-breadcrumb-list"
   
     role="navigation"
     aria-label="Breadcrumb">
@@ -1346,6 +1375,14 @@ img.screenshot {
         data-label="Breadcrumbs"
       
         data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
       
     >
     
@@ -1375,6 +1412,14 @@ img.screenshot {
       
         data-value="2"
       
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
     >
     
         Products
@@ -1402,6 +1447,14 @@ img.screenshot {
         data-label="Breadcrumbs"
       
         data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="AdWords API"
       
     >
     
@@ -1431,6 +1484,14 @@ img.screenshot {
       
         data-value="4"
       
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail=""
+      
     >
     
         Resources &amp; Policies
@@ -1441,22 +1502,22 @@ img.screenshot {
   </li>
   
 </ul>
+    
       
-        
     <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
     </devsite-page-rating>
   
-      
-    </div>
-
     
-      <devsite-feedback
+  </div>
+
+  
+    <devsite-feedback
   position="header"
   project-name="AdWords API"
   product-id="82128"
   bucket="AdWordsAPI"
   context=""
-  version="t-devsite-webserver-20200924-r01-rc00.429872899142986475"
+  version="t-devsite-webserver-20201001-r01-rc01.430035087605178851"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1481,18 +1542,18 @@ img.screenshot {
   
   </button>
 </devsite-feedback>
+  
+  
+
+  <devsite-toc class="devsite-nav" devsite-toc-embedded
+               >
+  </devsite-toc>
+
+  <div class="devsite-article-body clearfix
+    devsite-no-page-title">
+
     
-    
-
-    <devsite-toc class="devsite-nav" devsite-toc-embedded
-                 >
-    </devsite-toc>
-
-    <div class="devsite-article-body clearfix
-      devsite-no-page-title">
-
       
-        
 
 <style>.c0{font-weight:bold}.c0.c5{font-weight:inherit}</style>
 
@@ -1779,27 +1840,27 @@ you will receive an email shortly containing instructions on how to accept
 these new terms and conditions.</p>
 
   
-      
-
-      
-    </div>
-
     
 
     
+  </div>
+
+  
+
+  
+    
       
-        
     <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
     </devsite-page-rating>
   
-         
-           <devsite-feedback
+       
+         <devsite-feedback
   position="footer"
   project-name="AdWords API"
   product-id="82128"
   bucket="AdWordsAPI"
   context=""
-  version="t-devsite-webserver-20200924-r01-rc00.429872899142986475"
+  version="t-devsite-webserver-20201001-r01-rc01.430035087605178851"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1824,14 +1885,13 @@ these new terms and conditions.</p>
   
   </button>
 </devsite-feedback>
-         
-      
-      
+       
     
+    
+  
 
-    
-    
-  </article>
+  
+  
 </article>
 
 
@@ -2031,7 +2091,7 @@ these new terms and conditions.</p>
        data-category="Site-Wide Custom Events"
        data-label="Footer Google Developers Link">
       <img class="devsite-footer-sites-logo"
-           src="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/developers/images/lockup-developers.svg"
+           src="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/developers/images/lockup-developers.svg"
            loading="lazy"
            alt="Google Developers">
     </a>
@@ -2288,7 +2348,7 @@ these new terms and conditions.</p>
     <devsite-heading-link></devsite-heading-link>
     <devsite-analytics >
       
-        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension5": "en", "dimension11": false, "dimension8": null, "dimension4": "AdWords API", "dimension1": "Signed out", "dimension3": false, "dimension6": "en"}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}, {"gaid": "UA-54828107-1", "dimensions": {"dimension5": "en", "dimension11": false, "dimension8": null, "dimension4": "AdWords API", "dimension1": "Signed out", "dimension3": false, "dimension6": "en"}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}]</script>
+        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension11": false, "dimension5": "en", "dimension8": null, "dimension1": "Signed out", "dimension4": "AdWords API", "dimension3": false, "dimension6": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}, {"gaid": "UA-54828107-1", "dimensions": {"dimension11": false, "dimension5": "en", "dimension8": null, "dimension1": "Signed out", "dimension4": "AdWords API", "dimension3": false, "dimension6": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}]</script>
 <script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "AdWords API", "scriptsafe": null, "signedIn": "False", "tenant": "developers"}}</script>
       
     </devsite-analytics>
@@ -2296,12 +2356,12 @@ these new terms and conditions.</p>
       <devsite-badger></devsite-badger>
     
     
-    <script>
+    <script nonce="ixDP13D8tM08ttWyGHKXlkd09aPMUU">
   
   (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
     t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
     E.parentNode.insertBefore(t,E);})(window, document, 'script',
-    'https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159","https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+    'https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b","https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
   
 </script>
   </body>

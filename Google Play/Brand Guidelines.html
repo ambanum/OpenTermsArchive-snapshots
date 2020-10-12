@@ -31,14 +31,14 @@
     
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
       
-      <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android/css/app.css">
+      <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android/css/app.css">
     
 
     <noscript>
       
     </noscript>
-    <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android/images/favicon.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.com/distribute/marketing-tools/brand-guidelines"><link rel="search" type="application/opensearchdescription+xml"
+    <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.com/distribute/marketing-tools/brand-guidelines"><link rel="search" type="application/opensearchdescription+xml"
             title="Android Developers" href="https://developer.android.com/s/opensearch.xml">
       
 
@@ -130,7 +130,7 @@
 
 
 
-<div class="devsite-header--inner">
+<div class="devsite-header--inner nocontent">
   <div class="devsite-top-logo-row-wrapper-wrapper">
     <div class="devsite-top-logo-row-wrapper">
       <div class="devsite-top-logo-row">
@@ -148,7 +148,7 @@
    track-name="androidDevelopers" track-metadata-position="nav"
    track-metadata-eventDetail="nav">
 
-  <img src="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+  <img src="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
 
 </a>
 
@@ -338,6 +338,8 @@
            </div>
           
 <devsite-search
+    aria-expanded="false"
+    aria-haspopup="listbox"
     enable-signin
     enable-search
     enable-suggestions
@@ -348,22 +350,28 @@
     
     
     
-    >
+    
+    
+    role="combobox">
   <form class="devsite-search-form" action="https://developer.android.com/s/results" method="GET">
     <div class="devsite-search-container">
       <div class="devsite-searchbox">
         <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
           
           aria-label="Search"
           aria-haspopup="false"
+          aria-multiline="false"
+          aria-label="Search box"
           autocomplete="off"
           class="devsite-search-field devsite-search-query"
           name="q"
           
           placeholder="Search"
-          role="combobox"
           type="text"
-          value="">
+          value=""
+          >
         <div class="devsite-search-image material-icons" aria-hidden="true"></div>
       </div>
       <button type="button"
@@ -604,6 +612,14 @@
         data-label="Lower Header"
       
         data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
       
     >
     
@@ -907,7 +923,7 @@
    track-name="androidDevelopers" track-metadata-position="nav"
    track-metadata-eventDetail="nav">
 
-  <img src="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+  <img src="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
 
 </a>
 
@@ -1595,15 +1611,14 @@
 
 
 <article class="devsite-article">
-  <article class="devsite-article-inner">
-    
-    
-    
+  
+  
+  
 
-    <div class="devsite-article-meta">
-      
-      
-      <ul class="devsite-breadcrumb-list"
+  <div class="devsite-article-meta">
+    
+    
+    <ul class="devsite-breadcrumb-list"
   
     role="navigation"
     aria-label="Breadcrumb">
@@ -1623,6 +1638,14 @@
         data-label="Breadcrumbs"
       
         data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Play"
       
     >
     
@@ -1652,6 +1675,14 @@
       
         data-value="2"
       
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
     >
     
         Resources
@@ -1662,28 +1693,28 @@
   </li>
   
 </ul>
+    
       
-        
     <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
     </devsite-page-rating>
   
+    
+  </div>
+
+  
+  
+    <h1 class="devsite-page-title">Brand guidelines</h1>
+  
+
+  <devsite-toc class="devsite-nav" devsite-toc-embedded
+               >
+  </devsite-toc>
+
+  <div class="devsite-article-body clearfix
+    ">
+
+    
       
-    </div>
-
-    
-    
-      <h1 class="devsite-page-title">Brand guidelines</h1>
-    
-
-    <devsite-toc class="devsite-nav" devsite-toc-embedded
-                 >
-    </devsite-toc>
-
-    <div class="devsite-article-body clearfix
-      ">
-
-      
-        
 
 
 <p>The &quot;Android&quot; name, the Android logo, the &quot;Google Play&quot; brand, and other Google
@@ -1826,27 +1857,26 @@ least one week.</p>
   Submit brand inquiry
 </a></p>
 
-      
-
-      
-    </div>
-
     
 
     
+  </div>
+
+  
+
+  
+    
       
-        
     <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
     </devsite-page-rating>
   
-         
-      
-      
+       
     
+    
+  
 
-    
-    
-  </article>
+  
+  
 </article>
 
 
@@ -2212,7 +2242,7 @@ least one week.</p>
        data-category="Site-Wide Custom Events"
        data-label="Footer Google Developers Link">
       <img class="devsite-footer-sites-logo"
-           src="https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android/images/lockup-developers.svg"
+           src="https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android/images/lockup-developers.svg"
            loading="lazy"
            alt="Google Developers">
     </a>
@@ -2542,7 +2572,7 @@ least one week.</p>
     <devsite-heading-link></devsite-heading-link>
     <devsite-analytics >
       
-        <script type="application/json" analytics>[{"gaid": "UA-5831155-1", "dimensions": {"dimension5": "en", "dimension11": false, "dimension6": "en", "dimension4": "Google Play", "dimension3": false, "dimension1": "Signed out"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}, {"gaid": "UA-49880327-2", "dimensions": {"dimension5": "en", "dimension11": false, "dimension6": "en", "dimension4": "Google Play", "dimension3": false, "dimension1": "Signed out"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}]</script>
+        <script type="application/json" analytics>[{"gaid": "UA-5831155-1", "dimensions": {"dimension5": "en", "dimension11": false, "dimension1": "Signed out", "dimension3": false, "dimension4": "Google Play", "dimension6": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}, {"gaid": "UA-49880327-2", "dimensions": {"dimension5": "en", "dimension11": false, "dimension1": "Signed out", "dimension3": false, "dimension4": "Google Play", "dimension6": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}]</script>
 <script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "Google Play", "scriptsafe": null, "signedIn": "False", "tenant": "android"}, "tags": ["GTM-KMSWPCJ"]}</script>
       
     </devsite-analytics>
@@ -2550,12 +2580,12 @@ least one week.</p>
       <devsite-badger></devsite-badger>
     
     
-    <script>
+    <script nonce="8XJf3HZZbNty2ShOr3eLNLp9sOMsTB">
   
   (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
     t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
     E.parentNode.insertBefore(t,E);})(window, document, 'script',
-    'https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android/js/app_loader.js', '[3,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159","https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android","https://android-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/android/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v85e39fe21f53c758adf6c791fb94a7a2182cff2705b3dc8ed7c59fc745471159/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+    'https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android/js/app_loader.js', '[3,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b","https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android","https://android-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/android/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v36e9b4a2fdc696650f09851e8c880b958655492821ded3455f80aaef87b6b52b/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
   
 </script>
   </body>

@@ -1504,15 +1504,51 @@ img.screenshot {
 </ul>
     
       
-    <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
-    </devsite-page-rating>
-  
-    
-  </div>
-
-  
-    <devsite-feedback
-  position="header"
+    <devsite-thumb-rating position="header">
+       <template class="thumb-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples/Code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+       <template class="thumb-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+       
+         
+         
+         <template class="thumb-rating-feedback">
+         <devsite-feedback
+  position="thumb-rating"
   project-name="AdWords API"
   product-id="82128"
   bucket="AdWordsAPI"
@@ -1521,7 +1557,7 @@ img.screenshot {
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
-  track-metadata-position="header"
+  track-metadata-position="thumb-rating"
   
   
     project-feedback-url="https://groups.google.com/forum/#!forum/adwords-api"
@@ -1537,11 +1573,17 @@ img.screenshot {
 
   <button>
   
-    
-    Send feedback
+    Need to tell us more?
   
   </button>
 </devsite-feedback>
+         </template>
+       
+    </devsite-thumb-rating>
+  
+    
+  </div>
+
   
   
 
@@ -1850,12 +1892,51 @@ these new terms and conditions.</p>
   
     
       
-    <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
-    </devsite-page-rating>
-  
+    <devsite-thumb-rating position="footer">
+       <template class="thumb-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples/Code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+       <template class="thumb-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
        
+         
+         
+         <template class="thumb-rating-feedback">
          <devsite-feedback
-  position="footer"
+  position="thumb-rating"
   project-name="AdWords API"
   product-id="82128"
   bucket="AdWordsAPI"
@@ -1864,7 +1945,7 @@ these new terms and conditions.</p>
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
-  track-metadata-position="footer"
+  track-metadata-position="thumb-rating"
   
   
     project-feedback-url="https://groups.google.com/forum/#!forum/adwords-api"
@@ -1880,11 +1961,14 @@ these new terms and conditions.</p>
 
   <button>
   
-    
-    Send feedback
+    Need to tell us more?
   
   </button>
 </devsite-feedback>
+         </template>
+       
+    </devsite-thumb-rating>
+  
        
     
     
@@ -2348,7 +2432,7 @@ these new terms and conditions.</p>
     <devsite-heading-link></devsite-heading-link>
     <devsite-analytics >
       
-        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension1": "Signed out", "dimension6": "en", "dimension11": false, "dimension4": "AdWords API", "dimension5": "en", "dimension3": false, "dimension8": null}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}, {"gaid": "UA-54828107-1", "dimensions": {"dimension1": "Signed out", "dimension6": "en", "dimension11": false, "dimension4": "AdWords API", "dimension5": "en", "dimension3": false, "dimension8": null}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}]</script>
+        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension11": false, "dimension1": "Signed out", "dimension4": "AdWords API", "dimension3": false, "dimension8": null, "dimension6": "en", "dimension5": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}, {"gaid": "UA-54828107-1", "dimensions": {"dimension11": false, "dimension1": "Signed out", "dimension4": "AdWords API", "dimension3": false, "dimension8": null, "dimension6": "en", "dimension5": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}]</script>
 <script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "AdWords API", "scriptsafe": null, "signedIn": "False", "tenant": "developers"}}</script>
       
     </devsite-analytics>
@@ -2356,7 +2440,7 @@ these new terms and conditions.</p>
       <devsite-badger></devsite-badger>
     
     
-    <script nonce="50k7nwp8FGOtW8/aIejMcQPM4xeeEx">
+    <script nonce="ZwStjGgg3zxEXqoe4SZ66Q2WgcaIhB">
   
   (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
     t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];

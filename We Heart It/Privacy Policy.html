@@ -3,7 +3,7 @@
 
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# weheartit-tl: http://ogp.me/ns/fb/weheartit-tl#">
     <meta charset="UTF-8">
-<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"5b52aba749","applicationID":"126300297","transactionName":"JQxbTEJfDg5TQxZEFQcXXFtvQAMFU0IWRxMPFVRbSQ==","queueTime":6,"applicationTime":76,"agent":""}</script>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"5b52aba749","applicationID":"126300297","transactionName":"JQxbTEJfDg5TQxZEFQcXXFtvQAMFU0IWRxMPFVRbSQ==","queueTime":2,"applicationTime":51,"agent":""}</script>
 <script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"5b52aba749",applicationID:"126300297"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
 
 <title>Privacy Policy - We Heart It</title>
@@ -52,7 +52,7 @@
 
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="un14mpGkPtAwGgPO9ApIU+0TsZbHKOm+hQb/fmJjCQBoXzk8zEsGgXL1tX3IVA77yLgWbIhq7wnCSWca8+0cyw==" />
+<meta name="csrf-token" content="rc/qDzfPu3dBTowvK88vJ+avQyz7L4VLxXEHXnu1Cbl+DEQ2zhZx9KVO9vW/QLeIecIY5+X6ioBj/k2d7Dm2zg==" />
 
 <link rel="stylesheet" media="screen" href="https://assets.whicdn.com/assets/application-8c25f6c94e26756cee890ddf21918d2cc745e3241c75be0ba1c287c6e5ea1c57.css" />
 
@@ -457,9 +457,6 @@
       <a href="https://weheartit.com/about/privacy-policy">Privacy Policy</a>
     </div>
     <div class="list-item list-item-small ">
-      <a href="https://weheartit.com/about/ca-privacy">California Privacy Rights</a>
-    </div>
-    <div class="list-item list-item-small ">
       <a href="/contact/copyright">Claim Copyright</a>
     </div>
       <div class="list-item list-item-small">
@@ -476,149 +473,344 @@
 
   <!-- main -->
   <div class="cel span-9 span-xs-12 span-sm-8">
+    <h2 class="h3">We Heart It Privacy Policy</h2>
 
-    <div class="panel panel-large">
-      <h4 class="h4">Table of contents:</h4>
-      <ul class="list-spaced">
-        <li><a href="#I">I. Privacy Policy</a></li>
-        <li><a href="#II">II. Our commitment to your privacy</a></li>
-        <li><a href="#III">III. Information we collect</a></li>
-        <li><a href="#IV">IV. How we collect information about you</a></li>
-        <li><a href="#V">V. How we use information collected from you</a></li>
-        <li><a href="#VI">VI. Sharing your information</a></li>
-        <li><a href="#VII">VII. How to access and update your information</a></li>
-        <li><a href="#VIII">VIII. Links to third party web sites</a></li>
-        <li><a href="#IX">IX. Our policy towards children</a></li>
-        <li><a href="#X">X. Security of your information</a></li>
-        <li><a href="#XI">XI. Changes to this policy</a></li>
-      </ul>
-    </div>
+<p><em>Date of Last Revision and Effective Date:&nbsp;10.19.2020</em></p>
 
-    <hr id="content">
-    <br>
+<p>This Privacy Policy explains how your Personal Information is collected, use, and shared and the rights you have with respect to your Personal Information when you use the We Heart It website (the <strong>&ldquo;Site&rdquo;</strong>) and related We Heart It mobile application(s) and services provided by Super Basic, LLC and/or its legal affiliates (<strong>&ldquo;We Heart It&rdquo;</strong>, <strong>&ldquo;we&rdquo;</strong>,<strong> &ldquo;us&rdquo;</strong>, or <strong>&ldquo;our&rdquo;</strong>) (collectively, the <strong>&ldquo;Services&rdquo;)</strong>.</p>
+<p>This Privacy Policy applies to information that you provide to us (or permit third parties to provide us) or that we collect through the Services. This Privacy Policy will be updated from time to time in the future at the sole discretion of We Heart It. We will notify you of any material changes by posting the new Privacy Policy on the Services. We Heart It recommends that you consult this policy periodically for any changes.</p>
+<p>By using our Services you are consenting to our Processing of your information as described in this Privacy Policy now and as revised in the future by We Heart It. <strong>&ldquo;Processing&rdquo;</strong> means any operation or set of operations that are performed on Personal Information or on sets of Personal Information, whether or not by automated means. If you do not agree to the terms of this Privacy Policy, please do not use the Services.</p>
 
-    <h2 class="h2" id="I">I. Privacy Policy</h2>
-    <p><strong>Effective date:</strong> This Privacy Policy is effective and was last updated as of April 20, 2018</p>
+<div class="panel panel-large push-down-2em">
+  <h4 class="h4">What This Policy Contains</h4>
+  <p><strong><a href="#section-1">I. How We Collect and Use Your Personal Information</a></strong></p>
+  <p><strong><a href="#section-2">II. Legal Bases for Use of Your Personal Information</a></strong></p>
+  <p><strong><a href="#section-3">III. Information Sharing and Disclosure</a></strong></p>
+  <p><strong><a href="#section-4">IV. How Long We Store Your Information</a></strong></p>
+  <p><strong><a href="#section-5">V. Your Rights &amp; Preferences</a></strong></p>
+  <p><strong><a href="#section-6">VI. Security</a></strong></p>
+  <p><strong><a href="#section-7">VII. International Transfer</a></strong></p>
+  <p><strong><a href="#section-8">VIII. Our Policy Toward Children</a></strong></p>
+  <p><strong><a href="#section-9">IX. Phishing</a></strong></p>
+  <p><strong><a href="#section-10">X. Links to Other Sites</a></strong></p>
+  <p><strong><a href="#section-11">XI. Complaints</a></strong></p>
+  <p><strong><a href="#section-12">XII. Contacting Us</a></strong></p>
+</div>
 
-    <br><br>
-    <h3 class="h3" id="II">II. Our commitment to your privacy</h3>
-    <p>A. Thank you for visiting the We Heart It website, located at <a href="https://weheartit.com">weheartit.com</a> (the "Website") and operated by Super Basic, LLC. ("we" or "us" or "our"). The privacy of our visitors and users (collectively "you" or "your") is very important to us.  This Privacy Policy describes:</p>
-    <ol class="list-spaced">
-      <li>How and why we collect certain information from you via the Website;</li>
-      <li>How we use and with whom we share such information;</li>
-      <li>How you can access and update such information; and</li>
-      <li>The choices you can make about how we collect, use and share your information.</li>
-    </ol>
-    <p>B. If you have any questions regarding this Privacy Policy or our information collection and use practices, please contact us using the information in the "Contact Us" section below.</p>
 
-    <br><br>
-    <h3 class="h3" id="III">III. Information we collect</h3>
-    <p>A. <strong>Registration Information</strong> - In order to register for a Website Account, you must provide the following information:</p>
-    <ol class="list-spaced">
-      <li>Your email address (which must be a functioning email address)</li>
-      <li>A password</li>
-      <li>A username</li>
-      <li>A display name</li>
-    </ol>
-    <p>Of these categories of information, we will not share or publicly expose your email address or site password.</p>
-    <p>B. <strong>Additional Information</strong> - You may provide us with additional information to make public, such as:</p>
-    <ol class="list-spaced">
-      <li>A short biography </li>
-      <li>A photograph that will appear as your profile picture</li>
-      <li>Your location (the city and country in which you live)</li>
-      <li>A link you wish to appear on your profile, such as your blog or personal website</li>
-    </ol>
-    <p>Providing any or all of this information is entirely optional.</p>
-    <p>C. <strong>Non-Personal Information</strong> - We also collect aggregate, non-personally identifiable information about you and your use of the Website, as described in more detail below, including by using "cookies," web beacons, local shared objects, or other types of tracking technology.</p>
+<p id="section-1"><strong>I. How We Collect and Use Your Personal Information</strong></p>
 
-    <br><br>
-    <h3 class="h3" id="IV">IV. How we collect information about you</h3>
-    <p>We may collect Personal Information and Non-Personal Information about you in any one or more of the following ways:</p>
-    <p>A. <strong>Registering Your Account & Creating Your Heart</strong></p>
-    <p>In order for us to provide you with the ability to collect and post images to a personalized profile page (your <strong>"Heart"</strong>) on the Website, you must first create a user account our Website (<strong>"Account"</strong>). During registration, you are required to provide an email address and to create a password, a User name and a display name (your <strong>"Registration Information"</strong>). </p>
-    <p>After you create an account, we give you the opportunity to provide additional information, such as a short biography, a photograph that will serve as a public profile picture, the city and country in which you live and a link to a website (your <strong>"Optional Profile Information"</strong>, and together with your Registration Information, your <strong>"Personal Information"</strong>). </p>
-    <p>Your Heart is visible to any site visitor and to other users of the site, and will show your display name and any Optional Profile Information you have provided.  Your email address will never be displayed.</p>
-    <p>B. <strong>Public display and site communications features</strong></p>
-    <p>The Website runs a "parade" of randomly selected clickable photographs posted by users on its home page. If a site visitor clicks on one of the photographs in the Parade, he or she will be able to view that user’s Heart, including their display name and any Optional Profile Information the user has chosen to provide.  A visitor to We Heart It will be able to view your Heart, but will not be able to indicate their approval of the content you have posted (<strong>"Hearting"</strong>) unless he or she registers an account and creates a Heart of their own.</p>
-    <p>C. <strong>Website interactions</strong></p>
-    <p>You may be able to take part in certain activities on our website that give you the opportunity to communicate or share information not just with us, but also with other users of our Service. These include:</p>
-    <ul class="list-spaced">
-      <li>Creating your Heart</li>
-      <li>Logging in and out of the Website</li>
-      <li>Posting images</li>
-      <li>Hearting images posted by other users</li>
-      <li>Choosing to follow another user's Heart</li>
-      <li>Adding tags to images</li>
-      <li>Sharing We Heart It's pages on other social networks</li>
-    </ul>
-    <p>D. <strong>Cookies and automated non personal information collection</strong></p>
-    <p>We use a technology referred to as "cookies" (or other similar technology), which are pieces of data on your computer tied to information about you which recognize you as a return user of the Website and help to provide a more personalized experience.</p>
-    <p>Like most standard website servers, we collect certain types of technical "Non Personal Information", including internet protocol (IP) addresses, browser types, the referring domain, pages visited, search terms internet service providers (ISPs), and the number of clicks. We may also use web beacons, which allow us to know if a certain page was visited, an email was opened, or if ad banners on our website and other sites were effective.</p>
-    <p>Note that some Advertisements displayed on our Website are delivered through Tribal Fusion, a third party advertising network.  When you click on one of these advertisements, Tribal Fusion collects “click stream data” related to your visit to that website.  Click stream data is anonymous and can include information such as your IP address, Web pages viewed, the date and time at which those pages were viewed and interaction with content and advertisements on those Web pages. Technologies used to collect this click stream data includes cookies and Web beacons. Tribal Fusion cookies are programmed to expire in six months.</p>
-    <p>You may opt-out of receiving Cookies from third party advertising networks such as Tribal Fusion through a link to the Network Advertising Initiatives cookie opt-out page, which can be found <a href="http://networkadvertising.org/managing/opt_out.asp">here</a>. You can also find out how to make these changes to your browser <a href="http://www.youronlinechoices.com/five-top-tips">here</a>. If you wish to know more about online behavioral advertising, and how to opt-out of it, please visit <a href="http://www.youronlinechoices.co.uk">http://www.youronlinechoices.co.uk</a>.</p>
-    <p>E. <strong>Third Party Advertisers</strong></p>
-    <p>We allow third-party companies to serve ads and/or collect certain anonymous information when you visit our website. These companies may use non-personally identifiable information (e.g., click stream information, browser type, time and date, subject of advertisements clicked or scrolled over) during your visits to this and other websites in order to provide advertisements about goods and services likely to be of greater interest to you. Please note that click stream data is anonymous and can include information such as your IP address, web pages viewed, the date and time at which those pages were viewed and interaction with content and advertisements on those web pages. Technologies used to collect this click stream data include cookies and Web beacons.</p>
-    <p>You may opt-out of receiving Cookies from third party advertising networks through a link to the Network Advertising Initiatives cookie opt-out page, which can be found here. You can also find out how to make these changes to your browser here. If you wish to know more about online behavioral advertising, and how to opt-out of it, please visit <a href="www.youronlinechoices.co.uk">www.youronlinechoices.co.uk</a>.</p>
+<p><strong>Personal Information We Collect and Sources of Personal Information</strong></p>
+<p>As you use the Services, we may collect or you may provide information that identifies, relates to, or directly or indirectly describes you or your household and devices (<strong>&ldquo;Personal Information&rdquo;</strong>). Personal Information includes data such as your name and email address, but is not limited to this information. For example, when you contact our customer support services, this may include a record of communication correspondence and associated contact information.</p>
+<p><strong><em>Categories of Personal Information That You Provide or Authorize Us to Collect</em></strong></p>
+<p>We collect the following categories of Personal Information you provide when you use the Services:</p>
+<p><em>Social Networking Details</em>. Where applicable, you may sign up to use the Services directly via the Services or via certain third-party social networking sites (each, a <strong>&ldquo;Social Networking Site&rdquo;</strong>). If you decide to create an account to use the Services via a Social Networking Site, we may extract the Personal Information you have provided to such Social Networking Site (such as your &ldquo;real&rdquo; name, email address and other information you make available via the Social Networking Site) from the account you have with such Social Networking Site and use that information to connect to our Services; the information we extract may depend on the privacy settings you have with the Social Networking Site.</p>
+<p><em>Purchase Details</em>. If you choose to purchase any virtual goods as part of your use of the Services, to the extent available, we or our third party service providers may collect Personal Information from you, including financial information related to your method of payment, to facilitate your payment for such virtual goods.</p>
+<p><em>Other Information You Provide When You Use the Services</em>. We collect information that you provide in connection with your registration, such as profile details and other personal identifiers, as well as general location information you may choose to provide. We also collect information related to your use of the Services, including things you upload to the Services, records of your interaction with the Services, such as tagging a photo, Hearting content, or editing a collection, as well as individual preferences and certain online identifiers and other internet or electronic network activity information about your computer or mobile device, such as operating system, software version and unique advertising identifier.&nbsp;</p>
+<p><em>Device Information, Collected with Your Consent</em>. With your permission and depending on the requirements of the specific Services you are using, we may access additional information from your device, such as contacts access (to enable inviting and finding friends) or photo library access (to allow for profile picture and image uploads). You must grant the app or service permission to enable these features.</p>
+<p>Certain information we collect may be Personal Information depending on how it is combined with other identifiers (for example, your IP address when combined with other data that enables us to identify you or your household). The same pieces of information may not be Personal Information when taken alone or combined only with non-identifying information.</p>
+<p><strong><em>Information We Collect Automatically</em></strong></p>
+<p>Our Services may require additional information or permissions from your device in order to provide certain functions, including monitoring and analyzing use of the Services, maintaining and improving the Services, and serving advertisements and other information that may interest you.</p>
+<p><em>Log Data</em>. When you use the Services, whether as a registered user or a non-registered user, for example in accessing our Services through a Social Networking Site, (any of these, a <strong>&ldquo;We Heart It User&rdquo;</strong>), our servers automatically record information that your browser sends whenever you visit a website or application (<strong>&ldquo;Log Data&rdquo;</strong>). This Log Data may include information such as:</p>
+<ul>
+<li>your computer&rsquo;s Internet Protocol (<strong>&ldquo;IP&rdquo;</strong>) address</li>
+<li>the browser type or the website or application you were visiting before you came to the Services</li>
+<li>pages of the websites or applications involved in the Service that you visit and the time spent on those pages</li>
+<li>information you search for</li>
+<li>other details about your interaction with our Services, such as access times and dates, your device&rsquo;s operating system, software version, unique advertising identifier, and other identifiers and statistics</li>
+</ul>
+<p>We use this information to monitor and analyze use of the Services and for the Service&rsquo;s technical administration, to increase the functionality and user-friendliness of our Services, and to better tailor the Services to our visitors&rsquo; needs. For example, some of this information is collected so that when you use our Services again, it will recognize you and remember your preferences. We also use this information to verify that visitors to the Services meet the criteria required to process their requests. We may aggregate, analyze and evaluate Log Data, and such aggregate data is not treated as Personal Information.</p>
+<p><em>Information Collected from Cookies and Similar Technology</em>. Like many websites and applications, our Service uses &ldquo;cookies&rdquo; and mobile advertising identifiers to collect information. A cookie is a small data file that we transfer to your device for record-keeping purposes. An advertising identifier is an anonymous, resettable ID associated with your mobile device that can be managed in your device settings.</p>
+<p><strong>How We Use Your Personal Information</strong></p>
+<p>We may use your Personal Information to provide products and services and to support our business functions. For example, we may use this information for the following purposes:</p>
+<p><strong><em>Provide, Improve, and Develop the Services.</em></strong></p>
+<ul>
+<li>Provide the Services to you</li>
+<li>Display content and information (including Personal Information) you choose to make public on the Services</li>
+<li>Recognize you when you return to our Services, save your registration ID and login password for future logins, and store information about your use of the Services</li>
+<li>Provide customer service</li>
+<li>Operate, protect, improve, and optimize the Services and the user experience, such as by performing analytics and conducting research</li>
+<li>Communicate with you and send you information by email, postal mail, telephone, text message, or other means about our products, services, contests, support messages, updates, security alerts, and account notifications. If you decide at any time that you no longer wish to receive such communications from us, please follow the unsubscribe instructions provided in any of the communications or update your &ldquo;user preferences&rdquo; information. (See &ldquo;<strong>Your Rights</strong>,&rdquo; below.)</li>
+<li>Make your user experience easier, more personalized, more enjoyable and more efficient</li>
+<li>Address problems with and improve our products, brands, services and technologies, and develop new products and services</li>
+<li>Enable certain features of the Services in order to better understand how you interact with the Services and monitor aggregate usage.</li>
+<li>Enable you to share information to Social Networking Sites</li>
+<li>Administer and fulfill contests and promotions</li>
+<li>Help us learn more about your product preferences</li>
+<li>Send you push notifications with app-related information when you give us permission</li>
+<li>Fulfill your purchase requests and process refunds</li>
+<li>Fulfill a contract we have with you</li>
+<li>Operate, protect, improve, and optimize the Services and experience, and personalize and customize your experience. We personalize the Services based on how you use, interact, and share information with the Services.</li>
+</ul>
+<p>We process this information given our legitimate interest in improving the Services and our users&rsquo; experience, and where it is necessary, for the adequate performance of the contract with you.</p>
+<p><strong><em>Create and Maintain a Trusted and Safe Environment.</em></strong></p>
+<ul>
+<li>Prevent, detect, mitigate and investigate fraud, security breaches and activities that are or potentially may be prohibited or illegal</li>
+<li>Conduct security investigations and risk assessments</li>
+<li>Verify or authenticate information</li>
+<li>As we believe to be required or appropriate to protect the rights, property, safety and security of our Services and our employees, customers and others</li>
+<li>As we believe to be required or appropriate under applicable law, to respond to requests from government authorities and to comply with legal process, investigations, regulatory or governmental enquiries or for other legal or regulatory purposes</li>
+<li>Comply with our legal obligations</li>
+<li>Resolve any disputes with any of our users and enforce our agreements with third parties</li>
+<li>Enforce our Terms of Service or other policies</li>
+</ul>
+<p>We process this information given our legitimate interest in providing and protecting the Services, to measure the adequate performance of our contract with you, and to comply with applicable laws.</p>
+<p><strong><em>Provide, Personalize, Measure, and Improve our Advertising and Marketing.</em></strong></p>
+<ul>
+<li>Send you promotional messages we believe may be of interest to you, including marketing, advertising, and other information that may be of interest to you based on your preferences (including information about We Heart It or partner campaigns and services).</li>
+<li>Personalize, measure, and improve our advertising.</li>
+<li>Administer referral programs, rewards, surveys, sweepstakes, contests, or other promotional activities or events sponsored or managed by We Heart It or its third party partners.</li>
+<li>Gather and infer information about your characteristics and preferences (based on the information you provide to us, your interactions with the Services, information obtained from third parties, and your search and booking history) so that we can send you promotional messages, marketing, advertising and other information that we think may be of interest to you.</li>
+</ul>
+<p>We will process your Personal Information for the purposes listed in this section given our legitimate interest in undertaking marketing activities to offer you products or services that may be of interest.</p>
+<p><strong><em>Other Purposes.</em></strong></p>
+<ul>
+<li>When you consent to it</li>
+<li>When it is necessary to protect your vital interests or that of another person</li>
+<li>When it is necessary to carry out your instructions</li>
+<li>When it is necessary for the performance of a task carried out in the public interest</li>
+<li>If there is a sale of the assets of We Heart It or corporate restructuring, or as a result of a change of control of We Heart It or one of its group companies, or in preparation of any of these events. Any third party to which We Heart It transfers or sells We Heart It&rsquo;s assets will have the right to continue to use the Personal Information and other information that you provide to us in the manner set out in this Privacy Policy.</li>
+<li>When it is in our legitimate interests. Legitimate interests are our business or commercial reasons for using your data, such as (i) keeping our records up to date (ii) providing the Services to you; (iii) maintaining or administering the Services (iv) performing business analyses or for other internal purposes to improve the quality of our business and the Services we offer; (v) prevention of fraud and financial crime to protect the public; (vi) communicating with you concerning programs or services consistent with our obligations to provide those services or otherwise; and (vii) participating in litigation, investigations, regulatory or governmental enquiries or for other legal or regulatory purposes involving our customers who use or have used our Services or other third parties. We will not unfairly place our legitimate interests above what is best for you.</li>
+</ul>
 
-    <br><br>
-    <h3 class="h3" id="V">V. How we use information collected from you</h3>
-    <p>We may use Personal Information and Non-Personal Information collected from you in any one or more of the following ways:</p>
-    <p>A. <strong>How We Use Your Personal Information</strong> – the Personal Information we collect may be used as follows:</p>
-    <ol class="list-spaced">
-      <li>To register and service your Account;</li>
-      <li>For our internal records, tracking and business purposes;</li>
-      <li>In order to contact you to respond to your questions or requests or to provide you with technical support;</li>
-      <li>To provide you with information regarding changes to the Website which may affect your Account, your use of the Website, and/or the products and services available through the Website; </li>
-      <li>To customize advertising that may be visible to you on the Website; and</li>
-    </ol>
-    <p>B. <strong>How We Use Your Non-Personal Information</strong> - Non-Personal Information collected from you is used for various purposes, such as: </p>
-    <ol class="list-spaced">
-      <li>To improve our products and services; </li>
-      <li>To customize the user experience of the Website;</li>
-      <li>To administer the Website;</li>
-      <li>To analyze trends, track user movement and gather statistical information for aggregate use; and</li>
-      <li>To customize advertising that may be visible to you on the Website.</li>
-    </ol>
+<p id="section-2"><strong>II. Legal Bases for Use of Your Personal Information</strong></p>
 
-    <br><br>
-    <h3 class="h3" id="VI">VI. Sharing your information</h3>
-    <p>A. The information included on your Heart will be visible to all users and all visitors to the Website.  In addition, your information may also be shared as follows:</p>
-    <ol class="list-spaced">
-      <li>Safety, Security and Compliance with Law: We may disclose any information, including Personal Information, we deem necessary to comply with any applicable law, regulation, legal process or governmental request, or to enforce our rights or to protect the safety and security of our Website or other users.</li>
-      <li>Business Transfers:  In the event We Heart It undergoes a business transition, such as a merger, acquisition by another company, or sale of all or a portion of its assets, we may transfer your Personal Information to the successor organization in such transaction. If material changes to We Heart It's privacy practices will occur as a result of the business transition, We Heart It will attempt to notify you via email and will post a notice on the Website alerting you to the business transition prior to transferring your Personal Information so that we can elect whether to delete your account.</li>
-      <li>To Service Providers Performing Services on Our Behalf:  We may contract with third party companies to perform services on our behalf, including marketing assistance, e-mail delivery, hosting services, customer service, and data analysis.  We require any third party service providers to maintain the confidentiality of the information disclosed to them and are not permitted to use your Personal Information for any purpose other than to provide services to We Heart It.</li>
-    </ol>
+<p>Other than as described above, the legal bases for using your Personal Information as set forth in this Privacy Policy are as follows:</p>
+<p>(a) our use of your Personal Information is necessary to perform our obligations under any contract with you (for example, to comply with the Terms of Service); or</p>
+<p>(b) you have provided us with your consent to do so, including with respect to the advertising and marketing materials delivered via our Services that are tailored to you and your preferences.</p>
+<p>(c) where (a) or (b) does not apply, our use of your Personal Information is necessary for our legitimate interests or the legitimate interests of others. Our legitimate interests are to:</p>
+<p>(i) develop and improve our business, including funding our business by use of advertising revenues;</p>
+<p>(ii) operate, maintain and improve the Services and our marketing optimization efforts;</p>
+<p>(iii) understand the way in which the Services are used; and</p>
+<p>(iv) for internal administrative purposes.</p>
 
-    <br><br>
-    <h3 class="h3" id="VII">VII. How to access and update your information</h3>
-    <p>A. You can access and update the information that you have provided to We Heart It as follows:</p>
-    <ol class="list-spaced">
-      <li>You may contact us at <a href="mailto:legal@weheartit.com">legal@weheartit.com</a> and request to review, amend or delete your Personal Information collected by us, and/or request us to cease collecting Personal Information from you in the future.  </li>
-      <li>If you have created an Account, you may review and make changes to certain of your Personal Information and Non-Personal Information by logging into your Account and updating your Account profile.</li>
-    </ol>
+<p id="section-3"><strong>III. Information Sharing and Disclosure</strong></p>
 
-    <br><br>
-    <h3 class="h3" id="VIII">VIII. Links to third party web sites</h3>
-    <p>A. We are not responsible for the practices employed by websites linked to or from the Website nor the information or content contained therein.  Often links to other websites are provided solely as pointers to information on topics that may be useful or interesting to our users, or provided by other users to give you more information about themselves.  Please remember that when you navigate away from the Website to another website, our Privacy Policy is no longer in effect.  By your browsing and interaction on any other website, including websites which have a link on our Website, is subject to that website’s own rules and policies.  Please read over those rules and policies before proceeding.</p>
+<p><strong><em>We Heart It&nbsp;Registered Users</em>. </strong></p>
+<p>If you register through the Services and submit your Personal Information to create a profile or login credentials for We Heart It, other registered users may be able to see your Username and other Personal Information you choose to include in your profile or otherwise post or share.</p>
+<p><strong><em>Third-Party Advertisers.</em></strong></p>
+<p><em>Aggregate Information, Identifiers, Personal Information, and Other Data Shared with Advertisers</em>. We may share aggregated information that does not include Personal Information with third parties. We may also disclose device identifiers, advertising identifiers, and Log Data with third parties. This information is used for industry analysis, demographic profiling and other purposes</p>
+<p>For example, we may share the advertising identifier associated with your device (such as the Apple IDFA and Android Advertising ID) with advertisers. An advertising identifier is an alphanumeric string that can be used to identify your device so that advertisers can serve relevant ads to you. We use the Apple IDFA only as permitted by Apple, and we use the Android Advertising ID only as permitted by Google. You may limit the use of or reset your advertising device ID using the privacy settings on your mobile device; in some instances, you may need to reset the operating system to reset the advertising device ID. We do not associate any of your Personal Information with your advertising device ID without your consent (which may be given by you in our terms of use for an Application).</p>
+<p>In addition to device and advertising identifiers, we may share Log Data and aggregated information with third-party advertising and technology companies. The data we share with them may include data about your device, location, and use of We Heart It, including IP address, usage data and technical information, purchase data, and information you provide to us when using We Heart It. Such information may be used to send you personalized advertisements for products and services that are relevant to your interests.</p>
+<p><em>Personalized Advertising on the Services and on Other Online Services. </em>In some cases, these third parties will also use the data that they collect for their own purposes, such as aggregating your data with other data they hold in order to inform advertising related services provided to other clients. These third parties may place a cookie on your browser, or use a web beacon, to collect information about your use of our Services so that they can provide advertising about products and services tailored to your interests.&nbsp;That advertising may appear across the Services, or on other websites, apps and services.</p>
+<p><em>Opting Out of Personalized Ads on Browsers and on Certain Devices. </em>You may be able to instruct your browser, by changing its options, to stop accepting cookies or to prompt you before accepting a cookie from the websites you visit. If you do not accept cookies, however, you may not&nbsp;be able to use all portions or all functionality of our Services, and advertising will no longer be targeted to your interests.</p>
+<p>On mobile you can reset your settings by referring to your devices settings and instructions or by taking the following steps:</p>
+<ul>
+<li>For iOS:&nbsp;https://support.apple.com/en-us/HT202074</li>
+<li>For Android:&nbsp;https://support.google.com/ads/answer/2662922?hl=en).</li>
+</ul>
+<p>For advertisers or advertising networks who are members of the Network Advertising Initiative or who subscribe to the Digital Advertising Alliance&rsquo;s Self-Regulatory Principles for Online Behavioral Advertising, you may be able to opt out of receiving personalized advertisements by visiting the opt-out options of each of those organizations. Links to those sites are here:</p>
+<p>Network Advertising Initiative:</p>
+<ul>
+<ul>
+<ul>
+<ul>
+<li>Browser Opt-Out: http://www.networkadvertising.org/choices/&nbsp;</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<p>Digital Advertising Alliance:</p>
+<ul>
+<ul>
+<ul>
+<ul>
+<li>Browser Opt-Out: http://www.aboutads.info/choices/&nbsp;</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<p>Both Network Advertising Initiative and Digital Advertising Alliance</p>
+<ul>
+<ul>
+<ul>
+<ul>
+<li>App Opt-Out: http://youradchoices.com/appchoices</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<p>When you opt out of personalized advertising, you may continue to see online advertising on our Services and/or our ads on other website and online services.</p>
+<p>A list of the third-party advertising and technology companies that we work with is set forth below:</p>
+<ul>
+<li>AdAdapted, Inc. &ndash;&nbsp;<a href="https://info.adadapted.com/privacy-policy">Privacy Policy</a></li>
+<li>AdButler (SparkLIT Networks) &ndash;&nbsp;<a href="https://www.adbutler.com/agreements.spark?agreement=privacy">Privacy Policy</a></li>
+<li>AdColony, Inc. &ndash;&nbsp;<a href="https://www.adcolony.com/privacy-policy/">Privacy Policy</a></li>
+<li>Admob (Google LLC) &ndash;&nbsp;<a href="https://support.google.com/admob/answer/48182">Privacy Policy</a></li>
+<li>Adview Technology &ndash;&nbsp;<a href="https://www.adview.cn/web/overseas/policy/privacy">Privacy Policy</a></li>
+<li>Aerserv LLC &ndash;&nbsp;<a href="https://www.aerserv.com/privacy-policy/">Privacy Policy</a></li>
+<li>Amazon Services International, Inc. &ndash;&nbsp;<a href="https://developer.amazon.com/support/legal/mobileads/terms-and-agreements">Privacy Policy</a></li>
+<li>AppGeneration &ndash;Software Technologies, Lda &ndash;&nbsp;<a href="http://www.appgeneration.com/privacy.html">Privacy Policy</a></li>
+<li>AppLovin Corporation &ndash;&nbsp;<a href="https://www.applovin.com/privacy/">Privacy Policy</a></li>
+<li>Appnexus Inc. &ndash;&nbsp;<a href="https://www.appnexus.com/platform-privacy-policy">Privacy Policy</a></li>
+<li>AppoDeal, Inc. &ndash;&nbsp;<a href="https://www.appodeal.com/privacy-policy">Privacy Policy</a></li>
+<li>Avocarrot (Glispa GmbH) &ndash;&nbsp;<a href="https://www.glispa.com/privacy-policy/">Privacy Policy</a></li>
+<li>bRealTime (TAM) / EMX (EMX Digital LLC) &ndash;&nbsp;<a href="http://www.brealtime.com/privacy-policy/">Privacy Policy</a></li>
+<li>Chartboost, Inc. &ndash;&nbsp;<a href="https://answers.chartboost.com/en-us/articles/200780269">Privacy Policy</a></li>
+<li>District M (A9/TAM) &ndash;&nbsp;<a href="https://www.districtm.net/platforms-data-privacy-policy/">Privacy Policy</a></li>
+<li>EMX Digital, Inc. &ndash; <a href="https://emxdigital.com/privacy/">Privacy Policy</a></li>
+<li>Facebook, Inc. &ndash;&nbsp;<a href="https://www.facebook.com/ads/manage/audience_network/publisher_tos/">Privacy Policy</a></li>
+<li>Fyber N.V &ndash; <a href="https://www.fyber.com/website-privacy-policy/">Privacy Policy</a></li>
+<li>Greystripe / Conversant (Conversant LLC) &ndash;&nbsp;<a href="https://www.conversantmedia.com/legal/privacy">Privacy Policy</a></li>
+<li>Index Exchange, Inc. &ndash;&nbsp;<a href="http://www.indexexchange.com/privacy/">Privacy Policy</a></li>
+<li>Inmobi Pte Ltd &ndash;&nbsp;<a href="https://www.inmobi.com/privacy-policy/">Privacy Policy</a></li>
+<li>ironSource Mobile Ltd. &ndash;&nbsp;<a href="https://developers.ironsrc.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/">Privacy Policy</a></li>
+<li>Kiip, Inc. &ndash;&nbsp;<a href="https://app.kiip.me/privacy">Privacy Policy</a></li>
+<li>Liftoff Mobile, Inc. &ndash; <a href="https://liftoff.io/privacy-policy/">Privacy Policy</a></li>
+<li>LiveRamp &ndash;&nbsp;<a href="https://liveramp.com/privacy/">Privacy Policy</a></li>
+<li>LiveIntent &ndash; <a href="https://www.liveintent.com/services-privacy-policy/">Privacy Policy</a></li>
+<li>LoopMe Ltd. &ndash;&nbsp;<a href="https://loopme.com/privacy/">Privacy Policy</a></li>
+<li>Mobfox &ndash;&nbsp;<a href="https://www.mobfox.com/privacy-policy/">Privacy Policy</a></li>
+<li>MobileFuse, LLC &ndash;&nbsp;<a href="https://mobilefuse.com/privacy-policy/">Privacy Policy</a></li>
+<li>Mopub Inc. &ndash;&nbsp;<a href="https://www.mopub.com/legal/privacy/">Privacy Policy</a></li>
+<li>OpenX Software Ltd. &ndash;&nbsp;<a href="https://www.openx.com/legal/privacy-policy/">Privacy Policy</a></li>
+<li>Outbrain Inc. &ndash; <a href="https://www.outbrain.com/legal/privacy#privacy-policy">Privacy Policy</a></li>
+<li>PubMatic, Inc. &ndash;&nbsp;<a href="https://pubmatic.com/legal/privacy-policy/">Privacy Policy</a></li>
+<li>PubNative GmbH &ndash;&nbsp;<a href="https://pubnative.net/privacy-policy/">Privacy Policy</a></li>
+<li>Rubicon Project, Inc. &ndash;&nbsp;<a href="https://rubiconproject.com/privacy-policy/">Privacy Policy</a></li>
+<li>Sharethrough, Inc. &ndash;&nbsp;<a href="https://platform-cdn.sharethrough.com/privacy-policy">Privacy Policy</a></li>
+<li>Shop Style&ndash; <a href="https://www.shopstyle.com/privacy">Privacy Policy</a></li>
+<li>Smaato, Inc. &ndash;&nbsp;<a href="https://www.smaato.com/privacy/">Privacy Policy</a></li>
+<li>SmartFox &ndash;&nbsp;<a href="https://www.smartfoxserver.com/privacy">Privacy Policy</a></li>
+<li>Snap Inc. &ndash; <a href="https://www.snap.com/en-US/privacy/privacy-policy">Privacy Policy</a></li>
+<li>Sonobi, Inc. &ndash;&nbsp;<a href="http://sonobi.com/privacy-policy/">Privacy Policy</a></li>
+<li>Sovrn Holdings, Inc. &ndash;&nbsp;<a href="https://www.sovrn.com/privacy-policy/">Privacy Policy</a></li>
+<li>StartApp Inc. &ndash;&nbsp;<a href="https://www.startapp.com/policy/privacy-policy/">Privacy Policy</a></li>
+<li>Tapdaq Limited &ndash;&nbsp;<a href="https://tapdaq.com/privacy-policy">Privacy Policy</a></li>
+<li>TappX &ndash;&nbsp;<a href="https://www.tappx.com/en/privacy-policy/">Privacy Policy</a></li>
+<li>TripleLift, Inc. &ndash;&nbsp;<a href="https://triplelift.com/privacy/">Privacy Policy</a></li>
+<li>Unity Ads (Unity Technologies) &ndash;&nbsp;<a href="https://unity3d.com/legal/privacy-policy">Privacy Policy</a></li>
+<li>Unruly &ndash;&nbsp;<a href="https://unruly.co/privacy/">Privacy Policy</a></li>
+<li>Verve Wireless, Inc. &ndash;&nbsp;<a href="https://www.verve.com/privacy-policy/">Privacy Policy</a></li>
+<li>Verizon Media (Oath) &ndash; <a href="https://www.verizonmedia.com/policies/us/en/verizonmedia/privacy/index.html">Privacy Policy</a></li>
+<li>VigLink &ndash;&nbsp;<a href="https://www.viglink.com/legal/privacy/">Privacy Policy</a></li>
+<li>Vrtcal (VRTCAL Markets, Inc.) &ndash;&nbsp;<a href="https://vrtcal.com/docs/PrivacyPolicy-Advertising.pdf">Privacy Policy</a></li>
+<li>Vungle, Inc. &ndash;&nbsp;<a href="https://vungle.com/privacy/">Privacy Policy</a></li>
+<li>YieldMo &ndash; <a href="https://www.yieldmo.com/privacy-policy/">Privacy Policy</a></li>
+</ul>
+<p>This list may be updated at any time. Please check this Privacy Policy for the most current information.</p>
+<p><strong><em>Service Providers</em>. </strong></p>
+<p>We may employ third party companies and individuals to facilitate our Services, to provide our services on our behalf, to perform functions related to our Services (e.g., without limitation, analytics and reporting services, database and hosting services, distribution platforms, and other Site or app supporting-service providers) or to assist us in analyzing how our Services are used. These third parties have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+<p>Service providers with whom we share your Personal Information include:</p>
+<p><strong>Hosting &amp; Cloud Services: </strong></p>
+<ul>
+<li>Amazon Web Services &ndash; <a href="https://aws.amazon.com/privacy/">Privacy Policy</a></li>
+<li>Rackspace Technology Global, Inc. &ndash; <a href="https://www.rackspace.com/information/legal/privacystatement">Privacy Policy</a></li>
+<li>Highwinds Network Group, Inc. &ndash; <a href="https://www.stackpath.com/legal/privacy-statement/">Privacy Policy</a></li>
+<li>Google (Firebase, Google Analytics, Google Cloud)</li>
+</ul>
+<p><strong>Messaging &amp; Email: </strong></p>
+<ul>
+<li>Sendgrid (Twilio) &ndash; <a href="https://www.twilio.com/legal/privacy">Privacy Policy</a></li>
+<li>Onesignal &ndash;&nbsp;<a href="https://onesignal.com/privacy_policy">Privacy Policy</a></li>
+</ul>
+<p><strong>Customer Support: </strong></p>
+<ul>
+<li>Zendesk, Inc &ndash; <a href="https://www.zendesk.com/company/customers-partners/privacy-policy/">Privacy Policy</a></li>
+</ul>
+<p><strong><em>Social Networking Sites</em>. </strong></p>
+<p>We may share the information in your We Heart It account (including your Personal Information) with the Social Networking Sites you have linked to your We Heart It account, with similar platforms, as well as with our advertising partners in order to provide you with enhanced services, including relevant advertising. These third parties have access to your Personal Information only for these purposes and are obligated not to disclose or use it for any other purpose.</p>
+<p><strong><em>We Heart It Affiliates</em>. </strong></p>
+<p>We may share your Personal Information with our affiliates where it is in our legitimate interests to do so to enable them to provide customer support to you or for internal administrative and management purposes (for example, for corporate strategy, compliance, auditing and monitoring, research and development, and quality assurance).</p>
+<p><strong><em>Compliance with Laws and Law Enforcement</em>. </strong></p>
+<p>We Heart It cooperates with government and law enforcement officials and private parties to enforce and comply with the law. We will disclose any information about you to government or law enforcement officials or private parties as we, in our sole discretion, believe necessary or appropriate to respond to claims and legal process (including but not limited to subpoenas), to protect the property and rights of We Heart It or a third party, to protect the safety of the public or any person, or to prevent or stop activity we may consider to be, or to pose a risk of being, illegal, unethical or legally actionable.</p>
+<p><strong><em>Business Transfers</em>. </strong></p>
+<p>We Heart It may sell, transfer or otherwise share some or all of its assets, including your Personal Information, in connection with a merger, acquisition, reorganization or sale of assets or in the event of bankruptcy.</p>
+<p><strong><em>Other Disclosures</em>. </strong></p>
+<p>We may share your Personal Information with our legal, regulatory, audit, and other professional advisors. Those companies may use your Personal Information to assist us in our operations consistent with our legitimate business interests. We also may share information about you as described at the point of collection or otherwise pursuant to your consent or where We Heart It has a legitimate interest in doing so.</p>
 
-    <br><br>
-    <h3 class="h3" id="IX">IX. Our policy towards children</h3>
-    <p>A. This Website is not intended for children under the age of 13 and we do not knowingly collect any Personal Information from such children. Children under the age of 13 should not use our Website or our online services at any time.  In the event that we learn that we have inadvertently gathered Personal Information from children under the age of 13, we will use reasonable efforts to erase such information from our records.</p>
+<p id="section-4"><strong>IV. How Long We Store Your Information</strong></p>
 
-    <br><br>
-    <h3 class="h3" id="X">X. Security of your information</h3>
-    <p>A. We implement reasonable administrative, technical and physical security measures to protect the security of your information both online and offline, and we are committed to the protection of customer information.  In general, our business practices limit employee access to confidential information to those employees we reasonably believe need such information do their jobs.</p>
-    <p>B. Your User Account information is protected by the password you use to access your online account.  It is important that you protect and maintain the security of your User Account and that you immediately notify us of any unauthorized use of your User Account.  If you forget your password, you may <a href="https://weheartit.com/forgot_password">request a new password here</a>.</p>
-    <p>C. While we take reasonable precautions against possible security breaches of the Website, no website or Internet transmission is completely secure, and we cannot guarantee that unauthorized access, hacking, data loss, or other breaches will never occur.  We urge you to take steps to keep your Personal Information safe (including your User Account password), and log out of your User Account after use.</p>
+<p>We keep your Personal Information for no longer than necessary for the purposes for which the Personal Information is processed. The length of time for which we retain Personal Information depends on the purposes for which we collect and use it and/or as required to comply with applicable laws and to establish, exercise or defend our legal rights.</p>
 
-    <br><br>
-    <h3 class="h3" id="XI">XI. Changes to this policy</h3>
-    <p>A. If we decide to make material changes to our Privacy Policy, we will attempt to notify you and other users of the Website by sending a notice to the email address provided to us and/or by placing a notice on our Website. You should periodically check the Website for such notices.</p>
+<p id="section-5"><strong>V. Your Rights &amp; Preferences</strong></p>
 
-    <br><br>
-    <h3 class="h3">Contact us</h3>
-    <p>If you have any questions, comments or concerns regarding our Privacy Policy and/or practices, please send an email to: <a href="mailto:hello@weheartit.com">hello@weheartit.com</a>. You may also <a target="_blank" href="/contact">contact us here</a>.</p>
+<p>In accordance with We Heart It&rsquo;s policies and procedures, all We Heart It users have certain rights regarding their Personal Information:</p>
+<ul>
+<li>the right to review, verify, correct, and request erasure of the Personal Information that we hold about them under certain circumstances.Please note that if you completely delete all such information, then your account may become deactivated.</li>
+<li>the right to limit, restrict, or object to the processing of your Personal Information under certain circumstances.</li>
+<li>the right to request that we transfer your Personal Information to another party to the extent provided for under applicable data privacy laws.</li>
+</ul>
+<p>If you want to exercise one of the above rights, please contact us at <strong>legal@weheartit.com</strong> or write to We Heart It at Super Basic, LLC, 1880 Century Park East, Suite 1108, Los Angeles, CA 90067. To protect your privacy and security, we also will take reasonable steps to verify your identity before granting access, making corrections, or following such a request to correct or delete your data.</p>
+<p>When you contact us, we will respond as soon as possible and where possible within one month. If your request is more complicated, it may take longer to respond to you, but we will respond within two months of your request. There is no charge for most requests, but if you ask us to provide a significant amount of data, for example, we may ask you to pay a reasonable administrative fee if permitted under applicable law.</p>
+<p><strong><em>Personalized Advertising Preferences</em></strong></p>
+<p>You may opt out of personal advertising in the We Heart It app in Settings on iOS or Android. On Web, decline cookies to opt out. If you have already accepted cookies, clear cookies and cache in your browser settings and opt out when you next visit the Service.</p>
+<p>In addition, you can use your device settings to let us know that you wish to withdraw your consent to personalized advertising experience across all of your apps on that device.</p>
+<ul>
+<li>On iOS version 13 and earlier only, you may withdraw your consent by enabling the &ldquo;Limit Ad Tracking&rdquo; setting in your iOS settings.</li>
+<li>On iOS version 14 and later only, you may withdraw your consent by disabling the &ldquo;Allow Apps to Request to Track&rdquo; setting in your iOS settings.</li>
+<li>On Android devices, you may withdraw your consent in the Google Ads settings within your Android settings by toggling the &ldquo;Opt out of Ads Personalization&rdquo; switch on.</li>
+</ul>
+<p><strong><em>Your California Privacy Rights </em></strong></p>
+<p>California Civil Code Section 1798.83 permits customers of We Heart It who are California residents to request certain information regarding our disclosure of Personal Information to third parties for their direct marketing purposes. To make such a request, please write to us at the following address:</p>
+<p>Super Basic, LLC</p>
+<p>Attn:California Privacy Rights</p>
+<p>1880 Century Park East, Suite 1108</p>
+<p>Los Angeles, CA 90067</p>
+<p>At this time, we do not respond to Do Not Track browser settings or signals. For information about Do Not Track, please visit: www.allaboutdnt.com.</p>
+<p>Under the California Consumer Privacy Act of 2018 (&ldquo;CCPA&rdquo;), California residents have the right to request:</p>
+<ul>
+<li>the deletion of the Personal Information we have about them</li>
+<li>additional information about whether and how we have collected, used, disclosed, and sold Personal Information about them</li>
+<li>the specific pieces of Personal Information we have about them</li>
+<li>that we opt them out of the &ldquo;sale&rdquo; of their Personal Information (<strong>&ldquo;Right to Opt Out&rdquo;</strong>), which can be done at the below <strong>&ldquo;Do Not Sell My Personal Information&rdquo;</strong><a href="https://help.weheartit.com/hc/en-us/requests/new">link</a>.</li>
+</ul>
+<p>California residents also have the right not to receive discriminatory treatment if they exercise the rights list above.</p>
+<p>When you make a request, we may require that you provide information and follow procedures so that we can verify the request and your jurisdiction before responding to it.&nbsp;The verification steps we take may differ depending on the request you make. We will match the information that you provide in your request to information we already have on file to verify your identity. If we are able to verify your request, we will process it. If we cannot verify your request, we may ask you for additional information to help us verify your request.</p>
+<p>California residents will be required to submit their first and last name and email address and may also be asked to provide their telephone number or address so that we can verify the request. Please provide as much of the requested information as possible to help us verify the request. We will only use the information received in a request for the purposes of responding to the request.</p>
+<p>California law permits California residents to use an authorized agent to make privacy rights requests. We require the authorized agent to provide proof of the California resident&rsquo;s written permission that shows the authorized agent has the authority to submit a request for the California resident. An authorized agent must follow the process described below to make a request, and we will additionally require the authorized agent to verify his/her own identity.</p>
+<p>You may submit a California privacy rights request to us by:</p>
+<ul>
+<li>Completing <a href="https://help.weheartit.com/hc/en-us/requests/new">this form</a>, select the California Privacy Rights option</li>
+<li>Emailing us at <strong>legal@weheartit.com</strong>.</li>
+</ul>
+<p>To exercise the Right to Opt Out, in addition to contacting us using the above information, you may use the following link:</p>
+<p><a href="https://help.weheartit.com/hc/en-us/requests/new"><strong>&ldquo;DO NOT SELL MY PERSONAL INFORMATION.&rdquo;</strong></a></p>
+<p><strong><em>Your Nevada Privacy Rights </em></strong></p>
+<p>We do not sell consumers&rsquo; covered information for monetary consideration (as defined in Chapter 603A of the Nevada Revised Statutes). However, if you are a Nevada resident, you have the right to submit a request directing us not to sell certain information about you. To submit such a request, please contact us at <strong>legal@weheartit.com</strong>.</p>
 
+<p id="section-6"><strong>VI. Security</strong></p>
+
+<p>We Heart It is concerned with safeguarding your information. We employ reasonable administrative, physical and electronic measures designed to help protect your information from unauthorized access.&nbsp;No security, however, can eliminate the possibility that your information may be accessed by an unauthorized third party, and we cannot guarantee that your information will remain secure in all situations.</p>
+<p>We will make any legally required disclosures of any breach of the security, confidentiality, or integrity of your unencrypted electronically stored data (as defined in applicable state statutes on security breach notification) to you via email, mail, telephone, or conspicuous posting on our website in the most expedient time possible and without unreasonable delay, insofar as consistent with (i) the legitimate needs of law enforcement or (ii) any measures necessary to determine the scope of the breach and restore the reasonable integrity of the data system. We reserve the right to choose which method we use to contact you about such an event.</p>
+
+<p id="section-7"><strong>VII. International Transfer</strong></p>
+
+<p>You are giving us the following particular express, voluntary, and informed consent to a few activities relating to your Personal Information that is disclosed in providing goods and services to you, or for a purpose directly related to such purpose:</p>
+<p><strong><em>Consent to International Transfer and Disclosure of Personal Information</em></strong><em>.</em></p>
+<p>We Heart It is located in the United States (&ldquo;U.S.&rdquo;) and is subject to the applicable laws of the United States (where data privacy laws are less stringent than in the European Union and certain other jurisdictions). We will store and process information we receive about you, as described in this Privacy Policy, in the U.S.</p>
+<p>We may be involved in business activities in a variety of countries. You agree that We Heart It and those with whom we share your Personal Information (&ldquo;Recipients&rdquo;) may disclose, transfer, process, and store your Personal Information outside of your country of origin to our affiliates, sponsors and partners, and any other third party service providers for the purposes described in this Privacy Policy.</p>
+<p>Some of the recipients of Personal Information as specified above may be located in countries that do not provide a level of data protection equivalent to that set forth by the European Union and some other jurisdictions.If you submit any Personal Information or choose to access or use the Services offered by We Heart It, you consent to such disclosure, transfer, processing, and storage of information in accordance with this Privacy Policy and subject to such applicable laws which may include access by law enforcement and other government entities including courts and tribunals.</p>
+<p>If we do transfer Personal Information outside the U.S., we will make sure that it is protected in the same way as if it were being used in the U.S. We will use one of the following safeguards to ensure your information is protected:</p>
+<ul>
+<li>Transfer the data to a non-EEA country that has privacy laws at least as protective as those within the EEA, or</li>
+<li>Put in place a contract with the recipient of the data, which means the recipient must protect the data to the same standards as required within the EEA, or</li>
+<li>Transfer it to organizations that are part of the Privacy Shield. The Privacy Shield is a framework that sets out the standards for data to be sent between the United States and European countries. The Privacy Shield ensures that data are protected to the same standards as used within the EEA.</li>
+</ul>
+<p><strong><em>Consent to Electronic Notice If There is a Security Breach.</em></strong></p>
+<p>We will safeguard your Personal Information and prevent such information from unauthorized access, disclosure, or use. If we or a Recipient are required to provide notice of unauthorized access to or other invasion of certain security systems, you agree that we (or they) may do so when required (or voluntarily) by posting notice on our website or sending notice to any email address we have for you, in our (or their) good faith discretion. You agree that notice to you will count as notice to others for whom you are acting, and agree to pass the notice on to them.</p>
+
+<p id="section-8"><strong>VIII. Our Policy Toward Children</strong></p>
+
+<p>The We Heart It Services are not directed to children under 13. We do not knowingly collect Personal Information from children under 13. If a parent or guardian becomes aware that his or her child has provided us with Personal Information without parental consent, he or she should contact us at&nbsp;<strong>legal@weheartit.com</strong>. If we become aware that a child under 13 has provided us with Personal Information, we will delete such information.</p>
+
+<p id="section-9"><strong>IX. Phishing</strong></p>
+
+<p>Identity theft and the practice currently known as &ldquo;phishing&rdquo; are of great concern to We Heart It. Safeguarding information to help protect you from identity theft is a top priority. We do not and will not, at any time, request your credit card information, your account ID, login password, or national identification numbers in a non-secure or unsolicited e-mail or telephone communication. For more information about phishing, visit the Federal Trade Commission&rsquo;s website.</p>
+
+<p id="section-10"><strong>X. Links to Other Sites</strong></p>
+
+<p>Our Services may provide links to other websites and applications. If you choose to visit an advertiser by &ldquo;clicking on&rdquo; a banner ad or other type of advertisement, or click on another third party link, you will be directed to that third party&rsquo;s website. The fact that we link to a website or present a banner ad or other type of advertisement is not an endorsement, authorization or representation of our affiliation with that third party, nor is it an endorsement of their privacy or information security policies or practices. We do not exercise control over third party websites. These other websites may place their own cookies or other files on your computer, collect data or solicit Personal Information from you. Other websites follow different rules regarding the use or disclosure of the Personal Information you submit to them. We encourage you to read the privacy policies or statements of the other websites you visit.</p>
+
+<p id="section-11"><strong>XI. Complaints</strong></p>
+
+<p>If you have any complaints concerning We Heart It&rsquo;s processing of your Personal Information, please email us at <strong>legal@weheartit.com </strong>or write to us at 1880 Century Park East, Suite 1108, Los Angeles, CA 90067.</p>
+<p>Please note that if you are an EU Resident, you may have the right to lodge a complaint with a European Union supervisory authority that is responsible for the protection of Personal Information in the country where you live or work, or in which you think a breach of data protection laws might have taken place. You can learn more about these rights at https://ec.europa.eu/info/law/law-topic/data-protection/reform/rights-citizens_en.</p>
+<p>Customers in the United Kingdom can contact the Information Commissioner&rsquo;s Office by telephone on 0303 123 1113, or by using the live chat service that is available through the Information Commissioner&rsquo;s website www.ico.org.uk.</p>
+
+<p id="section-12"><strong>XII. Contacting Us</strong></p>
+
+<p>If you have any questions about this Privacy Policy or if you would like us to delete your Personal Information, please contact us at <strong>legal@weheartit.com</strong>.</p>
   </div>
 </div>
       </div>
@@ -699,7 +891,6 @@
               <ul class="list-unstyled">
                 <li><small><a href="/about/terms-of-service">Terms of Service</a></small></li>
                 <li><small><a href="/about/privacy-policy">Privacy Policy</a></small></li>
-                <li><small><a href="/about/ca-privacy">California Privacy Rights</a></small></li>
                   <li><small><a href="/about/monetized-links">Links monetized by Skimlinks</a></small></li>
                 <li><small><a href="/contact/copyright">Claim Copyright</a></small></li>
               </ul>
@@ -813,7 +1004,7 @@ _qevents.push({
   <script type="text/javascript" src="//b-code.liadm.com/a-028f.min.js" async="true" charset="utf-8"></script>
 
 
-<script src="https://assets.whicdn.com/assets/application-bd6b471c5b673280e6990f8a2e6d26bf1418351d5e121db07796b3d0d18c7597.js"></script>
+<script src="https://assets.whicdn.com/assets/application-30b41baaf80c80f95edb2b220df49ff3d4b57713d3b47183e4bc782ee38694c3.js"></script>
 
   <script>
   $.getScript("https://s.skimresources.com/js/28678X866187.skimlinks.js")
@@ -833,7 +1024,7 @@ _qevents.push({
 <script>
 var WeHeartIt = require('/modules/whi')
 new WeHeartIt({
-  views : ["follow_button", "catalog/catalog", "catalog/vimeo_thumbs", "widgets", "entry/create_entry_set", "entry/youtube_autoplay", "entry/report_button", "entry/add_to_collection", "entry/tag_form", "entry/share_buttons", "entry/entry_group", "entry/entry_ftue", "entry/entry", "prompts/app_promo_ad", "file_preview", "block_warning", "user_account/facebook_timeline", "user_account/edit_profile", "user_account/email_suggestion", "user_account/link_account", "user_account/edit_notices", "user_account/verify_age", "user_account/find_friends", "modal", "collaborate", "email_bounced", "inspirations/inspirations", "doubleclick_ads", "new_account/new_confirmation", "postcard", "user_profile/profile", "navbar/notifications", "navbar/topbar_touches", "navbar/navbar", "text_preview", "postcard_button", "cookie_warning", "dummy_ads", "recaptcha", "activation", "actions/new_entry_form_sign_in", "actions/too_many_tags", "actions/heart_success", "actions/add_image", "actions/new_entry_form", "sidebar", "toggle_element", "dashboard/box_contacts", "dashboard/userFilter", "static/facebook_timeline", "static/app", "static/popular", "static/postcards_gallery", "static/postcards", "static/download_heart_button", "static/left_share_buttons", "inbox", "banner_join", "modals/create_new_collection_modal", "modals/add_to_collection_modal", "modals/collections_modal", "heart_button_new_entry", "registration/login", "registration/join_tracker", "registration/testimonials", "registration/registration", "registration/email_signup", "onboarding_inspirations", "heart_button_container", "article_draft", "reactions", "dropdown", "interstitial", "facebook_widget", "add_favorite_keyword", "branchio", "click_out", "article_preview", "user_set", "follow_collection_button", "heart_button", "share_modal", "floating_window"],
+  views : ["branchio", "catalog/catalog", "catalog/vimeo_thumbs", "actions/heart_success", "actions/new_entry_form", "actions/too_many_tags", "actions/new_entry_form_sign_in", "actions/add_image", "share_modal", "file_preview", "user_profile/profile", "static/postcards_gallery", "static/postcards", "static/facebook_timeline", "static/popular", "static/left_share_buttons", "static/app", "static/download_heart_button", "modals/create_new_collection_modal", "modals/collections_modal", "modals/add_to_collection_modal", "navbar/notifications", "navbar/navbar", "navbar/topbar_touches", "registration/email_signup", "registration/login", "registration/join_tracker", "registration/testimonials", "registration/registration", "modal", "heart_button", "block_warning", "article_draft", "doubleclick_ads", "click_out", "heart_button_new_entry", "user_account/find_friends", "user_account/email_suggestion", "user_account/facebook_timeline", "user_account/verify_age", "user_account/edit_notices", "user_account/link_account", "user_account/edit_profile", "interstitial", "dropdown", "postcard", "add_favorite_keyword", "article_preview", "toggle_element", "banner_join", "user_set", "onboarding_inspirations", "activation", "text_preview", "follow_button", "dashboard/box_contacts", "dashboard/userFilter", "floating_window", "widgets", "dummy_ads", "collaborate", "entry/entry", "entry/tag_form", "entry/share_buttons", "entry/entry_group", "entry/report_button", "entry/entry_ftue", "entry/add_to_collection", "entry/create_entry_set", "entry/youtube_autoplay", "inspirations/inspirations", "cookie_warning", "facebook_widget", "heart_button_container", "email_bounced", "follow_collection_button", "new_account/new_confirmation", "reactions", "recaptcha", "prompts/app_promo_ad", "postcard_button", "sidebar", "inbox"],
   modules : [
     'notifications',
     'search',

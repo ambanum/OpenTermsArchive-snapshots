@@ -23,9 +23,9 @@
             <link rel="canonical" href="/privacy">
         <link rel="apple-touch-icon-precomposed" href="https://i.vimeocdn.com/favicon/main-touch_180">
 
-<link rel="mask-icon" href="https://f.vimeocdn.com/svg/legacy_view_support/iris_icon_v_64.svg?9dc9c824ae42177cde54fac7fa2d3b4b1e6b6909" color="#17272e">
+<link rel="mask-icon" href="https://f.vimeocdn.com/svg/legacy_view_support/iris_icon_v_64.svg?6047c4238ae8dd018d9d414406f57f167e9c1bd8" color="#17272e">
 
-    <link rel="shortcut icon" href="https://f.vimeocdn.com/images_v6/favicon.ico?9dc9c824ae42177cde54fac7fa2d3b4b1e6b6909" data-play="https://i.vimeocdn.com/favicon/play_32" data-pause="https://i.vimeocdn.com/favicon/pause_32">
+    <link rel="shortcut icon" href="https://f.vimeocdn.com/images_v6/favicon.ico?6047c4238ae8dd018d9d414406f57f167e9c1bd8" data-play="https://i.vimeocdn.com/favicon/play_32" data-pause="https://i.vimeocdn.com/favicon/pause_32">
 
 <meta name="msapplication-TileImage" content="https://i.vimeocdn.com/favicon/main-touch_144">
 <meta name="msapplication-TileColor" content="#00adef">
@@ -52,7 +52,7 @@
                                     
                                                     
                 
-                                                        <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global/icon_fonts.min.css?9dc9c824ae42177cde54fac7fa2d3b4b1e6b6909">
+                                                        <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global/icon_fonts.min.css?6047c4238ae8dd018d9d414406f57f167e9c1bd8">
 
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global_main_combined.min.css?a398d758">
     <link rel="stylesheet" href="https://f.vimeocdn.com/styles/css_opt/global_combined.min.css?a32821d0">
@@ -230,6 +230,60 @@ window.addEventListener('load', handleGDPR);
 
                 
                 
+
+<style>
+    @-webkit-keyframes record_animation {
+        0%, 20%, 50%, 80%, 100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+        40% {
+            -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+        }
+        60% {
+            -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+        }
+    }
+
+    @keyframes record_animation {
+        0%, 20%, 50%, 80%, 100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+        40% {
+            -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+        }
+        60% {
+            -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+        }
+    }
+
+    .no_user_record_animation {
+        animation: record_animation 1.5s .25s 5;
+    }
+
+    .user_record_animation {
+        animation: record_animation 1.5s .25s infinite;
+    }
+
+    .recorder_new_label {
+        text-transform: uppercase;
+        background-color: #1140C6;
+        color: #fff;
+        border-radius: 2px;
+        height: 20px;
+        line-height: 20px;
+        margin-left: 14px;
+        font-size: 10px;
+        width: 40px;
+        font-weight: 700;
+        text-align: center;
+    }
+</style>
 
 <script>
     window.vimeo = window.vimeo || {};
@@ -420,7 +474,7 @@ window.addEventListener('load', handleGDPR);
                             <div class="topnav_menu_right">
                                 
                                 
-                                    <div class="topnav_desktop_video_popover" onMouseenter="trackNewVideoDropdownImpression('')">
+                                    <div id="record_tip_wrapper" class="topnav_desktop_video_popover" onMouseenter="trackNewVideoDropdownImpression('')">
                         <button
                             id="new_video_dropdown_button"
                             class="topnav_desktop_video_popover_button iris_btn--primary"
@@ -428,7 +482,7 @@ window.addEventListener('load', handleGDPR);
                             onclick="handleNewVideoClick()"
                         >
                             <span class="topnav_desktop_video_popover_span_wrapper">
-                                New video                                <span class="topnav_desktop_video_popover_span_variant">
+                                New video                                <span id="record_animation_wrapper" class="topnav_desktop_video_popover_span_variant">
                                     <svg viewBox="0 0 24 24" width="24px" height="24px">
                                         <path
                                             d="M12 15.5a1 1 0 0 1-.67-.26l-5-4.5 1.34-1.48L12 13.15l4.33-3.9 1.34 1.49-5 4.5a1 1 0 0 1-.67.26z"
@@ -442,21 +496,29 @@ window.addEventListener('load', handleGDPR);
                                                     <ul id="new_video_dropdown_variant" class="topnav_desktop_menu_items_dropdown topnav_desktop_video_popover_dropdown_variant" role="menu" aria-hidden="true" style="padding: unset;">
                                                                     
                                     <li class="topnav_desktop_menu_items_dropdown_item_variant" role="menuitem" tabindex="-1">
-                                        <a onclick="(function(event) { if (window.handleUploadButtonClick) { handleUploadButtonClick(event); }})(event)" data-fatal-attraction="container:top_nav|component:new_video|keyword:{'action':'upload'}|target:/upload|type:click" id="topnav_desktop_upload_button" href="//vimeo.com/upload" ><div class="align_topnav_dropdown_icons"><span class="topnav_dropdown_icons"><svg viewBox="0 0 20 20" width="24px" height="24px">
+                                        <a onclick="(function(event) { if (window.handleUploadButtonClick) { handleUploadButtonClick(event); }})(event)" data-fatal-attraction="container:top_nav|component:new_video|keyword:{'action':'upload'}|target:/upload|type:click" id="topnav_desktop_upload_button" href="//vimeo.com/upload" >
+                                            <div class="align_topnav_dropdown_icons">
+                                                <span class="topnav_dropdown_icons"><svg viewBox="0 0 20 20" width="24px" height="24px">
                             <path
                                 d="M18 8.48a7.16 7.16 0 0 0-1.84-4.76A5.81 5.81 0 0 0 6.92 5a5.24 5.24 0 0 0-4.69 3.85A4.91 4.91 0 0 0 0 13a5.13 5.13 0 0 0 5 5h10a5.1 5.1 0 0 0 5-4.94 5.89 5.89 0 0 0-2-4.58zM15 16h-4v-3.59l1.29 1.29 1.41-1.41-3.7-3.7-3.71 3.7L7.7 13.7 9 12.41V16H5a3.16 3.16 0 0 1-3-3 2.91 2.91 0 0 1 1.52-2.58l.4-.2.08-.44A3.38 3.38 0 0 1 7.59 7h.7l.24-.66A3.69 3.69 0 0 1 12 4a3.73 3.73 0 0 1 2.72 1.12A5.45 5.45 0 0 1 16 9v.54l.45.3A3.79 3.79 0 0 1 18 13.06 3.09 3.09 0 0 1 15 16z"
                                 fill="#1a2e3b"
                             />
-                        </svg></span>Upload</div></a>
+                        </svg></span>
+                                                Upload                                                                                            </div>
+                                        </a>
                                     </li>
                                                                     
                                     <li class="topnav_desktop_menu_items_dropdown_item_variant" role="menuitem" tabindex="-1">
-                                        <a onclick="handleCreateVideoClick(event)" data-fatal-attraction="container:top_nav|component:new_video|keyword:{'action':'create'}|target:/create/video-maker|type:click" id="topnav_desktop_create_video_button" href="//vimeo.com/create/video-maker" ><div class="align_topnav_dropdown_icons"><span class="topnav_dropdown_icons"><svg viewBox="0 0 20 20" width="24px" height="24px">
+                                        <a onclick="handleCreateVideoClick(event)" data-fatal-attraction="container:top_nav|component:new_video|keyword:{'action':'create'}|target:/create/video-maker|type:click" id="topnav_desktop_create_video_button" href="//vimeo.com/create/video-maker" >
+                                            <div class="align_topnav_dropdown_icons">
+                                                <span class="topnav_dropdown_icons"><svg viewBox="0 0 20 20" width="24px" height="24px">
                         <path
                             d="M3.2 16.8l3.8-1 10-10c.2-.2.2-.5 0-.7L14.9 3c-.2-.2-.5-.2-.7 0l-2.1 2.1 2.8 2.8L13.8 9 11 6.2 4.2 13l-1 3.8zm9.9-14.9c.8-.8 2-.8 2.8 0L18.1 4c.8.8.8 2 0 2.8L7.8 17.2l-5.6 1.5c-.5.1-.9-.2-.7-.7l1.4-5.7L13.1 1.9z"
                             fill="#1a2e3b"
                         />
-                    </svg></span>Create a video</div></a>
+                    </svg></span>
+                                                Create a video                                                                                            </div>
+                                        </a>
                                     </li>
                                                             </ul>
                                             </div>
@@ -565,6 +627,39 @@ window.addEventListener('load', handleGDPR);
     showVariant();
 </script>
 
+    <script>
+        var arrow = document.getElementById('record_animation_wrapper');
+        var newVideoBtn = document.getElementById('record_tip_wrapper');
+
+        arrow.classList.add('');
+
+        var isHovered = false;
+
+        newVideoBtn.addEventListener('mouseenter', function() {
+            if (isHovered) return;
+
+            isHovered = true;
+
+            if (arrow) {
+                arrow.classList.remove('');
+            }
+
+            store_record_tip_settings(1);
+
+        }, false);
+
+        function store_record_tip_settings(value) {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('POST', '/settings/nav_recorder_tip');
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.send('record_screen_tip_state=' + value + '&token=' + vimeo.xsrft);
+
+            // Nothing to handle. We hope for the best in this case
+            xhr.onload = function () {};
+        };
+    </script>
 
 
     
@@ -1636,7 +1731,7 @@ function renameOneTrustHeaderTags() {
 
                 <aside id="footer_tip" class="footer_v2__tip" aria-live="polite">
             <h4 class="footer_v2__tip-header">Did you know?</h4>
-            <p class="active footer_v2__tip-content">If you have a question about Vimeo, chances are we’ve already answered it in our FAQ. <a href="https://help.vimeo.com/hc/" data-fatal-attraction="container:did_you_know_box|component:help">Take a look-see.</a></p>
+            <p class="active footer_v2__tip-content">If you come here often, you should tell us (and the whole world, really) about yourself in the <a href="/settings/profile" data-fatal-attraction="container:did_you_know_box|component:product">bio section</a> of your profile.</p>
         </aside>
     </section>
     
@@ -1715,11 +1810,11 @@ function renameOneTrustHeaderTags() {
         IMAGE_DIR = 'https://f.vimeocdn.com/images_v6/',
         FONT_DIR = 'https://f.vimeocdn.com/fonts/',
         SVG_DIR = 'https://f.vimeocdn.com/svg/',
-                BUILD_HASH = 'd65b4';
+                BUILD_HASH = 'be631';
 
     
         var vimeo = _extend((window.vimeo || {}), {"app_version":"v6","domain":"vimeo.com","url":"vimeo.com","cur_user":false,"origin_user_id":null,"origin_user":false,"is_mobile":false});
-    vimeo.config = _extend((vimeo.config || {}), {"sticky_topnav":{"excluded_pages":["Vimeo\\Controller\\AboutController:main","Vimeo\\Controller\\AboutController:professionals","Vimeo\\Controller\\AboutController:everyone","Vimeo\\Controller\\HomeController:upgrade","Vimeo\\Controller\\StoreController:main","Vimeo\\Controller\\User\\Settings2Controller:main","Vimeo\\Controller\\User\\Settings2Controller:team_members","Vimeo\\Controller\\User\\Settings2Controller:password","Vimeo\\Controller\\ProfileController:main","Vimeo\\Controller\\ClipStatsController:main","Vimeo\\Controller\\Clip\\Settings\\EmbedController:embed","Vimeo\\Controller\\VideoManagerController","Vimeo\\Controller\\VideoReviewController","Vimeo\\Controller\\MessagesController","Vimeo\\Controller\\StatsController","Vimeo\\Controller\\UploadController","Vimeo\\Controller\\OnDemand\\SettingsController","Vimeo\\Controller\\Clip\\SettingsController"],"sticky_included_pages":["Vimeo\\Controller\\Stock\\StockHomePageController","Vimeo\\Controller\\Stock\\StockFootageController","Vimeo\\Controller\\Stock\\StockSearchController","Vimeo\\Controller\\Stock\\StockCollectionsController","Vimeo\\Controller\\AlbumController"],"topnav_wrap_selector":"#topnav_outer_wrap","content_wrap_selector":".wrap_content"},"locale":"en","omnisearch_enabled":false,"omnisearch_disabled":null,"omnisearch_jwt":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDMyNjYzNjAsInVzZXJfaWQiOm51bGwsImFwcF9pZCI6NTg0NzksInNjb3BlcyI6InB1YmxpYyBwcml2YXRlIGRlbGV0ZSIsInRlYW1fdXNlcl9pZCI6bnVsbH0.cbWhszWO-l6uSeoyDrzzTQRyZWbll4HFjsA3vcxPzkU","omnisearch_user":null,"api_url":"api.vimeo.com"});
+    vimeo.config = _extend((vimeo.config || {}), {"sticky_topnav":{"excluded_pages":["Vimeo\\Controller\\AboutController:main","Vimeo\\Controller\\AboutController:professionals","Vimeo\\Controller\\AboutController:everyone","Vimeo\\Controller\\HomeController:upgrade","Vimeo\\Controller\\StoreController:main","Vimeo\\Controller\\User\\Settings2Controller:main","Vimeo\\Controller\\User\\Settings2Controller:team_members","Vimeo\\Controller\\User\\Settings2Controller:password","Vimeo\\Controller\\ProfileController:main","Vimeo\\Controller\\ClipStatsController:main","Vimeo\\Controller\\Clip\\Settings\\EmbedController:embed","Vimeo\\Controller\\VideoManagerController","Vimeo\\Controller\\VideoReviewController","Vimeo\\Controller\\MessagesController","Vimeo\\Controller\\StatsController","Vimeo\\Controller\\UploadController","Vimeo\\Controller\\OnDemand\\SettingsController","Vimeo\\Controller\\Clip\\SettingsController"],"sticky_included_pages":["Vimeo\\Controller\\Stock\\StockHomePageController","Vimeo\\Controller\\Stock\\StockFootageController","Vimeo\\Controller\\Stock\\StockSearchController","Vimeo\\Controller\\Stock\\StockCollectionsController","Vimeo\\Controller\\AlbumController"],"topnav_wrap_selector":"#topnav_outer_wrap","content_wrap_selector":".wrap_content"},"locale":"en","omnisearch_enabled":false,"omnisearch_disabled":null,"omnisearch_jwt":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDMyNjk5NjAsInVzZXJfaWQiOm51bGwsImFwcF9pZCI6NTg0NzksInNjb3BlcyI6InB1YmxpYyBwcml2YXRlIGRlbGV0ZSIsInRlYW1fdXNlcl9pZCI6bnVsbH0.-karoBZn0INsZ7YMrewX9QDZaqs0QF-yMRZXq7lBcn4","omnisearch_user":null,"api_url":"api.vimeo.com"});
 
         var __i18nLocale = 'en';
     var localeConfig = {

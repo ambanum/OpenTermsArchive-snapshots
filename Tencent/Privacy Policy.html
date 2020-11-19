@@ -453,6 +453,16 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(mta, s);
     })();
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    var ga = document.createElement("script");
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-DW9MBJC8M8";
+    ga.async = 1;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ga, s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DW9MBJC8M8');
   } else {
     console.log(window.location.href)
     if (window.location.href.indexOf("cookies-policy") >= 0 || window.location.href.indexOf("cookie-policy") >= 0) {
@@ -481,6 +491,16 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(mta, s);
       })();
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      var ga = document.createElement("script");
+      ga.src = "https://www.googletagmanager.com/gtag/js?id=G-DW9MBJC8M8";
+      ga.async = 1;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(ga, s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DW9MBJC8M8');
     }
   })
 

@@ -105,7 +105,7 @@
 window.ue_ihb = (window.ue_ihb || window.ueinit || 0) + 1;
 if (window.ue_ihb === 1) {
 var ue_hob=+new Date();
-var ue_id='96C8K0XVRBVV7C9W30KD',
+var ue_id='ENGK62JSHA11KRWNNZ7C',
 ue_csm = window,
 ue_err_chan = 'jserr-rw',
 ue = {};
@@ -119,7 +119,7 @@ pec:0,ts:0,erl:[],ter:[],mxe:50,startTimer:function(){a.ts++;setInterval(functio
 ue.stub(ue,"event");ue.stub(ue,"onSushiUnload");ue.stub(ue,"onSushiFlush");
 
 var ue_url='/rd/uedata',
-ue_sid='146-9637185-3785715',
+ue_sid='143-7910608-9407265',
 ue_mid='ATVPDKIKX0DER',
 ue_sn='www.amazon.com',
 ue_furl='fls-na.amazon.com',
@@ -127,7 +127,7 @@ ue_surl='https://unagi-na.amazon.com/1/events/com.amazon.csm.nexusclient.prod',
 ue_navtiming=1,
 ue_fcsn=1,
 ue_isrw=true,
-ue_fpf='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:146-9637185-3785715:96C8K0XVRBVV7C9W30KD$uedata=s:',
+ue_fpf='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:143-7910608-9407265:ENGK62JSHA11KRWNNZ7C$uedata=s:',
 ue_qsl=2000,
 ue_rpl_ns=0,
 ue_orct=1,
@@ -165,10 +165,16 @@ v=(A||{}).navigation,K=(h||{}).navigationStart,w=d.ue_fpf,O=0,S=0,J=[],D;a.oid=F
 (function(c){var a=c.ue;a.cv={};a.cv.scopes={};a.count=function(d,c,b){var e={},f=a.cv,g=b&&0===b.c;e.counter=d;e.value=c;e.t=a.d();b&&b.scope&&(f=a.cv.scopes[b.scope]=a.cv.scopes[b.scope]||{},e.scope=b.scope);if(void 0===c)return f[d];f[d]=c;d=0;b&&b.bf&&(d=1);ue_csm.ue_sclog||!a.clog||0!==d||g?a.log&&a.log(e,"csmcount",{c:1,bf:d}):a.clog(e,"csmcount",{bf:d})};a.count("baselineCounter2",1);a&&a.event&&(a.event({requestId:c.ue_id||"rid",server:c.ue_sn||"sn",obfuscatedMarketplaceId:c.ue_mid||"mid"},
 "csm","csm.CSMBaselineEvent.4"),a.count("nexusBaselineCounter",1,{bf:1}))})(ue_csm);
 
+(function(g,h,m){if("function"===typeof h.addEventListener&&"function"===typeof m.querySelectorAll){var l,n,u,p,f,v,q,r,w,x=["mouseenter","mouseleave"],y="click dblclick mousedown mouseover mouseout touchstart keydown keypress MSPointerDown pointerdown focusin".split(" ").concat(x),s=!1,t=[];p=function(a){for(var c=[];a;)c.push(a),a=a.parentNode;return c};n=function(a,c){var b=-1,d;for(d=0;d<c.length;d++)if(c[d]===a){b=d;break}return b};r=function(a,c){var b=n(a,c);0<=b&&c.splice(b,1)};u=function(a){var c;
+a=p(a);for(var b,d,e=0;e<a.length;e++)if(d=a[e],(b=d.nodeName)&&b!==m.nodeName){b=b.toLowerCase();if(d.id)return b+"#"+d.id+(c?">"+c:"");(d=d.getAttribute("class"))&&(b=b+"."+d.split(" ").join("."));c=b+(c?">"+c:"")}return c};w=function(a){return a.replace(/[^\w.:\-]/g,function(a){return"#"===a?"::":">"===a?":-":"_"})};q=function(a,c){var b,d,e;if(g.ue&&g.ue.count&&g.ueLogError)for(b=u(a),e=w(b),d="degraded"===c?"A UX degrading element has entered the viewport: "+b:"A "+c+" was not handled on element: "+
+b,g.ueLogError({m:d,fromOnError:1},{logLevel:"ERROR",attribution:b,message:d}),b=["TNR","TNR:"+c,"TNR:"+e,"TNR:"+c+":"+e],f=0;f<b.length;f++)g.ue.count(b[f],(g.ue.count(b[f])||0)+1)};v=function(a){a=a.getBoundingClientRect();return a.top<a.bottom&&a.left<a.right&&0<=a.bottom&&a.top<=h.innerHeight&&0<=a.right&&a.left<=h.innerWidth};l=function(){s||(s=!0,setTimeout(function(){[].forEach.call(m.querySelectorAll("[data-ux-degraded]"),function(a){v(a)?0>n(a,t)&&(t.push(a),q(a,"degraded")):r(a,t)});s=!1},
+250))};h.addEventListener("scroll",l);h.addEventListener("resize",l);l=function(a){var c=!1,b=0>n(a,x);m.addEventListener(a,function(d){if(!c){c=!0;var e=[],f=b?p(d.target):[d.target],k,g,h;for(g=0;g<f.length;g++)k=f[g],k.getAttribute&&("mouseover"===a&&k===d.target&&((h=k.getAttribute("data-ux-jq-mouseenter"))||""===h)&&e.push(k),((h=k.getAttribute("data-ux-"+a))||""===h)&&e.push(k));e.length?(d.ack=d.acknowledge=function(a){a=a||d.currentTarget;r(a,e)},setTimeout(function(){var b;for(b=0;b<e.length;b++)q(e[b],
+a);c=!1},250)):c=!1}},!0)};for(f=0;f<y.length;f++)l(y[f])}})(ue_csm,window,document);
+
 var ue_hoe=+new Date();
 }
 </script>
-<!-- 0civ03h5v7bq39oh7oy7bnfzh1u18sd7m89l5ozod66phxofd5mvfw3i013h5y7lsw5g480gqqra7s7dlocmfs1myhzw30s3v76mf6ypcfrmp22hzrrv9cvm18hprzxf9nr28ga93gq -->
+<!-- sqvjwt0ll6zfk1ss0bqlykfpslg0tizhclh3yf4bwbcwt7czhc9hr -->
 
 
 
@@ -333,7 +339,7 @@ csHelpOmniture.event = function(omnitureObjJson, jQuery) {
     }
     s.list1 = s.prop15;
 
-    s.prop38 = '146-9637185-3785715'; // session id
+    s.prop38 = '143-7910608-9407265'; // session id
     s.eVar38 = s.prop38;
 
     s.prop41 = 'en_US';  // TO-DO: find correct variable name.
@@ -588,7 +594,7 @@ ue.stub(ue,"trigger");
 </script>
 </head>
 <body><div style='display:none;visibility:hidden;'>
-    <img src='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:146-9637185-3785715:96C8K0XVRBVV7C9W30KD$uedata=s:%2Frd%2Fuedata%3Fstaticb%26id%3D96C8K0XVRBVV7C9W30KD%26pty%3Dzeitgeist%26spty%3Dmw%26pti%3Dsporting-goods:1000' />
+    <img src='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:143-7910608-9407265:ENGK62JSHA11KRWNNZ7C$uedata=s:%2Frd%2Fuedata%3Fstaticb%26id%3DENGK62JSHA11KRWNNZ7C%26pty%3DOrderDetails%26spty%3DDefaultDeBr%26pti%3D:1000' />
 
 
 </div>
@@ -601,18 +607,18 @@ ue.stub(ue,"trigger");
             'Events.Namespace': 'csa',
             'ObfuscatedMarketplaceId': 'ATVPDKIKX0DER',
             'Events.SushiEndpoint': 'https://unagi.amazon.com/1/events/com.amazon.csm.csa.prod',
-            'CacheDetection.RequestID': "96C8K0XVRBVV7C9W30KD",
+            'CacheDetection.RequestID': "ENGK62JSHA11KRWNNZ7C",
             'CacheDetection.Callback': window.ue && ue.reset
         });
 
         csa("Events")("setEntity", {
             page: {
-                requestId: "96C8K0XVRBVV7C9W30KD",
+                requestId: "ENGK62JSHA11KRWNNZ7C",
                 pageType: "GPHelp",
                 subPageType: "Help",
                 pageTypeId: "201485660"
             },
-            session: {id: "146-9637185-3785715"}
+            session: {id: "143-7910608-9407265"}
          });
     }
 !function(n){var e,o,r="splice",i=n.csa,t={},u={},f=n.csa._s,c=0,a={},s={},g={},l=setTimeout,h=Object.keys;function d(n,t){return i(n,t)}function v(n,t){var i=u[n]||{};O(i,t),u[n]=i,l(S,0)}function p(n,t,i){var e=!0;i&&i.buffered&&(e=(g[n]||[]).every(function(n){return!1!==t(n)})),e&&(a[n]||(a[n]=[]),a[n].push(t))}function m(n,t){if(n in s)t(s[n]);else{p(n,function(n){return t(n),!1})}}function b(n){if(i("Errors")("logError",n),t.DEBUG)throw n}function w(){return Math.abs(4294967295*Math.random()|0).toString(36)}function y(n,t){return function(){try{n.apply(this,arguments)}catch(n){b(n.message||n)}}}function S(){for(var n=0;n<f.length;){var t=f[n],i=t[0]in u;if(!i&&!o)return void(c=t.length);i?(f[r](c=n,1),D(t)):n++}}function D(n){var arguments,t=u[n[0]],i=(arguments=n[1])[0];if(!t||!t[i])return b("Undefined function: "+t+"/"+i);e=n[3],u[n[2]]=t[i].apply(t,arguments.slice(1))||{},e=0}function E(){o=1,S()}function O(t,i){h(i).forEach(function(n){t[n]=i[n]})}m("$beforeunload",E),v("Config",{instance:function(n){O(t,n)}}),i.plugin=y(function(n){n(d)}),d.config=t,d.register=v,d.on=p,d.removeListener=function(n,t){var i=a[n];i&&i[r](i.indexOf(t),1)},d.once=m,d.emit=function(n,t,i){for(var e=a[n]||[],o=0;o<e.length;)!1===e[o](t)?e[r](o,1):o++;s[n]=t||{},i&&i.buffered&&(g[n]||(g[n]=[]),100<=g[n].length&&g[n].shift(),g[n].push(t||{}))},d.UUID=function(){return[w(),w(),w(),w()].join("-")},d.time=function(n){var t=e?new Date(e.time):new Date;return"ISO"===n?t.toISOString():t.getTime()},d.error=b,d.exec=y,(d.global=n).csa._s.push=function(n){n[0]in u&&(!f.length||o)?D(n):f[r](c++,0,n)},S(),l(function(){l(E,t.SkipMissingPluginsTimeout||5e3)},1)}("undefined"!=typeof window?window:global);
@@ -649,12 +655,12 @@ csa.plugin(function(c){var n=c.global,u=c.emit,d=5,m="click";function f(n){if(n.
 
 <!-- NAVYAAN CSS -->
 
-<link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/41icwgAxVqL._RC|71RZbJ6oa3L.css,21qFIynv1ZL.css,31FX6DlOvlL.css,21lRUdwotiL.css,41oKRlyPnmL.css,11G4HxMtMSL.css,31OvHRW+XiL.css,01XHMOHpK1L.css,0126aJ6LvzL.css_.css?AUIClients/NavDesktopUberAsset&DWnvS2Ix#desktop.310484-T1" />
+<link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/41icwgAxVqL._RC|71NSoECx16L.css,21qFIynv1ZL.css,31FX6DlOvlL.css,21lRUdwotiL.css,41oKRlyPnmL.css,11G4HxMtMSL.css,31OvHRW+XiL.css,01XHMOHpK1L.css,0126aJ6LvzL.css_.css?AUIClients/NavDesktopUberAsset&ZUIyZrxo#desktop" />
 <!-- NAVYAAN JS -->
 
 <script>
 (window.AmazonUIPageJS ? AmazonUIPageJS : P).when('navCF').execute(function() {
-  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/41ObXqHJYmL._RC|71Oc9eDun5L.js,61l-paIJdLL.js,41W9ohA0e+L.js,11vrNkbdcvL.js,21cmvUGs-3L.js,41DFEkYe9bL.js,517+5hCcu5L.js,31odYvSoo1L.js,01ZuJG498XL.js_.js?AUIClients/NavDesktopUberAsset&y8WKtY7c#desktop.292977-T3.312593-T1.310484-T1');
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/41ObXqHJYmL._RC|71vsMDhhZXL.js,61l-paIJdLL.js,41W9ohA0e+L.js,11vrNkbdcvL.js,21cmvUGs-3L.js,41DFEkYe9bL.js,517+5hCcu5L.js,31odYvSoo1L.js,01ZuJG498XL.js_.js?AUIClients/NavDesktopUberAsset&HNZoS3wM#desktop.292977-T3.312593-T1');
 });
 </script>
 <!-- From remote config v3-->
@@ -1141,8 +1147,45 @@ Under $10</option>
             </div>
             <div class='nav-right'>
               <script type='text/javascript'>window.navmet.tmp=+new Date();</script><!-- Navyaan SWM -->
-<div id="nav-swmslot" class="nav-swm-text-widget">
-  <a href="/cybermonday/?_encoding=UTF8&ref_=nav_swm_CM20_DO_SWM_ENES&pf_rd_p=290a2687-9d2a-4557-80a0-04d968abaac2&pf_rd_s=nav-sitewide-msg-text&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=96C8K0XVRBVV7C9W30KD" class="nav_a nav-swm-text">Shop Cyber Monday deals now</a>
+<div id="nav-swmslot">
+  <script type="text/javascript"> typeof uet === 'function' && uet('bb', 'hveNavSwmCountdownWidget', {wb: 1}); </script>
+
+  <div class="nav-swm-countdown-wrapper" style="height: 40px; width: 350px;">
+    <div id="hveNavSwmCountdownWidget-6f0eaf55-7125-46a7-810f-69d5ac090674" >
+      <div id= "hveNavSwmCountdownWidget-6f0eaf55-7125-46a7-810f-69d5ac090674-internal" style='background: url("https://images-na.ssl-images-amazon.com/images/G/01/img20/events/Q4/Holiday/CyberMonday/TrafficDrivers/Q4_T5_CM_SWM_DealsCountdown_en._CB417307451_.jpg") 0% 0% / 350px 40px no-repeat; max-width: 350px; height: 40px; overflow: hidden; margin: 0px auto; position: relative;'></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">function HveCountdownTimer(t){this.requiredConstructWidgetArguments=["EndDate","WidgetContainerId","BackgroundImageWidth","BackgroundImageHeight","TimeFontColor","TimeFontSize","TimeFontFamily","TimeFontWeight","TimeFontStyle","StartTimeUnit","EndTimeUnit"],this.numericWidgetArguments=["BackgroundImageWidth","BackgroundImageHeight","TimeFontWeight"];var e=this;this.timeUnits=["days","hours","minutes","seconds"],this.timeUnitProperties={days:{name:"days",unitInMilliseconds:864e5,formatFunction:function(t){return e.appendLeadingZeros(t,1)}},hours:{name:"hours",unitInMilliseconds:36e5,formatFunction:function(t){return e.appendLeadingZeros(t,2)}},minutes:{name:"minutes",unitInMilliseconds:6e4,formatFunction:function(t){return e.appendLeadingZeros(t,2)}},seconds:{name:"seconds",unitInMilliseconds:1e3,formatFunction:function(t){return e.appendLeadingZeros(t,2)}}};try{if(!t)throw"ConstructWidgetArgs is not defined in HveCountdownTimer constructor";var i=this.validateConstructWidgetRequest(t);if(i.length>0)return void this.handleConstructWidgetArgsError(t,i,"Construct Widget");if(this.widget=document.getElementById(t.WidgetContainerId),!this.widget)return void this.handleConstructWidgetArgsError(t,["Widget Container not found"],"Construct Widget");this.widget.style.height="100%",this.widget.style.width="100%",this.timeUnitDivs={},this.startUnit=t.StartTimeUnit,this.endUnit=t.EndTimeUnit,this.buildHtmlContent(t),this.paintWidget(new Date(t.EndDate).getTime())}catch(n){this.logExceptionToCSM(n,"FATAL","Construct Widget"),this.constructFallback(t)}}HveCountdownTimer.prototype.buildHtmlContent=function(t){var e=document.getElementById(t.WidgetContainerId+"-internal");this.setImageHrefProperties(e,t.ImageHref);for(var i=document.createDocumentFragment(),n=0;n<this.timeUnits.length;n++){var o=this.timeUnits[n],r=this.buildTimeUnitDiv(t[o+"XPosition"],t[o+"YPosition"],t.TimeFontColor,t.TimeFontSize,t.TimeFontWeight,t.TimeFontFamily,t.TimeFontStyle);i.appendChild(r),this.timeUnitDivs[o]=r}e.appendChild(i)},HveCountdownTimer.prototype.constructFallback=function(t){var e=[];if(t&&t.WidgetContainerId?(this.widget=document.getElementById(t.WidgetContainerId),this.widget||e.push("Widget Container not found")):(this.widget=undefined,e.push("No WidgetContainerId was provided by the widget arguments")),!t||!t.FallbackBackgroundImageUrl)return window.ue&&window.ue.count&&window.ue.count("CountDownTimerPuntTime",1),this.widget&&(this.widget.innerHTML=""),e;if(t.BackgroundImageWidth||e.push("No BackgroundImageWidth was provided by the widget arguments"),t.BackgroundImageHeight||e.push("No BackgroundImageHeight was provided by the widget arguments"),this.isInt(t.BackgroundImageWidth)||e.push("BackgroundImageWidth is not numeric"),this.isInt(t.BackgroundImageHeight)||e.push("BackgroundImageHeight is not numeric"),e.length>0)return this.logErrorArrayToCSM(e,"FATAL","Construct Fallback"),e;var i=document.getElementById(t.WidgetContainerId+"-internal");i.style.background="url("+t.FallbackBackgroundImageUrl+") no-repeat",this.setImageHrefProperties(i,t.ImageHref),window.ue&&window.ue.count&&window.ue.count("FallbackCountDownTimerTime",1)},HveCountdownTimer.prototype.buildTimeUnitDiv=function(t,e,i,n,o,r,s){var a=document.createElement("div");return t||(t=0),e||(e=0),a.style.left=this.getPixelFormat(t),a.style.top=this.getPixelFormat(e),a.style.overflow="hidden",a.style.position="absolute",a.style.display="inline",a.style.whiteSpace="nowrap",a.style.color=i,a.style.fontSize=n,a.style.fontWeight=o.toString(),a.style.fontFamily=r,a.style.fontStyle=s,a.style.textAlign="center",a.style.lineHeight="normal",a},HveCountdownTimer.prototype.paintWidget=function(t){try{for(var e=t-this.getDate().getTime(),i=this.calculateTimeRemaining(e),n=0;n<this.timeUnits.length;n++){var o=this.timeUnits[n],r=this.timeUnitDivs[o];i[o]&&(r.textContent?r.textContent=i[o]:r.innerText=i[o])}this.createPaintWidgetTimeout(t,e)}catch(s){this.timeout&&window.clearTimeout(this.timeout),this.logExceptionToCSM(s)}},HveCountdownTimer.prototype.createPaintWidgetTimeout=function(t,e){var i=this;this.timeout=window.setTimeout((function(){i.paintWidget(t)}),this.calculatePaintDelay(e,this.timeUnitProperties[this.endUnit].unitInMilliseconds))},HveCountdownTimer.prototype.setImageHrefProperties=function(t,e){e?(t.setAttribute("onclick","location.href='"+e+"'"),t.style.cursor="pointer"):(t.onclick=null,t.style.cursor="auto")},HveCountdownTimer.prototype.calculateTimeRemaining=function(t){var e=this.timeUnits.slice(this.timeUnits.indexOf(this.startUnit),this.timeUnits.indexOf(this.endUnit)+1);t<=0&&(t=0);for(var i=t,n={},o={},r="",s={},a=0;a<e.length;a++){r=e[a];var u=(s=this.timeUnitProperties[r]).unitInMilliseconds,d=Math.floor(i/u);(i-=d*u)>0&&r===this.endUnit&&(d+=1),n[r]=d}for(var m=e.length-1;m>0;m--){r=e[m],s=this.timeUnitProperties[r];var g=n[r],l=e[m-1],h=this.timeUnitProperties[l];g*s.unitInMilliseconds===h.unitInMilliseconds&&(n[r]=0,n[l]+=1)}for(var c=0;c<e.length;c++)r=e[c],s=this.timeUnitProperties[r],o[r]=s.formatFunction(n[r]);return o},HveCountdownTimer.prototype.calculatePaintDelay=function(t,e){return t%e==0?e:t%e},HveCountdownTimer.prototype.validateConstructWidgetRequest=function(t){for(var e=[],i=0;i<this.requiredConstructWidgetArguments.length;i++){var n=this.requiredConstructWidgetArguments[i];t[n]||e.push(n.toString()+" was not provided")}for(var o=0;o<this.numericWidgetArguments.length;o++){var r=this.numericWidgetArguments[o],s=t[r];if(s)this.isInt(s)||e.push(r.toString()+" is not numeric")}if(t.EndDate){var a=Date.parse(t.EndDate);isNaN(a)&&e.push("Invalid End Date: "+t.EndDate)}var u=this.timeUnits.indexOf(t.StartTimeUnit),d=this.timeUnits.indexOf(t.EndTimeUnit);return-1===u&&e.push("Invalid start time unit: "+t.StartTimeUnit),-1===d&&e.push("Invalid end time unit: "+t.EndTimeUnit),u>-1&&d>-1&&u>d&&e.push("The endTimeUnit is larger than the startTimeUnit"),e},HveCountdownTimer.prototype.handleConstructWidgetArgsError=function(t,e,i){this.logErrorArrayToCSM(e,"FATAL",i),this.constructFallback(t)},HveCountdownTimer.prototype.logErrorArrayToCSM=function(t,e,i){if(window.ueLogError)try{for(var n=0;n<t.length;n++){var o={message:t[n]};this.logExceptionToCSM(o,e,i)}}catch(r){}},HveCountdownTimer.prototype.logExceptionToCSM=function(t,e,i){if(window.ueLogError){var n={logLevel:e,attribution:"HighVelocityEvents - CountdownTimer - "+i};try{window.ueLogError(t,n)}catch(o){}}},HveCountdownTimer.prototype.appendLeadingZeros=function(t,e){for(var i=""+t,n=i.length>e?i.length:e,o="";o.length<e;)o+="0";var r=o+t;return r.substr(r.length-n)},HveCountdownTimer.prototype.getPixelFormat=function(t){return t.toString()+"px"},HveCountdownTimer.prototype.isValidTimeUnit=function(t){return this.timeUnits.indexOf(t)>-1},HveCountdownTimer.prototype.isInt=function(t){var e;return!isNaN(t)&&(0|(e=parseFloat(t)))===e},HveCountdownTimer.prototype.isBoolean=function(t){return"boolean"==typeof t},HveCountdownTimer.prototype.getDate=function(){return new Date};try{module&&(module.exports=HveCountdownTimer)}catch(error){}</script>
+  <script type="text/javascript"> typeof uet === 'function' && uet('cf', '<% $widgetName %>', {wb: 1});
+  new HveCountdownTimer({
+      WidgetName: "hveNavSwmCountdownWidget",
+      EndDate: "2020-12-01T07:59:59.000Z",
+      WidgetContainerId: "hveNavSwmCountdownWidget-6f0eaf55-7125-46a7-810f-69d5ac090674",
+      FallbackBackgroundImageUrl: "https://images-na.ssl-images-amazon.com/images/G/01/img20/events/Q4/Holiday/CyberMonday/TrafficDrivers/Q4_T5_CM_SWM_DealsCountdown_en._CB417307451_.jpg",
+      BackgroundImageWidth: "350",
+      BackgroundImageHeight: "40",
+      ImageHref: "/cybermonday?ref_=US_CM20_DO_GW_DESK_SWM-countdown_EN",
+      TimeFontColor: "#002552",
+      TimeFontSize: "18px",
+      TimeFontWeight: "550",
+      TimeFontFamily: "'ArialMT', 'Arial'",
+      TimeFontStyle: "normal",
+      StartTimeUnit: "hours",
+      EndTimeUnit: "seconds",
+      daysXPosition: "",
+      daysYPosition: "",
+      hoursXPosition: "207",
+      hoursYPosition: "4",
+      minutesXPosition: "250",
+      minutesYPosition: "4",
+      secondsXPosition: "292",
+      secondsYPosition: "4"
+    });
+    typeof uex === 'function' && uex('ld', 'hveNavSwmCountdownWidget', {
+      wb: 1
+    });
+  </script>
 </div><script type='text/javascript'>window.navmet.push({key:'SWM',end:+new Date(),begin:window.navmet.tmp});</script>
             </div>
         </div>
@@ -1175,10 +1218,10 @@ if (typeof uet === 'function') {  uet('x1', 'ewc', {wb: 1}); }
 
 window.$Nav && $Nav.declare('config.ewc', (function() {
   var config = 
-{"isCompactViewEnabled":true,"viewportWidthForPersistent":1400,"EWCStateReason":"fixed","isEWCStateExpanded":true,"isCompactEWCRendered":true,"enablePersistent":true,"cartCount":0,"isEWCLogging":1,"url":"/cart/ewc/compact/146-9637185-3785715?ie=UTF8&hostPageRID=96C8K0XVRBVV7C9W30KD&hostPageType=GPHelp&hostSubPageType=Help&storeName=help","isSmallScreenEnabled":true};
+{"isCompactViewEnabled":true,"viewportWidthForPersistent":1400,"EWCStateReason":"fixed","isEWCStateExpanded":true,"isCompactEWCRendered":true,"enablePersistent":true,"cartCount":0,"isEWCLogging":1,"url":"/cart/ewc/compact/143-7910608-9407265?ie=UTF8&hostPageRID=ENGK62JSHA11KRWNNZ7C&hostPageType=GPHelp&hostSubPageType=Help&storeName=help","isSmallScreenEnabled":true};
   var removeSkeletonAlign = false;
   var hideEwcOnIos = true;
-  config.errorContent = {"html":"<div class=\"nav-ewc-error\"><span class='nav-title'>Oops!</span><p class='nav-paragraph'>\n    There's a problem loading your cart right now.\n  </p><a href='/gp/cart/view.html/146-9637185-3785715?ie=UTF8&amp;ref_=nav_err_ewc_timeout' class='nav-action-button' ><span class='nav-action-inner'>Your Cart</span></a></div>"};
+  config.errorContent = {"html":"<div class=\"nav-ewc-error\"><span class='nav-title'>Oops!</span><p class='nav-paragraph'>\n    There's a problem loading your cart right now.\n  </p><a href='/gp/cart/view.html/143-7910608-9407265?ie=UTF8&amp;ref_=nav_err_ewc_timeout' class='nav-action-button' ><span class='nav-action-inner'>Your Cart</span></a></div>"};
   var hasAui = window.P && window.P.AUI_BUILD_DATE;
   config.pinnable = config.pinnable && hasAui;
 
@@ -1348,8 +1391,8 @@ window.$Nav && $Nav.when("util.templates").run("FlyoutErrorTemplate", function(t
   , searchAliases: ["aps","amazon-custom-products","amazon-devices","amazonbasics","amazonfresh","amazon-pharmacy","wholefoods","allthebestpets","bartelldrugs","bristolfarms","freshthyme","kegnbottle","missionwinespirits","petfoodexpress","sousaswineliquors","surdyksliquorcheeseshop","unionsquarewine","vintagegrape","westsidemarket","stripbooks","popular","apparel","electronics","sporting","sports-and-fitness","outdoor-recreation","fan-shop","garden","videogames","toys-and-games","jewelry","digital-text","digital-music","prime-digital-music","watches","grocery","hpc","instant-video","handmade","handmade-jewelry","handmade-home-and-kitchen","prime-instant-video","shop-instant-video","baby-products","office-products","software","smart-home","magazines","tools","automotive","misc","industrial","mi","pet-supplies","digital-music-track","digital-music-album","mobile","mobile-apps","movies-tv","music-artist","music-album","music-song","stripbooks-spanish","electronics-accessories","pantry","photo","audio-video","computers","furniture","kitchen","audible","audiobooks","beauty","shoes","arts-crafts","appliances","gift-cards","pets","outdoor","lawngarden","collectibles","replacement-parts","financial","fine-art","fashion","fashion-womens","fashion-womens-clothing","fashion-womens-jewelry","fashion-womens-shoes","fashion-womens-watches","fashion-womens-handbags","fashion-mens","fashion-mens-clothing","fashion-mens-jewelry","fashion-mens-shoes","fashion-mens-watches","fashion-girls","fashion-girls-clothing","fashion-girls-jewelry","fashion-girls-shoes","fashion-girls-watches","fashion-boys","fashion-boys-clothing","fashion-boys-jewelry","fashion-boys-shoes","fashion-boys-watches","fashion-baby","fashion-baby-boys","fashion-baby-girls","fashion-luggage","3d-printing","tradein-aps","todays-deals","live-explorations","local-services","vehicles","video-shorts","warehouse-deals","luxury-beauty","banjo-apps","black-friday","cyber-monday","alexa-skills","subscribe-with-amazon","courses","edu-alt-content","amazon-global-store","prime-wardrobe","under-ten-dollars","tempo","specialty-aps-sns"]
   , filterAliases: []
   , pageType: "GPHelp"
-  , requestId: "96C8K0XVRBVV7C9W30KD"
-  , sessionId: "146-9637185-3785715"
+  , requestId: "ENGK62JSHA11KRWNNZ7C"
+  , sessionId: "143-7910608-9407265"
   , language: "en_US"
   , customerId: ""
   , b2b: 0
@@ -1544,14 +1587,14 @@ window.$Nav && $Nav.declare('config.subnavFlyoutUrl','\x2Fgp\x2Fnavigation\x2Faj
 
 window.$Nav && $Nav.declare('config.recordEvUrl','\x2Fgp\x2Fnavigation\x2Fajax\x2Frecordevent.html');
 window.$Nav && $Nav.declare('config.recordEvInterval',15000);
-window.$Nav && $Nav.declare('config.sessionId','146\x2D9637185\x2D3785715');
-window.$Nav && $Nav.declare('config.requestId','96C8K0XVRBVV7C9W30KD');
+window.$Nav && $Nav.declare('config.sessionId','143\x2D7910608\x2D9407265');
+window.$Nav && $Nav.declare('config.requestId','ENGK62JSHA11KRWNNZ7C');
 
 window.$Nav && $Nav.declare('config.alexaListEnabled',true);
 
 window.$Nav && $Nav.declare('config.readyOnATF',false);
 
-window.$Nav && $Nav.declare('config.dynamicMenuArgs',{"rid":"96C8K0XVRBVV7C9W30KD","isFullWidthPrime":0,"isPrime":0,"dynamicRequest":1,"weblabs":"","isFreshRegionAndCustomer":"","primeMenuWidth":310});
+window.$Nav && $Nav.declare('config.dynamicMenuArgs',{"rid":"ENGK62JSHA11KRWNNZ7C","isFullWidthPrime":0,"isPrime":0,"dynamicRequest":1,"weblabs":"","isFreshRegionAndCustomer":"","primeMenuWidth":310});
 
 window.$Nav && $Nav.declare('config.customerName',false);
 
@@ -1667,7 +1710,7 @@ window.$Nav && $Nav.declare('config.isDesktopHeaderFlex',true);
 
 window.$Nav && $Nav.declare('config.flyoutArrowStyle','null');
 
-window.$Nav && $Nav.declare('config.hashCustomerAndSessionId','95e5fd38dba57c6ca9d4d8b3bf8f4811d6cede19');
+window.$Nav && $Nav.declare('config.hashCustomerAndSessionId','cf6ce6c2e1727b2aaab8761c5cd3eae0271b3ca8');
 
 window.$Nav && $Nav.declare('config.isExportMode',false);
 
@@ -1729,7 +1772,7 @@ window.$Nav && $Nav.declare('configComplete');
 
 <div class="a-row a-spacing-top-small">
     <div class="a-column a-span9">
-         <a class="cs-help-title" href="/gp/help/customer/display.html/ref=hp_bc_anchor/146-9637185-3785715?ie=UTF8&nodeId=508510">Help & Customer Service</a>
+         <a class="cs-help-title" href="/gp/help/customer/display.html/ref=hp_bc_anchor/143-7910608-9407265?ie=UTF8&nodeId=508510">Help & Customer Service</a>
     </div>
 </div>
 
@@ -1771,7 +1814,7 @@ window.$Nav && $Nav.declare('configComplete');
             <!-- Change small to large for section spacing as the former has bottom margin overlap with its bottom element in mobile browser. -->
         <div id="csg-search-cu" class="a-section a-spacing-large">
         <div class="a-row">
-	    <form id="search-help" name="search-help" method="get" action="/gp/help/customer/display.html/ref=hp_articles_search_rd/146-9637185-3785715?ie=UTF8&nodeId=">
+	    <form id="search-help" name="search-help" method="get" action="/gp/help/customer/display.html/ref=hp_articles_search_rd/143-7910608-9407265?ie=UTF8&nodeId=">
 	        <input type="hidden" name="__mk_en_US" value="ÅMÅŽÕÑ" />
 	        <div class="a-column a-span12">
 	            <div class="a-row">
@@ -1809,7 +1852,7 @@ window.$Nav && $Nav.declare('configComplete');
 
 
 <div class="cs-help-breadcrumb">
-  <a href="/gp/help/customer/display.html/ref=hp_bc_nav/146-9637185-3785715?ie=UTF8&amp;nodeId=201376310">Digital Services & Content</a><span class="a-list-item">&nbsp;&rsaquo;&nbsp;</span><a href="/gp/help/customer/display.html/ref=hp_bc_nav/146-9637185-3785715?ie=UTF8&amp;nodeId=GRBHRJHSSV9RA2PM">Amazon Appstore</a><span>&rsaquo;</span>
+  <a href="/gp/help/customer/display.html/ref=hp_bc_nav/143-7910608-9407265?ie=UTF8&amp;nodeId=201376310">Digital Services & Content</a><span class="a-list-item">&nbsp;&rsaquo;&nbsp;</span><a href="/gp/help/customer/display.html/ref=hp_bc_nav/143-7910608-9407265?ie=UTF8&amp;nodeId=GRBHRJHSSV9RA2PM">Amazon Appstore</a><span>&rsaquo;</span>
 </div>
 
 
@@ -2125,7 +2168,7 @@ window.$Nav && $Nav.declare('configComplete');
   <div class="inner">
     <span>
       <span class="a-color-state">&lsaquo;</span>
-      <a href="/gp/help/customer/display.html/146-9637185-3785715?ie=UTF8&amp;nodeId=508510">All Help Topics</a>
+      <a href="/gp/help/customer/display.html/143-7910608-9407265?ie=UTF8&amp;nodeId=508510">All Help Topics</a>
     </span>
   </div>
   <div class="inner">
@@ -2136,7 +2179,7 @@ window.$Nav && $Nav.declare('configComplete');
 
 
  <h3>Amazon Appstore</h3>
-    <ul class="nav-topics"><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GWSH56DBKXBNGC8E">What are Amazon Coins?</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GM5UP39EFNETVXSE">Turn Off In-App Purchasing</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GB8P5MQSYFYHPCQ5">Set Parental Controls for In-App Purchases</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GAUJXF93B77T87AJ">App Errors or Is Unresponsive</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GBRMBVSSWHAU7FS8">Clear App Cache and Data on Your Android Device</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GPVS38BEKXWQS7R8">Manage Your Appstore Subscriptions from the Amazon Appstore App</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GDT2SXJJ7K49JKYE">Manage Your Appstore Subscriptions from the Website</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GTAQFP3SY9N483CU">Manage Your Appstore Subscriptions from Your Fire Tablet</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GG6HESXQN45DZQ8N">Countries & Territories Eligible to Shop for Apps in Other Amazon Marketplaces</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=GSXRFWKVKXYMK8GS">Countries & Territories Eligible to Shop for Apps on Amazon.com</a></li><li class="selected">Amazon Appstore for Android Terms of Use</li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=201434520">Amazon Coins Terms</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=201357690">Amazon App Suite Legal Notices</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/146-9637185-3785715?ie=UTF8&amp;nodeId=201487670">Amazon GameCircle Terms of Use</a></li></ul>
+    <ul class="nav-topics"><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GWSH56DBKXBNGC8E">What are Amazon Coins?</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GM5UP39EFNETVXSE">Turn Off In-App Purchasing</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GB8P5MQSYFYHPCQ5">Set Parental Controls for In-App Purchases</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GAUJXF93B77T87AJ">App Errors or Is Unresponsive</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GBRMBVSSWHAU7FS8">Clear App Cache and Data on Your Android Device</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GPVS38BEKXWQS7R8">Manage Your Appstore Subscriptions from the Amazon Appstore App</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GDT2SXJJ7K49JKYE">Manage Your Appstore Subscriptions from the Website</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GTAQFP3SY9N483CU">Manage Your Appstore Subscriptions from Your Fire Tablet</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GG6HESXQN45DZQ8N">Countries & Territories Eligible to Shop for Apps in Other Amazon Marketplaces</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=GSXRFWKVKXYMK8GS">Countries & Territories Eligible to Shop for Apps on Amazon.com</a></li><li class="selected">Amazon Appstore for Android Terms of Use</li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=201434520">Amazon Coins Terms</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=201357690">Amazon App Suite Legal Notices</a></li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/143-7910608-9407265?ie=UTF8&amp;nodeId=201487670">Amazon GameCircle Terms of Use</a></li></ul>
 
 
   </div>
@@ -2159,7 +2202,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/video/settings/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_av">
+            <a class="a-link-normal quick-solution-action" href="/gp/video/settings/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_av">
                 <img alt="Prime Video" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/aiv-icon-qs._CB485947020_.png" title="Prime Video">
                 <div style="display: none;">
                     Prime Video
@@ -2168,7 +2211,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/video/settings/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_av">
+            <a class="a-link-normal quick-solution-action" href="/gp/video/settings/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_av">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Prime Video
                 </p>
@@ -2182,7 +2225,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_ad">
+            <a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_ad">
                 <img alt="Apps &amp; Devices" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/hollywood-qs._CB485971251_.png" title="Apps &amp; Devices">
                 <div style="display: none;">
                     Apps & Devices
@@ -2191,7 +2234,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_ad">
+            <a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_ad">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Apps & Devices
                 </p>
@@ -2205,7 +2248,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/css/order-history/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_dp&unifiedOrders=0">
+            <a class="a-link-normal quick-solution-action" href="/gp/css/order-history/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_dp&unifiedOrders=0">
                 <img alt="Digital Purchases" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/digital-purchases-qs._CB485927774_.png" title="Digital Purchases">
                 <div style="display: none;">
                     Digital Purchases
@@ -2214,7 +2257,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/css/order-history/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_dp&unifiedOrders=0">
+            <a class="a-link-normal quick-solution-action" href="/gp/css/order-history/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_dp&unifiedOrders=0">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Digital Purchases
                 </p>
@@ -2228,7 +2271,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/dmusic/cloudplayer/player/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_mym">
+            <a class="a-link-normal quick-solution-action" href="/gp/dmusic/cloudplayer/player/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_mym">
                 <img alt="Manage Your Music" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/music-qs._CB441573195_.png" title="Manage Your Music">
                 <div style="display: none;">
                     Manage Your Music
@@ -2237,7 +2280,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/dmusic/cloudplayer/player/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_mym">
+            <a class="a-link-normal quick-solution-action" href="/gp/dmusic/cloudplayer/player/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_mym">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Manage Your Music
                 </p>
@@ -2251,7 +2294,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/help/customer/display.html/146-9637185-3785715?ie=UTF8&nodeId=200127470&ref_=hp_ss_qs_v3_dg_ds">
+            <a class="a-link-normal quick-solution-action" href="/gp/help/customer/display.html/143-7910608-9407265?ie=UTF8&nodeId=200127470&ref_=hp_ss_qs_v3_dg_ds">
                 <img alt="Digital Services and Device Support" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/family-device-qs._CB485927826_.png" title="Digital Services and Device Support">
                 <div style="display: none;">
                     Digital Services and Device Support
@@ -2260,7 +2303,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/help/customer/display.html/146-9637185-3785715?ie=UTF8&nodeId=200127470&ref_=hp_ss_qs_v3_dg_ds">
+            <a class="a-link-normal quick-solution-action" href="/gp/help/customer/display.html/143-7910608-9407265?ie=UTF8&nodeId=200127470&ref_=hp_ss_qs_v3_dg_ds">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Digital Services and Device Support
                 </p>
@@ -2274,7 +2317,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/photos/storage/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_ycd">
+            <a class="a-link-normal quick-solution-action" href="/gp/photos/storage/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_ycd">
                 <img alt="Your Amazon Drive" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/clouddrive-qs._CB485925393_.png" title="Your Amazon Drive">
                 <div style="display: none;">
                     Your Amazon Drive
@@ -2283,7 +2326,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/photos/storage/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dg_ycd">
+            <a class="a-link-normal quick-solution-action" href="/gp/photos/storage/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dg_ycd">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Your Amazon Drive
                 </p>
@@ -2297,7 +2340,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html/146-9637185-3785715?_encoding=UTF8&location=https%3A%2F%2Fwww.amazonforum.com%2F%3Fref_%3Dhp_ss_qs_v3_dig_forum&source=standards&token=FFF77676D2E96B28C6E2782C695EF32B1339EFAF">
+            <a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html/143-7910608-9407265?_encoding=UTF8&location=https%3A%2F%2Fwww.amazonforum.com%2F%3Fref_%3Dhp_ss_qs_v3_dig_forum&source=standards&token=FFF77676D2E96B28C6E2782C695EF32B1339EFAF">
                 <img alt="Digital &amp; Device Forum" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/digital-device-forum-clr-qs._CB485946755_.png" title="Digital &amp; Device Forum">
                 <div style="display: none;">
                     Digital & Device Forum
@@ -2306,7 +2349,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html/146-9637185-3785715?_encoding=UTF8&location=https%3A%2F%2Fwww.amazonforum.com%2F%3Fref_%3Dhp_ss_qs_v3_dig_forum&source=standards&token=FFF77676D2E96B28C6E2782C695EF32B1339EFAF">
+            <a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html/143-7910608-9407265?_encoding=UTF8&location=https%3A%2F%2Fwww.amazonforum.com%2F%3Fref_%3Dhp_ss_qs_v3_dig_forum&source=standards&token=FFF77676D2E96B28C6E2782C695EF32B1339EFAF">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Digital & Device Forum
                 </p>
@@ -2319,7 +2362,7 @@ window.$Nav && $Nav.declare('configComplete');
 
                  <hr class="a-divider-normal">
                  
-    <span class="a-button a-button-base"><span class="a-button-inner"><a href="/gp/help/customer/contact-us/ref=hp_ss_qs_v3_dg_cu_t2&initialIssue=digital-order/146-9637185-3785715?ie=UTF8&ref_=hp_ss_qs_v3_dig_forum" class="a-button-text" role="button">
+    <span class="a-button a-button-base"><span class="a-button-inner"><a href="/gp/help/customer/contact-us/ref=hp_ss_qs_v3_dg_cu_t2&initialIssue=digital-order/143-7910608-9407265?ie=UTF8&ref_=hp_ss_qs_v3_dig_forum" class="a-button-text" role="button">
         Contact Us
     </a></span></span>
 
@@ -2504,7 +2547,7 @@ Prime Now<br/> <span class="navFooterDescText">FREE 2-hour Delivery<br/> on Ever
 </table></div>
    
 <div class="navFooterLine navFooterLinkLine navFooterPadItemLine navFooterCopyright"><ul><li class='nav_first'><a href='/gp/help/customer/display.html?ie=UTF8&amp;nodeId=508088&amp;ref_=footer_cou' class='nav_a'>Conditions of Use</a></li><li><a href='/gp/help/customer/display.html?ie=UTF8&amp;nodeId=468496&amp;ref_=footer_privacy' class='nav_a'>Privacy Notice</a></li><li><a href='/interestbasedads/ref=footer_iba' class='nav_a'>Interest-Based Ads</a></li><li class='nav_last'>© 1996-2020, Amazon.com, Inc. or its affiliates</li></ul></div>
-</div><!-- whfh-CcpAEx6GomJqfVEwGMbOMkdBk2xyPenkWCj3o5qoAEAE5cgMSasVBLe08l2KX7xB rid-96C8K0XVRBVV7C9W30KD -->
+</div><!-- whfh-ums4rDtuRqhsqiwegqpGhMilrSn5m9p3d5RLSKtD1jOZezkDiZqXI5got1zXi+dn rid-ENGK62JSHA11KRWNNZ7C -->
 
 
 
@@ -2527,7 +2570,7 @@ Prime Now<br/> <span class="navFooterDescText">FREE 2-hour Delivery<br/> on Ever
 
 
 
-<div id="sis_pixel_r2" aria-hidden="true" style="height:1px; position: absolute; left: -1000000px; top: -1000000px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=010139675f2af9e1c5aac2f5e7dafb33cd9ee0119a44029ea55ae291b9ddfc7436cd&old_oo=0&ts=1606721403460&s=ASaeVFEGYbvDDG64cKRd6AdoZisET1A0WmJE4kLi4ReE&cb=1606721403460" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>')},300)});</script>
+<div id="sis_pixel_r2" aria-hidden="true" style="height:1px; position: absolute; left: -1000000px; top: -1000000px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=010175be3cea40225cf79c25bbf1387fafb3567d4adb96ebe7e6a5d2e341157a16dd&old_oo=0&ts=1606725005518&s=AU0oZAJJsSS68mG1dRLgx5x3tbYGekTvhqEDdAHydlwo&cb=1606725005518" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>')},300)});</script>
 
 
 
@@ -2974,7 +3017,7 @@ $Nav.when('$', 'data', 'flyout.yourAccount', 'sidepanel.csYourAccount',
 
 
 
-   {"biaHcbRid":"96C8K0XVRBVV7C9W30KD"},
+   {"biaHcbRid":"ENGK62JSHA11KRWNNZ7C"},
                 dataType: 'json',
                 timeout: 4*1000,
                 success: renderBuyItAgain,
@@ -3074,7 +3117,7 @@ $Nav.when('$', 'data', 'flyout.yourAccount', 'sidepanel.csYourAccount',
     <div class="nav-ajax-message"></div>
     <div class="nav-ajax-error-msg">
       <p class="nav_p nav-bold">There's a problem loading this menu right now.</p>
-      <p class="nav_p"><a href="/gp/prime/ref=nav_prime_ajax_err/146-9637185-3785715" class="nav_a">Learn more about Amazon Prime.</a></p>
+      <p class="nav_p"><a href="/gp/prime/ref=nav_prime_ajax_err/143-7910608-9407265" class="nav_a">Learn more about Amazon Prime.</a></p>
     </div>
   </div>
 </div>
@@ -3118,7 +3161,7 @@ $Nav.when('$', 'data', 'flyout.yourAccount', 'sidepanel.csYourAccount',
     <div class="nav-npt-text-detail"> Prime members enjoy FREE Delivery and exclusive access to music, movies, TV shows, original audio series, and Kindle books. </div>
     <div class="nav-npt-text-detail">
       &gt;
-      <a class="nav-npt-a" href="/gp/prime/ref=nav_tooltip_redirect/146-9637185-3785715">Get started</a>
+      <a class="nav-npt-a" href="/gp/prime/ref=nav_tooltip_redirect/143-7910608-9407265">Get started</a>
     </div>
   </div>
 </div>
@@ -3175,7 +3218,7 @@ window.$Nav && $Nav.declare('config.prefetch',function() {
     window.$Nav && $Nav.when('$', 'page.ready').run('MXMarketplaceRedirectOverlay',function($) {
         $.ajax({
             type: 'POST',
-            url: '/gp/redirection/mexico.html/146-9637185-3785715',
+            url: '/gp/redirection/mexico.html/143-7910608-9407265',
             data: {
                 path: '/gp/help/customer/display.html',
                 queryString: '?ie=UTF8\u0026nodeId=201485660',
@@ -3402,36 +3445,6 @@ window.$Nav && $Nav.declare('config.prefetch',function() {
     });
 </script>
 
-            
-        
-
-
-
-
-
-
-
-        
-        <script type="text/javascript">
-        window.$Nav && $Nav.when('$').run('SEMarketplaceRedirectOverlay',function($) {
-        $.ajax({
-        type: 'POST',
-        url: '/gp/redirection/sweden.html',
-        data: {
-        path: '/gp/help/customer/display.html',
-                queryString: '?ie=UTF8\u0026nodeId=201485660',
-                pageType: 'GPHelp',
-referer: ''
-},
-success: function(data) {
-    if (data) {
-        $('body').append(data);
-    }
-}
-});
-});
-</script>
-
 
 
 
@@ -3635,10 +3648,10 @@ var ue_pty='GPHelp', ue_spty='Help', ue_pti='201485660';
 
 </script>
 
-<a href='/rd/uedata?tepes=1&amp;id=96C8K0XVRBVV7C9W30KD'>v</a>
+<a href='/rd/uedata?tepes=1&amp;id=ENGK62JSHA11KRWNNZ7C'>v</a>
 <noscript>
-     <img src='/rd/uedata?noscript&amp;id=96C8K0XVRBVV7C9W30KD&amp;pty=GPHelp&amp;spty=Help&amp;pti=201485660' />
-     <img src='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:146-9637185-3785715:96C8K0XVRBVV7C9W30KD$uedata=s:%2Frd%2Fuedata%3Fnoscript%26id%3D96C8K0XVRBVV7C9W30KD%26pty%3DGPHelp%26spty%3DHelp%26pti%3D201485660:2000' />
+     <img src='/rd/uedata?noscript&amp;id=ENGK62JSHA11KRWNNZ7C&amp;pty=GPHelp&amp;spty=Help&amp;pti=201485660' />
+     <img src='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:143-7910608-9407265:ENGK62JSHA11KRWNNZ7C$uedata=s:%2Frd%2Fuedata%3Fnoscript%26id%3DENGK62JSHA11KRWNNZ7C%26pty%3DGPHelp%26spty%3DHelp%26pti%3D201485660:2000' />
 
 </noscript>
 </div>

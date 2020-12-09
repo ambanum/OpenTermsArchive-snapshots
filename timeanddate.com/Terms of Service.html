@@ -129,7 +129,11 @@ bli();main();
 </script>
  
 <div id=FBD style="display:none" class=wfc></div>
-
+<script>//Copyright timeanddate.com 2016, do not use without permission
+(function(e){aelw("load",function(){var a=window,c="0";a.I10C&&(c="1",a.I10C.Morph&&(c="2"));var b=gf("ad-wrap"),d="A0";a.getComputedStyle&&(d="A1",b&&(d="A2","none"===getComputedStyle(b).display&&(d="A3")));a.performance&&a.performance.timing?(b=a.performance.timing,c={results:{blocking:b.domainLookupStart-b.fetchStart,dnsLookupTime:b.domainLookupEnd-b.domainLookupStart,connecting:b.connectEnd-(b.secureConnectionStart||b.connectStart),reqDelay:b.requestStart-b.connectEnd,waiting:b.responseStart-
+b.requestStart,receiving:performance.timing.responseEnd-performance.timing.responseStart},meta:{url:a.location.href,useragent:navigator.userAgent,redirect:a.performance.navigation.redirectCount,instart:c,ab:d},raw:a.performance.timing},c.results.total=c.results.dnsLookupTime+c.results.connecting+c.results.waiting+c.results.receiving,e.perf=c,a=gx(),c="data="+JSON.stringify(c),a.onreadystatechange=function(){},a.open("POST","/scripts/logperf.php",!0),a.setRequestHeader("Content-type","application/x-www-form-urlencoded"),
+a.send(c)):e.perf="Unsupported"})})(window);
+</script>
 <script>
 openprivacy=function(params) {
  if (document.privacyframe_form) {return;}

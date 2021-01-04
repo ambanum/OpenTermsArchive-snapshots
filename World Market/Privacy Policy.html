@@ -15877,6 +15877,62 @@ $(document).ready(function(){
 		.cpwm-offer.cpwm-left a, .cpwm-offer.cpwm-right a {white-space: nowrap;}
 	}
 </style>
+<style>
+	.cpwm-popup-compensate {z-index:1000 !important;overflow:hidden !important;}
+	.pr-snippet-read-and-write {margin-top: 5px !important;}
+	a.pr-snippet-review-count { top: 0 !important;}
+	#ensModalWrapper .ensModal {padding-top: 100px;background: url("/images/worldmarket/en_us/global/globalnav/logo01.png") no-repeat center top;}
+	.ensModal .ensTitle {top:65px;}
+	section#ensModalWrapper .close {position: absolute; top: -16px; right: 2px; font-size: 64px;font-family: "Sentinel-Light",serif;color: #196d79;cursor:pointer;opacity:1;}
+	section#ensModalWrapper .close:hover {color: #0f4149;}
+</style>
+<script>
+	function closeUp(){
+//Clicking 'Manage Preferences'; Closes 'notify' modal
+		console.log("PREFERENCES LINK CLICKED");
+		jQuery("#ensNotifyBanner").hide();
+  	}
+	function closePreferences() {
+		jQuery("#ensCancel > div:nth-child(1)").click();
+	}
+	jQuery(document).keyup(function(e) {
+		if (e.key === "Escape") { 
+			console.log("CCPA Escape");
+			jQuery("#ensCancel > div:nth-child(1)").click();
+		}
+	});	
+
+	jQuery(document).ready(function(){
+		var cpwmMNA = jQuery.cookie("COSTPLUSWORLDMARKET_ENSIGHTEN_PRIVACY_Marketing_and_Advertising");
+		console.log("cpwmMNA: " + cpwmMNA);
+		if(cpwmMNA == "0" || cpwmMNA == "1"){
+			jQuery.cookie("COSTPLUSWORLDMARKET_ENSIGHTEN_PRIVACY_BANNER_VIEWED","1");
+		}
+		var isitthere = "#ensBannerDescription > p:nth-child(3) > a:nth-child(1)";
+		var cpwmCloseEcks = '<span class="close" onclick="closePreferences();">&times;</span>';
+		var isitthereChk = setInterval(function () {
+			if(jQuery(isitthere).length > 0){
+				jQuery("#ensBannerDescription > p:nth-child(3) > a:nth-child(1)").attr("onclick","closeUp()");
+				jQuery("section#ensModalWrapper").prepend(cpwmCloseEcks);
+//Clicking 'Cancel'; Closes 'preferences' modal
+				jQuery("#ensCancel > div:nth-child(1)").click(function() {
+					console.log("CANCEL CLICKED");
+					jQuery("#ensModalWrapper").hide();
+					if(!(jQuery.cookie("COSTPLUSWORLDMARKET_ENSIGHTEN_PRIVACY_Marketing_and_Advertising")) && (jQuery.cookie("COSTPLUSWORLDMARKET_ENSIGHTEN_PRIVACY_BANNER_VIEWED") != "1")){
+						jQuery("#ensNotifyBanner").show();
+					}
+				});
+//Clicking 'Save'; Closes 'preferences' modal
+				jQuery("#ensSave > div:nth-child(1)").click(function() {
+					console.log("SAVE CLICKED");
+					jQuery("#ensModalWrapper").hide();
+				});
+				clearInterval(isitthereChk);
+			}
+		}, 1000);
+	});
+
+</script>
 <!-- wk44-gps-promo-201231.html -->
 </div>
 	  

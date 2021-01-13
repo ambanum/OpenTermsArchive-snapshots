@@ -44,7 +44,7 @@
 <!-- category dns-prefetch start -->	
 <!-- category dns-prefetch end -->
 
-<link rel='stylesheet' type='text/css' href='/wro/70c2a1159270a219ebccf9b48b5c7d7/HEAD-CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/wro/dd87de61e5456fd36642d99587c689ed/SITE_CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/text/inc/css/global.css?v=rl15a'><script src='/wro/c4880afc073bc11d021087ead6fdd0ac/HEAD.js?minimize=true'></script><link href="https://plus.google.com/u/0/b/116195269616123281160" rel="publisher"/>
+<link rel='stylesheet' type='text/css' href='/wro/70c2a1159270a219ebccf9b48b5c7d7/HEAD-CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/wro/728d95aa28ebbe4724b6e92ec2b15cd9/SITE_CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/text/inc/css/global.css?v=rl15a'><script src='/wro/c4880afc073bc11d021087ead6fdd0ac/HEAD.js?minimize=true'></script><link href="https://plus.google.com/u/0/b/116195269616123281160" rel="publisher"/>
 <script>
    var limitSkuQtyExceeded= "Limit {0} per customer. Please adjust your quantity.";
    var limitSkuQtyMap = {};
@@ -278,7 +278,7 @@ jQuery(document).ready(function(){
 
                                         <div>
                                                 <div id="forgotPasswordLink">
-                                                    <button id="forgotPassword" type="button">Forgot Password?</button>
+                                                    <button id="forgotPasswordSign" type="button">Forgot Password?</button>
                                                 </div>
                                             </div>
                                         <div class="sButtonHolder">
@@ -647,7 +647,7 @@ jQuery(document).ready(function(){
 				<div class="thContent" id="thWishList" style="display:none">
 						<div class="ml-header-link ml-header-favorites">
 							<div class="ml-header-link-item">
-								<a href="javascript:void(0)" onclick="javascript:MarketLive.Base.showWishListPage('/wishlist/list.do?nav=%2Fcategory%2Fid%2F117515?method=view');" class="ml-svg-icon-heart">
+								<a href="javascript:void(0)" id="showWishHeader" onclick="javascript:MarketLive.Base.showWishListPage('/wishlist/list.do?nav=%2Fcategory%2Fid%2F117515?method=view',false,'wishlistId','#showWishHeader');" class="ml-svg-icon-heart">
 									<button aria-hidden="true" class="ml-icon-lib ml-icon-wishlist" aria-label="Add to WishList" aria-selected="false" role="tab" 
 									type="button"></button>Wish List</a>
 							</div>
@@ -1166,11 +1166,13 @@ function getStateFromDomHeader() {
                     <div class="ml-header-logo-wrapper">
                         <div class="ml-header-logo">
                             <a href="/" aria-label="Cost Plus World Market">
-									<picture>
-										  <source media="(max-width:640px)" srcset="/images/worldmarket/en_us/global/globalnav/evergreen/logo_xs.png">
-										  <source media="(min-width:641px)" srcset="/images/worldmarket/en_us/global/globalnav/logo01.png">
-										  <img src="/images/worldmarket/en_us/global/globalnav/logo01.png" alt="Cost Plus World Market">
-									</picture>
+									<h1>
+										<picture>
+											  <source media="(max-width:640px)" srcset="/images/worldmarket/en_us/global/globalnav/evergreen/logo_xs.png">
+											  <source media="(min-width:641px)" srcset="/images/worldmarket/en_us/global/globalnav/logo01.png">
+											  <img src="/images/worldmarket/en_us/global/globalnav/logo01.png" alt="Cost Plus World Market">
+										</picture>
+									</h1>
 								</a>	
 								</div>
                     </div>
@@ -21270,27 +21272,23 @@ Email: <a href="mailto:customercare@worldmarket.com">customercare@worldmarket.co
 	                            <div id="facetsArea" data-facets-area="Category" style="display:none;"></div>
   		<div class="ml-navleft">
 	    <nav class="ml-navleft-body-wrapper panel-group" aria-label="product category">
-	        <div class="col-sm-12 col-md-12 panel-default"><ul class="ml-leftNav-category-wrapper">
+	        <div class="col-sm-12 col-md-12 panel-default"><ul class="ml-leftNav-category-wrapper"><li class='ml-navleft-topCats-active'>
                                     
                   
              
-              <div class="ml-navleft-topCats-active">
-                    <ul><li><a data-category-type="$singleCatType" href="/category/customer-service.do"><h2><span aria-hidden='true'></span>Customer Service </h2></a>
-			             </li></ul>
-              </div>
-      
-<div id='117515_collapse' class='panel-collapse'>
+                            <a data-category-type="2" href="/category/customer-service.do"><h2><span aria-hidden='true'></span>Customer Service </h2></a>
+			             
+              
+</li><li id='117515_collapse' class='panel-collapse'><ul><li class='panel-heading ml-navleft-cats-active'>
                                     
                   
              
-              <div class="panel-heading ml-navleft-cats-active">
-                    <ul><li><a data-category-type="$singleCatType" href="/category/customer-service/terms-of-use.do">Terms And Conditions</a>
-			             </li></ul>
-              </div>
-      
+                            <a data-category-type="2" href="/category/customer-service/terms-of-use.do">Terms And Conditions</a>
+			             
+              
+</li>
 
-
-</div>
+</ul></li>
 
 </ul></div>
 	    </nav>
@@ -21311,16 +21309,16 @@ Email: <a href="mailto:customercare@worldmarket.com">customercare@worldmarket.co
 	MarketLive.Reporting.dlGlobal.prodGwSubCats.push(tmpCatList);
 
 	jQuery(function(){
-		var $clickOn = jQuery('#leftNavContainer .panel-heading ul li').find('a[data-toggle="collapse"]');
+		var $clickOn = jQuery('#leftNavContainer .panel-heading').find('a[data-toggle="collapse"]');
 		
 		if($clickOn.length){
 			$clickOn.on('click', function(){
 				if ( $(this).attr('aria-expanded') == 'true' ) {
 					$(this).find('.glyphicon').removeClass('glyphicon ml-icon ml-icon-minus').addClass('glyphicon ml-icon ml-icon-plus');
-					$(this).parents('ul').removeClass('ml-navleft-active');
+					$(this).parents('li').removeClass('ml-navleft-active');
 				} else {
 					$(this).find('.glyphicon').removeClass('glyphicon ml-icon ml-icon-plus').addClass('glyphicon ml-icon ml-icon-minus');
-					$(this).parents('ul').addClass('ml-navleft-active');
+					$(this).parents('li').addClass('ml-navleft-active');
 				}
 			});
 		}
@@ -21328,12 +21326,12 @@ Email: <a href="mailto:customercare@worldmarket.com">customercare@worldmarket.co
 			   e = e || window.event;
 			  // find the children and close them
 			   $(e.target).find('.ml-icon-minus').removeClass('ml-icon-minus').addClass('ml-icon-plus');
-			   $(e.target).find('.ml-icon-plus').parents('ul').removeClass('ml-navleft-active');
+			   $(e.target).find('.ml-icon-plus').parents('li').removeClass('ml-navleft-active');
 			   $(e.target).find('.panel-collapse').collapse('hide');
 		});
        
-		$('.ml-navleft-cats-active ul').addClass('ml-navleft-active');
-		$('.ml-navleft-subCats-active ul').addClass('ml-navleft-active');
+		$('.ml-navleft-cats-active li').addClass('ml-navleft-active');
+		$('.ml-navleft-subCats-active li').addClass('ml-navleft-active');
 		$('.ml-navleft-cats-active  + .panel-collapse').addClass('in'); 
 		$('.ml-navleft-subCats-active + .panel-collapse').addClass('in');
 		$('.ml-navleft-subCats4-active + .panel-collapse').addClass('in');
@@ -21366,7 +21364,7 @@ Email: <a href="mailto:customercare@worldmarket.com">customercare@worldmarket.co
 <div class="ml-footer-container">
 	  <div class="ml-footer-signup-wrapper">
 		 <div id="ml-footer-contact-wrapper" class="">
-		  	<h4 class="need-help">Need Help?</h4>
+		  	<h2 class="need-help">Need Help?</h2>
 			<a href="tel:(877) 967-5362">
 				<div class="ml-icon ml-social-icon ml-icon-call-us ml-footer-c-icon">
 					<div>Call Us</div>
@@ -23073,7 +23071,7 @@ console.log('**** DataLayer - Ensighten Reporting - End ****');
     MarketLive.Reporting = MarketLive.Reporting || {};
     MarketLive.Reporting.templateType = 'GATEWAY';
 </script>
-<script type='text/javascript' src='/wro/425f2d610e15dfe5e5b912044462bb5a/FOOTER.js?minimize=true'></script><script type='text/javascript' src='/wro/17169ebd1bfd3b11e7bb119ccd36f07a/FOOTER-LIVECHAT-PRD.js?minimize=true'></script><script type='text/javascript' src='/wro/b69c86c27f6fff21e9488ecb255875b2/P2P.js?minimize=true'></script><script src="https://portal.afterpay.com/afterpay.js" async></script>
+<script type='text/javascript' src='/wro/91f4b547ec4b67612dad3735385d95a4/FOOTER.js?minimize=true'></script><script type='text/javascript' src='/wro/17169ebd1bfd3b11e7bb119ccd36f07a/FOOTER-LIVECHAT-PRD.js?minimize=true'></script><script type='text/javascript' src='/wro/6d91142dc1ba176b373f0cad465a099d/P2P.js?minimize=true'></script><script src="https://portal.afterpay.com/afterpay.js" async></script>
 <script src="https://static-us.afterpay.com/javascript/present-afterpay.js"></script>
 <script type='text/javascript'>
     window.MarketLive = window.MarketLive || {};
@@ -23341,7 +23339,10 @@ jQuery(document).ready(function() {
             var ww = jQuery("#thSignIn .dropdown-wrapper").width();
             var xP = (( wW - ww )/2) - sL;
             jQuery("#thSignIn .dropdown-wrapper").css("left",xP+"px");
-			jQuery(".loggedIn").removeClass("openMenu");
+			if(!jQuery("#thSignIn .dropdown-wrapper").is(":visible")){
+				jQuery(".loggedIn").removeClass("openMenu");
+				jQuery('body').removeClass("open-Amenu");	
+			}
             bufInMod = 0;
         }
         else{
@@ -23381,7 +23382,7 @@ $('#accountSetupFormLogin').on('submit', function(){
    $('#loginError').html('');
 });
 
-$('#forgotPassword').on('click', function(){
+$('#forgotPasswordSign').on('click', function(){
     MarketLive.Base.showPasswordReset();
     MarketLive.Reporting.dlGlobal.overlayFormOpen('password recovery');
 });
@@ -23602,7 +23603,7 @@ MarketLive.Base.showFormWithRecaptchaRendering(1000);
 		$('.wmr-cta a.btn-primary').css({'display':'block'})
 	});
 	
-	if(loadMyStore != 'undefined' && loadMyStore=="true") {
+	if(typeof loadMyStore != 'undefined' && loadMyStore=="true") {
 		$(window).load(function() {
 			MarketLive.MyStore.getMyStore('false');
 		});

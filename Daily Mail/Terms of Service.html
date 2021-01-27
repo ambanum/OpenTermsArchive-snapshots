@@ -237,7 +237,7 @@ PageCriteria.latitude = "51.50";
 PageCriteria.longitude = "-0.12";
 PageCriteria.geo = "GB" || PageCriteria.geo;
 PageCriteria.region = "EN" || '';
-PageCriteria.timestamp = 1611775840;
+PageCriteria.timestamp = 1611779433;
 PageCriteria.isMobile = "is_mobilefalse";
 PageCriteria.isMobile = (!!PageCriteria.isMobile) ? PageCriteria.isMobile === 'is_mobiletrue' : undefined;
 PageCriteria.isTablet = "";
@@ -395,7 +395,7 @@ var adType='dart',
         videoBundleVersion: '6.12.0',
         adsBundleLocation: 'https://www.dailymail.co.uk/static/mol-adverts/4.1.40',
         adsBundleVersion: '4.1.40',
-        feTag: 'fe_desktop_default',
+        feTag: 'fe_ads-1_percent_desktop',
         
         
         appVersion: '5.303.0',
@@ -412,7 +412,7 @@ var adType='dart',
          // login tracking (1)
 
      
-     window.feTag = 'fe_desktop_default';
+     window.feTag = 'fe_ads-1_percent_desktop';
      
 
     if (document.cookie.replace(/(?:(?:^|.*;\s*)attempting_login\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "true" &&
@@ -520,7 +520,7 @@ Object.assign(DM.platformConfig.features, {});
   adverts.initEmergencyRules();
   if (adverts.setSupportedSlots) adverts.setSupportedSlots(["adx_page_skins","adx_tracking","banner_top","billboard","bvp_puff_26","bvp_puff_29","fff","half_mpu_top","inread_player","inread_player_mw","inread_player_top","interstitial","intro_ad","ldr_top","leader_bottom","leader_lower_middle","leader_middle","leader_top","leader_very_bottom","leader_wide","mpu_bottom","mpu_bottom_right","mpu_channel","mpu_comments_1","mpu_comments_2","mpu_factbox","mpu_home","mpu_middle","mpu_mobile","mpu_mobile_bottom","mpu_mobile_factbox","mpu_mobile_lower_middle","mpu_mobile_others","mpu_mobile_top","mpu_mobile_upper_middle","mpu_puff_10","mpu_puff_15","mpu_puff_20","mpu_puff_30","mpu_puff_45","mpu_puff_5","mpu_puff_others","mpu_top","native_channel","native_fff_accessorise","native_fff_overlay_accessorise","native_mpu","native_mpu_dfp","native_puff","native_puff_dfp","native_related","network_banner","para_top","puff_ad_3","puff_ad_6","puff_ad_9","puff_ad_others","sky_left_bottom","sky_left_top","sky_right_bottom","sky_right_top","sticky_banner","video_ad","video_carousel"]);
 
-adverts.botIPs={"19":["85.115.53.201|*","86.141.196.1|*","62.25.109.197|*"],"20":["85.115.53.201|*","86.141.196.1|*","62.25.109.197|*"]}
+adverts.botIPs={"20":["85.115.53.201|*","86.141.196.1|*","62.25.109.197|*"],"21":["85.115.53.201|*","86.141.196.1|*","62.25.109.197|*"]}
 
 var adTrackingConfig=adTrackingConfig||{};adTrackingConfig.geoConfig=adTrackingConfig.geoConfig||{};adTrackingConfig.geoConfig["default"]=[{"name":"asyncBus","enabled":false},{"name":"mvt","enabled":true},{"name":"cmp.hackyDelayer","enabled":false},{"name":"gpt","enabled":true},{"name":"sortable","enabled":false},{"name":"minBid","enabled":false},{"name":"permutive","enabled":false},{"name":"indexExchangeContainer","enabled":false},{"name":"adzouk","enabled":false},{"name":"botsPlugin","enabled":true},{"name":"adxChannelPlugin","enabled":false},{"name":"impIDPlugin","enabled":true},{"name":"increaseOnline","enabled":false},{"name":"appnexus","enabled":true},{"name":"audienceMembershipPlugin","enabled":false},{"name":"audienceSciencePlugin","enabled":false},{"name":"browserResolutionPlugin","enabled":true},{"name":"switch","enabled":false},{"name":"forensiqPlugin","enabled":false},{"name":"rubicon","enabled":true},{"name":"ix","enabled":true},{"name":"openx","enabled":true},{"name":"criteo","enabled":false},{"name":"pubmatic","enabled":true},{"name":"grapeshotPlugin","enabled":false},{"name":"mediaDirectPlugin","enabled":false},{"name":"devicePlugin","enabled":true},{"name":"pageFairPlugin","enabled":false},{"name":"realTimePricingPlugin","enabled":false},{"name":"sonobiPlugin","enabled":false},{"name":"yieldbot","enabled":false},{"name":"technorati","enabled":false},{"name":"criteoGooglePlugin","enabled":false},{"name":"imaSDK","enabled":true},{"name":"prizel","enabled":false},{"name":"vpaid","enabled":true},{"name":"firstImpression","enabled":false},{"name":"videoForceFlyout","enabled":false},{"name":"matchadsPlugin","enabled":false},{"name":"videoFlyout","enabled":false},{"name":"auctionInfo","enabled":true},{"name":"brandedVideoPlayer","enabled":true},{"name":"maxbid","enabled":true},{"name":"prebidEventReporter","enabled":false},{"name":"article","enabled":true},{"name":"sessionDepth","enabled":true},{"name":"adyoulike","enabled":false},{"name":"integral","enabled":false},{"name":"performanceMonitor","enabled":false},{"name":"pulsepoint","enabled":false},{"name":"rubiconVideo","enabled":true},{"name":"taboola","enabled":true},{"name":"visits","enabled":true},{"name":"cmpRtaTracking","enabled":false},{"name":"cmp","enabled":false},{"name":"taboolaAds","enabled":true},{"name":"skimlinks","enabled":true},{"name":"lotame","enabled":false},{"name":"performPlayer","enabled":false},{"name":"amazonNative","enabled":true},{"name":"jwplayer","enabled":true},{"name":"analytics.cmp","enabled":false},{"name":"analytics.rtaIds","enabled":true},{"name":"analytics.timing","enabled":true},{"name":"analytics.viewability","enabled":true},{"name":"appnexusVideo","enabled":true},{"name":"arrowKeysScroll","enabled":true},{"name":"audienceProject","enabled":false},{"name":"billboardAdjustments","enabled":true},{"name":"fbRemarketingPixel","enabled":true},{"name":"kargo","enabled":false},{"name":"nativo","enabled":false},{"name":"pixelSync","enabled":true},{"name":"rubiconSkin","enabled":false},{"name":"sticky.billboard","enabled":true},{"name":"sticky.mpus","enabled":true},{"name":"sticky.skies","enabled":true},{"name":"addHBDeal","enabled":false},{"name":"bidders.amazon","enabled":true},{"name":"bidders.improveDigital","enabled":false},{"name":"bidders.indexExchangeVideo","enabled":false},{"name":"slots.mpuPuffOthers","enabled":false},{"name":"sharethrough","enabled":true},{"name":"skins","enabled":true},{"name":"adIntegrator","enabled":true},{"name":"analytics.abtest","enabled":true},{"name":"analytics.entryPoint","enabled":true},{"name":"analytics.storage","enabled":true},{"name":"analytics.memory","enabled":true},{"name":"analytics.bidmax","enabled":true},{"name":"bidders.collective564","enabled":true},{"name":"players.flyoutManager","enabled":true},{"name":"bidders.inskin","enabled":true},{"name":"slots.leaderTop","enabled":true},{"name":"bidders.oathVideo","enabled":true},{"name":"openxVideo","enabled":true},{"name":"paidSessions","enabled":true},{"name":"revenueReporter","enabled":true},{"name":"trackers.taboola","enabled":true},{"name":"watershed","enabled":true},{"name":"chromelessWaitForBillboard","enabled":true},{"name":"abe.iab.abd","enabled":false},{"name":"abe.detection","enabled":false},{"name":"abe.conversion","enabled":true},{"name":"abe.errorDetection","enabled":true},{"name":"abe.rtaTracking","enabled":true},{"name":"abe.serverBypass","enabled":true},{"name":"adNami","enabled":false},{"name":"analytics.inputDelays","enabled":true},{"name":"analytics.bidmaxSendBeacon","enabled":true},{"name":"bidders.appnexusOutstream","enabled":false},{"name":"domain","enabled":true},{"name":"bidders.collectiveImprove","enabled":false},{"name":"trackers.digitrust","enabled":false},{"name":"bidders.groupmSkin","enabled":false},{"name":"trackers.id5","enabled":true},{"name":"ixVideo","enabled":true},{"name":"bidders.justPremium","enabled":true},{"name":"slots.mpuMobileOthers","enabled":false},{"name":"bidders.pxyz","enabled":false},{"name":"prebidUserSync","enabled":true},{"name":"programmaticCampaign","enabled":true},{"name":"slots.puffAdOthers","enabled":false},{"name":"quantcast","enabled":false},{"name":"rtaPageEventDispatcher","enabled":true},{"name":"trackers.smartclip","enabled":false},{"name":"bidders.spotx2","enabled":true},{"name":"bidders.teads","enabled":false},{"name":"bidders.telariaVideo","enabled":true},{"name":"trackers.adxChannel","enabled":true},{"name":"cmp.reprompt","enabled":false},{"name":"bidders.groupm","enabled":true},{"name":"irisTv","enabled":true},{"name":"dmp.permutive.video","enabled":false},{"name":"bidders.rubiMM","enabled":false},{"name":"bidders.rubiMMVideo","enabled":false},{"name":"bidders.rubiTTD","enabled":false},{"name":"trackers.universalid","enabled":true},{"name":"videoEvents","enabled":false},{"name":"adProtection","enabled":false},{"name":"adsRefresherV2","enabled":true},{"name":"bidders.video.konduit","enabled":false},{"name":"analytics.bidmaxSendBeaconMigration","enabled":true},{"name":"analytics.bidsHunting","enabled":true},{"name":"analytics.cacheIndication","enabled":true},{"name":"analytics.connection","enabled":true},{"name":"analytics.customTracking","enabled":true},{"name":"analytics.externalData","enabled":true},{"name":"analytics.pageCriteria","enabled":true},{"name":"analytics.videoFailures","enabled":true},{"name":"cmpAvailabilityNotification","enabled":false},{"name":"chromelessv2.dmplayer","enabled":true},{"name":"players.dmplayer","enabled":true},{"name":"fff","enabled":true},{"name":"mobileFlyawayPlayer","enabled":false},{"name":"bidders.pubmaticVideo","enabled":true},{"name":"bidders.video.rubiMM","enabled":false},{"name":"bidders.rubiMM2","enabled":false},{"name":"bidders.video.spotx","enabled":false},{"name":"tcfv2","enabled":true},{"name":"bidders.criteoV2","enabled":true},{"name":"bidders.triplelift","enabled":true},{"name":"bidders.tripleliftVideo","enabled":true},{"name":"bidders.verizon","enabled":true},{"name":"bidders.brightroll","enabled":true},{"name":"headerBidding.bidsReceived","enabled":true},{"name":"players.visibility","enabled":false},{"name":"smartBanner","enabled":false},{"name":"slots.InreadPlayerTop","enabled":false},{"name":"slots.connatix","enabled":false},{"name":"slots.minuteMedia","enabled":false},{"name":"slots.refreshInfo","enabled":true},{"name":"slots.mpuFactBox","enabled":true},{"name":"slots.mpuMobileFactbox","enabled":true},{"name":"sticky.gallery","enabled":true},{"name":"sticky.mpuLeft","enabled":false},{"name":"trackers.admantx","enabled":true},{"name":"trackers.ixIdentity","enabled":false},{"name":"trackers.pubcommon","enabled":true},{"name":"durationRefresh","enabled":false},{"name":"dmp.permutive.indexedDBUsage","enabled":true},{"name":"bidders.mediagrid","enabled":true},{"name":"bidders.mediagridVideo","enabled":true},{"name":"nonPersonalizedAds","enabled":false},{"name":"trackers.unifiedid","enabled":true},{"name":"bidders.adform.display","enabled":false},{"name":"bidders.adform.video","enabled":false}]
 
@@ -550,7 +550,7 @@ DM.later('bundle', function (){
 
 
   <script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false"}]);</script>
-                          <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="RQAJ2-Q4TGF-HEKJL-TAEAK-5V3VD",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(c){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"RQAJ2-Q4TGF-HEKJL-TAEAK-5V3VD";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="gnf2t23inlcncyarx5qa-f-a50d7dd60-clientnsv4-s.akamaihd.net",i={"ak.v":"30","ak.cp":"808793","ak.ai":parseInt("145913",10),"ak.ol":"0","ak.cr":121,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"9d33c0f","ak.r":34619,"ak.a2":n,"ak.m":"dscj","ak.n":"essl","ak.bpcip":"51.75.169.0","ak.cport":47614,"ak.gh":"2.16.76.69","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1611775840","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==WttFxV6WQLm/eyQfaYoINLZQjFthA/sOPMB+emsOKGc9gsOo33+fe9U3S0jK43G1kGBfHCssRA3M3yRqcRnRkUyDcv9rr4wuJQzS98DN/y8kqRMFbpcMa6JOCnC2lHCLG7+MKHiWs+knJLS6uJLUUhRQoatpUsZdmEw9yyNcqO1RpxKwa2H6QOfiupT1hQVifaZcS2swL/Os8G7qoDcg9VqJ7pXsPnfNG//+sgK31KWS2v9MgWDYqn1zZ3IMPuHT6HDwUwS/kkSPxaKsM75TqEqT4rTk/cxZ41pY8iLk25ehhqwJPDNxXFSToY6K1u7C4H3u7Su9t6AukqcuxZLdD1km5tPqJv8eZuOJwX4NioqmDUWLDLZgQEcl3q5Qx2fdLaYv8XscoykfZSUygqrnPMfMpPPK87k+4PsxZHsjzhQ=","ak.pv":"758","ak.dpoabenc":""};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head><body class="tlc-home homehome mol-desktop aileron-font" id="home"><!--class fe.views.body_modules.SetupMobileClass-->
+                          <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="RQAJ2-Q4TGF-HEKJL-TAEAK-5V3VD",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(c){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"RQAJ2-Q4TGF-HEKJL-TAEAK-5V3VD";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="gnf2t23inlcncyarzvuq-f-faa3f8623-clientnsv4-s.akamaihd.net",i={"ak.v":"30","ak.cp":"808793","ak.ai":parseInt("145913",10),"ak.ol":"0","ak.cr":88,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1abefe7","ak.r":34619,"ak.a2":n,"ak.m":"dscj","ak.n":"essl","ak.bpcip":"51.75.169.0","ak.cport":49472,"ak.gh":"2.18.66.87","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1611779433","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==3IVpdEF98lUBwma5Xf1YqcMN7wih26r3iYuddI/1u3MO2WuJ4C6JISCsV/xE1Msk5OYIjgMA6O5H/eqFUQYWf6dYbN4NEq8vBy5QwTOtU4X5oF+c8rWibXxVHyghGhRw6+IYWK/sNNXMbW27STcLYsiHQCNDH3XNEPNieZdla5zmt9va4yWCM7D5bUcT7w2Ztei8tvLkHmXEmPKYYj+zYSGVeOHHdclkpTCSSI6qt3dujXf8qkfZYLX1AnYwPPoFh+Ib+iEWD7H3EBFamd4Zza+OG1BdELFE1PvzU9sK2atGFiPITdyiSGaA1fAYWW9KJa0vlHdF/Edp63gQjkksNxVLw2+QM3YrMRQc2U5yOc2YN+9FLDudEZ5sk47g2jUgWou+uuM6rxE6JywHUwdvnOkGDseg/uPHkslRwh1Ly6k=","ak.pv":"758","ak.dpoabenc":""};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head><body class="tlc-home homehome mol-desktop aileron-font" id="home"><!--class fe.views.body_modules.SetupMobileClass-->
 <script type="text/javascript">MobileUtils.setupMobileClass();</script>
 <!--class fe.views.masthead_map.MastheadMap-->
 
@@ -815,10 +815,10 @@ DM.later('bundle', function (){
     
     
     <strong>Wednesday, Jan 27th 2021</strong><a href="/home/weather/index.html">
-<span class="">6PM</span>
+<span class="">9PM</span>
 <strong>8&deg;C</strong>
-<span class="icn-w rain" title="Cloudy with outbreaks of Rain"></span><span class="pl20">9PM</span>
-<strong>8&deg;C</strong>
+<span class="icn-w rain" title="Cloudy with outbreaks of Rain"></span><span class="pl20">12AM</span>
+<strong>9&deg;C</strong>
 <span class="icn-w rain" title="Cloudy with outbreaks of Rain"></span>
 <span class="last pl20">5-Day Forecast</span></a>
   
@@ -1088,6 +1088,27 @@ DM.later('bundle', function () {
     </li>
 
         <li >
+      <a href="/tvshowbiz/article-9193133/Joe-Wicks-HUGE-hot-tub-ice-bath-installed-promises-starkers.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/14/38546842-0-image-m-100_1611759339092.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/14/38546842-0-image-m-100_1611759339092.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          'My neighbours are gonna love it!' Joe Wicks shows off his garden makeover as he has a HUGE hot tub and ice bath installed at his &pound;4m Surrey home
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
       <a href="/tvshowbiz/article-9192931/Kate-Moss-Cara-Delevingne-Fendi-Paris.html" 
 >
 
@@ -1109,19 +1130,19 @@ DM.later('bundle', function () {
     </li>
 
         <li >
-      <a href="/tvshowbiz/article-9193133/Joe-Wicks-HUGE-hot-tub-ice-bath-installed-promises-starkers.html" 
+      <a href="/tvshowbiz/article-9193805/Halsey-pregnant-singer-reveals-baby-bump.html" 
 >
 
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/14/38546842-0-image-m-100_1611759339092.jpg" height="115" width="154" alt="" />
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/18/38554794-0-image-m-26_1611771145869.jpg" height="115" width="154" alt="" />
           <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/14/38546842-0-image-m-100_1611759339092.jpg" height="115" width="154" alt="" />
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/18/38554794-0-image-m-26_1611771145869.jpg" height="115" width="154" alt="" />
           </noscript>
 
 
         <span class="pufftext">
           <span class="arrow-small-r"></span>
           <strong>
-          'My neighbours are gonna love it!' Joe Wicks shows off his garden makeover as he has a HUGE hot tub and ice bath installed at his &pound;4m Surrey home
+          Halsey is pregnant! The singer reveals her baby bump in topless photos as she shares the news she is expecting her first child: 'Surprise!'
           </strong>
           
           &nbsp;
@@ -1143,27 +1164,6 @@ DM.later('bundle', function () {
           <span class="arrow-small-r"></span>
           <strong>
           Pamela Anderson ties the knot! Baywatch beauty has married her bodyguard in intimate ceremony after falling in love during lockdown
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9193805/Halsey-pregnant-singer-reveals-baby-bump.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/17/38552762-0-image-m-28_1611767878854.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/17/38552762-0-image-m-28_1611767878854.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Halsey is pregnant! The singer reveals her baby bump in topless photos as she shares the news she is expecting her first child: 'Surprise!'
           </strong>
           
           &nbsp;
@@ -1223,112 +1223,19 @@ DM.later('bundle', function () {
     </li>
 
         <li >
-      <a href="/tvshowbiz/article-9193929/Benedict-Cumberbatch-stars-new-trailer-spy-thriller-Courier.html" 
+      <a href="/tvshowbiz/article-9193379/Chris-Ramseys-wife-Rosie-reveals-baby-son-Rafe-undergoing-treatment-fix-pointed-ears.html" 
 >
 
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/17/38554136-0-image-m-4_1611770322542.jpg" height="115" width="154" alt="" />
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/17/38551992-0-image-a-15_1611766895815.jpg" height="115" width="154" alt="" />
           <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/17/38554136-0-image-m-4_1611770322542.jpg" height="115" width="154" alt="" />
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/17/38551992-0-image-a-15_1611766895815.jpg" height="115" width="154" alt="" />
           </noscript>
 
 
         <span class="pufftext">
           <span class="arrow-small-r"></span>
           <strong>
-          Benedict Cumberbatch is the unassuming salesman sent to infiltrate Russia's KGB during The Cold War in new trailer for spy thriller The Courier
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9193837/Kim-Kardashian-gives-style-nod-Baby-Spice-amid-Kanye-West-divorce.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/17/38553422-0-image-m-6_1611768703684.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/17/38553422-0-image-m-6_1611768703684.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          'Baby Spice!' Kim Kardashian, 40, puts her hair in bunches giving a style nod to Emma Bunton... as she models a busty snakeskin top amid 'divorce'
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9193139/FIRST-LOOK-Kristen-Stewart-bears-incredible-resemblance-Princess-Diana.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/15/38547156-0-image-a-51_1611760744859.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/15/38547156-0-image-a-51_1611760744859.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          FIRST LOOK: Kristen Stewart bears a striking resemblance to Princess Diana as she perfects the royal's trademark head tilt in  new movie Spencer
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9193395/Love-Islands-Laura-Anderson-claims-flying-Dubai-coping-mechanism-lockdown.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/16/38551208-0-image-a-40_1611765673368.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/16/38551208-0-image-a-40_1611765673368.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          'I felt guilty': Love Island's Laura Anderson calls flying to Dubai 'a coping mechanism' in lockdown... as Priti Patel slams influencers for 'showing off'
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_10">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_10.html -->
-            
-            
-          </div>
-      </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9193511/Wendy-Williams-names-ex-husband-Kevin-Hunters-baby-mama-time.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/18/38556296-0-image-m-48_1611773528538.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/18/38556296-0-image-m-48_1611773528538.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Wendy Williams names ex-husband Kevin Hunter's baby mama for the first time on her show:&nbsp;'Welcome to Hot Topics, Sharina Hudson!'
+          Chris Ramsey's wife Rosie reveals their newborn baby son Rafe has had treatment to fix his 'pointed' ears so he isn't self-conscious in the future
           </strong>
           
           &nbsp;
@@ -1358,6 +1265,318 @@ DM.later('bundle', function () {
     </li>
 
         <li >
+      <a href="/tvshowbiz/article-9193929/Benedict-Cumberbatch-stars-new-trailer-spy-thriller-Courier.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/17/38554136-0-image-m-4_1611770322542.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/17/38554136-0-image-m-4_1611770322542.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Benedict Cumberbatch is the unassuming salesman sent to infiltrate Russia's KGB during The Cold War in new trailer for spy thriller The Courier
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9194245/Tom-Parkers-wife-Kelsey-gives-update-terminal-brain-tumour-diagnosis.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/19/38558152-0-image-a-137_1611777857040.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/19/38558152-0-image-a-137_1611777857040.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Tom Parker's wife Kelsey gives an update on his&nbsp;terminal brain tumour diagnosis and says he and their kids get her through 'bad days'
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_10">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_10.html -->
+            
+            
+          </div>
+      </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9194361/Lucie-Donlan-gushes-boyfriend-Luke-Mabbott-new-loved-snaps.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/20/38558814-0-image-m-6_1611778395760.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/20/38558814-0-image-m-6_1611778395760.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          &nbsp;Lucie Donlan gushes over boyfriend&nbsp;Luke Mabbott in new loved-up post amid feud with&nbsp;Yewande Biala
+          </strong>
+          
+          &nbsp;PDA
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9193837/Kim-Kardashian-gives-style-nod-Baby-Spice-amid-Kanye-West-divorce.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/17/38553422-0-image-m-6_1611768703684.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/17/38553422-0-image-m-6_1611768703684.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          'Baby Spice!' Kim Kardashian, 40, puts her hair in bunches giving a style nod to Emma Bunton... as she models a busty snakeskin top amid 'divorce'
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/news/article-9192715/Angry-expats-blasts-influencers-claimed-flew-Dubai-lockdown-work.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/13/38543888-0-image-a-8_1611754975992.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/13/38543888-0-image-a-8_1611754975992.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Priti's list of shame: Instagram stars and influencers under fire from Home Secretary for 'showing off in the sun' while rest of Britain is under lockdown
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9194119/Amanda-Bynes-fiance-Paul-Michael-work-coordinating-white-tops.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/19/38557074-0-image-m-47_1611775014454.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/19/38557074-0-image-m-47_1611775014454.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Amanda Bynes and her fiance Paul Michael wear coordinating white tops as they hold each other during leisurely coffee run in Calabasas&nbsp;
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9193347/Demi-Moore-58-storms-catwalk-HCFW-Fendi-Paris.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/15/38548760-0-image-m-5_1611761999403.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/15/38548760-0-image-m-5_1611761999403.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Demi Moore, 58, shows off her VERY taut-looking complexion as she struts in low-cut blouse for the Fendi show at  Paris Fashion Week
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9193139/FIRST-LOOK-Kristen-Stewart-bears-incredible-resemblance-Princess-Diana.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/15/38547156-0-image-a-51_1611760744859.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/15/38547156-0-image-a-51_1611760744859.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          FIRST LOOK: Kristen Stewart bears a striking resemblance to Princess Diana as she perfects the royal's trademark head tilt in  new movie Spencer
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9194123/Michael-B-Jordan-open-returning-Killmonger-Black-Panther-franchise.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/19/38557918-0-image-m-7_1611776632592.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/19/38557918-0-image-m-7_1611776632592.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Michael B. Jordan is still mourning the loss of Chadwick Boseman but is open to returning as Killmonger in Black Panther franchise
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9194055/Pregnant-Emily-Ratajkowski-wraps-cozy-teddy-bear-coat-NYC.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/19/38557610-0-image-a-47_1611776011187.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/19/38557610-0-image-a-47_1611776011187.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Pregnant Emily Ratajkowski wraps up in cozy teddy bear coat as she braves the cold for a masked outing in NYC
+          </strong>
+          
+          The model is weeks away from giving birth&nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9193395/Love-Islands-Laura-Anderson-claims-flying-Dubai-coping-mechanism-lockdown.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/16/38551208-0-image-a-40_1611765673368.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/16/38551208-0-image-a-40_1611765673368.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          'I felt guilty': Love Island's Laura Anderson calls flying to Dubai 'a coping mechanism' in lockdown... as Priti Patel slams influencers for 'showing off'
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9193511/Wendy-Williams-names-ex-husband-Kevin-Hunters-baby-mama-time.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/18/38556296-0-image-m-48_1611773528538.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/18/38556296-0-image-m-48_1611773528538.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Wendy Williams names ex-husband Kevin Hunter's baby mama for the first time on her show:&nbsp;'Welcome to Hot Topics, Sharina Hudson!'
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_20">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_20.html -->
+            
+            
+          </div>
+      </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9194199/Maya-Jama-larks-scenes-photoshoot-tight-white-vest.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/19/38556760-0-image-m-11_1611774855368.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/19/38556760-0-image-m-11_1611774855368.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Maya Jama larks around behind-the-scenes of a photoshoot in a tight white vest and snakeskin trousers... before killing time by balancing a coffee cup on her face
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
+      <a href="/tvshowbiz/article-9194167/Kelly-Clarksons-team-stands-accusations-ex-Brandon-Blackstock-defrauded-millions.html" 
+>
+
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/19/38557310-0-image-m-18_1611775287984.jpg" height="115" width="154" alt="" />
+          <noscript>
+            <img src="https://i.dailymail.co.uk/1s/2021/01/27/19/38557310-0-image-m-18_1611775287984.jpg" height="115" width="154" alt="" />
+          </noscript>
+
+
+        <span class="pufftext">
+          <span class="arrow-small-r"></span>
+          <strong>
+          Kelly Clarkson's legal team 'stands by' accusations estranged husband Brandon Blackstock defrauded her of millions and 'looks forward' to trying the case
+          </strong>
+          
+          &nbsp;
+        </span>
+      </a>
+    </li>
+
+        <li >
       <a href="/tvshowbiz/article-9193769/Coronation-Streets-Maureen-Lipman-74-taking-break-soap-Covid-vaccine.html" 
 >
 
@@ -1370,7 +1589,7 @@ DM.later('bundle', function () {
         <span class="pufftext">
           <span class="arrow-small-r"></span>
           <strong>
-          'I am taking a sabbatical': Coronation Street's Maureen Lipman, 74, reveals she's on a break from the soap until she gets the Covid-19 vaccine
+          Corrie's Maureen Lipman, 74, reveals she felt 'unsafe' filming in the pandemic and has now had a Covid vaccine... amid her 'sabbatical' from the soap
           </strong>
           
           &nbsp;
@@ -1526,9 +1745,9 @@ DM.later('bundle', function () {
     </li>
 
           <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_20">
+          <div class="puff-ad adHolder" id="mpu_puff_30">
             
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_20.html -->
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_30.html -->
             
             
           </div>
@@ -1682,27 +1901,6 @@ DM.later('bundle', function () {
     </li>
 
         <li >
-      <a href="/tvshowbiz/article-9193379/Chris-Ramseys-wife-Rosie-reveals-baby-son-Rafe-undergoing-treatment-fix-pointed-ears.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/17/38551992-0-image-a-15_1611766895815.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/17/38551992-0-image-a-15_1611766895815.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Chris Ramsey's wife Rosie reveals their newborn baby son Rafe has had treatment to fix his 'pointed' ears so he isn't self-conscious in the future
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
       <a href="/tvshowbiz/article-9194157/Mighty-Ducks-star-Shaun-Weiss-celebrates-one-year-sober-years-meth-abuse.html" 
 >
 
@@ -1744,15 +1942,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_30">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_30.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9193203/Kim-Kardashian-exit-plan-place-files-divorce.html" 
 >
@@ -1788,27 +1977,6 @@ DM.later('bundle', function () {
           <span class="arrow-small-r"></span>
           <strong>
           Bans on joggers, Liz Hurley's jugs and trans-women in women's sport: 20-1 shot for Prime Minister, PIERS MORGAN reveals his radical manifesto
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9193347/Demi-Moore-58-storms-catwalk-HCFW-Fendi-Paris.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/15/38548760-0-image-m-5_1611761999403.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/15/38548760-0-image-m-5_1611761999403.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Demi Moore, 58, commands attention in a low-cut blouse as she storms the catwalk for the Fendi show at Haute Couture Fashion Week in Paris
           </strong>
           
           &nbsp;
@@ -1899,6 +2067,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_45">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_45.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9193613/Bradley-Coopers-ex-Irina-Shayk-seen-taking-daughter-Lea-stroll-New-York-City.html" 
@@ -2068,15 +2245,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_45">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_45.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9193587/Coronation-Streets-Helen-Worth-Sue-Cleaver-reflect-cobbles-cat-fight.html" 
 >
@@ -2118,6 +2286,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_55">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9192933/Loose-Womens-Kelle-Bryan-45-reveals-received-COVID-19-vaccine.html" 
@@ -2287,15 +2464,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_55">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9191885/Dani-Dyer-reveals-named-perfect-baby-boy-Santiago.html" 
 >
@@ -2337,6 +2505,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_65">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9192935/Amanda-Holden-looks-stylish-elegant-black-trousers-outside-Heart-radio-studios-London.html" 
@@ -2506,15 +2683,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_65">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9193065/The-Undoings-Matilda-Angelis-puffs-vape.html" 
 >
@@ -2556,6 +2724,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_75">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9192883/Tammy-Hembrow-sizzles-poses-sexy-sisters-raunchy-lingerie-photoshoot.html" 
@@ -2725,15 +2902,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_75">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9191785/Gemma-Collins-reveals-father-73-able-leave-hospital-surviving-coronavirus-battle.html" 
 >
@@ -2775,6 +2943,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_85">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9191257/Jamie-Dornan-star-brand-new-Stan-Original-series-Tourist.html" 
@@ -2944,15 +3121,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_85">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9192435/Katie-Piper-reveals-shes-quit-booze-COVID-19-lockdown-over.html" 
 >
@@ -2994,6 +3162,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_95">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9192027/Piers-Morgan-APOLOGISES-Elizabeth-Hurley-55.html" 
@@ -3163,15 +3340,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_95">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/femail/article-9192149/Wayne-Linekers-daughter-Tia-flaunts-enviable-physique-black-lingerie.html" 
 >
@@ -3213,6 +3381,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_105">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9192063/Susanna-Reid-Piers-Morgan-pay-tribute-coronavirus-victims-GMB.html" 
@@ -3382,15 +3559,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_105">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9191123/Dua-Lipa-shows-flat-stomach-sexy-mirror-selfie-wearing-black-sweatshirt-matching-undies.html" 
 >
@@ -3432,6 +3600,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_115">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9191983/Iskra-Lawrence-flaunts-post-partum-figure-lingerie.html" 
@@ -3601,15 +3778,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_115">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9190793/Shaquille-ONeal-sells-massive-Florida-mansion-16-5-million.html" 
 >
@@ -3651,6 +3819,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_125">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9191207/Jennifer-Lopez-Matthew-McConaughey-celebrate-20th-anniversary-Wedding-Planner.html" 
@@ -3820,15 +3997,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_125">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9191027/Married-Sight-star-Dino-Hira-resurfaces-looking-unrecognisable.html" 
 >
@@ -3870,6 +4038,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_135">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9191141/Luke-Evans-portray-Disney-villain-lands-role-live-action-Pinocchio.html" 
@@ -4039,15 +4216,6 @@ DM.later('bundle', function () {
       </a>
     </li>
 
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_135">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
-
         <li >
       <a href="/tvshowbiz/article-9191185/Kate-Mara-stays-warm-sweater-takes-daughter-play-date-friend.html" 
 >
@@ -4089,6 +4257,15 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
+
+          <li class="mpu_puff_wrapper">
+          <div class="puff-ad adHolder" id="mpu_puff_other_145">
+            
+            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
+            
+            
+          </div>
+      </li>
 
         <li >
       <a href="/tvshowbiz/article-9191577/John-Legend-shares-glimpse-new-video-love-ballad-Minefields-Faouzia.html" 
@@ -4257,15 +4434,6 @@ DM.later('bundle', function () {
         </span>
       </a>
     </li>
-
-          <li class="mpu_puff_wrapper">
-          <div class="puff-ad adHolder" id="mpu_puff_other_145">
-            
-            <!-- ad: https://mads.dailymail.co.uk/v5/gb/home/none/article/other/mpu_puff_others.html -->
-            
-            
-          </div>
-      </li>
 
         <li >
       <a href="/tvshowbiz/article-9191029/Olivia-Munn-poses-beloved-rescue-pups-Frankie-Chance-cute-Instagram-snap.html" 
@@ -4919,7 +5087,7 @@ DM.later('bundle', function () {
     </li>
 
         <li >
-      <a href="/tvshowbiz/article-9190655/Kelly-Clarksons-ex-Brandon-Blackstock-fires-claims-defrauded-star-legal-docs.html" 
+      <a href="/tvshowbiz/article-9190655/Kelly-Clarksons-ex-Brandon-Blackstock-fires-claims-defrauded-star-legal-docs.html" class="bottom" 
 >
 
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/00/38521316-0-image-m-20_1611706563804.jpg" height="115" width="154" alt="" />
@@ -4932,531 +5100,6 @@ DM.later('bundle', function () {
           <span class="arrow-small-r"></span>
           <strong>
           Kelly Clarkson's estranged husband Brandon Blackstock fires back at claims he defrauded her in filings with California Labor Commission
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9187525/Katie-Prices-daughter-Bunny-six-lauded-tender-connection-disabled-brother-Harvey.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/09/38487056-0-image-m-9_1611653485292.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/09/38487056-0-image-m-9_1611653485292.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Katie Price's 'beautifully brought-up' daughter Bunny, six, is lauded for her tender connection with disabled brother Harvey, 18, in documentary
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190357/Christopher-Biggins-reveals-plans-hold-huge-wake-Dame-Barbara-Windsor.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/22/38517992-0-image-a-43_1611701955871.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/22/38517992-0-image-a-43_1611701955871.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Dame Barbara Windsor's close friend Christopher Biggins reveals plans to hold huge wake for the late star in 2022
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190939/Sarah-Jessica-Parker-keeps-casual-sweater-baggy-pants-spends-time-shoe-store.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/01/38523154-0-image-m-18_1611710440306.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/01/38523154-0-image-m-18_1611710440306.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Sarah Jessica Parker keeps it casual in sweater and baggy pants as she spends time at her Manhattan shoe store
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190681/Lisa-Rinna-shares-jaw-dropping-bikini-thirst-trap-sun-soaked-2018-getaway-Costa-Rica.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/23/38520184-0-image-m-12_1611704697311.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/23/38520184-0-image-m-12_1611704697311.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Lisa Rinna shares jaw-dropping bikini 'thirst trap' from her sun-soaked 2018 getaway to Costa Rica
-          </strong>
-          
-          Stunning&nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190631/Kanye-West-appears-working-new-Foam-RNNR-Yeezy-employee-paints-prototype-parking-lot.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/00/38519662-0-image-m-12_1611706540912.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/00/38519662-0-image-m-12_1611706540912.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Kanye West appears to be working on a new Foam RNNR as Yeezy employee spray-paints prototype in parking lot
-          </strong>
-          
-          The new version could be much cheaper
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190639/Britney-Spears-posting-identical-selfies-trailer-doc-released.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/00/38520828-0-image-m-15_1611706004727.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/00/38520828-0-image-m-15_1611706004727.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Britney Spears posts nearly identical selfies on Instagram after trailer for a doc about her conservatorship struggle is released
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190439/Pamela-Anderson-announces-no-longer-posting-social-media.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/23/38518078-0-image-m-71_1611702176875.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/23/38518078-0-image-m-71_1611702176875.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Pamela Anderson announces she will no longer be using social media and claims platforms are being used for mind control: 'I am free'&nbsp;
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9189961/Cate-Blanchett-looks-chic-rugs-coat-heading-New-York-City.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/20/38512398-0-image-m-5_1611693596806.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/20/38512398-0-image-m-5_1611693596806.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Pretty in pink! Cate Blanchett looks chic as she wraps up warm in a stylish coat while stepping out in New York
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190795/SEBASTIAN-SHAKESPEARE-Caroline-Stanbury-kicks-prenup-football-star-fianc.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/00/38521688-0-image-a-35_1611708074918.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/00/38521688-0-image-a-35_1611708074918.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          SEBASTIAN SHAKESPEARE: Caroline Stanbury kicks off a prenup with her football star fianc&eacute;&nbsp;
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9188023/Piers-Morgan-details-doctors-sombre-warning-Kate-Garraway.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/11/38492202-0-image-m-33_1611662192450.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/11/38492202-0-image-m-33_1611662192450.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          'He may never come out of a coma': Piers Morgan reveals doctors' sombre warning to Kate Garraway over COVID-stricken husband Derek Draper
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190935/Zooey-Deschanel-boyfriend-Jonathan-Scott-celebrate-Scottish-poet-Robert-Burns.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/01/38523000-0-image-m-10_1611710405809.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/01/38523000-0-image-m-10_1611710405809.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Zooey Deschanel and boyfriend Jonathan Scott celebrate Scottish poet Robert Burns with a festive virtual dinner with family
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190711/Selma-Blair-makes-sweatpants-chic-matching-blazer-grabbing-coffee-Studio-City.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/00/38520874-0-image-m-2_1611706399837.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/00/38520874-0-image-m-2_1611706399837.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Selma Blair makes sweatpants chic with matching blazer while grabbing coffee in Studio City
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190189/Jennifer-Aniston-glows-gets-hair-newly-highlighted-Friends-stylist.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/21/38514610-0-image-m-70_1611697037807.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/21/38514610-0-image-m-70_1611697037807.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Jennifer Aniston glows as she gets her hair newly highlighted by her Friends stylist... just weeks before her 52nd birthday
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9189491/Danielle-Armstrong-shows-toned-physique-losing-3-5st-following-birth-daughter-Orla.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/18/38509104-0-image-a-51_1611687097604.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/18/38509104-0-image-a-51_1611687097604.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Danielle Armstrong shows off toned physique in a floral bikini as she reveals 3.5st weight loss eight months after giving birth to daughter Orla
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9188767/Stephen-Bear-flees-home-finding-death-threat-posted-door.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/16/38502600-0-image-a-173_1611678364904.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/16/38502600-0-image-a-173_1611678364904.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Stephen Bear flees his home as he finds a death threat posted through the door after vowing to clear his name following revenge porn arrest
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190645/Miranda-Lambert-posts-cute-snap-Brendan-McLoughlin-celebrates-wedding-anniversary.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/00/38520770-0-image-m-22_1611705633683.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/00/38520770-0-image-m-22_1611705633683.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          '2 years hitched!!' Miranda Lambert posts cute snap with Brendan McLoughlin as she celebrates wedding anniversary
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190603/Amanda-Gorman-23-says-wants-president-future-inauguration-poem-recital.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/23/38520224-0-image-m-5_1611704630281.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/23/38520224-0-image-m-5_1611704630281.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Amanda Gorman, 23, says she's seriously considering running for president in the future... after reciting a poem at Joe Biden's inauguration
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190591/Clare-Crawley-seen-ring-left-hand-Sacramento-amid-split-Dale-Moss.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/27/00/38519522-0-image-m-2_1611706758895.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/27/00/38519522-0-image-m-2_1611706758895.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Clare Crawley is seen with a ring on her left hand while going for a walk in Sacramento amid split from Dale Moss
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9187421/Ioan-Gruffudds-wife-Alice-Evans-reveals-actor-leaving-family.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/08/38484108-0-image-m-6_1611649627784.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/08/38484108-0-image-m-6_1611649627784.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          'I am being gaslit and mentally tortured': Ioan Gruffudd's wife Alice Evans claims HE deleted her tweet announcing the actor is 'leaving their family'
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190217/Tory-Lanez-seeks-right-speak-Megan-Thee-Stallion-shooting-case-judge-ordered-silence.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/21/38513702-0-image-a-5_1611695554181.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/21/38513702-0-image-a-5_1611695554181.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Tory Lanez seeks right to speak on Megan Thee Stallion shooting case after judge ordered his silence
-          </strong>
-          
-          In court documents, Lanez said it's 'unfair'
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9189661/Holly-Hagan-shares-weight-loss-post-demonstrates-angle-trickery.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/19/38510628-0-image-a-21_1611690213040.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/19/38510628-0-image-a-21_1611690213040.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Holly Hagan shares another candid 'weight loss' post as she demonstrates lighting and angle trickery and admits she is 'sick' of living up to expectations
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190321/Steven-Spielbergs-son-Sawyer-makes-acting-debut-creepy-trailer-movie-Honeydew.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/21/38515734-0-image-m-2_1611698366099.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/21/38515734-0-image-m-2_1611698366099.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Steven Spielberg's son Sawyer, 28, makes his acting debut in VERY creepy trailer for horror movie Honeydew
-          </strong>
-          
-          Famous footsteps&nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9188545/Single-James-Argent-gastric-surgery-26-stone.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/14/38497002-0-image-m-71_1611670229014.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/14/38497002-0-image-m-71_1611670229014.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Single James Argent admits he feels 'lonely' and reveals he WILL have gastric surgery after his doctor called his 26 stone weight 'danger territory'
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li >
-      <a href="/tvshowbiz/article-9190025/Dani-Harmer-RETURNS-Tracy-Beaker-new-spoiler.html" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/21/38513580-0-image-m-28_1611695348911.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/21/38513580-0-image-m-28_1611695348911.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Dani Harmer RETURNS to Tracy Beaker with the former tearaway teen as a single mother who meets a rich footballer beau in new spoiler
-          </strong>
-          
-          &nbsp;
-        </span>
-      </a>
-    </li>
-
-        <li class="exclusive" >
-      <a href="/tvshowbiz/article-9187571/Vicky-Pattison-accused-breaking-lockdown-rules-travelling-300-miles-Essex-Newcastle.html" class="bottom" 
->
-
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i.dailymail.co.uk/1s/2021/01/26/10/38488644-0-image-a-15_1611655882039.jpg" height="115" width="154" alt="" />
-          <noscript>
-            <img src="https://i.dailymail.co.uk/1s/2021/01/26/10/38488644-0-image-a-15_1611655882039.jpg" height="115" width="154" alt="" />
-          </noscript>
-
-
-        <span class="pufftext">
-          <span class="arrow-small-r"></span>
-          <strong>
-          Vicky Pattison accused of breaking lockdown rules by travelling over 300 miles to celebrate her niece's first birthday with a party&nbsp;
           </strong>
           
           &nbsp;

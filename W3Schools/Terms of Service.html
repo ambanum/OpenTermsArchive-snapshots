@@ -1071,6 +1071,7 @@ function loadUser() {
   if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
   pos = pathname.indexOf("/");
   foldername = pathname.substr(0, pos);
+  if (pathname.indexOf("pandas") > -1) {foldername = "python/pandas";}
   filename = pathname.substr(pos + 1);
   typ = foldername;
   if (foldername == "quiztest") {
@@ -1084,7 +1085,7 @@ function loadUser() {
       y = this.responseText;
       x = y.substr(0, 1);
       if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
-       console.log(x);
+        console.log(x);
         activateElse();
       } else if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K"  || x == "L" || x == "M" || x == "Q") {
         console.log(x);
@@ -1106,6 +1107,7 @@ function finishedPage() {
   if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
   pos = pathname.indexOf("/");
   foldername = pathname.substr(0, pos);
+  if (pathname.indexOf("pandas") > -1) {foldername = "python/pandas";}
   filename = pathname.substr(pos + 1);
   typ = foldername;
   var xhttp = new XMLHttpRequest();

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" xml:lang="en" class="lang-en site-1">
+<html dir="ltr" lang="" xml:lang="" class="lang-en site-1">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no" />
@@ -11,11 +11,11 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <!--[if lt IE 9]><script src="https://static.tp-link.com/res/js/hack/html5shiv.js"></script><![endif]-->
   <!--[if lte IE 8]><script src="https://static.tp-link.com/res/js/hack/selectivizr.js"></script><![endif]-->
-  <link type="text/css" rel="stylesheet" href="https://static.tp-link.com/res/style/css/main.css" />
-  <link type="text/css" rel="stylesheet" href="https://static.tp-link.com/res/style/css/article.css" />
-  <script type="text/javascript" src="https://static.tp-link.com/common/js/jquery/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" src="https://static.tp-link.com/res/js/pageext/tpweb.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://static.tp-link.com/res/style/css/privacy_terms.css">
+  <link rel="stylesheet" href="https://static.tp-link.com/res/style/css/main.css" />
+  <link rel="stylesheet" href="https://static.tp-link.com/res/style/css/article.css" />
+  <script src="/assets/js/jquery/jquery-1.9.1.min.js"></script>
+  <script src="https://static.tp-link.com/res/js/pageext/tpweb.js"></script>
+  <link rel="stylesheet" href="https://static.tp-link.com/res/style/css/privacy_terms.css">
   <style>
     #article .privacy{font-size:0;}
     #article .v-top{display:inline-block;vertical-align:top;}
@@ -41,7 +41,7 @@
 <![endif]-->
   <link type="text/css" rel="stylesheet" href="/assets/css/common.css" />
   <noscript><p style="text-align:center;padding:0.5em 6%;margin:0;color:#fefefe;background:#aaa;">Your browser does not support JavaScript. Please turn it on for the best experience.</p></noscript>
-  <script type="text/javascript" src="https://static.tp-link.com/res/js/pageext/main.js"></script>
+  <script type="text/javascript" src="https://static.tp-link.com/res/js/pageext/main.js?v=20210207"></script>
 <div class="tp-soho-header" id="headerContainer">
   <div id="tp-top">
     <div class="tp-container">
@@ -632,6 +632,13 @@
                           <li>
                             
                             <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_bulletin-agile-solution" data-vars-event-label="https://www.tp-link.com/en/landing/agile-solution/" href="https://www.tp-link.com/en/landing/agile-solution/">Agile Solutions</a>
+                          </li>
+                          <li>
+                            <span class="line"></span>
+                          </li>
+                          <li>
+                            
+                            <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_bulletin-deco-cloud-management" data-vars-event-label="/en/solution/deco-for-isp/" href="/en/solution/deco-for-isp/">Deco for ISP</a>
                           </li>
                       </ul>
                     </div>
@@ -1567,6 +1574,14 @@
                   </a>
                 </div>
               </li>
+              <li class="tp-m-soho-menu-item" data-id="bulletin-deco-cloud-management">
+                <div class="tp-container-inner">
+                  <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_bulletin-deco-cloud-management" data-vars-event-label="/en/solution/deco-for-isp/" href="/en/solution/deco-for-isp/">
+                    
+                    <p>Deco for ISP</p>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
         </li>
@@ -2377,10 +2392,10 @@
 </style>
 <div class="tp-local-switcher">
   <div class="tp-local-content">
-    <p class="tp-local-title">From France?</p>
+    <p class="tp-local-title">From United Kingdom?</p>
     <p class="tp-local-tip">Check products and services for your region.</p>
         <div class="tp-local-handle">
-      <a data-vars-event-category="Go-To-Location" data-vars-event-label="https://www.tp-link.com/fr/about-us/privacy/" href="https://www.tp-link.com/fr/about-us/privacy/" class="tp-local-btn tp-local-go ga-click">Go</a>
+      <a data-vars-event-category="Go-To-Location" data-vars-event-label="https://www.tp-link.com/uk/about-us/privacy/" href="https://www.tp-link.com/uk/about-us/privacy/" class="tp-local-btn tp-local-go ga-click">Go</a>
       <a data-vars-event-category="Go-To-Other" data-vars-event-label="https://www.tp-link.com/en/choose-your-location/" href="https://www.tp-link.com/en/choose-your-location/" class="tp-local-btn tp-local-other ga-click">Other Option</a>
     </div>
     <span class="tp-local-close"></span>
@@ -2420,7 +2435,20 @@
   var privacyAgreeForNewsletter = 'By completing this form you confirm that you understand and agree to our <a href ="https://www.tp-link.com/privacy" target="_blank">Privacy Policy</a>.';
 </script>
   <script src="/assets/diff/en/widgets/facebook.js"></script>
-  <script src="/assets/diff/en/widgets/consult/script.js"></script>
+  
+  <script>
+  tp && tp.fixedView && tp.fixedView.add({
+    position: 'right-bottom',
+    dom: '<script src="/assets/diff/en/widgets/consult/script.js"><\/script>',
+    excludeUrls: [
+      /\/business-networking\/consult\/$/
+    ],
+    checkShowHandler: function() {
+      return $("body").hasClass("b2b")
+    }
+  })
+  </script>
+<script>tp && tp.fixedView && tp.fixedView.show()</script>
 <script async type="text/javascript" src="https://static.tp-link.com/res/js/Web_JS_Stats.js"></script>
   </div>
 </body>

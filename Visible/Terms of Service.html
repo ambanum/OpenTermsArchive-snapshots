@@ -6,8 +6,8 @@
   </head>
 
   <head>
-  <link rel="stylesheet" href="/css/footer.css?t=1611819385038">
-  <link rel="stylesheet" href="/css/header.css?t=1611819385038">
+  <link rel="stylesheet" href="/css/footer.css?t=1613022724444">
+  <link rel="stylesheet" href="/css/header.css?t=1613022724444">
   <link href='/images/favicon.ico' rel='icon'>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,9 +42,9 @@
   <link rel="dns-prefetch" href="https://bid.g.doubleclick.net">
   <link rel="dns-prefetch" href="https://bat.bing.com">
   <link rel="dns-prefetch" href="https://collect-us-east-1.tealiumiq.com">
-  <link rel="stylesheet" href="/css/hp.min.css?t=1611819385038">
-  <link href="/css/privacy.css?t=1611819385038" rel="stylesheet">
-  <link href="/css/search.css?t=1611819385038" rel="stylesheet">
+  <link rel="stylesheet" href="/css/hp.min.css?t=1613022724444">
+  <link href="/css/privacy.css?t=1613022724444" rel="stylesheet">
+  <link href="/css/search.css?t=1613022724444" rel="stylesheet">
   <script async src='//tags.tiqcdn.com/utag/flanker/main/prod/utag.sync.js'></script>
 </head>
 
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </div>
-		<script type="text/javascript" async src="js/esim-notice-bar.js?t=1611819385038">
+		<script type="text/javascript" async src="js/esim-notice-bar.js?t=1613022724444">
 			var currentPage =  sessionStorage.getItem('pageName')
 		</script>
     </div>
@@ -106,14 +106,25 @@
                     style="display:none;">:&nbsp;</span>
                 <span id="notice-sub-text" class="notice-sub-text" style="display:none;"></span>
                 <span id="notice-btn" class="notice-btn" style="display:none;"></span>
+			</p>
+			<img id="notification-close-icon" src="../images/svgs/close_icon_header.svg" />
+        </div>
+	</div>
+	<div class="notice-container" id="groupnoticeContainer" style="display:none;">
+        <div class="notice-details">
+            <p class="notice-text">
+                <span id="group-noticeText" class="group-notice-sub-text" style="display:none;"></span>
+                    <span id="group-notice-btn" class="group-notice-btn" style="display:none;"></span>
+                <span id="group-notice-sub-text" class="group-notice-sub-text" style="display:none;"></span>
             </p>
+            <img id="groups-close-icon" src="../images/svgs/close_icon_header.svg" />
         </div>
     </div>
     <nav alt="navigational menu" class="navbar navbar-default navbar-fixed-top top-nav-collapse" id=main-menu style=padding:0>
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <div class=container-fullwidth>
             <div class=navbar-header>
-                <div class=col-xs-2>
+                <div class=col-xs-2 id='hamburger'>
                     <button class="navbar-toggle header-toggle" data-target=.navbar-collapse data-toggle=collapse type=button>
                         <span class=sr-only>Toggle navigation</span>
 													<svg id="menuClosed" height=26 viewBox="0 0 33 26" width=33 xmlns=http://www.w3.org/2000/svg>
@@ -220,7 +231,7 @@
 															</svg>
 													</div>
 											<ul class="submenu navItem" id="planSubMenu">
-												<li class="submenu-item">
+												<li class="submenu-item" id="checkPlanLink">
 													<a class="subMenuItems" data-link=/plan data-tracking-name=tealium_event,check_out_our_plan,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/plan>
 															Check out our plan 
 													</a>
@@ -230,7 +241,7 @@
 															See our coverage
 													</a>
 												</li>
-												<li class="submenu-item">
+												<li class="submenu-item" id="savePartyPayLink">
 														<a class="subMenuItems" data-link=/plan/party-pay data-tracking-name=tealium_event,save_with_party_pay,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/plan/party-pay>
 																Save with Party Pay 
 														</a>
@@ -285,7 +296,16 @@
 													<a class="subMenuItems" data-link=/help data-tracking-name=tealium_event,help_center,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/help>
 														Help Center
 													</a>
-											</l	i>
+											</li>
+										</li>
+										<li class="submenu-item">
+												<a class="subMenuItems" data-link=http://community.visible.com data-tracking-name=tealium_event,community,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=http://community.visible.com>
+													<div class="community-link">
+														Community <div>beta</div>
+													</div>
+												</a>
+											</li>
+
 												<li class="submenu-item">
 													<a class="subMenuItems" data-link=/help/category?name=About_Visible data-tracking-name=tealium_event,about_visible,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/help/category?name=About_Visible>
 														About Visible 
@@ -426,6 +446,7 @@
         </div>
     </nav>
 </header>
+
         <!-- Display Search result start -->
 <div id="searchContents" style=" display:none;">
   <div class="row">
@@ -500,7 +521,7 @@
               <div class="terms-of-use" id="main_content">
                 <div class="rte terms-use">
 
-                     <link rel="stylesheet" href="/css/legal.css?t=1611819385038">
+                     <link rel="stylesheet" href="/css/legal.css?t=1613022724444">
    <h1>Visible Service Terms &amp; Conditions</h1>
    <div class="content">
       <p>Welcome to Visible! Thanks for choosing us. Your Service terms and conditions are part of this Customer Agreement (“Agreement”) and are provided by Visible Service LLC (“Visible”) or one of its affiliates. Your voice, text, and data services are for use within the Visible coverage area. Together, your Plan and any features you use are your Service. The current version of this Agreement and the terms and conditions for your Service are available online at <a href="/?remember=true" target="_top">visible.com</a>.</p>
@@ -567,7 +588,7 @@
           <div class="onlyDesktopN onlyIpad">
             <div class="rowN">
               <div class="col-md-6 col-sm-12 col-12">
-                <p class="subscribeText">Not a member? Subscribe to stay in the loop.</p>
+                <p class="subscribeText">Subscribe to stay in the loop.</p>
                 <form class="email-form emailForm" action="/stay-in-loop" method="post" onsubmit="emailSubmit()">
                   <div class="emailInput input-control">
                     <input
@@ -605,7 +626,7 @@
                 </a>
                 <p class="emailCTA">
                   <span class="footerTextSpan">8350 E Crescent Parkway, Suite 200, Greenwood Village, CO 80111</span> |
-                  <span class="footerTextSpan">© 2020 Visible. All rights reserved.</span>
+                  <span class="footerTextSpan">© 2021 Visible. All rights reserved.</span>
                 </p>
                 <div class="termsOfUse">
                   <p class="terms">
@@ -764,6 +785,18 @@
                     <p class="typeheading">Services</p>
                     <li class="footer-list-item">
                       <a
+                      data-link="http://community.visible.com"
+                      data-tracking-name="tealium_event,community,link_location,footer,link_type,text_link"
+                      href="http://community.visible.com"
+                      target="_blank"
+                      class="footerAnchorRight"
+                      rel="noopener noreferrer"
+                    >
+                      Community
+                    </a>
+                    </li>
+                    <li class="footer-list-item">
+                      <a
                       data-link="/visible-protect"
                       data-tracking-name="tealium_event,visible_protect,link_location,footer,link_type,text_link"
                       href="/visible-protect"
@@ -798,7 +831,7 @@
                         Swap Program
                       </a>
                     </li>
-                    <li class="footer-list-item">
+                    <li class="footer-list-item" id='partyPayLink'>
                       <a 
                         data-link="/plan/party-pay" 
                         data-tracking-name="tealium_event,party_pay,link_location,footer,link_type,text_link"
@@ -837,6 +870,18 @@
                   <div class="col-sm-6 noPad-mobile col-6 col-md-4 col-lg-4 lgElem padding-left-85 padding-sm-left-50">
                     <p class="typeheading">Company</p>
                     <li class="footer-list-item">
+                        <a
+                          data-link="/about-us"
+                          data-tracking-name="tealium_event,about_us,link_location,footer,link_type,text_link"
+                          href="/about-us"
+                          target="_blank"
+                          class="footerAnchorRight"
+                          rel="noopener noreferrer"
+                        >
+                          About Us
+                        </a>
+                      </li>
+                    <li class="footer-list-item">
                       <a
                         data-link="/connect"
                         data-tracking-name="tealium_event,visible_connect,link_location,footer,link_type,text_link"
@@ -850,9 +895,9 @@
                     </li>
                     <li class="footer-list-item">
                       <a
-                        data-link="https://www.linkedin.com/company/visible-mobile"
+                        data-link="https://newsroom.visible.com/"
                         data-tracking-name="tealium_event,newsroom,link_location,footer,link_type,text_link"
-                        href="https://urldefense.proofpoint.com/v2/url?u=https-3A__www.linkedin.com_company_visible-2Dmobile&amp;d=DwMGaQ&amp;c=udBTRvFvXC5Dhqg7UHpJlPps3mZ3LRxpb6__0PomBTQ&amp;r=_LwHYGczFnL5B_t5z4tDwUS_YSGnJozyVNGQCQgl_4JFhW8pe0PkoxZuCodDoT_9&amp;m=vdEFFawQofU2RQI_ijzKOYwZH2jZpLk5b6jpS60Mszc&amp;s=JzwCm3JsB8X1J3cglZsxNHWzwVq-JHrMAJo_h6C5L2k&amp;e"
+                        href="https://newsroom.visible.com/"
                         target="_blank"
                         class="footerAnchorRight"
                         rel="noopener noreferrer"
@@ -927,8 +972,8 @@
           <div class="onlyMobileN">
             <div class="rowN noBottomPad noMargin">
                 <div class="col-sm-12 col-12 noPad-mobile">
-                    <div class="textAlignCenter">
-                        <p class="subscribeTextMobile">Not a member? Subscribe to stay in the loop.</p>
+                    <div>
+                        <p class="subscribeTextMobile">Subscribe to stay in the loop.</p>
                     </div>
                 </div>
             </div>
@@ -993,6 +1038,9 @@
                   <div class="col-sm-3 noPad-mobile col-6 col-md-3 col-lg-4 lgElem padding-left-75 ">
                     <p class="typeheading">Services</p>
                     <li class="footer-list-item">
+                      <a data-link="http://community.visible.com" data-tracking-name="tealium_event,community,link_location,footer,link_type,text_link" href="http://community.visible.com" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Community</a>
+                    </li>
+                    <li class="footer-list-item">
                       <a data-link="/visible-protect" data-tracking-name="tealium_event,visible_protect,link_location,footer,link_type,text_link" href="/visible-protect" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Visible Protect</a>
                     </li>
                     <li class="footer-list-item">
@@ -1001,7 +1049,7 @@
                     <li class="footer-list-item">
                       <a data-link="/deals/swap" data-tracking-name="tealium_event,swap_program,link_location,footer,link_type,text_link" href="/deals/swap" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Swap Program</a>
                     </li>
-                    <li class="footer-list-item">
+                    <li class="footer-list-item" id='partyPayLink'>
                       <a data-link="/plan/party-pay" data-tracking-name="tealium_event,party_pay,link_location,footer,link_type,text_link" href="/plan/party-pay" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Party Pay</a>
                     </li>
                     <li class="footer-list-item">
@@ -1014,10 +1062,13 @@
                   <div class="col-sm-3 noPad-mobile col-6 col-md-3 col-lg-4 lgElem padding-left-85 padding-sm-left-50">
                     <p class="typeheading">Company</p>
                     <li class="footer-list-item">
+                        <a data-link="/about-us" data-tracking-name="tealium_event,about_us,link_location,footer,link_type,text_link" href="/about-us" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">About Us</a>
+                      </li>
+                    <li class="footer-list-item">
                       <a data-link="/connect/" data-tracking-name="tealium_event,visible_connect,link_location,footer,link_type,text_link" href="/connect" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Visible Connect</a>
                     </li>
                     <li class="footer-list-item">
-                      <a data-link="https://www.linkedin.com/company/visible-mobile" data-tracking-name="tealium_event,newsroom,link_location,footer,link_type,text_link" href="https://urldefense.proofpoint.com/v2/url?u=https-3A__www.linkedin.com_company_visible-2Dmobile&amp;d=DwMGaQ&amp;c=udBTRvFvXC5Dhqg7UHpJlPps3mZ3LRxpb6__0PomBTQ&amp;r=_LwHYGczFnL5B_t5z4tDwUS_YSGnJozyVNGQCQgl_4JFhW8pe0PkoxZuCodDoT_9&amp;m=vdEFFawQofU2RQI_ijzKOYwZH2jZpLk5b6jpS60Mszc&amp;s=JzwCm3JsB8X1J3cglZsxNHWzwVq-JHrMAJo_h6C5L2k&amp;e" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Newsroom</a>
+                      <a data-link="https://newsroom.visible.com/" data-tracking-name="tealium_event,newsroom,link_location,footer,link_type,text_link" href="https://newsroom.visible.com/" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Newsroom</a>
                     </li>
                     <li class="footer-list-item">
                       <a data-link="https://www.linkedin.com/company/visible-mobile/" data-tracking-name="tealium_event,careers,link_location,footer,link_type,text_link" href="https://www.linkedin.com/company/visible-mobile/" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Careers</a>
@@ -1059,7 +1110,7 @@
                   </div>
                   <div class="text-align-center copyrightWrapper">
                     <span class="footerTextSpan">8350 E Crescent Parkway, Suite 200, Greenwood Village, CO 80111</span>
-                    <span class="footerTextSpan">© 2020 Visible. All rights reserved.</span>
+                    <span class="footerTextSpan">© 2021 Visible. All rights reserved.</span>
                     <div class="termsOfUse">
                       <p class="terms">
                           <a data-link="/legal/terms-and-conditions" data-tracking-name="tealium_event,term_conditions,link_location,footer,link_type,text_link" href="/legal/terms-and-conditions" tabindex="-1" target="_blank" class=" termsItem footerAnchor" rel="noopener noreferrer">Terms &amp; Conditions</a>
@@ -1105,12 +1156,12 @@
     display: block
   }
 </style>
-<script src="/js/firebase-app.js?t=1611819385038"></script>
-<script src="/js/firebase-auth.js?t=1611819385038"></script>
-<script src="/js/device-details.js?t=1611819385038"></script>
-<script src="/js/hp.min.js?t=1611819385038"></script>
-<script src="/js/intersection-observer.js?t=1611819385038"></script>
-<script src="/js/common.js?t=1611819385038"></script>
+<script src="/js/firebase-app.js?t=1613022724444"></script>
+<script src="/js/firebase-auth.js?t=1613022724444"></script>
+<script src="/js/device-details.js?t=1613022724444"></script>
+<script src="/js/hp.min.js?t=1613022724444"></script>
+<script src="/js/intersection-observer.js?t=1613022724444"></script>
+<script src="/js/common.js?t=1613022724444"></script>
 
     <!-- Use in page footer for search -->
 <script>
@@ -1132,7 +1183,7 @@
   }
 </style>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-<script type="text/javascript" src="/js/liveChat.js?t=1611819385038"></script>
+<script type="text/javascript" src="/js/liveChat.js?t=1613022724444"></script>
 <!-- SF Live Chat Integration end -->
 
 

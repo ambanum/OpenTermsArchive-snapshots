@@ -36,174 +36,171 @@
 <link rel="preconnect" href="//fonts.gstatic.com/" crossorigin> 
 <script src="//www.googletagmanager.com/gtag/js?id=UA-10133450-43" type="text/javascript" data-cfasync="false"></script>
 <script type="text/javascript" data-cfasync="false">
-				var em_version = '6.6.0';
-				var em_track_user = true;
-				var em_no_track_reason = '';
-				
-								var disableStr = 'ga-disable-UA-10133450-43';
+var em_version = '6.6.0';
+var em_track_user = true;
+var em_no_track_reason = '';
+var disableStr = 'ga-disable-UA-10133450-43';
+/* Function to detect opted out users */
+function __gtagTrackerIsOptedOut() {
+return document.cookie.indexOf( disableStr + '=true' ) > - 1;
+}
+/* Disable tracking if the opt-out cookie exists. */
+if ( __gtagTrackerIsOptedOut() ) {
+window[disableStr] = true;
+}
+/* Opt-out function */
+function __gtagTrackerOptout() {
+document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+window[disableStr] = true;
+}
+if ( 'undefined' === typeof gaOptout ) {
+function gaOptout() {
+__gtagTrackerOptout();
+}
+}
+window.dataLayer = window.dataLayer || [];
+if ( em_track_user ) {
+function __gtagTracker() {
+dataLayer.push( arguments );
+}
+__gtagTracker( 'js', new Date() );
+__gtagTracker( 'set', {
+'developer_id.dNDMyYj' : true,
+});
+__gtagTracker( 'config', 'UA-10133450-43', {
+forceSSL:true,page_path:location.pathname + location.search + location.hash,					} );
+window.gtag = __gtagTracker;										(
+function () {
+/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+/* ga and __gaTracker compatibility shim. */
+var noopfn = function () {
+return null;
+};
+var noopnullfn = function () {
+return null;
+};
+var Tracker = function () {
+return null;
+};
+var p = Tracker.prototype;
+p.get = noopfn;
+p.set = noopfn;
+p.send = noopfn;
+var __gaTracker = function () {
+var len = arguments.length;
+if ( len === 0 ) {
+return;
+}
+var f = arguments[len - 1];
+if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+if ( 'send' === arguments[0] ) {
+if ( 'event' === arguments[1] ) {
+__gtagTracker( 'event', arguments[3], {
+'event_category': arguments[2],
+'event_label': arguments[4],
+'value': 1
+} );
+return;
+}
+if ( 'undefined' !== typeof ( arguments[1].hitType ) ) {
+var hitDetails = {};
+var gagtag_map = {
+'eventCategory': 'event_category',
+'eventAction': 'event_action',
+'eventLabel': 'event_label',
+'eventValue': 'event_value',
+'nonInteraction': 'non_interaction',
+'timingCategory': 'event_category',
+'timingVar': 'name',
+'timingValue': 'value',
+'timingLabel': 'event_label',
+};
+var gaKey;
+for ( gaKey in gagtag_map ) {
+if ( 'undefined' !== typeof arguments[1][gaKey] ) {
+hitDetails[gagtag_map[gaKey]] = arguments[1][gaKey];
+}
+}
+var action = 'timing' === arguments[1].hitType ? 'timing_complete' : arguments[1].eventAction;
+__gtagTracker( 'event', action, hitDetails );
+}
+}
+return;
+}
+try {
+f.hitCallback();
+} catch ( ex ) {
+}
+};
+__gaTracker.create = function () {
+return new Tracker();
+};
+__gaTracker.getByName = noopnullfn;
+__gaTracker.getAll = function () {
+return [];
+};
+__gaTracker.remove = noopfn;
+__gaTracker.loaded = true;
+window['__gaTracker'] = __gaTracker;
+}
+)();
+} else {
+console.log( "" );
+( function () {
+function __gtagTracker() {
+return null;
+}
+window['__gtagTracker'] = __gtagTracker;
+window['gtag'] = __gtagTracker;
+} )();
+}
+</script>
 
-				/* Function to detect opted out users */
-				function __gtagTrackerIsOptedOut() {
-					return document.cookie.indexOf( disableStr + '=true' ) > - 1;
-				}
-
-				/* Disable tracking if the opt-out cookie exists. */
-				if ( __gtagTrackerIsOptedOut() ) {
-					window[disableStr] = true;
-				}
-
-				/* Opt-out function */
-				function __gtagTrackerOptout() {
-					document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-					window[disableStr] = true;
-				}
-
-				if ( 'undefined' === typeof gaOptout ) {
-					function gaOptout() {
-						__gtagTrackerOptout();
-					}
-				}
-								window.dataLayer = window.dataLayer || [];
-				if ( em_track_user ) {
-					function __gtagTracker() {
-						dataLayer.push( arguments );
-					}
-					__gtagTracker( 'js', new Date() );
-					__gtagTracker( 'set', {
-						'developer_id.dNDMyYj' : true,
-						                    });
-					__gtagTracker( 'config', 'UA-10133450-43', {
-						forceSSL:true,page_path:location.pathname + location.search + location.hash,					} );
-										window.gtag = __gtagTracker;										(
-						function () {
-							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
-							/* ga and __gaTracker compatibility shim. */
-							var noopfn = function () {
-								return null;
-							};
-							var noopnullfn = function () {
-								return null;
-							};
-							var Tracker = function () {
-								return null;
-							};
-							var p = Tracker.prototype;
-							p.get = noopfn;
-							p.set = noopfn;
-							p.send = noopfn;
-							var __gaTracker = function () {
-								var len = arguments.length;
-								if ( len === 0 ) {
-									return;
-								}
-								var f = arguments[len - 1];
-								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
-									if ( 'send' === arguments[0] ) {
-										if ( 'event' === arguments[1] ) {
-											__gtagTracker( 'event', arguments[3], {
-												'event_category': arguments[2],
-												'event_label': arguments[4],
-												'value': 1
-											} );
-											return;
-										}
-										if ( 'undefined' !== typeof ( arguments[1].hitType ) ) {
-											var hitDetails = {};
-											var gagtag_map = {
-												'eventCategory': 'event_category',
-												'eventAction': 'event_action',
-												'eventLabel': 'event_label',
-												'eventValue': 'event_value',
-												'nonInteraction': 'non_interaction',
-												'timingCategory': 'event_category',
-												'timingVar': 'name',
-												'timingValue': 'value',
-												'timingLabel': 'event_label',
-											};
-											var gaKey;
-											for ( gaKey in gagtag_map ) {
-												if ( 'undefined' !== typeof arguments[1][gaKey] ) {
-													hitDetails[gagtag_map[gaKey]] = arguments[1][gaKey];
-												}
-											}
-											var action = 'timing' === arguments[1].hitType ? 'timing_complete' : arguments[1].eventAction;
-											__gtagTracker( 'event', action, hitDetails );
-										}
-									}
-									return;
-								}
-								try {
-									f.hitCallback();
-								} catch ( ex ) {
-								}
-							};
-							__gaTracker.create = function () {
-								return new Tracker();
-							};
-							__gaTracker.getByName = noopnullfn;
-							__gaTracker.getAll = function () {
-								return [];
-							};
-							__gaTracker.remove = noopfn;
-							__gaTracker.loaded = true;
-							window['__gaTracker'] = __gaTracker;
-						}
-					)();
-									} else {
-										console.log( "" );
-					( function () {
-						function __gtagTracker() {
-							return null;
-						}
-						window['__gtagTracker'] = __gtagTracker;
-						window['gtag'] = __gtagTracker;
-					} )();
-									}
-			</script>
-
-<script type="38a208372a6c98b2f09a0530-text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.webpronews.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6.1"}};
-			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.webpronews.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6.1"}};
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
 <style type="text/css">
 img.wp-smiley,
 img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
 }
 </style>
 <link rel='stylesheet' id='wp-block-library-css' href='https://c0.wp.com/c/5.6.1/wp-includes/css/dist/block-library/style.min.css' media='all' />
 <style id='wp-block-library-inline-css' type='text/css'>
 .has-text-align-justify{text-align:justify;}
 </style>
-<link rel='stylesheet' id='cf7-style-frontend-style-css' href='https://www.webpronews.com/wp-content/plugins/contact-form-7-style/css/frontend.css?ver=3.1.9' media='all' />
-<link rel='stylesheet' id='cf7-style-responsive-style-css' href='https://www.webpronews.com/wp-content/plugins/contact-form-7-style/css/responsive.css?ver=3.1.9' media='all' />
-<link rel='stylesheet' id='essential-grid-plugin-settings-css' href='https://www.webpronews.com/wp-content/plugins/essential-grid/public/assets/css/settings.css?ver=3.0.11' media='all' />
-<link rel='stylesheet' id='tp-fontello-css' href='https://www.webpronews.com/wp-content/plugins/essential-grid/public/assets/font/fontello/css/fontello.css?ver=3.0.11' media='all' />
-<link rel='stylesheet' id='exactmetrics-popular-posts-style-css' href='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/css/frontend.min.css?ver=6.6.0' media='all' />
-<link rel='stylesheet' id='thb-fa-css' href='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/css/font-awesome.min.css?ver=4.7.0' media='all' />
-<link rel='stylesheet' id='thb-app-css' href='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/css/app.css?ver=4.5.0' media='all' />
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="//www.webpronews.com/wp-content/cache/wpfc-minified/lyfgj417/9ugk4.css" media="all" />
 <style id='thb-app-inline-css' type='text/css'>
 body {font-family:PT Sans, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}h1, h2, h3, h4, h5, h6 {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}.subheader ul {}@media only screen and (min-width:48.063em) {.header {}}.header {background-color:#ffffff !important;}@media only screen and (min-width:64.063em) {.header .logo .logoimg {max-height:90px;}}@media only screen and (max-width:64.063em) {.header .logo .logoimg {max-height:90px;}}@media only screen and (min-width:64.063em) {.subheader.fixed .logo .logolink .logoimg {max-height:40px;}}a:hover, .menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.active a,.menu-holder ul li.sfHover > a, .subcategory_container .thb-sibling-categories li a:hover,label small, .more-link, .comment-respond .comment-reply-title small a, .btn.accent-transparent, .button.accent-transparent, input[type=submit].accent-transparent, .category_title.search span, .video_playlist .video_play.video-active .post-title h6, .menu-holder.dark ul li .sub-menu a:hover, .menu-holder.dark ul.sf-menu > li > a:hover, .post .post-bottom-meta a:hover,.thb-title-color-hover .post .post-title .entry-title a:hover,.btn.accent-border, .button.accent-border, input[type=submit].accent-border {color:#4789e8;}ul.point-list li:before, ol.point-list li:before, .post .article-tags .tags-title, .post.post-overlay .post-gallery .counts,.post-review ul li .progress span, .post-review .average, .category-title.style1 .category-header, .widget.widget_topreviews .style1 li .progress, .btn.black:hover, .button.black:hover, input[type=submit].black:hover, .btn.white:hover, .button.white:hover, input[type=submit].white:hover, .btn.accent:hover, .button.accent:hover, input[type=submit].accent:hover, .btn.accent-transparent:hover, .button.accent-transparent:hover, input[type=submit].accent-transparent:hover, #scroll_totop:hover, .subheader.fixed > .row .progress, #mobile-menu.style2, .thb-cookie-bar,.btn.accent-fill, .button.accent-fill, input[type=submit].accent-fill {background-color:#4789e8;}.plyr__control--overlaid,.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {background:#4789e8;}.plyr--full-ui input[type=range] {color:#4789e8;}.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder, .btn.black:hover, .button.black:hover, input[type=submit].black:hover, .btn.accent, .button.accent, input[type=submit].accent, .btn.white:hover, .button.white:hover, input[type=submit].white:hover, .btn.accent:hover, .button.accent:hover, input[type=submit].accent:hover, .btn.accent-transparent, .button.accent-transparent, input[type=submit].accent-transparent,.quick_search .quick_searchform,.btn.accent-border, .button.accent-border, input[type=submit].accent-border,.btn.accent-fill, .button.accent-fill, input[type=submit].accent-fill {border-color:#4789e8;}.btn.accent-fill:hover, .button.accent-fill:hover, input[type=submit].accent-fill:hover {border-color:#417ed5;background-color:#417ed5;}.quick_search .quick_searchform input[type="submit"] {background:rgba(71,137,232, .1);}.quick_search .quick_searchform:after {border-bottom-color:#4789e8;}.quick_search .quick_searchform input[type="submit"]:hover {background:rgba(71,137,232, .2);}.post .article-tags .tags-title:after {border-left-color:#4789e8;}.rtl .post .article-tags .tags-title:after {border-right-color:#4789e8;}.circle_rating .circle_perc {stroke:#4789e8;}.header .quick_search.active .quick_search_icon,.menu-right-content .quick_search.active .quick_search_icon,.post .post-bottom-meta a:hover .comment_icon,.btn.accent-border .thb-next-arrow,.button.accent-border .thb-next-arrow,input[type=submit].accent-border .thb-next-arrow,.btn.accent-transparent .thb-next-arrow,.button.accent-transparent .thb-next-arrow,input[type=submit].accent-transparent .thb-next-arrow {fill:#4789e8;}.post .post-content p a {border-color:#6bceff;-moz-box-shadow:inset 0 -5px 0 #6bceff;-webkit-box-shadow:inset 0 -5px 0 #6bceff;box-shadow:inset 0 -5px 0 #6bceff;}.post.carousel-listing.slick-current:after {-moz-box-shadow:inset 0 4px 0 0 #4789e8;-webkit-box-shadow:inset 0 4px 0 0 #4789e8;box-shadow:inset 0 4px 0 0 #4789e8;}.post .post-content p a:hover {background:#6bceff;}.quick_search .quick_searchform {border-color:#4789e8;}.quick_search .quick_searchform input[type="submit"] {background:rgba(71,137,232, .1);}.quick_search .quick_searchform:after {border-bottom-color:#4789e8;}.quick_search .quick_searchform input[type="submit"]:hover {background:rgba(71,137,232, .2);}input[type="submit"],submit,.button,.btn {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}.post .post-bottom-meta {font-style:normal;font-family:Source Sans Pro, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}.post .post-category {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}.widget > strong {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}h1,.h1 {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';font-style:normal;font-weight:bold;font-size:24px;}h2 {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';font-style:normal;font-weight:bold;font-size:22px;}h3 {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';font-style:normal;font-weight:bold;font-size:20px;}h4 {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';font-style:normal;font-weight:bold;font-size:18px;}h5 {}h6 {}.widget:not(.woo) {padding-top:0px;padding-right:0px;padding-bottom:10px;padding-left:15px;;}.post .post-title h1 {}.menu-holder ul.sf-menu > li > a {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}.menu-holder ul.sf-menu > li > a {}.menu-holder ul li .sub-menu li a,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li > a {font-family:PT Sans, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}.menu-holder ul li .sub-menu li a,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li > a {}.mobile-menu li a {font-family:Roboto, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}.mobile-menu li a {}.mobile-menu .sub-menu li a {}.mobile-menu .sub-menu li a {font-family:PT Sans, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans';}.widget:not(.widget_singlead) {background-color:#ffffff !important;}[role="main"] .widget.widget_categoryslider .slick-nav {background-color:#ffffff !important;}#subfooter {}@media only screen and (min-width:48.063em) {#subfooter .logolink .logoimg {max-height:100px;}}#menu-item-497147 {font-size:16px;font-weight:bold;text-decoration:underline;}#menu-item-480228 {font-size:16px;font-weight:bold;text-decoration:underline;}.resp-container {position:relative;overflow:hidden;padding-top:56.25%;}.resp-iframe {position:absolute;top:0;left:0;width:100%;height:100%;border:0;}div#aje_tmp_582663 {display:none;visibility:hidden;}div#aje_tmp_605888 {display:none;visibility:hidden;}div#aje_tmp_582689 {display:none;visibility:hidden;}div#aje_tmp_605887 {display:none;visibility:hidden;}#aje_scr_582663 {display:none;visibility:hidden;}#aje_scr_605888 {display:none;}#aje_scr_582689 {display:none;}#aje_scr_605887 {display:none;}.myButton {-moz-box-shadow:0px 1px 0px 0px #f0f7fa;-webkit-box-shadow:0px 1px 0px 0px #f0f7fa;box-shadow:0px 1px 0px 0px #f0f7fa;background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));background:-moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);background:-webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);background:-o-linear-gradient(top, #33bdef 5%, #019ad2 100%);background:-ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2',GradientType=0);background-color:#33bdef;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #057fd0;display:inline-block;cursor:pointer;color:#ffffff;font-family:Arial;font-size:15px;font-weight:bold;padding:6px 24px;text-decoration:none;text-shadow:0px -1px 0px #5b6178;}.myButton:hover {background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));background:-moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);background:-webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);background:-o-linear-gradient(top, #019ad2 5%, #33bdef 100%);background:-ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2', endColorstr='#33bdef',GradientType=0);background-color:#019ad2;}.myButton:active {position:relative;top:1px;}.su-tabs-panes label {text-transform:none !important;font-weight:normal !important;}.category-title.style2 h1 {text-transform:none;}.subcategory_container .thb-sibling-categories li a {text-transform:none;}.category-title p { display:none;}.post.blog-post .single_category_title {margin-bottom:18px;font-size:24px;text-transform:none;text-decoration:underline;font-weight:bold;}.wpp-post-title {font-size:16px;}blockquote {background:#f9f9f9;border-left:5px solid #ccc;margin:1.5em 5px;padding:0.5em 5px;quotes:"\201C""\201D""\2018""\2019";font-size:16px;text-align:left;}blockquote:before {color:#ccc;content:open-quote;font-size:2em;line-height:0.1em;margin-right:0.10em;vertical-align:-0.4em;}blockquote p {display:inline;font-size:16px;text-transform:none;text-align:left;}a:hover {color:#3C69AB !important;background-color:transparent !important;background:transparent !important;}.post .post-content p a {background-color:none !important;color:#3C69AB !important;border:0px solid transparent !important;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important;}.post .post-content p a:hover {border-color:none !important;background-color:none !important;color:#3C69AB !important;border:0px solid transparent !important;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important;}.post .post-content p a:visited {border-color:none !important;background-color:none !important;color:#3C69AB !important;border:0px solid transparent !important;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important;}.post .post-content p a:active {border-color:none !important;background-color:none !important;color:#3C69AB !important;border:0px solid transparent !important;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important;}.contact-form-480550 { margin-left:300px; }.emailsubmit1 { width:100%; margin-bottom:5px;}.emailformfields input { width:100%; margin-bottom:5px;}.widget .widget_title { border-color:#f2f2f2; }.category_title:before { display:none; }.post.blog-post.format-video .post-gallery, .post.blog-post.format-video { background:#fff; }.share-article { display:none; }#footer .textwidget { padding-right:20%; }.subheader.fixed .menu-holder .sf-menu li>a { font-weight:500; }#mc_embed_signup{ background-image:url("https://www.webpronews.com/wp-content/uploads/2021/02/business-1031754_1920_grey3.png"); background-repeat:no-repeat; background-size:cover; padding-top:50px; padding-bottom:50px; font:44px; height:100%;}#mc_embed_signup input.email {width:100%;height:50px;border:0px;padding:10px;background:white;}#mc_embed_signup form {width:58%;margin:auto;}#mc_embed_signup input.button {width:100%;height:50px;margin:auto;margin-top:4px;background:#bed6db;border:0px;font-weight:bold;font-size:20px;font-family:'PT Sans', sans-serif;}.sidebarformtext {width:100%;font-family:'PT Sans', sans-serif;font-weight:bold;margin:auto;color:white;margin-top:20px;font-size:20px;text-shadow:2px 2px #000;}
 </style>
 <link rel='stylesheet' id='style-css' href='https://www.webpronews.com/wp-content/themes/goodlife-wp-child/style.css?ver=4.5.0' media='all' />
 <link rel='stylesheet' id='thb-google-fonts-css' href='https://fonts.googleapis.com/css?family=PT+Sans%3A400%2C400i%2C700%2C700i%7CRoboto%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i%7CSource+Sans+Pro%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C600%2C600i%2C700%2C700i%2C900%2C900i&#038;subset=latin%2Clatin-ext&#038;display=swap&#038;ver=4.5.0' media='all' />
 <link rel='stylesheet' id='jetpack_css-css' href='https://c0.wp.com/p/jetpack/9.4/css/jetpack.css' media='all' />
-<script src='https://c0.wp.com/c/5.6.1/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script src='https://c0.wp.com/c/5.6.1/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script type="38a208372a6c98b2f09a0530-text/javascript" id='exactmetrics-frontend-script-js-extra'>
+<script src='https://c0.wp.com/c/5.6.1/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script src='https://c0.wp.com/c/5.6.1/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='exactmetrics-frontend-script-js-extra'>
 /* <![CDATA[ */
 var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,mp3,mpeg,pdf,docx,pptx,xlsx,rar","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/out\\\/\",\"label\":\"Affiliate\"}]","home_url":"https:\/\/www.webpronews.com","hash_tracking":"true","ua":"UA-10133450-43"};
 /* ]]> */
 </script>
-<script src='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=6.6.0' id='exactmetrics-frontend-script-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
+<script src='//www.webpronews.com/wp-content/cache/wpfc-minified/9hvmme7a/9ugk4.js' type="text/javascript"></script>
+
 <link rel="https://api.w.org/" href="https://www.webpronews.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.webpronews.com/wp-json/wp/v2/pages/503239" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.webpronews.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.webpronews.com/wp-includes/wlwmanifest.xml" />
 <meta name="generator" content="WordPress 5.6.1" />
@@ -212,23 +209,18 @@ var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"
 <link rel="alternate" type="text/xml+oembed" href="https://www.webpronews.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.webpronews.com%2Fterms-of-service%2F&#038;format=xml" />
 <style type='text/css'>img#wpstats{display:none}</style>
 <style class='cf7-style' media='screen' type='text/css'>
-
 </style>
 <meta name="onesignal" content="wordpress-plugin" />
-<script type="38a208372a6c98b2f09a0530-text/javascript">
-
-      window.OneSignal = window.OneSignal || [];
-
-      OneSignal.push( function() {
-        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
-        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
-        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
-
-        OneSignal.setDefaultNotificationUrl("https://www.webpronews.com");
-        var oneSignal_options = {};
-        window._oneSignalInitOptions = oneSignal_options;
-
-        oneSignal_options['wordpress'] = true;
+<script>
+window.OneSignal = window.OneSignal || [];
+OneSignal.push( function() {
+OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+OneSignal.setDefaultNotificationUrl("https://www.webpronews.com");
+var oneSignal_options = {};
+window._oneSignalInitOptions = oneSignal_options;
+oneSignal_options['wordpress'] = true;
 oneSignal_options['appId'] = 'bed01086-17cc-4606-b2f7-c94fa8c22751';
 oneSignal_options['allowLocalhostAsSecureOrigin'] = true;
 oneSignal_options['welcomeNotification'] = { };
@@ -247,25 +239,22 @@ oneSignal_options['notifyButton']['size'] = 'large';
 oneSignal_options['notifyButton']['showCredit'] = true;
 oneSignal_options['notifyButton']['text'] = {};
 oneSignal_options['notifyButton']['colors'] = {};
-                OneSignal.init(window._oneSignalInitOptions);
-                OneSignal.showSlidedownPrompt();      });
-
-      function documentInitOneSignal() {
-        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
-
-        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
-          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
-      }
-
-      if (document.readyState === 'complete') {
-           documentInitOneSignal();
-      }
-      else {
-           window.addEventListener("load", function(event){
-               documentInitOneSignal();
-          });
-      }
-    </script>
+OneSignal.init(window._oneSignalInitOptions);
+OneSignal.showSlidedownPrompt();      });
+function documentInitOneSignal() {
+var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+}
+if (document.readyState === 'complete') {
+documentInitOneSignal();
+}
+else {
+window.addEventListener("load", function(event){
+documentInitOneSignal();
+});
+}
+</script>
 <link rel="icon" href="https://i1.wp.com/www.webpronews.com/wp-content/uploads/2020/03/cropped-wpn_siteidentity-7.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
 <link rel="icon" href="https://i1.wp.com/www.webpronews.com/wp-content/uploads/2020/03/cropped-wpn_siteidentity-7.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
 <link rel="apple-touch-icon" href="https://i1.wp.com/www.webpronews.com/wp-content/uploads/2020/03/cropped-wpn_siteidentity-7.png?fit=180%2C180&#038;ssl=1" />
@@ -299,9 +288,9 @@ oneSignal_options['notifyButton']['colors'] = {};
 <a href="#" class="quick_toggle"></a>
 <svg class="quick_search_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="19px" viewBox="0 0 19 19" xml:space="preserve">
 <path d="M18.96,16.896l-4.973-4.926c1.02-1.255,1.633-2.846,1.633-4.578c0-4.035-3.312-7.317-7.385-7.317S0.849,3.358,0.849,7.393
-		c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
-		c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
-		c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z" />
+c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
+c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
+c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z" />
 </svg> <form method="get" class="quick_searchform" role="search" action="https://www.webpronews.com/">
 <input name="s" type="text" class="s">
 <input type="submit" value="Search">
@@ -499,9 +488,9 @@ oneSignal_options['notifyButton']['colors'] = {};
 <a href="#" class="quick_toggle"></a>
 <svg class="quick_search_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="19px" viewBox="0 0 19 19" xml:space="preserve">
 <path d="M18.96,16.896l-4.973-4.926c1.02-1.255,1.633-2.846,1.633-4.578c0-4.035-3.312-7.317-7.385-7.317S0.849,3.358,0.849,7.393
-		c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
-		c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
-		c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z" />
+c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
+c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
+c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z" />
 </svg> <form method="get" class="quick_searchform" role="search" action="https://www.webpronews.com/">
 <input name="s" type="text" class="s">
 <input type="submit" value="Search">
@@ -515,7 +504,7 @@ oneSignal_options['notifyButton']['colors'] = {};
 
 <div class="subheader show-for-large light boxed">
 <div class="row
-			full-width-row">
+full-width-row">
 <div class="small-12 medium-6 large-7 columns">
 <nav class="subheader-menu">
 <ul id="menu-subheader-menu" class="sf-menu"><li id="menu-item-500810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-500810"><a href="https://www.webpronews.com/privacy-policy/">Privacy Policy</a></li>
@@ -537,9 +526,9 @@ oneSignal_options['notifyButton']['colors'] = {};
 <a href="#" class="quick_toggle"></a>
 <svg class="quick_search_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="19px" viewBox="0 0 19 19" xml:space="preserve">
 <path d="M18.96,16.896l-4.973-4.926c1.02-1.255,1.633-2.846,1.633-4.578c0-4.035-3.312-7.317-7.385-7.317S0.849,3.358,0.849,7.393
-		c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
-		c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
-		c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z" />
+c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
+c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
+c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z" />
 </svg> <form method="get" class="quick_searchform" role="search" action="https://www.webpronews.com/">
 <input name="s" type="text" class="s">
 <input type="submit" value="Search">
@@ -571,9 +560,9 @@ oneSignal_options['notifyButton']['colors'] = {};
 <a href="#" class="quick_toggle"></a>
 <svg class="quick_search_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="19px" viewBox="0 0 19 19" xml:space="preserve">
 <path d="M18.96,16.896l-4.973-4.926c1.02-1.255,1.633-2.846,1.633-4.578c0-4.035-3.312-7.317-7.385-7.317S0.849,3.358,0.849,7.393
-		c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
-		c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
-		c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z" />
+c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
+c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
+c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z" />
 </svg> <form method="get" class="quick_searchform" role="search" action="https://www.webpronews.com/">
 <input name="s" type="text" class="s">
 <input type="submit" value="Search">
@@ -585,13 +574,13 @@ oneSignal_options['notifyButton']['colors'] = {};
 
 <div id="aje_1414352"></div>
 
-<script type="38a208372a6c98b2f09a0530-text/javascript" language="JavaScript"> 
-  aj_server = 'https://ientry.nui.media/pipeline/'; aj_tagver = '1.0'; 
-  aj_scripts = 'https://img.nui.media/banners/';
-  aj_zone = 'ientry'; aj_adspot = '1414352'; aj_page = '0'; aj_dim ='1391341'; aj_ch = '1414329'; aj_ct = ''; aj_kw = ''; 
-  aj_pv = true; aj_click = ''; 
+<script type="text/javascript" language="JavaScript"> 
+aj_server = 'https://ientry.nui.media/pipeline/'; aj_tagver = '1.0'; 
+aj_scripts = 'https://img.nui.media/banners/';
+aj_zone = 'ientry'; aj_adspot = '1414352'; aj_page = '0'; aj_dim ='1391341'; aj_ch = '1414329'; aj_ct = ''; aj_kw = ''; 
+aj_pv = true; aj_click = ''; 
 </script>
-<div id="aje_tmp_1414352" style="display: none;"><script id="aje_scr_1414352" type="38a208372a6c98b2f09a0530-text/javascript" language="JavaScript" src="https://img.nui.media/banners/async-ajtg.js"></script></div> </div>
+<div id="aje_tmp_1414352" style="display: none;"><script id="aje_scr_1414352" type="text/javascript" language="JavaScript" src="https://img.nui.media/banners/async-ajtg.js"></script></div> </div>
 </div>
 </header>
 
@@ -794,7 +783,7 @@ oneSignal_options['notifyButton']['colors'] = {};
 <p>When you visit iEntry Network or WebProNews.com or send emails to us, you are communicating with us electronically, and therefore you are consenting to receive communications from us electronically or by other means available&nbsp;— such as&nbsp;electronically, by telephone, by physical mail, or by facsimile. It is also understood that all agreements, disclosures, notices, and other communications that we provide to you electronically satisfy any legal requirement that such communication is in writing.</p>
 <h3>Copyright and Licenses</h3>
 <p>The entire contents of this website, including but not limited to: text, graphics, logos, button icons, Flash movies, images, audio clips, digital downloads, data compilations, and software, are the property of iEntry Network or WebProNews.com, its collaborators, or its clients and are protected by domestic and international copyright and trademark laws. You may not modify, copy, reproduce, republish, upload, post, transmit, or distribute any portion of the website contents without the prior expressed written consent of iEntry Network or WebProNews.com.”</p>
-<p>You may print or download portions of the materials from various areas of this website solely for your own non-commercial use provided that you agree not to change or delete any copyright or proprietary notices from the materials. If you believe any content appearing on our website constitutes a copyright infringement of another party&#8217;s rights, please contact us immediately at&nbsp;<em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ea999f9a9a85989eaa838f849e9893c4898587">[email&#160;protected]</a></em>&nbsp;to notify us of this infringement.</p>
+<p>You may print or download portions of the materials from various areas of this website solely for your own non-commercial use provided that you agree not to change or delete any copyright or proprietary notices from the materials. If you believe any content appearing on our website constitutes a copyright infringement of another party&#8217;s rights, please contact us immediately at&nbsp;<em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3d0d6d3d3ccd1d7e3cac6cdd7d1da8dc0ccce">[email&#160;protected]</a></em>&nbsp;to notify us of this infringement.</p>
 <p>Your submissions of files including, but not limited to: resumes, email, Flash movies, images, logos, audio loops, and other software hereby constitutes your agreement to grant iEntry Network or WebProNews.com a non-exclusive, royalty-free, worldwide, sub-licensable, perpetual license to reproduce, distribute, transmit, adapt, sub-license, and publicly display any such submissions. You also grant iEntry Network or WebProNews.com the right to utilize your name in connection with all advertising, marketing, and promotional materials related thereto.</p>
 <h3>License and Website Access</h3>
 <p>iEntry Network or WebProNews.com grants you limited license to access and make personal use of our website&#8217;s and email newsletter and not to download (other than for page caching purposes) or modify it, or any portion of it, except with the express written consent of the iEntry Network or WebProNews.com. This website or any portion of this website may not be reproduced, duplicated, adapted, copied, sold, resold, transmitted, or otherwise exploited for any commercial purpose without the express written consent of iEntry Network or WebProNews.com. You may not frame, or use any framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, Flash movie, page layout, or form) of iEntry Network or WebProNews.com without the express written consent of iEntry Network or WebProNews.com.</p>
@@ -815,7 +804,7 @@ oneSignal_options['notifyButton']['colors'] = {};
 <h3>Other Provisions</h3>
 <p>iEntry Network or WebProNews.com&#8217;s failure to insist upon or enforce strict performance of any provision of these Conditions of Use shall not be construed as a waiver of any provision or right. Neither the course of conduct between the parties nor trade practice shall act to modify any provision of these Terms of Service. The iEntry Network or WebProNews.com may assign its rights and duties under these Terms of Service to any party at any time without notice to you. If any of these conditions shall be deemed invalid, void, or for any reason unenforceable, that condition shall be deemed severable and shall not affect the validity or enforceability of any remaining condition. Any rights not expressly granted herein are reserved.</p>
 <h3>Contact Info</h3>
-<p>Please send notices by care of email to&nbsp;<em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5b6b0b5b5aab7b185aca0abb1b7bceba6aaa8">[email&#160;protected]</a></em>&nbsp;or reach us at our physical mailing&nbsp;address or by telephone.</p>
+<p>Please send notices by care of email to&nbsp;<em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="62111712120d1016220b070c16101b4c010d0f">[email&#160;protected]</a></em>&nbsp;or reach us at our physical mailing&nbsp;address or by telephone.</p>
 <p>iEntry, Inc.</p>
 <p>PO Box 5507<br>Lexington, Kentucky 40503<br>United States</p>
 <p>859-514-2720</p>
@@ -1035,27 +1024,27 @@ oneSignal_options['notifyButton']['colors'] = {};
 </nav>
 </div> 
 <a id="scroll_totop"><i class="fa fa-angle-up"></i></a>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src='https://www.webpronews.com/wp-content/plugins/auto-image-alt/js/auto_image_alt.js?ver=1.1' id='auto_image_alt-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script src='https://c0.wp.com/p/jetpack/9.4/_inc/build/photon/photon.min.js' id='jetpack-photon-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script src='https://www.webpronews.com/wp-content/plugins/contact-form-7-style/js/frontend-min.js?ver=3.1.9' id='cf7-style-frontend-script-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script src='https://www.google.com/recaptcha/api.js?render=6LcYaacUAAAAAGyRFQ7eLu2yaHfIHS_bhcmFTA-o&#038;ver=3.0' id='google-recaptcha-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script type="38a208372a6c98b2f09a0530-text/javascript" id='wpcf7-recaptcha-js-extra'>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src='https://www.webpronews.com/wp-content/plugins/auto-image-alt/js/auto_image_alt.js?ver=1.1' id='auto_image_alt-js'></script>
+<script src='https://c0.wp.com/p/jetpack/9.4/_inc/build/photon/photon.min.js' id='jetpack-photon-js'></script>
+<script src='https://www.webpronews.com/wp-content/plugins/contact-form-7-style/js/frontend-min.js?ver=3.1.9' id='cf7-style-frontend-script-js'></script>
+<script src='https://www.google.com/recaptcha/api.js?render=6LcYaacUAAAAAGyRFQ7eLu2yaHfIHS_bhcmFTA-o&#038;ver=3.0' id='google-recaptcha-js'></script>
+<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
 /* <![CDATA[ */
 var wpcf7_recaptcha = {"sitekey":"6LcYaacUAAAAAGyRFQ7eLu2yaHfIHS_bhcmFTA-o","actions":{"homepage":"homepage","contactform":"contactform"}};
 /* ]]> */
 </script>
-<script src='https://www.webpronews.com/wp-content/plugins/contact-form-7/modules/recaptcha/script.js?ver=5.3.2' id='wpcf7-recaptcha-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script src='https://cdn.plyr.io/3.6.3/plyr.polyfilled.js?ver=3.6.3' id='plyr-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script src='https://c0.wp.com/c/5.6.1/wp-includes/js/underscore.min.js' id='underscore-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script src='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/js/vendor.min.js?ver=4.5.0' id='thb-vendor-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script type="38a208372a6c98b2f09a0530-text/javascript" id='thb-app-js-extra'>
+<script src='https://www.webpronews.com/wp-content/plugins/contact-form-7/modules/recaptcha/script.js?ver=5.3.2' id='wpcf7-recaptcha-js'></script>
+<script src='https://cdn.plyr.io/3.6.3/plyr.polyfilled.js?ver=3.6.3' id='plyr-js'></script>
+<script src='https://c0.wp.com/c/5.6.1/wp-includes/js/underscore.min.js' id='underscore-js'></script>
+<script src='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/js/vendor.min.js?ver=4.5.0' id='thb-vendor-js'></script>
+<script type='text/javascript' id='thb-app-js-extra'>
 /* <![CDATA[ */
 var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php","l10n":{"loading":"Loading ...","nomore":"No More Posts"},"settings":{"viai_publisher_id":"431861828953521","thb_custom_video_player":"on"}};
 /* ]]> */
 </script>
-<script src='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/js/app.min.js?ver=4.5.0' id='thb-app-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script src='https://c0.wp.com/c/5.6.1/wp-includes/js/wp-embed.min.js' id='wp-embed-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script src='https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=5.6.1' async='async' id='remote_sdk-js' type="38a208372a6c98b2f09a0530-text/javascript"></script>
+<script src='https://www.webpronews.com/wp-content/themes/goodlife-wp/assets/js/app.min.js?ver=4.5.0' id='thb-app-js'></script>
+<script src='https://c0.wp.com/c/5.6.1/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+<script src='https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=5.6.1' async='async' id='remote_sdk-js'></script>
 <aside id="thb-login" class="mfp-hide thb-login-form light">
 <ul>
 <li class="lost"><a href="#" class="always">Lost Password</a> <span class="back">Back &#x27F6;</span></li>
@@ -1074,7 +1063,7 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 <input type="hidden" name="action" value="thb_reset_password" />
 <button class="btn " type="submit">Get new password</button>
 </div>
-<input type="hidden" id="password-security" name="password-security" value="697e9052a2" /><input type="hidden" name="_wp_http_referer" value="/terms-of-service/" /> </form>
+<input type="hidden" id="password-security" name="password-security" value="4666351675" /><input type="hidden" name="_wp_http_referer" value="/terms-of-service/" /> </form>
 </div>
 <div class="thb-login">
 <form id="thb_login_form" action="https://www.webpronews.com/" method="post">
@@ -1092,7 +1081,7 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 <input type="hidden" name="action" value="thb_login_member" />
 <button class="btn " type="submit">Login</button>
 </div>
-<input type="hidden" id="login-security" name="login-security" value="697e9052a2" /><input type="hidden" name="_wp_http_referer" value="/terms-of-service/" /> </form>
+<input type="hidden" id="login-security" name="login-security" value="4666351675" /><input type="hidden" name="_wp_http_referer" value="/terms-of-service/" /> </form>
 </div>
 <div class="thb-register">
 <div class="alert alert-warning">Registration is disabled.</div> </div>
@@ -1102,15 +1091,15 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 <div class="hide">
 <svg class="comment_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" enable-background="new 0 0 13 13" xml:space="preserve">
 <path id="comment_icon" d="M12.7,0H0.3C0.134,0,0,0.128,0,0.286v9.143c0,0.157,0.134,0.286,0.3,0.286h2.1v3c0,0.105,0.061,0.201,0.159,0.252
-	C2.603,12.988,2.651,13,2.7,13c0.058,0,0.116-0.016,0.167-0.048l3.524-3.237H12.7c0.165,0,0.3-0.129,0.3-0.286V0.286
-	C13,0.128,12.865,0,12.7,0z" />
+C2.603,12.988,2.651,13,2.7,13c0.058,0,0.116-0.016,0.167-0.048l3.524-3.237H12.7c0.165,0,0.3-0.129,0.3-0.286V0.286
+C13,0.128,12.865,0,12.7,0z" />
 </svg>
 </div>
-<script src='https://stats.wp.com/e-202107.js' defer type="38a208372a6c98b2f09a0530-text/javascript"></script>
-<script type="38a208372a6c98b2f09a0530-text/javascript">
-	_stq = window._stq || [];
-	_stq.push([ 'view', {v:'ext',j:'1:9.4',blog:'138578674',post:'503239',tz:'-5',srv:'www.webpronews.com'} ]);
-	_stq.push([ 'clickTrackerInit', '138578674', '503239' ]);
+<script src='https://stats.wp.com/e-202107.js' defer></script>
+<script>
+_stq = window._stq || [];
+_stq.push([ 'view', {v:'ext',j:'1:9.4',blog:'138578674',post:'503239',tz:'-5',srv:'www.webpronews.com'} ]);
+_stq.push([ 'clickTrackerInit', '138578674', '503239' ]);
 </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="38a208372a6c98b2f09a0530-|49" defer=""></script></body>
+</body>
 </html>

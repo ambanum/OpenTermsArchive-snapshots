@@ -164,6 +164,7 @@
 
 
 
+
 <header>
     <div class="comGlobalHeader">
         <div class="comGlobalHeader__content" >
@@ -228,6 +229,14 @@
 
             </ul>
             <ul class="comGlobalHeader__nav">
+              <li class="comGlobalHeader__navItem comGlobalHeader__navItemSecondary"><a href="#" title="Tools" class="comGlobalHeader__navItemLink js-submenu"><span class="icon ubnt-icon--tools comGlobalHeader__navItemIcon"></span><span class="comGlobalHeader__navItemLabel">Tools</span><span class="icon ubnt-icon--pointer-down comGlobalHeader__subNavIcon"></span><span class="icon ubnt-icon--pointer-up comGlobalHeader__subNavIcon"></span></a>
+                    <ul class="comGlobalHeader__subNav js-submenu-link">                      
+                        <li class="comGlobalHeader__navItem"><a href="https://wifiman.com" title="Ubiquiti WiFiman" class="comGlobalHeader__navItemLink" target="_blank">WiFiman</a></li>
+                        <li class="comGlobalHeader__navItem"><a href="https://unms.com" title="Let your network and business grow" class="comGlobalHeader__navItemLink" target="_blank">UNMS</a></li>
+                        <li class="comGlobalHeader__navItem"><a href="https://link.ui.com/" title="airLink" class="comGlobalHeader__navItemLink" target="_blank">airLink</a></li>
+                      
+                    </ul>
+                </li>
               	<li class="comGlobalHeader__navItem comGlobalHeader__navItemSecondary"><a href="#" title="Social" class="comGlobalHeader__navItemLink js-submenu"><span class="icon ubnt-icon--chat-bubbles-2 comGlobalHeader__navItemIcon"></span><span class="comGlobalHeader__navItemLabel">Social</span><span class="icon ubnt-icon--pointer-down comGlobalHeader__subNavIcon"></span><span class="icon ubnt-icon--pointer-up comGlobalHeader__subNavIcon"></span></a>
                     <ul class="comGlobalHeader__subNav js-submenu-link">                      
                         <li class="comGlobalHeader__navItem"><a href="https://www.facebook.com/uieverywhere/" title="Facebook" class="comGlobalHeader__navItemLink" target="_blank">Facebook</a></li>
@@ -794,6 +803,7 @@ Copyright © 2021 Ubiquiti Inc. All rights reserved.
     
     
     
+	
     
     
     
@@ -853,6 +863,14 @@ Copyright © 2021 Ubiquiti Inc. All rights reserved.
                         <li><a href="https://design.ui.com/#/" target="_blank" title="UniFi Design Tool">UniFi Design Tool</a></li>
                     </ul>
                 </div>
+              	<div class="col--sm2 comGlobalFooter__col">
+                    <h4 class="comGlobalFooter__title">Tools</h4>
+                    <ul class="list list--smash">                      
+                        <li><a href="https://wifiman.com" target="_blank" title="Ubiquiti WiFiman">WiFiman</a></li>
+                        <li><a href="https://unms.com" target="_blank" title="Let your network and business grow">UNMS</a></li>
+                        <li><a href="https://link.ui.com/" target="_blank" title="airLink">airLink</a></li>
+                    </ul>
+                </div>
                 <div class="col--sm2 comGlobalFooter__col">
                     <h4 class="comGlobalFooter__title">Social</h4>
                     <ul class="list list--smash">
@@ -868,7 +886,7 @@ Copyright © 2021 Ubiquiti Inc. All rights reserved.
 
 <div class="comNewsletterSignup">
     <form class="comNewsletterSignup__form js-form-newsletter-global" action="/newsletters/" >
-        <input type='hidden' name='csrfmiddlewaretoken' value='xbBcNAjmB92vg0hIEVqJ9jh7Vyj33KFxyxss09UqiMo8R8tTZZDeMMkm05mWZhIo' />
+        <input type='hidden' name='csrfmiddlewaretoken' value='83tOZ1cDE8mr4jTL5LbKf86DAOAf5JMm9DK3gfiY40oHOxbJwg56CcDRoV6Osb63' />
         <div class="comGlobalFooter__title">Stay In Touch</div>
       	<div class="comGlobalFooter__input">
         	<input type="email" placeholder="Email Address" required="required" name="email" class="comNewsletterSignup__input"/>
@@ -907,6 +925,30 @@ Copyright © 2021 Ubiquiti Inc. All rights reserved.
     </div>
 
 </footer>
+
+
+<style>
+@media only screen and (min-width: 891px){
+  footer .comContent--maxWidth .comGlobalFooter__col {
+      display: block;
+      padding-right: calc(100% - 91.8vw);
+  }
+}  
+@media only screen and (min-width: 1023px){
+  footer .comContent--maxWidth .comGlobalFooter__col {
+      display: block;
+      padding-right: calc(100% - 82.2vw);
+  }
+}
+@media only screen and (min-width: 1400px){
+  footer .comContent--maxWidth .comGlobalFooter__col {
+      padding-right: 3.94%;
+  }
+}
+
+
+</style>
+
             </div>
 
         <div id="toastContainer" class="comToastContainer is-toast-hidden js-toast-container">

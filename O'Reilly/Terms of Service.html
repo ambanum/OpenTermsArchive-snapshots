@@ -6,7 +6,7 @@
 
   	<title>Terms of Service - O'Reilly Media</title>
 	<meta name="description" content=" " />
-	<meta name="date" content="2021-02-22" />
+	<meta name="date" content="2021-02-23" />
 	<meta name="search_date" content="2019-01-09" />
 	<meta name="search-title" content="Terms of Service - O'Reilly Media" />
 	<meta name="pagename" content="Terms of Service - O'Reilly Media" />
@@ -38,7 +38,7 @@
   <![endif]-->
 
   <link rel="stylesheet" type="text/css" href="https://cdn.oreillystatic.com/assets/css/2018_font_face.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.oreillystatic.com/assets/css/odot-layout-20201027.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.oreillystatic.com/assets/css/odot-layout-20210222.css" />
 
   <!--[if IE 9]>
   <style type="text/css">
@@ -133,10 +133,10 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
                   <li class="menuList-subItem"><a href="https://www.oreilly.com/online-learning/feature-answers.html">Answers</a></li>
                 </ul>
               </li>
-              <li class="menuList-item" id="nav-whatsnew"><a href="https://www.oreilly.com/whats-new.html">What&rsquo;s new</a></li>
-              <li class="menuList-item menuList-forMarketers" id="nav-forMarketers"><a href="https://www.oreilly.com/content-marketing-solutions.html">O&rsquo;Reilly for marketers</a></li>
+              <li class="menuList-item" id="nav-forMarketers"><a href="https://www.oreilly.com/content-marketing-solutions.html">Content sponsorship</a></li>
               <li class="menuList-item menuList-item-search" id="nav-search">
-                <form id="js-searchForm" class="searchForm" action="https://www.oreilly.com/search/"><input id="search" type="search" name="query" placeholder="Explore our content" autocomplete="off" required=""></form>
+                <form id="js-searchForm" class="searchForm" action="https://www.oreilly.com/search/"><input id="search" type="search" name="query" placeholder="Explore our content" autocomplete="off" required=""><button id="js-searchCloseButton" class="navSearchCloseButton">Close</button></form>
+                <button id="js-searchButton" class="navSearchButton">Search</button>
               </li>
             </ul>
           </li>
@@ -515,6 +515,23 @@ document.write('</a>' + ending);
     }
     const searchForm = document.getElementById('js-searchForm');
     searchForm.addEventListener('submit', searchSubmit);
+
+
+    //Search button action
+    function showNavSearch(e) {
+      $('.menuList-item-search').addClass('overlay');
+      $('.menuList-item-search input#search').focus();
+    }
+    const searchButton = document.getElementById('js-searchButton');
+    searchButton.addEventListener('click', showNavSearch);
+
+
+    //Close search button action
+    function hideNavSearch(e) {
+      $('.menuList-item-search').removeClass('overlay');
+    }
+    const searchCloseButton = document.getElementById('js-searchCloseButton');
+    searchCloseButton.addEventListener('click', hideNavSearch);
   });
 
   (function(document, history, location) {

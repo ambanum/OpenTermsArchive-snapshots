@@ -19,6 +19,10 @@
 	<!-- CSS pre-connect settings start-->
 <link rel="preconnect" href="https://nexus.ensighten.com">
 <link rel="preconnect" href="https://cdn.optimizely.com">
+<link rel="preconnect" href="https://nexus.ensighten.com">
+<link rel="preconnect" href="https://cdn.optimizely.com">
+<link rel="preconnect" href="https://nexus.ensighten.com">
+<link rel="preconnect" href="https://cdn.optimizely.com">
 <!-- CSS pre-connect settings end -->
 
 <!-- Home CSS pre-connect settings start isHomePage:false -->
@@ -1411,9 +1415,9 @@ jQuery(document).ready(function() {
 //	setCookiePromo("cpwmFurniture", "notSpecific", 1);
 //	utm_campaign=20200827_WK26_Furniture_I49_V1
 //	utm_campaign=20200827_WK26_Furniture_I49_V2
-	isLighting = getUrlParameter("utm_campaign");
+/*210309	isLighting = getUrlParameter("utm_campaign");*/
 //for test	isLighting = getUrlParameter("cpwmtest");
-	isStorySort = getCookiePromo("cpwmFurniture");
+/*210309	isStorySort = getCookiePromo("cpwmFurniture");
 	if(isLighting == "20200827_WK26_Furniture_I49_V1" || isStorySort == "control") {
 		if(isStorySort == ""){
 			setCookiePromo("cpwmFurniture", "control", 1);
@@ -1444,7 +1448,7 @@ jQuery(document).ready(function() {
 			jQuery("#cpwm-furniture .cpwm-everyone").show();
 			jQuery("#a-tile .cpwm-everyone").show();
 		}
-	}
+	}*/
 //	cpwmLocalStore()
 	incOLmobCpwm();
 //	jQuery("nav .nav.navbar-nav.ml-navbar-nav > li").css("z-index","unset");

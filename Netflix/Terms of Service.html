@@ -3,7 +3,7 @@
     <head>
         
         <meta charset="utf-8">
-        <meta name="_csrf" content="ad4198c6-0b86-4903-982c-38b94d89ce06" />
+        <meta name="_csrf" content="b8d8075f-2ca0-43d6-a5dc-34e33c5fffab" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
 
         <meta name="google-site-verification" content="GmHfooq7jctbhvRUSGtLpE_XImtIATNo0iLofqbb16I" />
@@ -280,6 +280,7 @@
         },
         config: {
             "page": "Legal",
+            "enableBeacon": false,
             "suppressCanYouSignInPrompt": false,
             "chatForce": true,
             "clBatchInterval": 10000,
@@ -376,56 +377,13 @@
 
 
         <script crossorigin="anonymous" src="https://help.nflxext.com/helpcenter/manifest_94e1d4be5d8462b4c281.js"></script>
-        <script crossorigin="anonymous" src="https://help.nflxext.com/helpcenter/common_574e0e3c3ccc892cb7c1.js"></script>
+        <script crossorigin="anonymous" src="https://help.nflxext.com/helpcenter/common_9a4ef43855f6316c976f.js"></script>
 
         
         
             <script crossorigin="anonymous" src="https://help.nflxext.com/helpcenter/article_97eef61ab466559c83a4.js"></script>
         
-
-        <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-47787628-1', {
-        'cookieUpdate': false,
-        'cookieDomain': 'help.netflix.com',
-        'cookieExpires': 60 * 60 * 24 * 180
-    });
-    ga('send', 'pageview');
-    ga('set', 'anonymizeIp', true);
-</script>
-
-        <script>
-    /*<![CDATA[*/
-    function serialize(obj) {
-        var str = [];
-        for (var p in obj)
-            if (obj.hasOwnProperty(p)) {
-                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-            }
-        return str.join("&");
-    }
-
-    try {
-        netflix.beacon.init({
-            serverUrl: "https:\/\/help.netflix.com\/nm\/itracking",
-            client_type: 'padme',
-            timeout: 4000,
-            locale: "en",
-            testcells: ""
-        });
-
-        netflix.beacon.pageView(
-            serialize({
-                action: "Legal"
-            })
-        );
-    } catch (e) {}
-    /*]]>*/
-</script>
+        
         <script>
     (function() {
         var cseScript = document.createElement('script');

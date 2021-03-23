@@ -39,10 +39,10 @@
     <!--[if lte IE 9]>
 <p style="text-align:center;padding:0.5em 6%;margin:0;color:#fefefe;background:#aaa;">You are using an outdated browser. Please <a href="http://www.microsoft.com/download/internet-explorer.aspx" target="_blank">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-  <link rel="stylesheet" href="/assets/css/common.css" />
+  <link rel="stylesheet" href="/assets/css/common.css?v=20210323" />
   <noscript><p style="text-align:center;padding:0.5em 6%;margin:0;color:#fefefe;background:#aaa;">Your browser does not support JavaScript. Please turn it on for the best experience.</p></noscript>
-  <script src="https://static.tp-link.com/res/js/pageext/main.js?v=20210207"></script>
-<div class="tp-soho-header" id="headerContainer">
+  <script src="https://static.tp-link.com/res/js/pageext/main.js?v=20210323"></script>
+<header class="tp-soho-header" id="headerContainer">
   <div id="tp-top">
     <div class="tp-container">
       <div class="tp-container-inner">
@@ -72,6 +72,7 @@
             </span>
           <span>
             <a data-vars-event-category="SOHO_Header-ChooseLocation" data-vars-event-label="/en/choose-your-location/" href="/en/choose-your-location/" class="tp-top-link ga-click">Worldwide / English</a>
+          </span>
         </div>
         <div class="tp-top-brand">
           <ul class="tp-top-brand-list">
@@ -98,7 +99,7 @@
         <div class="tp-soho-search-box">
           <a class="tp-soho-search-box-icon" href="/en/search/">Search</a>
         </div>
-        <div class="tp-soho-nav-box">
+        <nav class="tp-soho-nav-box">
           <ul class="tp-soho-nav">
             <li class="tp-soho-nav-li" data-id="for-home" >
               <a class="tp-soho-firstmenu ga-click" data-vars-event-category="SOHO_Header-Menu_for-home" data-vars-event-label="">
@@ -676,10 +677,6 @@
                                     <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_sp-whole-home-mesh" data-vars-event-label="/en/service-provider/home-wifi-system/" href="/en/service-provider/home-wifi-system/">Whole-Home Mesh</a>
                                   </p>
                                   <p class="tp-soho-sub-item-slogan">A seamless, intelligent and easy-to-configure mesh network</p>
-                                  <ul>
-                                    <li><a class="ga-click" data-vars-event-category="SOHO_Header-Menu_sp-agile-whole-home-mesh" data-vars-event-label="/en/service-provider/home-wifi-system/" href="/en/service-provider/home-wifi-system/">Agile Whole-Home Mesh</a></li>
-                                    <li><a class="ga-click" data-vars-event-category="SOHO_Header-Menu_sp-deco-cloud-management" data-vars-event-label="/en/solution/deco-for-isp/" href="/en/solution/deco-for-isp/">Deco Cloud Management</a></li>
-                                  </ul>
                                 </div>
                               </div>
                             </div>
@@ -742,18 +739,19 @@
               </div>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
       <div class="tp-soho-form-box">
-        <form class="tp-soho-form stop-propagation" action="/en/search/" method="get" target="_top">
+        <form class="tp-soho-form stop-propagation" action="/en/search/" method="get" target="_top" data-recommend="Recommend" data-vars-event-category="SOHO_Header-SearchRecommend">
           <div class="tp-table tp-soho-form-content">
             <div class="tp-table-row">
               <div class="tp-table-cell">
                 <b class="tp-soho-form-icon"></b>
               </div>
               <div class="tp-table-cell tp-soho-form-input-wrapper">
-                <input class="tp-soho-form-input" type="text" name="q" placeholder="Search All" autocomplete="off">
-                <div class="tp-soho-form-suggest"></div>
+                <input class="tp-soho-form-input" type="text" name="q" maxlength="50" placeholder="Search All" autocomplete="off">
+                <input type="hidden" name="t" value="">
+                                <div class="tp-soho-form-suggest"></div>
               </div>
               <div class="tp-table-cell">
                 <b class="tp-soho-form-close"></b>
@@ -775,17 +773,18 @@
       </div>
     </div>
     <div class="tp-m-soho-search">
-      <form class="tp-m-soho-form stop-propagation" action="/en/search/" method="get" target="_top">
+      <form class="tp-m-soho-form stop-propagation" action="/en/search/" method="get" target="_top" data-recommend="Recommend" data-vars-event-category="SOHO_Header-SearchRecommend">
         <div class="tp-m-soho-search-inner">
           <div class="tp-container-inner">
-            <input class="tp-m-soho-form-input" type="text" name="q" placeholder="Search All" autocomplete="off">
-            <button type="submit" class="tp-m-soho-search-icon tp-m-soho-form-submit">Submit</button>
+            <input class="tp-m-soho-form-input" type="text" name="q" maxlength="50" placeholder="Search All" autocomplete="off">
+            <input type="hidden" name="t" value="">
+                        <button type="submit" class="tp-m-soho-search-icon tp-m-soho-form-submit">Submit</button>
             <div class="tp-m-soho-form-suggest"></div>
           </div>
         </div>
       </form>
     </div>
-        <div class="tp-m-soho-menu">
+        <nav class="tp-m-soho-menu">
       <ul class="tp-m-soho-menu-list">
         <li class="tp-m-soho-menu-item" data-id="for-home">
           <div class="tp-container-inner">
@@ -1515,28 +1514,9 @@
               </li>
               <li class="tp-m-soho-menu-item" data-id="sp-whole-home-mesh">
                 <div class="tp-container-inner">
-                  
-                    <i class="tp-m-soho-menu-expand"></i>
+                  <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_sp-whole-home-mesh" data-vars-event-label="/en/service-provider/home-wifi-system/" href="/en/service-provider/home-wifi-system/">
                     <p>Whole-Home Mesh</p>
-                  
-                </div>
-                <div class="tp-m-soho-lastmenu">
-                  <ul class="tp-m-soho-lastmenu-list">
-                    <li class="tp-m-soho-lastmenu-item">
-                      <div class="tp-container-inner">
-                        <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_sp-agile-whole-home-mesh" data-vars-event-label="/en/service-provider/home-wifi-system/" href="/en/service-provider/home-wifi-system/">
-                          <p class="tp-m-soho-lastmenu-title">Agile Whole-Home Mesh</p>
-                        </a>
-                      </div>
-                    </li>
-                    <li class="tp-m-soho-lastmenu-item">
-                      <div class="tp-container-inner">
-                        <a class="ga-click" data-vars-event-category="SOHO_Header-Menu_sp-deco-cloud-management" data-vars-event-label="/en/solution/deco-for-isp/" href="/en/solution/deco-for-isp/">
-                          <p class="tp-m-soho-lastmenu-title">Deco Cloud Management</p>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
+                  </a>
                 </div>
               </li>
               <li class="tp-m-soho-menu-item" data-id="sp-vdsl">
@@ -1765,15 +1745,15 @@
           </ul>
         </div>
       </ul>
-    </div>
+    </nav>
       </div>
     <script>
     if(typeof tp !== 'undefined'){
-      tp.searchSuggest("/en/search-suggest.html?q={keywords}", $(".tp-soho-header .tp-soho-form"), "tp-soho-form-suggest");
-      tp.searchSuggest("/en/search-suggest.html?q={keywords}", $(".tp-soho-header .tp-m-soho-form"), "tp-m-soho-form-suggest");
+      tp.searchSuggest("/en/search-suggest.html?q={keywords}&category=soho", $(".tp-soho-header .tp-soho-form"), "tp-soho-form-suggest");
+      tp.searchSuggest("/en/search-suggest.html?q={keywords}&category=soho", $(".tp-soho-header .tp-m-soho-form"), "tp-m-soho-form-suggest");
     }
     $(function () {
-      var $header = $(".tp-soho-header");
+      var $header = $(".tp-soho-header").after("<div id='headerContainer-curtain'></div>");
       var $li = $header.find(".tp-soho-nav-li");
       var $item = $li.find(".tp-soho-sub-item-text");
       /* $li.on("mouseenter", function () {
@@ -1803,11 +1783,14 @@
       $header.find(".tp-soho-search-box-icon").on("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
+        $(window).scrollTop(0);
+        $("html").addClass("fixed");
         $header.addClass("active");
         $header.find(".tp-soho-form-input").focus();
       })
       $header.find(".tp-soho-form-close").on("click", function () {
         $header.removeClass("active");
+        $("html").removeClass("fixed");
       })
 
       var $mSearch = $header.find(".tp-m-soho-search");
@@ -1819,9 +1802,10 @@
       $mMenuIcon.on("click", function (e) {
         e.stopPropagation();
         if($(this).hasClass("active")){
-          $("html,body").removeClass("fixed");
+          $("html").removeClass("fixed");
         }else{
-          $("html,body").addClass("fixed");
+          $(window).scrollTop(0);
+          $("html").addClass("fixed");
         }
         $mSearchIcon.removeClass("active");
         $mSearch.hide();
@@ -1834,9 +1818,10 @@
         e.preventDefault();
         e.stopPropagation();
         if($(this).hasClass("active")){
-          $("html,body").removeClass("fixed");
+          $("html").removeClass("fixed");
         }else{
-          $("html,body").addClass("fixed");
+          $(window).scrollTop(0);
+          $("html").addClass("fixed");
         }
         $mMenuIcon.removeClass("active");
         $mMenu.hide().removeClass("active").find(".active").removeClass("active");
@@ -1871,11 +1856,11 @@
         $mSearch.hide();
         $mSearch.find(".tp-m-soho-form-input").val('');
         $mSearch.find(".tp-m-soho-form-suggest").empty();
-        $("html,body").removeClass("fixed");
+        $("html").removeClass("fixed");
       })
     })
   </script>
-  </div>
+  </header>
     <div id="article">
       <div class="wrap">
                       <div class="title ">

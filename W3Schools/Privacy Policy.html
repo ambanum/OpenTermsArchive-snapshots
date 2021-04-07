@@ -138,8 +138,8 @@ function w3_getStyleValue(elmnt,style) {
 <!--  <a href='//www.w3schools.com' class='fa fa-logo xw3-text-green' style="font-size:50px;margin-top:-30px" title='Home'></a> -->
   <div id="loginactioncontainer" class='w3-right'>
     <div id="mypagediv"></div>
-<!--    <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='w3_open_nav("login")'>LOG IN</button>-->
-    <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='window.open("https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com%2F")'>LOG IN</button>
+      <!-- <button id="w3loginbtn" style="border:none;display:none;cursor:pointer" class="login w3-right w3-hover-greener" onclick='w3_open_nav("login")'>LOG IN</button>-->
+      <a id="w3loginbtn" style="border: medium none; display: inline; cursor: pointer;" class="login w3-right w3-hover-greener" href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" target="_self">LOG IN</a>
   </div>
 
   <div id="theworldsgreatest" class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">
@@ -243,6 +243,7 @@ function w3_getStyleValue(elmnt,style) {
           <a class="w3-bar-item w3-button" href='/asp/default.asp'>Learn ASP</a>
           <a class="w3-bar-item w3-button" href='/nodejs/default.asp'>Learn Node.js</a>
           <a class="w3-bar-item w3-button" href='/nodejs/nodejs_raspberrypi.asp'>Learn Raspberry Pi</a>          
+          <a class="w3-bar-item w3-button" href='/git/default.asp'>Learn Git</a>          
           <h3>Web Building</h3>
           <a class="w3-bar-item w3-button" href="/w3css/w3css_templates.asp">Web Templates</a>
           <a class="w3-bar-item w3-button" href='/browsers/default.asp'>Web Statistics</a>
@@ -350,6 +351,7 @@ function w3_getStyleValue(elmnt,style) {
           <a class="w3-bar-item w3-button" href="/cpp/cpp_exercises.asp">C++ Exercises</a>
           <a class="w3-bar-item w3-button" href="/cs/cs_exercises.asp">C# Exercises</a>
           <a class="w3-bar-item w3-button" href="/r/r_exercises.asp">R Exercises</a>
+          <a class="w3-bar-item w3-button" href="/git/exercise.asp?filename=exercise_getstarted1">Git Exercises</a>
         </div>
         <div class='w3-col l4 m6'>
           <h3>Quizzes</h3>
@@ -726,7 +728,7 @@ href="https://courses.w3schools.com" target="_blank" onclick="ga('send', 'event'
   text-decoration:none!important;
 }
 </style>
-  <h4><a href="/colors/colors_picker.asp">CODE GAME</a></h4>
+  <h4><a href="/codegame/index.html">CODE GAME</a></h4>
   <a href="/codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="/images/w3lynx_200.png" alt="Code Game"></a>
   <p><a class="w3-btn" href="/codegame/index.html" target="_blank">Play Game</a></p>
 </div>
@@ -999,6 +1001,7 @@ function loadUser() {
   pos = pathname.indexOf("/");
   foldername = pathname.substr(0, pos);
   if (pathname.indexOf("pandas") > -1) {foldername = "python/pandas";}
+  if (pathname.indexOf("numpy") > -1) {foldername = "python/numpy";}
   filename = pathname.substr(pos + 1);
   typ = foldername;
   if (foldername == "quiztest") {
@@ -1035,6 +1038,7 @@ function finishedPage() {
   pos = pathname.indexOf("/");
   foldername = pathname.substr(0, pos);
   if (pathname.indexOf("pandas") > -1) {foldername = "python/pandas";}
+  if (pathname.indexOf("numpy") > -1) {foldername = "python/numpy";}
   filename = pathname.substr(pos + 1);
   typ = foldername;
   var xhttp = new XMLHttpRequest();

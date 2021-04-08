@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en-US">
 <head>
   <meta charset="utf-8" />
-  <!-- v19565 -->
+  <!-- v19566 -->
 
   <title>Terms of service &ndash; Help</title>
 
@@ -22,7 +22,7 @@ This page describes the terms and conditions that govern your use of certain New
   <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/application-79172500fb4dbec2484043d570946543.css" id="stylesheet" />
     <!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
     <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/theming_v1_support-cf937686d5b6669242017892da7bad78.css" />
-  <link rel="stylesheet" type="text/css" href="//p20.zdassets.com/hc/theming_assets/968999/987838/style.css?digest=4399306787860">
+  <link rel="stylesheet" type="text/css" href="//p20.zdassets.com/hc/theming_assets/968999/987838/style.css?digest=4399331011348">
 
   <link rel="shortcut icon" type="image/x-icon" href="//theme.zdassets.com/theme_assets/968999/1965f56573cfa15ed817f84bf2248be1e2feee32.ico" />
 
@@ -58,47 +58,58 @@ This page describes the terms and conditions that govern your use of certain New
 
   
 <!-- BEGIN AWS Chat pilot launch for Cancel Help page -->
-<script src="https://care-chat.nyt.net/chat-js-sdk/versions/0.1.0.browser-sdk.min.js" type="text/javascript"></script> <!-- TODO UPDATE WITH SDK PROD LINK -->
+<script src="https://customerchat.nytimes.com/chat-js-sdk/versions/0.1.0.browser-sdk.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-    if(window.location.href.indexOf("/360003499613") > -1) {
-  		
-  		<!-- TO TURN ON OR OFF THE CHAT PILOT -->
-  		const CHAT_PILOT_FEATURE_FLAG = true; 
-			<!-- TO TURN ON OR OFF THE CHAT PILOT -->
-  		
-  		window.addEventListener('load', function() {
-  				const chatPilotButton = $("#Chat_New");
-  				const livePersonButton = $("#Help_New");
-  
-  				let chatAvailableResp;
-  				const chat = new NYTCareChat();
-  				chat.setChatHost('https://customerchat.nytimes.com');
-    			chat.isChatAvailable()
-  				.then(resp => {
-              chatAvailableResp = resp && resp[0]?.duringAvailableHours && resp[0]?.hasAvailableSlots;
-              
-  						if (CHAT_PILOT_FEATURE_FLAG && chatAvailableResp) {
-                livePersonButton.css("display", "none");
-                chatPilotButton.css("display", "");
-                chatPilotButton.click(function() {
-                  chat.openChat({
-                    attributes: {
-                      "entry_point": "chat_pilot",
-                    }
-                  });
-                });
-              } else {
-                livePersonButton.css("display", "");
-                chatPilotButton.css("display", "none");
-                <!-- LIVEPERSON CHAT -->
-               window.lpTag=window.lpTag || {};if(typeof window.lpTag._tagCount==='undefined'){window.lpTag={site:'17743901'||'',section:lpTag.section||'',autoStart:lpTag.autoStart===false?false:true,ovr:lpTag.ovr||{},_v:'1.6.0',_tagCount:1,protocol:'https:',events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn);},0);},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json);},1);}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn);}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn);}else{this._defL=this._defL||[];this._defL.push(fn);}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id);},0);},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+'//'+((this.ovr&&this.ovr.domain)?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site;}var s=document.createElement('script');s.setAttribute('charset',chr?chr:'UTF-8');if(id){s.setAttribute('id',id);}s.setAttribute('src',url);document.getElementsByTagName('head').item(0).appendChild(s);},init:function(){this._timing=this._timing||{};this._timing.start=(new Date()).getTime();var that=this;if(window.attachEvent){window.attachEvent('onload',function(){that._domReady('domReady');});}else{window.addEventListener('DOMContentLoaded',function(){that._domReady('contReady');},false);window.addEventListener('load',function(){that._domReady('domReady');},false);}if(typeof(window._lptStop)=='undefined'){this.load();}},start:function(){this.autoStart=true;},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger('LPT','DOM_READY',{t:n});}this._timing[n]=(new Date()).getTime();},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]};lpTag.init();}else{window.lpTag._tagCount+=1;}
-            }
-          })
+if(window.location.href.indexOf("/360003499613") > -1) {
+  <!-- TO TURN ON OR OFF THE CHAT PILOT -->
+  const CHAT_PILOT_FEATURE_FLAG = true;
+  <!-- TO TURN ON OR OFF THE CHAT PILOT -->
+
+  window.addEventListener('load', function() {
+    const chatPilotButton = $("#Chat_New");
+    const livePersonButton = $("#Help_New");
+
+    let chatAvailableResp;
+    const chat = new NYTCareChat();
+    chat.setChatHost('https://customerchat.nytimes.com');
+    chat.isChatAvailable()
+      .then(resp => {
+        chatAvailableResp = resp && resp[0]?.duringAvailableHours && resp[0]?.hasAvailableSlots;
+        console.log(chatAvailableResp)
+        if (CHAT_PILOT_FEATURE_FLAG && chatAvailableResp) {
+          livePersonButton && livePersonButton.css("display", "none");
+          chatPilotButton && chatPilotButton.css("display", "");
+          chatPilotButton.click(function() {
+            chat.openChat({
+              attributes: {
+                "entry_point": "chat_pilot",
+              }
+            });
+          });
+        } else {
+          livePersonButton && livePersonButton.css("display", "");
+          chatPilotButton && chatPilotButton.css("display", "none");
+          //<!-- BEGIN LivePerson Monitor. -->
+          window.lpTag=window.lpTag || {};if(typeof window.lpTag._tagCount==='undefined'){window.lpTag={site:'17743901'||'',section:lpTag.section||'',autoStart:lpTag.autoStart===false?false:true,ovr:lpTag.ovr||{},_v:'1.6.0',_tagCount:1,protocol:'https:',events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn);},0);},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json);},1);}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn);}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn);}else{this._defL=this._defL||[];this._defL.push(fn);}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id);},0);},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+'//'+((this.ovr&&this.ovr.domain)?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site;}var s=document.createElement('script');s.setAttribute('charset',chr?chr:'UTF-8');if(id){s.setAttribute('id',id);}s.setAttribute('src',url);document.getElementsByTagName('head').item(0).appendChild(s);},init:function(){this._timing=this._timing||{};this._timing.start=(new Date()).getTime();var that=this;if(window.attachEvent){window.attachEvent('onload',function(){that._domReady('domReady');});}else{window.addEventListener('DOMContentLoaded',function(){that._domReady('contReady');},false);window.addEventListener('load',function(){that._domReady('domReady');},false);}if(typeof(window._lptStop)=='undefined'){this.load();}},start:function(){this.autoStart=true;},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger('LPT','DOM_READY',{t:n});}this._timing[n]=(new Date()).getTime();},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]};lpTag.init();}else{window.lpTag._tagCount+=1;}
+          //<!-- END LivePerson Monitor. -->
+        }
+      })
+  })
+} else {
+  window.addEventListener('load', function() {
+    const chatPilotButton = $("#Chat_New");
+    const livePersonButton = $("#Help_New");
+    livePersonButton && livePersonButton.css("display", "");
+    chatPilotButton && chatPilotButton.css("display", "none");
+    //<!-- BEGIN LivePerson Monitor. -->
+    window.lpTag=window.lpTag || {};if(typeof window.lpTag._tagCount==='undefined'){window.lpTag={site:'17743901'||'',section:lpTag.section||'',autoStart:lpTag.autoStart===false?false:true,ovr:lpTag.ovr||{},_v:'1.6.0',_tagCount:1,protocol:'https:',events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn);},0);},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json);},1);}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn);}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn);}else{this._defL=this._defL||[];this._defL.push(fn);}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id);},0);},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+'//'+((this.ovr&&this.ovr.domain)?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site;}var s=document.createElement('script');s.setAttribute('charset',chr?chr:'UTF-8');if(id){s.setAttribute('id',id);}s.setAttribute('src',url);document.getElementsByTagName('head').item(0).appendChild(s);},init:function(){this._timing=this._timing||{};this._timing.start=(new Date()).getTime();var that=this;if(window.attachEvent){window.attachEvent('onload',function(){that._domReady('domReady');});}else{window.addEventListener('DOMContentLoaded',function(){that._domReady('contReady');},false);window.addEventListener('load',function(){that._domReady('domReady');},false);}if(typeof(window._lptStop)=='undefined'){this.load();}},start:function(){this.autoStart=true;},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger('LPT','DOM_READY',{t:n});}this._timing[n]=(new Date()).getTime();},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]};lpTag.init();}else{window.lpTag._tagCount+=1;}
+    //<!-- END LivePerson Monitor. -->
   })
 }
+
 </script>
 <!-- END AWS Chat pilot -->
-  <script type="text/javascript" src="//p20.zdassets.com/hc/theming_assets/968999/987838/script.js?digest=4399306787860"></script>
+  <script type="text/javascript" src="//p20.zdassets.com/hc/theming_assets/968999/987838/script.js?digest=4399331011348"></script>
 <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
 <body class="">
   
@@ -369,11 +380,11 @@ width: 100%;" border="1">
   HelpCenter = {};
   HelpCenter.account = {"subdomain":"nytimes","environment":"production","name":"The New York Times Customer Care"};
   HelpCenter.user = {"identifier":"da39a3ee5e6b4b0d3255bfef95601890afd80709","email":null,"name":null,"role":"anonymous","avatar_url":"https://assets.zendesk.com/hc/assets/default_avatar.png","is_admin":false,"organizations":[],"groups":[]};
-  HelpCenter.internal = {"asset_url":"//static.zdassets.com/hc/assets/","web_widget_asset_composer_url":"https://static.zdassets.com/ekr/snippet.js","current_session":{"locale":"en-us","csrf_token":null,"shared_csrf_token":null},"settings":{},"usage_tracking":{"event":"article_viewed","data":"BAh7CDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoPYXJ0aWNsZV9pZGwrCHT/a8caADoKX21ldGF7CzoPYWNjb3VudF9pZGkDJ8kOOhNoZWxwX2NlbnRlcl9pZGkEXl7vCzoNYnJhbmRfaWRpA74SDzoMdXNlcl9pZDA6E3VzZXJfcm9sZV9uYW1lSSIOQU5PTllNT1VTBjsGVDsASSIKZW4tdXMGOwZU--be42551c506d49a38c42910ef264e17bfd2d98bd","url":"https://help.nytimes.com/hc/activity"},"current_record_id":"115014893428","current_record_url":"/hc/en-us/articles/115014893428-Terms-of-service","current_record_title":"Terms of service","search_results_count":null,"current_text_direction":"ltr","current_brand":{"account_id":968999,"brand_id":987838,"brand_url":"https://help.nytimes.com","url":"https://nytimes.zendesk.com/api/v2/brands/987838.json","name":"The New York Times Customer Care","logo":"","subdomain":"nytimes","host_mapping":"help.nytimes.com","help_center_state":"enabled","ticket_form_ids":null,"active":true,"default":true,"has_help_center":true,"created_at":"2016-03-24T14:47:09Z","updated_at":"2020-10-26T06:00:15Z","id":987838,"route_id":874132},"current_brand_url":"https://nytimes.zendesk.com","current_host_mapping":"help.nytimes.com","current_path":"/hc/en-us/articles/115014893428-Terms-of-service","authentication_domain":"https://nytimes.zendesk.com","show_autocomplete_breadcrumbs":true,"rollbar_config":{"enabled":true,"endpoint":"https://rollbar-us.zendesk.com/api/1/item/","accessToken":"731a5a953e9a4b7ab6cac9623f50c732","captureUncaught":true,"captureUnhandledRejections":true,"payload":{"environment":"production","client":{"javascript":{"source_map_enabled":true,"code_version":"baa8150e1a7a136f0b442d436518b3964c737b03","guess_uncaught_frames":true}}}},"user_info_changing_enabled":false,"has_user_profiles_enabled":false,"has_end_user_attachments":true,"user_aliases_enabled":false,"has_anonymous_kb_voting":true,"has_multi_language_help_center":true,"mobile_device":false,"mobile_site_enabled":false,"show_at_mentions":false,"embeddables_config":{"embeddables_web_widget":false,"embeddables_connect_ipms":false},"base_domain":"zendesk.com","answer_bot_subdomain":"static","manage_content_url":"https://help.nytimes.com/hc/en-us","arrange_content_url":"https://help.nytimes.com/hc/admin/arrange_contents?locale=en-us","general_settings_url":"https://help.nytimes.com/hc/admin/general_settings?locale=en-us","user_segments_url":"https://nytimes.zendesk.com/knowledge/user_segments?brand_id=987838","has_gather":true,"has_community_enabled":false,"has_community_badges":false,"has_user_segments":true,"has_answer_bot_web_form_enabled":false,"has_answer_bot_web_form_modal_v2":false,"billing_url":"/access/return_to?return_to=https://nytimes.zendesk.com/admin/billing/subscription","has_block_answer_bot_embeddable":false,"is_account_owner":false,"theming_cookie_key":"hc-da39a3ee5e6b4b0d3255bfef95601890afd807091-preview","is_preview":false,"has_guide_user_segments_search":true,"has_alternate_templates":true,"arrange_articles_url":"https://nytimes.zendesk.com/knowledge/arrange?brand_id=987838","article_verification_url":"https://nytimes.zendesk.com/knowledge/verification?brand_id=987838","has_article_verification":true,"guide_language_settings_url":"https://help.nytimes.com/hc/admin/language_settings?locale=en-us","docs_importer_url":"https://nytimes.zendesk.com/knowledge/import_articles?brand_id=987838","community_badges_url":"https://nytimes.zendesk.com/knowledge/community_badges?brand_id=987838","community_settings_url":"https://nytimes.zendesk.com/knowledge/community_settings?brand_id=987838","gather_plan_state":"subscribed","search_settings_url":"https://nytimes.zendesk.com/knowledge/search_settings?brand_id=987838","has_multibrand_search_in_plan":true,"theming_api_version":1,"has_pci_credit_card_custom_field":true,"has_prefill_request_form_from_url":true,"current_brand_id":987838,"help_center_restricted":false,"current_brand_active":true,"is_assuming_someone_else":false,"flash_messages":[],"user_photo_editing_enabled":true,"has_end_user_apps":false};
+  HelpCenter.internal = {"asset_url":"//static.zdassets.com/hc/assets/","web_widget_asset_composer_url":"https://static.zdassets.com/ekr/snippet.js","current_session":{"locale":"en-us","csrf_token":null,"shared_csrf_token":null},"settings":{},"usage_tracking":{"event":"article_viewed","data":"BAh7CDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoPYXJ0aWNsZV9pZGwrCHT/a8caADoKX21ldGF7CzoPYWNjb3VudF9pZGkDJ8kOOhNoZWxwX2NlbnRlcl9pZGkEXl7vCzoNYnJhbmRfaWRpA74SDzoMdXNlcl9pZDA6E3VzZXJfcm9sZV9uYW1lSSIOQU5PTllNT1VTBjsGVDsASSIKZW4tdXMGOwZU--be42551c506d49a38c42910ef264e17bfd2d98bd","url":"https://help.nytimes.com/hc/activity"},"current_record_id":"115014893428","current_record_url":"/hc/en-us/articles/115014893428-Terms-of-service","current_record_title":"Terms of service","search_results_count":null,"current_text_direction":"ltr","current_brand":{"account_id":968999,"brand_id":987838,"brand_url":"https://help.nytimes.com","url":"https://nytimes.zendesk.com/api/v2/brands/987838.json","name":"The New York Times Customer Care","logo":"","subdomain":"nytimes","host_mapping":"help.nytimes.com","help_center_state":"enabled","ticket_form_ids":null,"active":true,"default":true,"has_help_center":true,"created_at":"2016-03-24T14:47:09Z","updated_at":"2020-10-26T06:00:15Z","id":987838,"route_id":874132},"current_brand_url":"https://nytimes.zendesk.com","current_host_mapping":"help.nytimes.com","current_path":"/hc/en-us/articles/115014893428-Terms-of-service","authentication_domain":"https://nytimes.zendesk.com","show_autocomplete_breadcrumbs":true,"rollbar_config":{"enabled":true,"endpoint":"https://rollbar-us.zendesk.com/api/1/item/","accessToken":"731a5a953e9a4b7ab6cac9623f50c732","captureUncaught":true,"captureUnhandledRejections":true,"payload":{"environment":"production","client":{"javascript":{"source_map_enabled":true,"code_version":"ac318665cb2bb00ea24c537e86eb12e0175b0db3","guess_uncaught_frames":true}}}},"user_info_changing_enabled":false,"has_user_profiles_enabled":false,"has_end_user_attachments":true,"user_aliases_enabled":false,"has_anonymous_kb_voting":true,"has_multi_language_help_center":true,"mobile_device":false,"mobile_site_enabled":false,"show_at_mentions":false,"embeddables_config":{"embeddables_web_widget":false,"embeddables_connect_ipms":false},"base_domain":"zendesk.com","answer_bot_subdomain":"static","manage_content_url":"https://help.nytimes.com/hc/en-us","arrange_content_url":"https://help.nytimes.com/hc/admin/arrange_contents?locale=en-us","general_settings_url":"https://help.nytimes.com/hc/admin/general_settings?locale=en-us","user_segments_url":"https://nytimes.zendesk.com/knowledge/user_segments?brand_id=987838","has_gather":true,"has_community_enabled":false,"has_community_badges":false,"has_user_segments":true,"has_answer_bot_web_form_enabled":false,"has_answer_bot_web_form_modal_v2":false,"billing_url":"/access/return_to?return_to=https://nytimes.zendesk.com/admin/billing/subscription","has_block_answer_bot_embeddable":false,"is_account_owner":false,"theming_cookie_key":"hc-da39a3ee5e6b4b0d3255bfef95601890afd807091-preview","is_preview":false,"has_guide_user_segments_search":true,"has_alternate_templates":true,"arrange_articles_url":"https://nytimes.zendesk.com/knowledge/arrange?brand_id=987838","article_verification_url":"https://nytimes.zendesk.com/knowledge/verification?brand_id=987838","has_article_verification":true,"guide_language_settings_url":"https://help.nytimes.com/hc/admin/language_settings?locale=en-us","docs_importer_url":"https://nytimes.zendesk.com/knowledge/import_articles?brand_id=987838","community_badges_url":"https://nytimes.zendesk.com/knowledge/community_badges?brand_id=987838","community_settings_url":"https://nytimes.zendesk.com/knowledge/community_settings?brand_id=987838","gather_plan_state":"subscribed","search_settings_url":"https://nytimes.zendesk.com/knowledge/search_settings?brand_id=987838","has_multibrand_search_in_plan":true,"theming_api_version":1,"has_pci_credit_card_custom_field":true,"has_prefill_request_form_from_url":true,"current_brand_id":987838,"help_center_restricted":false,"current_brand_active":true,"is_assuming_someone_else":false,"flash_messages":[],"user_photo_editing_enabled":true,"has_end_user_apps":false};
 </script>
 
   <script src="//static.zdassets.com/hc/assets/moment-f6f8513da6ab17eadada59a1a4edb536.js"></script>
   <script src="//static.zdassets.com/hc/assets/hc_enduser-1c3c7f65068eb2969f199220010b50e4.js"></script>
   
-<script type="text/javascript">(function(){window['__CF$cv$params']={r:'63cb8442da4fe678',m:'c316d30ccedab14f984688aeec4d3585d4012cd6-1617885128-1800-ATx1rtlK0YXjfNtxwxyEhbmap87RwA4KkXse4/cqCtk8m62bKUiARHUbZDYfK/ELFFK2ThFlzJAmzwGqdexETbToGWcx9BxiE21NEcQB9keUt8hHsQ5gL053pDbVWoz2n0ZtPC7alSf8S+1oigddpge3leaBiuCsxOzG02FJYmriR9nItMWy14U41VNc1A9N9w==',s:[0x187396b886,0x62f4f24624],}})();</script></body>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'63cc75afdfa35463',m:'fc937dfa2b0a8d011f8d32864d28b18fe9c2c39f-1617895017-1800-AW5ilTLmQ1vm4Wu0CFjo7rgEkT4k/XfvcichJxpyRj8qZMOpjVAWGG1PLCaUK+nld37vlfTS45+Pplzhhd1CeSgAWtDgeJ3ppzKjOCFQJdH96i7lTDfOR1Ppo6GIIlXqbTmz4KJim9Ux0qq28+s8xdXufWkX4ZiZELY5ERvW4b6YLhsf0DQezMpJ83nnpq+mHQ==',s:[0x6a168ab71c,0x1cbe65db07],}})();</script></body>
 </html>

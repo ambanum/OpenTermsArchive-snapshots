@@ -12,9 +12,9 @@
   
   <script src="https://assets.ubuntu.com/v1/703e23c9-lazysizes+noscript+native-loading.5.1.2.min.js" defer></script>
 
-  <script src="/static/js/dist/main.js?v=3f3d059" defer></script>
+  <script src="/static/js/dist/main.js?v=63c30a7" defer></script>
 
-  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/styles.css?v=349ff4f">
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/styles.css?v=0a51241">
   <link rel="stylesheet" type="text/css" media="print" href="/static/css/print.css?v=e91d129">
   <script>performance.mark("Stylesheets finished")</script>
 
@@ -115,6 +115,7 @@
 
         
       </div>
+      <div class="u-hide u-show--small js-account--small"></div>
     </div>
     <nav class="p-navigation__nav">
       <span class="u-off-screen">
@@ -151,9 +152,10 @@
       <ul class="p-navigation__items u-hide--small">
         <li class="p-navigation__item" id="link-4">
           <a href="/search" class="js-search-button p-navigation__link-anchor" style="padding-right: 1rem;">
-            Search <i class="p-icon--search is-light"></i>
+            <span class="u-hide u-show--large">Search</span> <i class="p-icon--search is-light"></i>
           </a>
         </li>
+        <li class="p-navigation__user js-account"></li>
       </ul>
       <div class="p-navigation__search u-show--small u-hide">
         <form action="/search" class="p-search-box" id="ubuntu-global-search-form">

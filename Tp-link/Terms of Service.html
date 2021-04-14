@@ -2471,17 +2471,17 @@
 </script>
   <script src="/assets/diff/en/widgets/facebook.js"></script>
   <script>
-  typeof tp != 'undefined' && tp.fixedView.add({
-    position: 'right-bottom',
-    dom: '<script src="/assets/diff/en/widgets/consult/script.js"><\/script>',
-    excludeUrls: [
-      /\/business-networking\/consult\/$/,
-      /\/smb\/select-product\//
-    ],
-    checkShowHandler: function() {
-      return $("body").hasClass("b2b")
-    }
-  });
+    typeof tp != 'undefined' && tp.fixedView.add({
+      position: 'right-bottom',
+      dom: '<script src="/assets/diff/en/widgets/consult/script.js"><\/script>',
+      excludeUrls: [
+        /\/business-networking\/consult\/$/,
+        /\/smb\/select-product\//
+      ],
+      checkShowHandler: function() {
+        return $("body").hasClass("b2b")
+      }
+    });
   </script>
 <script>typeof tp != 'undefined' && tp.fixedView.show()</script><script async type="text/javascript" src="https://static.tp-link.com/res/js/Web_JS_Stats.js"></script>
   </div>

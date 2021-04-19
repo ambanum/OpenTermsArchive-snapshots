@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
 
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# weheartit-tl: http://ogp.me/ns/fb/weheartit-tl#">
     <meta charset="UTF-8">
@@ -50,7 +50,7 @@
 
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="/J1QVSW6o+tQykx0H1kZ/vIp9yeGRJg5FnDdagm6WQuH7PJXX4thkhuud4GdKUfboE8/2wpKarNFq76c/JrA/Q==" />
+<meta name="csrf-token" content="TuLVLyCFXpw3M9PDxQNLcBP7xlJ8w7WVRFrJX55sk1O/aYyVPVebgmY4xhOv73JaOseOJ4gYCbJ2IqiLLonVCA==" />
 
 <link rel="stylesheet" media="screen" href="https://assets.whicdn.com/assets/application-8d95fe701b2dcb218581121d2a494ca3cab5b79a2f8a18c2b573fabee7104457.css" />
 
@@ -212,28 +212,28 @@
 
               <!-- discover link -->
               <li class="">
-                <a href="/">
+                <a title="Discover" href="/">
                   <i class="icon icon-discover"></i>
                   <span class="hide-xs hide-sm">Discover</span>
 </a>              </li>
 
               <!-- articles link -->
               <li class="">
-                <a href="/articles">
+                <a title="Articles" href="/articles">
                   <i class="icon icon-article"></i>
                   <span class="hide-xs hide-sm hide-md">Articles</span>
 </a>              </li>
 
               <!-- inspiration link -->
               <li class="">
-                <a href="/inspirations">
+                <a title="Channels" href="/inspirations">
                   <i class="icon icon-channels"></i>
                   <span class="hide-xs hide-sm hide-md">Channels</span>
 </a>              </li>
 
               <!-- podcasts link -->
               <li class="">
-                <a href="/podcasts">
+                <a title="Podcasts" href="/podcasts">
                   <i class="icon icon-podcasts"></i>
                   <span class="hide-xs hide-sm hide-md">Podcasts</span>
 </a>              </li>
@@ -248,7 +248,7 @@
           <div class="col span-12">
             <form id="image-search-form" class="navbar-search" action="/search/entries" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
                 <input type="hidden" name="ac" id="ac" value="0" class="autocomplete-clicked" />
-                <input type="search" name="query" id="text" placeholder="Search for things you love..." maxlength="140" class="js-autocomplete-field searchfield btn btn-block btn-small text-left bg-offwhite input-icon icon-search" />
+                <input type="search" name="query" id="text" placeholder="Search for things you love..." title="Search for things you love..." maxlength="140" class="js-autocomplete-field searchfield btn btn-block btn-small text-left bg-offwhite input-icon icon-search" />
 </form>          </div> <!-- /search field -->
         </div> <!-- grid-flex -->
       </div> <!-- /col main area -->
@@ -793,8 +793,8 @@
     <div class="text-small text-center position-fixed position-bottom push-around hidden js-pagination-counter" style="opacity:0.95; width: auto; right: 0; left: auto;">
   <a class="btn btn-block text-primary hidden js-pagination-scroll-top" href="/about/terms-of-service">Scroll to Top</a>
   <form class="panel js-pagination-counter-form push-up hide-xs">
-    <span>Page</span>
-    <input type="text" class="btn-mini text-center js-pagination-counter-current" value="1" style="width:4em">
+    <span id="pagination-page">Page</span>
+    <input type="text" class="btn-mini text-center js-pagination-counter-current" value="1" style="width:4em" aria-labelledby="pagination-page">
     <span class="js-pagination-counter-total"></span>
   </form>
 </div>
@@ -976,7 +976,7 @@ _qevents.push({
 <script>
 var WeHeartIt = require('/modules/whi')
 new WeHeartIt({
-  views : ["postcard_button", "doubleclick_ads", "catalog/vimeo_thumbs", "catalog/catalog", "reactions", "recaptcha", "branchio", "floating_window", "click_out", "navbar/notifications", "navbar/topbar_touches", "navbar/navbar", "widgets", "follow_collection_button", "admin_tools", "inspirations/inspirations", "share_modal", "interstitial", "static/postcards", "static/left_share_buttons", "static/facebook_timeline", "static/download_heart_button", "static/popular", "static/postcards_gallery", "static/app", "inbox", "user_set", "user_profile/profile", "activation", "article_draft", "sidebar", "facebook_widget", "modal", "follow_button", "modals/collections_modal", "modals/add_to_collection_modal", "modals/create_new_collection_modal", "heart_button_container", "actions/too_many_tags", "actions/new_entry_form", "actions/new_entry_form_sign_in", "actions/add_image", "actions/heart_success", "registration/email_signup", "registration/registration", "registration/testimonials", "registration/login", "registration/join_tracker", "dummy_ads", "file_preview", "onboarding_inspirations", "dashboard/box_contacts", "dashboard/userFilter", "text_preview", "dropdown", "prompts/app_promo_ad", "block_warning", "heart_button_new_entry", "entry/create_entry_set", "entry/entry_group", "entry/tag_form", "entry/add_to_collection", "entry/youtube_autoplay", "entry/report_button", "entry/entry_ftue", "entry/entry", "entry/share_buttons", "add_favorite_keyword", "cookie_warning", "toggle_element", "postcard", "new_account/new_confirmation", "heart_button", "article_preview", "email_bounced", "user_account/find_friends", "user_account/edit_profile", "user_account/facebook_timeline", "user_account/verify_age", "user_account/edit_notices", "user_account/email_suggestion", "user_account/link_account", "collaborate", "banner_join"],
+  views : ["heart_button_new_entry", "add_favorite_keyword", "facebook_widget", "toggle_element", "share_modal", "follow_button", "article_draft", "banner_join", "sidebar", "postcard", "article_preview", "user_account/email_suggestion", "user_account/facebook_timeline", "user_account/edit_profile", "user_account/verify_age", "user_account/edit_notices", "user_account/find_friends", "user_account/link_account", "prompts/app_promo_ad", "user_set", "file_preview", "onboarding_inspirations", "email_bounced", "static/facebook_timeline", "static/left_share_buttons", "static/popular", "static/app", "static/postcards", "static/download_heart_button", "static/postcards_gallery", "catalog/vimeo_thumbs", "catalog/catalog", "click_out", "dropdown", "activation", "follow_collection_button", "heart_button_container", "actions/too_many_tags", "actions/add_image", "actions/heart_success", "actions/new_entry_form", "actions/new_entry_form_sign_in", "admin_tools", "recaptcha", "cookie_warning", "heart_button", "block_warning", "navbar/topbar_touches", "navbar/notifications", "navbar/navbar", "floating_window", "modals/add_to_collection_modal", "modals/collections_modal", "modals/create_new_collection_modal", "branchio", "inbox", "reactions", "new_account/new_confirmation", "widgets", "dummy_ads", "user_profile/profile", "collaborate", "modal", "registration/email_signup", "registration/join_tracker", "registration/registration", "registration/testimonials", "registration/login", "interstitial", "inspirations/inspirations", "postcard_button", "dashboard/box_contacts", "dashboard/userFilter", "text_preview", "doubleclick_ads", "entry/entry_ftue", "entry/youtube_autoplay", "entry/create_entry_set", "entry/entry_group", "entry/share_buttons", "entry/add_to_collection", "entry/tag_form", "entry/report_button", "entry/entry"],
   modules : [
     'notifications',
     'search',

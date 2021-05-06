@@ -42,7 +42,7 @@
 <!-- category dns-prefetch start -->	
 <!-- category dns-prefetch end -->
 
-<link rel='stylesheet' type='text/css' href='/wro/70c2a1159270a219ebccf9b48b5c7d7/HEAD-CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/wro/a4f34dda7f76d4e54d88b798ad349fe3/SITE_CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/text/inc/css/global.css?v=rl04'><script src='/wro/b72cee568c13ecd0861061d86cc5ddf6/HEAD.js?minimize=true'></script><link href="https://plus.google.com/u/0/b/116195269616123281160" rel="publisher"/>
+<link rel='stylesheet' type='text/css' href='/wro/70c2a1159270a219ebccf9b48b5c7d7/HEAD-CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/wro/a4f34dda7f76d4e54d88b798ad349fe3/SITE_CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/text/inc/css/global.css?v=rl04'><script src='/wro/768c3c370b31cfb8673abe954f828f59/HEAD.js?minimize=true'></script><link href="https://plus.google.com/u/0/b/116195269616123281160" rel="publisher"/>
 <script>
    var limitSkuQtyExceeded= "Limit {0} per customer. Please adjust your quantity.";
    var limitSkuQtyMap = {};
@@ -469,7 +469,7 @@ jQuery(document).ready(function(){
         </div>
     </div>
 </div>
-<div id="idChangeStoreModal" class="modal fade" aria-modal="true" aria-label="locations near" role="dialog">
+<div id="idChangeStoreModal" class="modal fade" aria-modal="true" aria-label="Select Store" role="dialog">
 	<div class="modal-dialog">
 	<!-- Modal content-->						
 		<div class="modal-content">			
@@ -1121,21 +1121,20 @@ function getStateFromDomHeader() {
 			</div>
 		</div>
 </div>
-<div><script type="text/javascript">
- 	
+<div><script type='text/javascript'>	
 	var promoWmMessage = "";
 	var sourceCodeValid = false;
-	console.log("sourceCodeValid = "+sourceCodeValid+"....promoWmMessage = "+promoWmMessage);
+	console.info("sourceCodeValid = "+sourceCodeValid+"....promoWmMessage = "+promoWmMessage);
 	if((sourceCodeValid == true) || (promoWmMessage != '' && promoWmMessage.length > 0)){
-		console.log("showPromoMessage = "+sessionStorage.getItem('showPromoMessage'));
-	var showPromoMessage = (sessionStorage.getItem('showPromoMessage')==null)?true:false;
-	console.log("showPromoMessage = "+showPromoMessage);
+		console.info("showPromoMessage = "+sessionStorage.getItem('showPromoMessage'));
+		var showPromoMessage = (sessionStorage.getItem('showPromoMessage')==null)?true:false;
+		console.info("showPromoMessage = "+showPromoMessage);
 		if(showPromoMessage) {
 			sessionStorage.setItem('showPromoMessage', false);
-		MarketLive.Nav.TopNav.openPromoMessage(promoWmMessage);
-	}
-	}
-	else{
+			MarketLive.Nav.TopNav.openPromoMessage(promoWmMessage);
+			MarketLive.Nav.TopNav.clearPromoMessages();
+		}
+	} else{
 		sessionStorage.removeItem('showPromoMessage');
 	}
 </script></div>
@@ -2766,7 +2765,16 @@ $(document).ready(function(){
         
         
         <li class="ml-category-nav-item ml-category-nav-id-116752" >
-        <a href="/category/furniture/dining-room/wine-storage.do" class="ml-category-nav-name" data-category-type="1">Dining Storage and Bars</a>
+        <a href="/category/furniture/dining-room/wine-storage.do" class="ml-category-nav-name" data-category-type="1">Sideboards and Buffet Tables</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-120825" >
+        <a href="/category/furniture/dining-room/bar-carts.do" class="ml-category-nav-name" data-category-type="1">Bar Carts and Bar Cabinets</a>
 		            </li>
 
         
@@ -3508,6 +3516,15 @@ $(document).ready(function(){
         
         <li class="ml-category-nav-item ml-category-nav-id-116859" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3">
         <a href="/category/outdoor/food-and-drink.do" class="ml-category-nav-name" data-category-type="1">Picnic Foods &amp; Drink</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-116860" data-sibling-group-id="a87ff679a2f3e71d9181a67b7542122c">
+        <a href="/category/outdoor/kites-games.do" class="ml-category-nav-name" data-category-type="1">Outdoor Toys &amp; Games</a>
 		            </li>
 
         
@@ -8254,7 +8271,16 @@ $(document).ready(function(){
         
         
         <li class="ml-category-nav-item ml-category-nav-id-116752" >
-        <a href="/category/furniture/dining-room/wine-storage.do" class="ml-category-nav-name" data-category-type="1">Dining Storage and Bars</a>
+        <a href="/category/furniture/dining-room/wine-storage.do" class="ml-category-nav-name" data-category-type="1">Sideboards and Buffet Tables</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-120825" >
+        <a href="/category/furniture/dining-room/bar-carts.do" class="ml-category-nav-name" data-category-type="1">Bar Carts and Bar Cabinets</a>
 		            </li>
 
         
@@ -8996,6 +9022,15 @@ $(document).ready(function(){
         
         <li class="ml-category-nav-item ml-category-nav-id-116859" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3">
         <a href="/category/outdoor/food-and-drink.do" class="ml-category-nav-name" data-category-type="1">Picnic Foods &amp; Drink</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-116860" data-sibling-group-id="a87ff679a2f3e71d9181a67b7542122c">
+        <a href="/category/outdoor/kites-games.do" class="ml-category-nav-name" data-category-type="1">Outdoor Toys &amp; Games</a>
 		            </li>
 
         
@@ -13524,7 +13559,7 @@ $(document).ready(function(){
 	</div>
 </div>
 
-<div id="idChangeStoreModal" class="modal fade" aria-modal="true" aria-label="locations near" role="dialog">
+<div id="idChangeStoreModal" class="modal fade" aria-modal="true" aria-label="Select Store" role="dialog">
 	<div class="modal-dialog">
 	<!-- Modal content-->						
 		<div class="modal-content">			
@@ -15810,7 +15845,16 @@ privacy@cpwm.com<br>
         
         
         <li class="ml-category-nav-item ml-category-nav-id-116752" >
-        <a href="/category/furniture/dining-room/wine-storage.do" class="ml-category-nav-name" data-category-type="1">Dining Storage and Bars</a>
+        <a href="/category/furniture/dining-room/wine-storage.do" class="ml-category-nav-name" data-category-type="1">Sideboards and Buffet Tables</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-120825" >
+        <a href="/category/furniture/dining-room/bar-carts.do" class="ml-category-nav-name" data-category-type="1">Bar Carts and Bar Cabinets</a>
 		            </li>
 
         
@@ -16552,6 +16596,15 @@ privacy@cpwm.com<br>
         
         <li class="ml-category-nav-item ml-category-nav-id-116859" data-sibling-group-id="eccbc87e4b5ce2fe28308fd9f2a7baf3">
         <a href="/category/outdoor/food-and-drink.do" class="ml-category-nav-name" data-category-type="1">Picnic Foods &amp; Drink</a>
+		            </li>
+
+        
+        
+
+        
+        
+        <li class="ml-category-nav-item ml-category-nav-id-116860" data-sibling-group-id="a87ff679a2f3e71d9181a67b7542122c">
+        <a href="/category/outdoor/kites-games.do" class="ml-category-nav-name" data-category-type="1">Outdoor Toys &amp; Games</a>
 		            </li>
 
         
@@ -22851,7 +22904,7 @@ console.log('**** DataLayer - Ensighten Reporting - End ****');
     MarketLive.Reporting = MarketLive.Reporting || {};
     MarketLive.Reporting.templateType = 'GATEWAY';
 </script>
-<script type='text/javascript' src='/wro/83ed6e17b86cd0c3efdfaeee89496ad3/FOOTER.js?minimize=true'></script><script type='text/javascript' src='/wro/17169ebd1bfd3b11e7bb119ccd36f07a/FOOTER-LIVECHAT-PRD.js?minimize=true'></script><script type='text/javascript' src='/wro/57a9cd7b086378e49d1ab3b5131ce0a9/P2P.js?minimize=true'></script><script src="https://portal.afterpay.com/afterpay.js" async></script>
+<script type='text/javascript' src='/wro/56e526f099592f2b11a5c72cb3e324f2/FOOTER.js?minimize=true'></script><script type='text/javascript' src='/wro/17169ebd1bfd3b11e7bb119ccd36f07a/FOOTER-LIVECHAT-PRD.js?minimize=true'></script><script type='text/javascript' src='/wro/507ca080cc11bc2a05ed14ce10b0f5fd/P2P.js?minimize=true'></script><script src="https://portal.afterpay.com/afterpay.js" async></script>
 <script src="https://static-us.afterpay.com/javascript/present-afterpay.js"></script>
 <script type='text/javascript'>
     window.MarketLive = window.MarketLive || {};

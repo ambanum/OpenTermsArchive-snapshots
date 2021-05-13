@@ -13,7 +13,7 @@
 <meta name="apple-itunes-app" content="app-id=539124565"/>
 <meta name="google" value="notranslate" />
 <meta name="google-site-verification" content="2CvSp512_iBKdx3E2WmmD14XybjcyQUa7hn9L2Non98" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- pinterest domain verify -->
 <meta name="p:domain_verify" content="ffbe899db827967e40cf58e30bed6c38"/>
@@ -50,9 +50,9 @@
 
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="C7I6ausiGx/EWHj8q5F4zcvr6XBqbiU7cE5ErtfEA/8/pcz17+xwVlvbM2+wJz45S6GL9NETNLSiPJ5gnw5HZA==" />
+<meta name="csrf-token" content="r5Zo4S/Gnpu7Y36x2MDO0NJJrL2LdyGH/KEjIx130McVWI/GMDnM444sd8EOlwqNZGTTG1yci4wqrGwpVQxySw==" />
 
-<link rel="stylesheet" media="screen" href="https://assets.whicdn.com/assets/application-8d95fe701b2dcb218581121d2a494ca3cab5b79a2f8a18c2b573fabee7104457.css" />
+<link rel="stylesheet" media="screen" href="https://assets.whicdn.com/assets/application-9ac2d8a3c1fcd400f1c087f052ddf9841b86588ff79a4f2bdf771688d5978bf7.css" />
 
 <script type="text/javascript">
 
@@ -163,12 +163,14 @@
 
 
   <body class="loggedout  body-xs-double-navbar " >
+    <a class="hide-element hide-element-focusable" href="#main">Skip to the main content</a>
+
     <!-- container used to render all modals in -->
-    <div class="modal js-modal-container noskim noskimwords"></div>
+    <div class="modal js-modal-container noskim noskimwords" aria-hidden="true" aria-role="dialog"></div>
 
     <!-- empty lightbox -->
     <!-- lightbox -->
-<div id="lightbox" style="display:none;">
+<div id="lightbox" style="display:none;" aria-hidden="true" aria-role="dialog">
   <div class="spinner"></div>
 </div> <!-- close lightbox -->
 
@@ -187,7 +189,7 @@
       <!-- logo horizontal -->
       <div class="col hide-xs hide-sm">
           <a href="/"><img class="img-static" alt="We Heart It" style="height: 28px" src="https://assets.whicdn.com/assets/weheartit-42e2538b2440ef84f47b25402883bb255ef589c10193a8b323892a0f718749ab.png" /></a>
-        &nbsp;&nbsp;&nbsp;
+        &nbsp;
       </div>
 
       <!-- logo square -->
@@ -205,7 +207,7 @@
 
               <!-- home link -->
               <li class=" ">
-                <a href="/dashboard">
+                <a title="Home" href="/dashboard">
                   <i class="icon icon-home "></i>
                   <span class="hide-xs hide-sm">Home</span>
 </a>              </li>
@@ -247,8 +249,9 @@
           <!-- search field -->
           <div class="col span-12">
             <form id="image-search-form" class="navbar-search" action="/search/entries" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-                <input type="hidden" name="ac" id="ac" value="0" class="autocomplete-clicked" />
-                <input type="search" name="query" id="text" placeholder="Search for things you love..." title="Search for things you love..." maxlength="140" class="js-autocomplete-field searchfield btn btn-block btn-small text-left bg-offwhite input-icon icon-search" />
+              <input type="hidden" name="ac" id="ac" value="0" class="autocomplete-clicked" />
+              <label for="image-search-form" class="sr-only">Search for things you love...</label>
+              <input type="search" name="query" id="text" placeholder="Search for things you love..." title="Search for things you love..." maxlength="140" class="js-autocomplete-field searchfield btn btn-block btn-small text-left bg-offwhite input-icon icon-search" />
 </form>          </div> <!-- /search field -->
         </div> <!-- grid-flex -->
       </div> <!-- /col main area -->
@@ -267,8 +270,8 @@
 
             <!-- more stuff -->
             <div class="col hide-xs">
-              <div class="dropdown dropdown-right">
-                <a href="#" class="btn btn-link text-gray">▾</a>
+              <div class="dropdown dropdown-right" aria-haspopup="true" aria-expanded="false">
+                <a class="btn btn-link text-gray dropdown-label" aria-label="Links Menu" href="#">▾</a>
 <ul class="dropdown-menu-light panel">
   <li class="text-small"><a href="/about">About We Heart It</a></li>
   <!-- <li class="text-small"><a href="http://business.weheartit.com/">Business</a></li> -->
@@ -278,7 +281,13 @@
   <li class="push-down"><div><a class="btn btn-small btn-block btn-wrap bg-gradient" href="/about/app">Download the App</a></div></li>
   <li><div><a class="btn btn-small btn-block btn-wrap text-primary" href="/heart-button">Heart Button</a></div></li>
   <li class="dropdown-divider"></li>
-  <li class="text-small"><a onclick="$(&#39;#languages-picker&#39;).show(); return false;" href="#">Language</a></li>
+    <li class="text-small"><a class="js-floating-window-link" data-target="#languages-picker" href="#">Language</a></li>
+  <li class="text-small">
+    <a class="js-high-contrast" href="#">
+      High Contrast
+      <span class="high-contrast-selected text-primary">✓</span>
+</a>  </li>
+  <li class="dropdown-divider"></li>
   <li class="text-small"><a href="/about/terms-of-service">Terms</a></li>
   <li class="text-small"><a href="/about/privacy-policy">Privacy</a></li>
   <li class="text-small"><a target="_blank" href="/contact">Contact us</a></li>
@@ -301,7 +310,7 @@
 
 
   <!-- connection error modal -->
-  <div class="floating-window" id="connection-error" style="display:none">
+  <div class="floating-window" id="connection-error" style="display:none" aria-hidden="true" aria-role="dialog">
     <span class="close"></span>
     <div class="floating-window-content">
       <span class="closex"></span>
@@ -313,7 +322,7 @@
   </div>
 
   <!-- Languages modal -->
-  <div class="floating-window" id="languages-picker" style="display:none">
+  <div class="floating-window" id="languages-picker" style="display:none" aria-hidden="true" aria-role="dialog">
     <span class="close"></span>
     <div class="floating-window-content">
       <span class="closex"></span>
@@ -361,7 +370,7 @@
   </div>
 
 <!-- Add images modal -->
-<div class="floating-window" id="addimages" style="display:none">
+<div class="floating-window" id="addimages" style="display:none" aria-hidden="true" aria-role="dialog">
   <span class="close"></span>
   <div class="floating-window-content">
     <span class="closex position-top-right"></span>
@@ -370,19 +379,19 @@
     <br>
     <div class="grid text-center">
       <div class="col span-4">
-        <a class="js-upload-image" href="javascript:void(0);">
+        <a class="js-upload-image" title="Post Image" href="javascript:void(0);">
           <i class="icon icon-upload icon-huge icon-primary push-down"></i><br>
           Post Image
 </a>      </div>
       <div class="col span-4">
-        <a href="/articles/new">
+        <a title="Write an Article" href="/articles/new">
           <i class="icon icon-article icon-huge icon-primary push-down">
             <span class="btn btn-tiny bg-success position-top-right text-uppercase">new</span>
           </i><br>
           Write an Article
 </a>      </div>
       <div class="col span-4">
-        <a class="js-add-from-url" href="javascript:void(0);">
+        <a class="js-add-from-url" title="Add From URL" href="javascript:void(0);">
           <i class="icon icon-web icon-huge icon-primary push-down"></i><br>
           Add From URL
 </a>      </div>
@@ -415,7 +424,7 @@
     <!-- interstitial for apps -->
 
 
-    <main style="">
+    <main id="main" style="">
       <div class="container" id="main-container" data-title="Privacy Policy - We Heart It" data-page="">
         <br>
 <div class="grid-responsive">
@@ -822,7 +831,7 @@
     </main>
 
       <!-- login modal -->
-  <div class="floating-window" id="first-heart-window" style="display: none;">
+  <div class="floating-window" id="first-heart-window" style="display: none;" aria-hidden="true" aria-role="dialog">
     <div class="floating-window-content text-center">
       <h3>Is this your first heart?</h3>
       <hr />
@@ -853,10 +862,10 @@
 </div>
 
 
-    <div class="floating-window js-popup" style="display: none;">
+    <div class="floating-window js-popup" style="display: none;" aria-hidden="true" aria-role="dialog">
   <div class="floating-window-content text-center">
     <br>
-    <h4 class="h4 js-popup-title"></h4>
+    <p class="h4 js-popup-title"></p>
     <p class="js-popup-message"></p>
     <button class="btn btn-small js-popup-cancel">Cancel</button>
     <button class="btn btn-small bg-primary btn-wide js-popup-confirm">Opt out</button>
@@ -915,7 +924,7 @@
 
         <div class="col span-4 span-xs-12">
           <div class="show-xs">
-            <a onclick="$(&#39;#languages-picker&#39;).show(); return false;" class="btn btn-small text-muted" href="#">Language</a>
+            <a class="btn btn-small text-muted js-floating-window-link" data-target="#languages-picker" href="#">Language</a>
           </div>
           <div class="hide-xs">
             <p class="h5">Languages:</p>
@@ -973,9 +982,9 @@
 
     <div id="fb-root" style="display:none"></div>
 
-    <div style="width:0;height:0;overflow:hidden">
-    <img src="https://assets.whicdn.com/assets/ajax-heart-gray-65c2a9c251ef70bad698c2330bd8d28c70284684ab1f034f336478fdee0e1f7d.gif" />
-    <img src="https://assets.whicdn.com/assets/ajax-heart-white-fda8a547384de31097feeb795bb1ee9bc135ad7bb4725f3d858fefc6c83e3586.gif" />
+    <div style="width:0;height:0;overflow:hidden" aria-hidden="true">
+      <img alt="" src="https://assets.whicdn.com/assets/ajax-heart-gray-65c2a9c251ef70bad698c2330bd8d28c70284684ab1f034f336478fdee0e1f7d.gif" />
+      <img alt="" src="https://assets.whicdn.com/assets/ajax-heart-white-fda8a547384de31097feeb795bb1ee9bc135ad7bb4725f3d858fefc6c83e3586.gif" />
     </div>
 
     <!-- Quantcast Tag Part 1 -->
@@ -1009,7 +1018,7 @@ _qevents.push({
   <script type="text/javascript" src="//b-code.liadm.com/a-028f.min.js" async="true" charset="utf-8"></script>
 
 
-<script src="https://assets.whicdn.com/assets/application-3c1aa75acfaa199e1547aeea50f160bd186e7d6f3ff316bdfb58bc8712e63419.js"></script>
+<script src="https://assets.whicdn.com/assets/application-50994483b897411cac58654c29f172a57a6e4082eab112f7c83bf980a213b9fc.js"></script>
 
   <script>
   $.getScript("https://s.skimresources.com/js/28678X866187.skimlinks.js")
@@ -1029,7 +1038,7 @@ _qevents.push({
 <script>
 var WeHeartIt = require('/modules/whi')
 new WeHeartIt({
-  views : ["postcard_button", "doubleclick_ads", "catalog/vimeo_thumbs", "catalog/catalog", "reactions", "recaptcha", "branchio", "floating_window", "click_out", "navbar/notifications", "navbar/topbar_touches", "navbar/navbar", "widgets", "follow_collection_button", "admin_tools", "inspirations/inspirations", "share_modal", "interstitial", "static/postcards", "static/left_share_buttons", "static/contact", "static/facebook_timeline", "static/download_heart_button", "static/popular", "static/postcards_gallery", "static/app", "inbox", "user_set", "user_profile/profile", "activation", "article_draft", "sidebar", "facebook_widget", "modal", "follow_button", "modals/collections_modal", "modals/add_to_collection_modal", "modals/create_new_collection_modal", "heart_button_container", "actions/too_many_tags", "actions/new_entry_form", "actions/new_entry_form_sign_in", "actions/add_image", "actions/heart_success", "registration/email_signup", "registration/registration", "registration/testimonials", "registration/login", "registration/join_tracker", "dummy_ads", "file_preview", "onboarding_inspirations", "dashboard/box_contacts", "dashboard/userFilter", "text_preview", "dropdown", "prompts/app_promo_ad", "block_warning", "heart_button_new_entry", "entry/create_entry_set", "entry/entry_group", "entry/tag_form", "entry/add_to_collection", "entry/youtube_autoplay", "entry/report_button", "entry/entry_ftue", "entry/entry", "entry/share_buttons", "add_favorite_keyword", "cookie_warning", "toggle_element", "postcard", "new_account/new_confirmation", "heart_button", "article_preview", "email_bounced", "user_account/find_friends", "user_account/edit_profile", "user_account/facebook_timeline", "user_account/verify_age", "user_account/edit_notices", "user_account/email_suggestion", "user_account/link_account", "collaborate", "banner_join"],
+  views : ["follow_button", "inspirations/inspirations", "click_out", "article_draft", "registration/testimonials", "registration/login", "registration/join_tracker", "registration/registration", "registration/email_signup", "reactions", "admin_tools", "floating_window", "new_account/new_confirmation", "prompts/app_promo_ad", "static/postcards_gallery", "static/left_share_buttons", "static/popular", "static/app", "static/postcards", "static/facebook_timeline", "static/download_heart_button", "static/contact", "doubleclick_ads", "activation", "onboarding_inspirations", "interstitial", "catalog/vimeo_thumbs", "catalog/catalog", "email_bounced", "modals/add_to_collection_modal", "modals/create_new_collection_modal", "modals/collections_modal", "user_set", "heart_button", "inbox", "share_modal", "branchio", "text_preview", "sidebar", "entry/entry_group", "entry/entry", "entry/tag_form", "entry/entry_ftue", "entry/add_to_collection", "entry/youtube_autoplay", "entry/create_entry_set", "entry/share_buttons", "entry/report_button", "dummy_ads", "postcard_button", "navbar/navbar", "navbar/topbar_touches", "navbar/notifications", "modal", "user_account/edit_notices", "user_account/find_friends", "user_account/verify_age", "user_account/edit_profile", "user_account/facebook_timeline", "user_account/email_suggestion", "user_account/link_account", "heart_button_container", "article_preview", "block_warning", "facebook_widget", "recaptcha", "actions/add_image", "actions/too_many_tags", "actions/new_entry_form", "actions/new_entry_form_sign_in", "actions/heart_success", "banner_join", "follow_collection_button", "widgets", "heart_button_new_entry", "toggle_element", "file_preview", "postcard", "add_favorite_keyword", "collaborate", "dashboard/userFilter", "dashboard/box_contacts", "cookie_warning", "dropdown", "user_profile/profile"],
   modules : [
     'notifications',
     'search',

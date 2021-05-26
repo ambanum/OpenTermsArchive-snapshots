@@ -4,13 +4,59 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="HSBC-SEC-TOKEN" content="357f38fae97c94e0c43fc836ebe53e7e02543b770baf9692444410ca6edba60d"> <meta name="HSBC-SEC-TOKEN-B" content="132661315581608407">
+    <meta name="HSBC-SEC-TOKEN" content="e578628a8043d92773aca05d4ebcdcec5205a2f168528e0b7a7d5d4a516bffae"> <meta name="HSBC-SEC-TOKEN-B" content="132664908725363487">
         <meta property="og:title" content="Terms and conditions | HSBC Holdings plc" />
     <meta property="og:description" content="This page sets out the terms and conditions of use of hsbc.com. Data provided are for market information only." />
     <meta property="og:url" content="https://www.hsbc.com/terms-and-conditions" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="HSBC" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary_large_image" />    <script></script>
+<meta name="facebook-domain-verification" content="rw6u2qsf90sclb2x6by9qg0l3o6out">
+<script></script>
+    <script>onThemeReady(function () {
+    PopupNotification.prototype.attachEvents = function () {
+        var td = {
+            page_name: window.utag_data ? window.utag_data.page_name : document.querySelector('title').innerText,
+            page_name_en: window.utag_data ? window.utag_data.page_name : document.querySelector('title').innerText,
+            page_url: window.utag_data ? window.utag_data.page_url : '',
+            event_type: 'click',
+            event_category: 'content',
+            event_action: this.title.innerText,
+            event_content: this.props.ctaNegativeLabel || 'CANCEL',
+        };
+        var ctd = Object.assign({}, td, { event_content: 'CLOSE' });
+        var track = function (data) { if (window.TMS && window.TMS.trackEvent) window.TMS.trackEvent(data); };
+        var popup = this;
+        if (typeof popup.props.id === 'string' && popup.props.id.includes('NEW_WINDOW_NEGATIVE')) {
+            this.ctaPositiveButton.style.whiteSpace = 'normal';
+            this.ctaNegativeButton.style.whiteSpace = 'normal';
+        }
+        var negative = function (e) {
+            if (typeof popup.props.id === 'string' && popup.props.id.includes('NEW_WINDOW_NEGATIVE')) {
+                e.preventDefault();
+                if (e && e.target && e.target.classList.contains('popup-notification__button')) {
+                    track(td);
+                    window.open(popup.props.negativeActionUrl, '_blank');
+                } else {
+                    track(ctd);
+                    popup.close();
+                    popup.unmount();
+                }
+            } else {
+                originalNegative(e);
+            }
+        };
+        var originalNegative = this.ctaNegativeHandler;
+        this.ctaNegativeHandler = negative;
+        this.events.add(this.ctaNegativeButton, 'click', negative);
+        this.events.add(this.closeButton, 'click', negative);
+        this.events.add(this.ctaPositiveButton, 'click', this.ctaPositiveHandler);
+        window.addEventListener('resize', function () {
+            if (this.isEnabled) this.forceRenderOnPixelGrid();
+        });
+    };
+});</script>
+
     
 
 <title>Terms and conditions | HSBC Holdings plc</title>
@@ -2264,71 +2310,6 @@ Go to this section                                        </span>
         });
     </script>
 
-    <script></script>
-    <script>onThemeReady(function () {
-    PopupNotification.prototype.attachEvents = function () {
-        var td = {
-            page_name: window.utag_data ? window.utag_data.page_name : document.querySelector('title').innerText,
-            page_name_en: window.utag_data ? window.utag_data.page_name : document.querySelector('title').innerText,
-            page_url: window.utag_data ? window.utag_data.page_url : '',
-            event_type: 'click',
-            event_category: 'content',
-            event_action: this.title.innerText,
-            event_content: this.props.ctaNegativeLabel || 'CANCEL',
-        };
-        var ctd = Object.assign({}, td, { event_content: 'CLOSE' });
-        var track = function (data) { if (window.TMS && window.TMS.trackEvent) window.TMS.trackEvent(data); };
-        var popup = this;
-        if (typeof popup.props.id === 'string' && popup.props.id.includes('NEW_WINDOW_NEGATIVE')) {
-            this.ctaPositiveButton.style.whiteSpace = 'normal';
-            this.ctaNegativeButton.style.whiteSpace = 'normal';
-        }
-        var negative = function (e) {
-            if (typeof popup.props.id === 'string' && popup.props.id.includes('NEW_WINDOW_NEGATIVE')) {
-                e.preventDefault();
-                if (e && e.target && e.target.classList.contains('popup-notification__button')) {
-                    track(td);
-                    window.open(popup.props.negativeActionUrl, '_blank');
-                } else {
-                    track(ctd);
-                    popup.close();
-                    popup.unmount();
-                }
-            } else {
-                originalNegative(e);
-            }
-        };
-        var originalNegative = this.ctaNegativeHandler;
-        this.ctaNegativeHandler = negative;
-        this.events.add(this.ctaNegativeButton, 'click', negative);
-        this.events.add(this.closeButton, 'click', negative);
-        this.events.add(this.ctaPositiveButton, 'click', this.ctaPositiveHandler);
-        window.addEventListener('resize', function () {
-            if (this.isEnabled) this.forceRenderOnPixelGrid();
-        });
-    };
-});</script>
-    <script>if (typeof Object.assign != 'function') {
-  Object.assign = function(target) {
-    'use strict';
-    if (target == null) {
-      throw new TypeError('Cannot convert undefined or null to object');
-    }
-
-    target = Object(target);
-    for (var index = 1; index < arguments.length; index++) {
-      var source = arguments[index];
-      if (source != null) {
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-    }
-    return target;
-  };
-}</script>
 
         <script>
         window.HSBC_DICTIONARY = {

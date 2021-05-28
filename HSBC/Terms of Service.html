@@ -4,7 +4,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="HSBC-SEC-TOKEN" content="26b5d1067e9ed26ac22a9dbf3634278b7b2cdecb312e2db8a3af8a83b8dc0a12"> <meta name="HSBC-SEC-TOKEN-B" content="132666643899545371">
+    <meta name="HSBC-SEC-TOKEN" content="e343f97d9c3e4188df0135f18896765de118cc4135ca2a266938450e2db86b63"> <meta name="HSBC-SEC-TOKEN-B" content="132666715908735468">
         <meta property="og:title" content="Terms and conditions | HSBC Holdings plc" />
     <meta property="og:description" content="This page sets out the terms and conditions of use of hsbc.com. Data provided are for market information only." />
     <meta property="og:url" content="https://www.hsbc.com/terms-and-conditions" />
@@ -13,49 +13,6 @@
 <meta name="twitter:card" content="summary_large_image" />    <script></script>
 <meta name="facebook-domain-verification" content="rw6u2qsf90sclb2x6by9qg0l3o6out">
 <script></script>
-    <script>onThemeReady(function () {
-    PopupNotification.prototype.attachEvents = function () {
-        var td = {
-            page_name: window.utag_data ? window.utag_data.page_name : document.querySelector('title').innerText,
-            page_name_en: window.utag_data ? window.utag_data.page_name : document.querySelector('title').innerText,
-            page_url: window.utag_data ? window.utag_data.page_url : '',
-            event_type: 'click',
-            event_category: 'content',
-            event_action: this.title.innerText,
-            event_content: this.props.ctaNegativeLabel || 'CANCEL',
-        };
-        var ctd = Object.assign({}, td, { event_content: 'CLOSE' });
-        var track = function (data) { if (window.TMS && window.TMS.trackEvent) window.TMS.trackEvent(data); };
-        var popup = this;
-        if (typeof popup.props.id === 'string' && popup.props.id.includes('NEW_WINDOW_NEGATIVE')) {
-            this.ctaPositiveButton.style.whiteSpace = 'normal';
-            this.ctaNegativeButton.style.whiteSpace = 'normal';
-        }
-        var negative = function (e) {
-            if (typeof popup.props.id === 'string' && popup.props.id.includes('NEW_WINDOW_NEGATIVE')) {
-                e.preventDefault();
-                if (e && e.target && e.target.classList.contains('popup-notification__button')) {
-                    track(td);
-                    window.open(popup.props.negativeActionUrl, '_blank');
-                } else {
-                    track(ctd);
-                    popup.close();
-                    popup.unmount();
-                }
-            } else {
-                originalNegative(e);
-            }
-        };
-        var originalNegative = this.ctaNegativeHandler;
-        this.ctaNegativeHandler = negative;
-        this.events.add(this.ctaNegativeButton, 'click', negative);
-        this.events.add(this.closeButton, 'click', negative);
-        this.events.add(this.ctaPositiveButton, 'click', this.ctaPositiveHandler);
-        window.addEventListener('resize', function () {
-            if (this.isEnabled) this.forceRenderOnPixelGrid();
-        });
-    };
-});</script>
 
     
 

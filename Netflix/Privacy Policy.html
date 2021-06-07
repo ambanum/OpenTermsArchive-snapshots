@@ -3,7 +3,7 @@
     <head>
         
         <meta charset="utf-8">
-        <meta name="_csrf" content="f0aeb5ae-de0d-4e03-968e-7d10777fea4f" />
+        <meta name="_csrf" content="323cec22-be08-4bbc-85f4-9c79646d94a2" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
 
         <meta name="google-site-verification" content="GmHfooq7jctbhvRUSGtLpE_XImtIATNo0iLofqbb16I" />
@@ -281,7 +281,7 @@
         },
         config: {
             "page": "Legal",
-            "enableChatReplatform": false,
+            "enableChatReplatform": true,
             "requireIssueDescription": true,
             "enableBeacon": false,
             "chatForce": true,
@@ -382,7 +382,6 @@
             "chat.new.message": "New message",
             "chat.ewt.wait.time": "Wait time: {0} minutes",
             "chat.write.reply": "Enter a reply",
-            "chat.contactus.chatbox.send": "",
             "chat.mop.enter.new.payment": "Enter new payment information",
             "chat.mop.enter.new.payment.verification": "Enter payment information for verification",
             "chat.mop.agentname.cant.see": "{0} cannot see this",
@@ -423,17 +422,27 @@
             "padme.pages.contactus.chatbox.send": "Send",
             "padme.pages.contactus.chatbox.endchat": "End Chat",
             "padme.pages.contactus.chatbox.clickhere": "Click Here",
-            "padme.pages.contactus.chatbox.welcome": "Welcome to Netflix Chat.",
+            "padme.pages.contactus.chatbox.welcome": "Welcome to Netflix Chat",
             "chat.mop.bank.name": "Bank Name",
             "chat.mop.bank.name.required": "Bank Name is Required",
             "chat.mop.account.type": "Account Type",
             "chat.mop.account.type.required": "Account Type is Required",
             "chat.mop.account.type.CHECKING": "Checking",
             "chat.mop.account.type.SAVINGS": "Savings",
-            "netflix.assistant": "Netflix Assistant",
+            "netflix": "Netflix",
             "chat.mop.dob.invalid": "Valid Date of Birth is Required",
             "chat.connecting": "Connecting",
-            "padme.pages.contactus.chat.chatEnded": "This chat session has ended."
+            "padme.pages.contactus.chat.chatEnded": "This chat session has ended.",
+            "difficult": "Difficult",
+            "dissatisfied": "Dissatisfied",
+            "dont.know.not.applicable": "Don't know \/ Not applicable",
+            "easy": "Easy",
+            "neutral": "Neutral",
+            "satisfied": "Satisfied",
+            "very.difficult": "Very difficult",
+            "very.dissatisfied": "Very dissatisfied",
+            "very.easy": "Very easy",
+            "very.satisfied": "Very Satisfied"
         }
     };
 /*]]>*/
@@ -441,14 +450,12 @@
 
 
         <script crossorigin="anonymous" src="https://help.nflxext.com/helpcenter/manifest_916eec0513eb339936b1.js"></script>
-        <script crossorigin="anonymous" src="https://help.nflxext.com/helpcenter/common_9d7341c5755cdd8bb317.js"></script>
+        <script crossorigin="anonymous" src="https://help.nflxext.com/helpcenter/common_ef90aa8cde69838ff469.js"></script>
 
         
         
-            <script crossorigin="anonymous" src="https://help.nflxext.com/helpcenter/article_d6102d295d59a5dfef62.js"></script>
+            <script crossorigin="anonymous" src="https://help.nflxext.com/helpcenter/article_b0cf553362537210c5fb.js"></script>
         
-        
-
         
 
         
@@ -457,9 +464,9 @@
         var cseScript = document.createElement('script');
         cseScript.type = 'text/javascript';
         cseScript.async = true;
-        cseScript.src = "/supportscript";
+        cseScript.src = "/interface/chat/supportscript";
 
-        if (window.netflix && window.netflix.config && window.netflix.config.chatForce) {
+        if (window.netflix && window.netflix.config) {
             var params = [];
 
             if (window.netflix.i18n && window.netflix.i18n.locale) {
@@ -479,6 +486,8 @@
         s.parentNode.insertBefore(cseScript, s);
     }());
 </script>
+
+        
 
         
     </body>

@@ -19,6 +19,8 @@
 	<!-- CSS pre-connect settings start-->
 <link rel="preconnect" href="https://nexus.ensighten.com">
 <link rel="preconnect" href="https://cdn.optimizely.com">
+<link rel="preconnect" href="https://nexus.ensighten.com">
+<link rel="preconnect" href="https://cdn.optimizely.com">
 <!-- CSS pre-connect settings end -->
 
 <!-- Home CSS pre-connect settings start isHomePage:false -->
@@ -696,6 +698,11 @@ jQuery(document).ready(function(){
 	
 		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1">
 <!-- wk14-hdr-carousel-210601.html | OPEN -->
+<style>
+	#globalHeaderIncludeSm #promoslot-gps {
+		visibility: hidden;
+	}
+</style>
 <script type="text/javascript">
 	jQuery(document).ready(function() {
 		var isHomepage = 		window.location.pathname == "/";
@@ -707,6 +714,9 @@ jQuery(document).ready(function(){
 </script>
 <script>
 jQuery(document).ready(function() {
+	setTimeout(function(){
+		jQuery("#globalHeaderIncludeSm #promoslot-gps").css("visibility","visible");
+	}, 1000);
 	jQuery("#globalHeaderIncludeSm #promoslot-gps").slick({
 		"lazyLoad": "progressive",
 		"dots": false,
@@ -869,30 +879,30 @@ jQuery(document).ready(function() {
 <div id="cpwm-carousel-p" class="hidden-lg">
 <div id="promoslot-gps" class="promoslot gps">
 	<div class="banner">
-		<p class="nonwme" style="margin-top:6px;">
+		<p class="nonwme" style="margin-top:5px;">
 			Members Save 10% On Curbside Pick-Up Orders <br>
 			<button onclick="MarketLive.Base.showCreateAccount();">Join Now</button>
 			<button class="curb10details">Details</button>
 		</p>
-		<p class="wme" style="margin-top:6px;">
+		<p class="wme" style="margin-top:5px;">
 			Members Save 10% On Curbside Pick-Up Orders <br>
 			<button onclick="MarketLive.Base.openSignInPopUp('stayOnCurrentPage');">Sign In</button>
 			<button class="curb10details">Details</button>
 		</p>
-		<p class="logged" style="margin-top:6px;">
+		<p class="logged" style="margin-top:5px;">
 			Members Save 10% On Curbside Pick-Up Orders <br>
 			<a href="?code=CURBSIDE10&ab=promo_carousel:14:1:curbside10-apply" rel="nofollow" class="cpwm-one">Apply Code</a>
 			<button class="curb10details">Details</button>
 		</p>
 	</div>
 	<div class="banner">
-		<p>
+		<p style="margin-top:9px;">
 			Save up to 25% Select Outdoor<br>
 			<a href="/category/outdoor.do?ab=promo_carousel:14:2:25off-select-outdoor" class="cpwm-one">Shop Now</a>
 		</p>
 	</div>
 	<div class="banner">
-		<p>
+		<p style="margin-top:5px;">
 			Shop Our Outdoor Assortment in our Virtual Store <br>
 			<a href="/virtual-outdoor-store?ab=promo_carousel:14:3:virtual-outdoor-store" class="cpwm-one">Shop Now</a>
 		</p>
@@ -7525,8 +7535,8 @@ $(document).ready(function(){
 
         
         
-        <li class="ml-category-nav-item ml-category-nav-id-117795" >
-        <a href="/category/holiday/americana.do" class="ml-category-nav-name" data-category-type="1">Americana</a>
+        <li class="ml-category-nav-item ml-category-nav-id-117402" >
+        <a href="/category/holiday/fourth-of-july.do" class="ml-category-nav-name" data-category-type="1">Fourth of July</a>
 		            </li>
 
         
@@ -12887,8 +12897,8 @@ $(document).ready(function(){
 
         
         
-        <li class="ml-category-nav-item ml-category-nav-id-117795" >
-        <a href="/category/holiday/americana.do" class="ml-category-nav-name" data-category-type="1">Americana</a>
+        <li class="ml-category-nav-item ml-category-nav-id-117402" >
+        <a href="/category/holiday/fourth-of-july.do" class="ml-category-nav-name" data-category-type="1">Fourth of July</a>
 		            </li>
 
         
@@ -14759,8 +14769,8 @@ $(document).ready(function(){
                                  <li class="ml-category-nav-item ml-category-nav-id-117328">
                                     <a href="/category/holiday/fathers-day.do" class="ml-category-nav-name cpwmfly-l2">Father's Day</a>
                                  </li>
-                                 <li class="ml-category-nav-item ml-category-nav-id-117795">
-                                    <a href="/category/holiday/americana.do" class="ml-category-nav-name cpwmfly-l2">Americana</a>
+                                 <li class="ml-category-nav-item ml-category-nav-id-117402">
+                                    <a href="/category/holiday/fourth-of-july.do" class="ml-category-nav-name cpwmfly-l2">Fourth of July</a>
                                  </li>
                               </ul>
                            </li>
@@ -20213,8 +20223,8 @@ Email: <a href="mailto:customercare@worldmarket.com">customercare@worldmarket.co
 
         
         
-        <li class="ml-category-nav-item ml-category-nav-id-117795" >
-        <a href="/category/holiday/americana.do" class="ml-category-nav-name" data-category-type="1">Americana</a>
+        <li class="ml-category-nav-item ml-category-nav-id-117402" >
+        <a href="/category/holiday/fourth-of-july.do" class="ml-category-nav-name" data-category-type="1">Fourth of July</a>
 		            </li>
 
         
@@ -21267,7 +21277,7 @@ if(document.getElementById("footerKickerMobile").innerHTML){
 <div class="ml-common-kickers-wrapper">
 	<div class="ml-kickers-row">
 	
-		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- sms-signup-cc-210403.html | IV prop65 | V cursor | no cc | P65 1210 | 193864/4630 210524 --> 
+		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- sms-signup-cc-210403.html | IV prop65 | V cursor | no cc | P65 1210 | 193864/4630 210524/210606 --> 
 <script>
 	jQuery(document).ready(function(){
 		var loggedStatusSMS = pageData.customer.status;//MarketLive.Reporting.dlGlobal.status;
@@ -21338,7 +21348,7 @@ if(document.getElementById("footerKickerMobile").innerHTML){
 </style>
 <div id="global-footer">
 	<div id="sms-signup" class="logged">
-		<h2 class="heading6">Members</h2>
+		<p class="heading6" role="heading" level="2">Members</p>
 		<p class="xs-body">Get Your Rewards Sent to Your Phone!</p>
 		<img src="/images/common/sms-signup.png" alt="Text SIGNUP to 95730" title="Text SIGNUP to 95730" width="" height="">
 		<p class="disclaimer body-copy">Msg &amp; data rates may apply. Frequency based on user behavior.</p>

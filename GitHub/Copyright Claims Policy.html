@@ -58,7 +58,7 @@
   <meta name="google-site-verification" content="c1kuD-K2HIVF635lypcsWPoD4kilo5-jA_wBFyT4uMY" />
 
   
-  <meta name="csrf-token" content="gI5KsTlm-Y3W0HKamjPVYp-NJjQa3da4qW3E">
+  <meta name="csrf-token" content="PFb9mEia-bs066zgkr5oODhc4qEDqtx5AWvI">
   <meta name="site.data.ui.search.placeholder" content="Search topics, products...">
 </head>
 
@@ -1835,10 +1835,12 @@
     class="mb-1 f4"
   >
     Did this doc help you?
+    <a
+      class="f6 text-normal ml-3 color-text-link"
+      href="/github/site-policy/github-privacy-statement"
+      target="_blank"
+    >Privacy policy</a>
   </h2>
-  <p class="f6">
-    <a href="/github/site-policy/github-privacy-statement">Privacy policy</a>
-  </p>
   <p
     class="radio-group"
     data-help-start
@@ -1869,7 +1871,7 @@
     </label>
   </p>
   <p class="color-text-secondary f6" hidden data-help-yes>
-    Want to learn about new docs features and updates? Sign up for updates!
+    We're continually improving our docs. We'd love to hear what we do well.
   </p>
   <p class="color-text-secondary f6" hidden data-help-no>
     We're continually improving our docs. We'd love to hear how we can do better.
@@ -1880,12 +1882,13 @@
     name="survey-token"
     aria-hidden="true"
   />
-  <p hidden data-help-no>
+  <p hidden data-help-yes data-help-no>
     <label
       class="d-block mb-1 f6"
       for="survey-comment"
     >
-      <span>Let us know what we can do better</span>
+      <span hidden data-help-yes>Let us know what we do well</span>
+      <span hidden data-help-no>Let us know what we can do better</span>
       <span class="text-normal color-text-tertiary float-right ml-1">
         Optional
       </span>
@@ -1896,12 +1899,10 @@
       id="survey-comment"
     ></textarea>
   </p>
-  <p>
+  <p hidden data-help-yes data-help-no>
     <label
       class="d-block mb-1 f6"
       for="survey-email"
-      hidden
-      data-help-no
     >
       Can we contact you if we have more questions?
       <span class="text-normal color-text-tertiary float-right ml-1">
@@ -1914,10 +1915,8 @@
       name="survey-email"
       id="survey-email"
       placeholder="email@example.com"
-      hidden
-      data-help-yes
-      data-help-no
     />
+    <span class="f6 color-text-secondary">If you need a reply, please contact support instead.</span>
   </p>
   <p
     class="text-right"
@@ -1930,7 +1929,7 @@
     </button>
   </p>
   <p class="color-text-secondary f6" hidden data-help-end>
-    Thank you! Your feedback has been submitted.
+    Thank you! We received your feedback.
   </p>
 </form>
 
@@ -2003,7 +2002,7 @@
 </footer>
 
 <script id="expose" type="application/json">{"searchOptions":{"languages":["en","cn","ja","es","pt","de"],"versions":{"free-pro-team@latest":"dotcom","enterprise-server@3.1":"3.1","enterprise-server@3.0":"3.0","enterprise-server@2.22":"2.22","enterprise-server@2.21":"2.21","github-ae@latest":"ghae"},"nonEnterpriseDefaultVersion":"free-pro-team@latest"}}</script>
-<script src="/dist/index.js?hash=7d549b0174a61cbcd1c8e53f950ff9fc"></script>
+<script src="/dist/index.js?hash=a7e1c882cc623bbf2ea9a16d1209d8bf"></script>
 
 
       <button class="arrow-for-scrolling-top tooltipped tooltipped-n tooltipped-no-delay" aria-label="Scroll to top" id="js-scroll-top">

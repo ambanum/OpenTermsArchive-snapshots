@@ -21509,15 +21509,16 @@ $(document).ready(function() {
 <div class="ml-common-kickers-wrapper">
 	<div class="ml-kickers-row">
 	
-		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- wk14-promo-bar-210601.html | upd -->
+		  <div id ="display-kicker01-1" class="ml-slot-item ml-slot-1 display-kicker01-1"><!-- wk15-promo-bar-210609.html | upd -->
 <!-- Assumes the following have been preloaded: global.js; global.css -->
 <script>var cpwmNobar = false; var cpwmNoCaro = false; var isHomepageforpromo;</script>
 <script src="/text/inc/js/promosuppressions-sh.js" type="text/javascript"></script>
 <script type="text/javascript">
 //    isHomepageforpromo = window.location.pathname == "/";
 //    cpwmNobar = isHomepageforpromo;
+	var cpwmSlickIndex = 6;
 </script>
-<script src="/text/inc/js/promocontroller-no-a360-link.js?rev=zindexx" type="text/javascript"></script>
+<script src="/text/inc/js/promocontroller-no-a360-link-tab.js" type="text/javascript"></script>
 <style>
 	#footer-kicker {
 		z-index: 100;
@@ -21533,6 +21534,13 @@ $(document).ready(function() {
             width: 90%;
         }
     }
+	#tab-promos a.btn-overlay:focus, #tab-promos button.btn-overlay:focus {
+		outline: 1px dotted #363636 !important;
+		outline-offset: 0px !important;
+	}
+/* 210607 - visibility */
+	#tab-promos.start {visibility: hidden}
+	#tab-promos.end {visibility: visible}
 </style>
 <div id="tabbing" class="starting">
     <button id="tabclick" class="tabview" aria-expanded="false" aria-controls="tabbing">
@@ -21543,14 +21551,14 @@ $(document).ready(function() {
         <div id="tabopenclose" class="arrow arrowopen">&nbsp;</div>
     </button>
     <div class="clearall"></div>
-    <div id="tab-promos" class="start">
+    <div id="tab-promos" class="start" aria-hidden="true">
         <div class="promobox first">
             <div class="nonwme"><div class="imagebox"><img lazy-src="/images/promos/footer/2021/wk14/wk14_curbside10.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Member Exclusive | Extra 10% Off Every Curbside Pick-Up Order | Exclusions apply."></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><button class="btn-overlay" onclick="MarketLive.Base.showCreateAccount();">Join Now</button></div></div>
+            <div class="buttonbox"><button class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.showCreateAccount();">Join Now</button></div></div>
             <div class="wme"><div class="imagebox"><img lazy-src="/images/promos/footer/2021/wk14/wk14_curbside10.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Member Exclusive | Extra 10% Off Every Curbside Pick-Up Order | Exclusions apply."></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><button class="btn-overlay" onclick="MarketLive.Base.openSignInPopUp('rewards');">Sign In</button></div></div>
+            <div class="buttonbox"><button class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.openSignInPopUp('rewards');">Sign In</button></div></div>
             <div class="logged"><div class="imagebox"><img lazy-src="/images/promos/footer/2021/wk14/wk14_curbside10.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Member Exclusive | Extra 10% Off Every Curbside Pick-Up Order | Exclusions apply."></div>
             <div class="clearall"></div>
             <div class="buttonbox"><a href="?code=CURBSIDE10&ab=promo:14:1:curbside10-apply" class="btn-overlay btn-overlay-first" rel="nofollow">Apply Code</a><button class="btn-overlay btn-overlay-second curb10details">Details</button></div></div>
@@ -21558,12 +21566,12 @@ $(document).ready(function() {
         <div class="promobox">
             <div class="imagebox"><img lazy-src="/images/promos/footer/2021/wk12/wk12_25offoutdoor.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Save up to 25% Select Outdoor"></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><a href="/category/outdoor.do?ab=promo:14:2:25off-select-outdoor" class="btn-overlay">Shop Now</a></div>
+            <div class="buttonbox"><a href="/category/outdoor.do?ab=promo:14:2:25off-select-outdoor" class="btn-overlay btn-overlay-only">Shop Now</a></div>
         </div>
         <div class="promobox">
             <div class="imagebox"><img lazy-src="/images/promos/footer/2018/wk28/wk27_BOPUS_promo_bar.jpg" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Buy Online &gt; Pick Up In Store"></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><a href="/category/code/in-store-pick-up.do?ab=promo:14:3:bopus" class="btn-overlay">View Details</a></div>
+            <div class="buttonbox"><a href="/category/code/in-store-pick-up.do?ab=promo:14:3:bopus" class="btn-overlay btn-overlay-only">View Details</a></div>
         </div>
         <div class="promobox">
             <div class="imagebox"><img lazy-src="/images/promos/footer/2020/evergreen/evergreen_wmfs49_no_curb.jpg" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Free Shipping on EVERY Order $49+ |  Exclusions apply. Shipping surcharges still apply."></div>
@@ -21573,18 +21581,18 @@ $(document).ready(function() {
         <div class="promobox">
             <div class="nonwme"><div class="imagebox"><img lazy-src="/images/promos/footer/2018/evergreen/wmr_promo_bar_v1a.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="World Market Rewards&trade; Welcome Reward | Get 15% Off Your Next Purchase"></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><button class="btn-overlay" onclick="MarketLive.Base.showCreateAccount();">Join Now</button></div></div>
+            <div class="buttonbox"><button class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.showCreateAccount();">Join Now</button></div></div>
             <div class="wme"><div class="imagebox"><img lazy-src="/images/promos/footer/2018/evergreen/wmr_promo_bar_v2.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="World Market Rewards&trade; | Welcome Back! View your latest Rewards, coupons &amp; perks."></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><button class="btn-overlay" onclick="MarketLive.Base.openSignInPopUp('rewards');">Sign In</button></div></div>
+            <div class="buttonbox"><button class="btn-overlay btn-overlay-only" onclick="MarketLive.Base.openSignInPopUp('rewards');">Sign In</button></div></div>
             <div class="logged"><div class="imagebox"><img lazy-src="/images/promos/footer/2018/evergreen/wmr_promo_bar_v3.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="World Market Rewards&trade; | Welcome Back! View your current Rewards."></div>
             <div class="clearall"></div>
-            <div class="buttonbox"><a href="/account/gateway.do?tab=rewards&ab=promo:14:5:wme-see-rewards" class="btn-overlay">See Rewards</a></div></div>
+            <div class="buttonbox"><a href="/account/gateway.do?tab=rewards&ab=promo:14:5:wme-see-rewards" class="btn-overlay btn-overlay-only">See Rewards</a></div></div>
         </div>
         <div class="promobox last">
             <div class="imagebox last"><img lazy-src="/images/promos/footer/2020/wk04/wk04_flat_rate.png" src="/images/worldmarket/en_us/global/globalgraphics/spacer01.gif" alt="Free Shipping on EVERY Order $49+ |  Exclusions apply. Shipping surcharges still apply."></div>
             <div class="clearall"></div>
-            <div class="buttonbox last"><button class="btn-overlay frspromodetails">Learn More</button></div>
+            <div class="buttonbox last"><button class="btn-overlay btn-overlay-only frspromodetails">Learn More</button></div>
         </div>
     </div>
 </div>
@@ -21607,7 +21615,7 @@ $(document).ready(function() {
         isLogged();
     });
 </script>
-<!-- wk14-promo-bar-210601.html -->
+<!-- wk15-promo-bar-210609.html -->
 </div>
 	  
 	</div>

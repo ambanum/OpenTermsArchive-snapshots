@@ -1232,7 +1232,7 @@ function getStateFromDomHeader() {
 
 
 
-        <div id ="esl_kicker_01-1" class="ml-slot-item ml-slot-1 esl_kicker_01-1"><!-- wk15-secondary-nav-210607.html | nocar support | loc | host | cj | sheer popup | wine7 | lbSym -->
+        <div id ="esl_kicker_01-1" class="ml-slot-item ml-slot-1 esl_kicker_01-1"><!-- wk15-secondary-nav-210610.html | nocar support | loc | host | cj | sheer popup | wine7 | modal upd -->
 <script src="/text/inc/js/global.js?rev=cjpix" type="text/javascript"></script>
 <style>
 	.ml-recommendation-carousel-view-item .cpwmPth, .ml-recentlyviewed-carousel-view-items .cpwmPth, .ml-gtw-pg-container .cpwmPth {display: none !important;}
@@ -1835,6 +1835,17 @@ function bannerdetails(){
 	});
 }
 /*Outside doc ready*/
+function cpwmModalComp(){
+	jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
+	jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
+	jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
+	jQuery("#thSignIn").addClass("cpwm-popup-compensate");
+	jQuery("#globalBasket").addClass("cpwm-popup-compensate");
+}
+jQuery(".disclaimer .close").focusin(function() {
+	console.log("FOCUS ACHIEVED");
+});
+
 function cpwmDisclaimersAction(){
     var detailsCTA = jQuery(".promo-directory .promoslot .promodetails, .promo-header .promoslot .promodetails, .directorydisclaimer, .shareddisclaimer, .discountdetails, #see-details, #globalHeaderIncludeSm .shareddisclaimer");
 	var modalDisclaimer = jQuery(".cpwm-promo-modal.disclaimer");
@@ -1862,128 +1873,67 @@ function cpwmDisclaimersAction(){
 	var pledgelingmodalDonate = jQuery(".cpwm-promo-modal.pledgelingdonate");
 	
 	var closeBtn = jQuery(".cpwm-promo-modal.disclaimer, .cpwm-promo-modal.alternatedisclaimer, .cpwm-promo-modal.additionaldisclaimer, .cpwm-promo-modal.additionaldisclaimer2, .cpwm-promo-modal.frsdisclaimer, .cpwm-promo-modal.frspromodisclaimer, .cpwm-promo-modal.curb10disclaimer, .cpwm-promo-modal.sheeriddisclaimer, .cpwm-promo-modal.sheeridhealthcare, .cpwm-promo-modal.sheeridresponder, .cpwm-promo-modal.sheeridteacher, .cpwm-promo-modal.pledgelingdonate");
-    detailsCTA.click(function(){
-//		console.log("Disclaimer click");
-        modalDisclaimer.show();
+	detailsCTA.click(function(){
+		modalDisclaimer.show();
 		jQuery(".disclaimer .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    alternatedetailsCTA.click(function(){
-//		console.log("Alternate Disclaimer Click");
-        alternatemodalDisclaimer.show();
+		cpwmModalComp();
+	});
+	alternatedetailsCTA.click(function(){
+		alternatemodalDisclaimer.show();
 		jQuery(".alternatedisclaimer .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    additionaldetailsCTA.click(function(){
-//		console.log("Additional Details Click");
-        additionalmodalDisclaimer.show();
+		cpwmModalComp();
+	});
+	additionaldetailsCTA.click(function(){
+		additionalmodalDisclaimer.show();
 		jQuery(".additionaldisclaimer .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    additionaldetailsTwoCTA.click(function(){
-//		console.log("Additional Details 2 Click");
-        additionalmodalDisclaimerTwo.show();
+		cpwmModalComp();
+	});
+	additionaldetailsTwoCTA.click(function(){
+		additionalmodalDisclaimerTwo.show();
 		jQuery(".additionaldisclaimer2 .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    frsdetailsCTA.click(function(){
-//		console.log("FRSdetails Click");
-        frsmodalDisclaimer.show();
+		cpwmModalComp();
+	});
+	frsdetailsCTA.click(function(){
+		frsmodalDisclaimer.show();
 		jQuery(".frsdisclaimer .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    frspromodetailsCTA.click(function(){
-//		console.log("FRSpromodetails Click");
-        frspromomodalDisclaimer.show();
+		cpwmModalComp();
+	});
+	frspromodetailsCTA.click(function(){
+		frspromomodalDisclaimer.show();
 		jQuery(".frspromodisclaimer .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    curb10detailsCTA.click(function(){
-//		console.log("curb10details Click");
-        curb10modalDisclaimer.show();
+		cpwmModalComp();
+	});
+	curb10detailsCTA.click(function(){
+		curb10modalDisclaimer.show();
 		jQuery(".curb10disclaimer .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    sheeridCTA.click(function(){
-//		console.log("Disclaimer click");
-        sheeridmodalDisclaimer.show();
+		cpwmModalComp();
+	});
+	sheeridCTA.click(function(){
+		sheeridmodalDisclaimer.show();
 		jQuery(".sheeriddisclaimer .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    sheeridHealthcareCTA.click(function(){
-//		console.log("Disclaimer click");
-        sheeridmodalHealthcare.show();
+		cpwmModalComp();
+	});
+	sheeridHealthcareCTA.click(function(){
+		sheeridmodalHealthcare.show();
 		jQuery(".sheeridhealthcare .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    sheeridResponderCTA.click(function(){
-//		console.log("Disclaimer click");
-        sheeridmodalResponder.show();
+		cpwmModalComp();
+	});
+	sheeridResponderCTA.click(function(){
+		sheeridmodalResponder.show();
 		jQuery(".sheeridresponder .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    sheeridTeacherCTA.click(function(){
-//		console.log("Disclaimer click");
-        sheeridmodalTeacher.show();
+		cpwmModalComp();
+	});
+	sheeridTeacherCTA.click(function(){
+		sheeridmodalTeacher.show();
 		jQuery(".sheeridteacher .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
-    pledgelingDonateCTA.click(function(){
-//		console.log("Disclaimer click");
-        pledgelingmodalDonate.show();
+		cpwmModalComp();
+	});
+	pledgelingDonateCTA.click(function(){
+		pledgelingmodalDonate.show();
 		jQuery(".pledgelingdonate .close").focus();
-		jQuery("#topmostHeader").addClass("cpwm-popup-compensate");
-		jQuery("#ml-grid-view-subcatitems").addClass("cpwm-popup-compensate");
-		jQuery(".breadcrumb").addClass("cpwm-popup-compensate");
-		jQuery("#thSignIn").addClass("cpwm-popup-compensate");
-		jQuery("#globalBasket").addClass("cpwm-popup-compensate");
-    });
+		cpwmModalComp();
+	});
     closeBtn.click(function(){
-//		console.log("CLOSE");
         modalDisclaimer.hide();
 		alternatemodalDisclaimer.hide();
 		additionalmodalDisclaimer.hide();
@@ -2004,12 +1954,12 @@ function cpwmDisclaimersAction(){
     });
 	jQuery(document).keyup(function(e) {
 		if (e.key === "Escape") { 
-			console.log("The Prisoner escapes");
+//			console.log("The Prisoner escapes");
 			closeBtn.click();
 		}
 	});	
 }
-	/*end outside doc ready*/
+/*end outside doc ready*/
 /* wine GEO*/	
 var cpwmWmrStates = ["AZ","CA","CO","DC","FL","GA","IA","ID","IL","LA","MD","MI","MO","MT","NE","NM","NV","OR","SC","SD","TX","VA","WA","WI"];
 var cpwmStateChk = -1;
@@ -2308,7 +2258,7 @@ var sbrKids = ["/inspirations/shop-by-room/kids/adventure-landing.do",
 		outline-width: 1px;
 	}
 </style>
-<!-- wk15-secondary-nav-210607.html -->
+<!-- wk15-secondary-nav-210610.html -->
 </div>
     </div>
 						

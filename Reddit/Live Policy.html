@@ -249,9 +249,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 grecaptcha.render('recaptcha', {
                     'sitekey' : '6LfV4JYUAAAAAEhc2CrEBZBUPG8POUC-OhvKE0nL',
                     'callback' : function(response) {
-                        $.post('/recaptcha.php', {response: response}, function(data) {
-                            $('form .require-recaptcha').removeClass('require-recaptcha').attr('disabled', false);
-                        });
+                        $('form .require-recaptcha').removeClass('require-recaptcha').attr('disabled', false);
                     }
                 });
             }

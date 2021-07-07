@@ -511,6 +511,17 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-DW9MBJC8M8');
+
+    <!--Metricool Tracker -->
+    function loadScript (a) {
+      var b = document.getElementsByTagName('head')[0], c = document.createElement('script')
+      c.type = 'text/javascript', c.src = 'https://tracker.metricool.com/resources/be.js', c.onreadystatechange = a, c.onload = a, b.appendChild(c)
+    }
+
+    loadScript(function () {
+      beTracker.t({ hash: 'cc917e970604fc97c930332506849347' })
+    })
+
   } else {
     console.log(window.location.href)
     if (window.location.href.indexOf("cookies-policy") >= 0 || window.location.href.indexOf("cookie-policy") >= 0) {
@@ -549,6 +560,16 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-DW9MBJC8M8');
+
+      <!--Metricool Tracker -->
+      function loadScript (a) {
+        var b = document.getElementsByTagName('head')[0], c = document.createElement('script')
+        c.type = 'text/javascript', c.src = 'https://tracker.metricool.com/resources/be.js', c.onreadystatechange = a, c.onload = a, b.appendChild(c)
+      }
+
+      loadScript(function () {
+        beTracker.t({ hash: 'cc917e970604fc97c930332506849347' })
+      })
     }
   })
 

@@ -112,38 +112,6 @@
 
 
 
-
-  
-    
-    <script id="contexthub-json" type="application/json">
-    {
-      "CONTEXTHUB_PATH": "/etc/cloudsettings/default/contexthub",
-      "RESOURCE_PATH": "\/content\/help\u002Dtwitter\/en\/rules\u002Dand\u002Dpolicies\/twitter\u002Dlaw\u002Denforcement\u002Dsupport\/_jcr_content\/contexthub",
-      "SEGMENTATION_PATH": "\/etc\/segmentation\/contexthub",
-      "CQ_CONTEXT_PATH": "",
-      "ANONYMOUS_HOME": "/home/users/F/F4I-BMhxoJ1kqQxGQQIO",
-      "MODE": "no-ui"
-    }
-    </script>
-    
-    <script id="contexthub-script" type="text/javascript">
-      (function () {
-        window.ContextHub = window.ContextHub || {};
-        const values = JSON.parse(document.getElementById('contexthub-json').textContent);
-        /* setting paths */
-        ContextHub.Paths = ContextHub.Paths || {};
-        ContextHub.Paths.CONTEXTHUB_PATH = values.CONTEXTHUB_PATH;
-        ContextHub.Paths.RESOURCE_PATH = values.RESOURCE_PATH;
-        ContextHub.Paths.SEGMENTATION_PATH = values.SEGMENTATION_PATH;
-        ContextHub.Paths.CQ_CONTEXT_PATH = values.CQ_CONTEXT_PATH;
-
-        /* setting initial constants */
-        ContextHub.Constants = ContextHub.Constants || {};
-        ContextHub.Constants.ANONYMOUS_HOME = values.ANONYMOUS_HOME;
-        ContextHub.Constants.MODE = values.MODE;
-      }());
-    </script><script src="/etc/cloudsettings/default/contexthub.kernel.js" type="text/javascript"></script>
-
   </head>
   <body class="
         twtr-theme--orange

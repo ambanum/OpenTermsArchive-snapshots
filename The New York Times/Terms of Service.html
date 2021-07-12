@@ -22,7 +22,7 @@ This page describes the terms and conditions that govern your use of certain New
   <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/application-79172500fb4dbec2484043d570946543.css" id="stylesheet" />
     <!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
     <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/theming_v1_support-cf937686d5b6669242017892da7bad78.css" />
-  <link rel="stylesheet" type="text/css" href="//p20.zdassets.com/hc/theming_assets/968999/987838/style.css?digest=4403511069972">
+  <link rel="stylesheet" type="text/css" href="//p20.zdassets.com/hc/theming_assets/968999/987838/style.css?digest=4403518777108">
 
   <link rel="shortcut icon" type="image/x-icon" href="//theme.zdassets.com/theme_assets/968999/1965f56573cfa15ed817f84bf2248be1e2feee32.ico" />
 
@@ -57,60 +57,22 @@ This page describes the terms and conditions that govern your use of certain New
 </script>
 
   
-<!-- BEGIN AWS Chat pilot launch for Cancel Help page -->
-<script src="https://customerchat.nytimes.com/chat-js-sdk/versions/0.1.0.browser-sdk.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-window.addEventListener('load', function() {
-  const chatPilotButton = $("#Chat_New");
-  const livePersonButton = $("#Help_New");
-
-  // Chat Pilot is only available on the Cancel your subscription page
-  if (window.location.href.indexOf("/360003499613") > -1) {
-    <!-- TO TURN ON OR OFF THE CHAT PILOT -->
-    const CHAT_PILOT_FEATURE_FLAG = false;
-    <!-- TO TURN ON OR OFF THE CHAT PILOT -->
-
-    let chatAvailableResp;
-    const chat = new NYTCareChat();
-    chat.setChatHost('https://customerchat.nytimes.com');
-    chat.isChatAvailable()
-      .then(resp => {
-        chatAvailableResp = resp && resp[0]?.duringAvailableHours && resp[0]?.hasAvailableSlots;
-
-        if (CHAT_PILOT_FEATURE_FLAG && chatAvailableResp) {
-          livePersonButton && livePersonButton.css("display", "none");
-          chatPilotButton && chatPilotButton.css("display", "block");
-          chatPilotButton.click(function() {
-            chat.openChat({
-              attributes: {
-                "entry_point": "chat_pilot",
-              }
-            });
-          });
-        } else {
-  			// if the feature flag is off or the Chat Pilot queue is full or it's after hours of operation
-          showLivepersonChat()
-        }
-     })
-  } else {
-  	// show the Liveperson Chat button in other Help pages
-    showLivepersonChat()
-  }
-
-  // function to show the Liveperson button, hide the Chat Pilot Button,
-  function showLivepersonChat() {
-    livePersonButton && livePersonButton.css("display", "");
-    chatPilotButton && chatPilotButton.css("display", "none");
-    //<!-- BEGIN LivePerson Monitor. -->
-    window.lpTag=window.lpTag || {};if(typeof window.lpTag._tagCount==='undefined'){window.lpTag={site:'17743901'||'',section:lpTag.section||'',autoStart:lpTag.autoStart===false?false:true,ovr:lpTag.ovr||{},_v:'1.6.0',_tagCount:1,protocol:'https:',events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn);},0);},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json);},1);}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn);}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn);}else{this._defL=this._defL||[];this._defL.push(fn);}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id);},0);},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+'//'+((this.ovr&&this.ovr.domain)?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site;}var s=document.createElement('script');s.setAttribute('charset',chr?chr:'UTF-8');if(id){s.setAttribute('id',id);}s.setAttribute('src',url);document.getElementsByTagName('head').item(0).appendChild(s);},init:function(){this._timing=this._timing||{};this._timing.start=(new Date()).getTime();var that=this;if(window.attachEvent){window.attachEvent('onload',function(){that._domReady('domReady');});}else{window.addEventListener('DOMContentLoaded',function(){that._domReady('contReady');},false);window.addEventListener('load',function(){that._domReady('domReady');},false);}if(typeof(window._lptStop)=='undefined'){this.load();}},start:function(){this.autoStart=true;},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger('LPT','DOM_READY',{t:n});}this._timing[n]=(new Date()).getTime();},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]};lpTag.init();}else{window.lpTag._tagCount+=1;}
-    //<!-- END LivePerson Monitor. -->
-  }
-})
+<!-- BEGIN AWS Chat pilot launch for Cancel Help page & Contact Us page -->
+<script src="https://customerchat.nytimes.com/chat-js-sdk/versions/0.2.0.zendesk-client.min.js" type="text/javascript"></script>
+<script>
+  window.addEventListener('load', function() {
+    initZendeskChat({
+      connectChatHost: "https://customerchat.nytimes.com",
+      enableConnectChat: true,
+      enableConnectGencareChat: false,
+    })
+    .catch(e => console.error("failed to setup zendesk chat", e))
+});
 </script>
 <!-- END AWS Chat pilot -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-  <script type="text/javascript" src="//p20.zdassets.com/hc/theming_assets/968999/987838/script.js?digest=4403511069972"></script>
+  <script type="text/javascript" src="//p20.zdassets.com/hc/theming_assets/968999/987838/script.js?digest=4403518777108"></script>
 <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
 <body class="">
   
@@ -386,5 +348,5 @@ window.addEventListener('load', function() {
   <script src="//static.zdassets.com/hc/assets/moment-f6f8513da6ab17eadada59a1a4edb536.js"></script>
   <script src="//static.zdassets.com/hc/assets/hc_enduser-94432d150121fd68d4b696ee07d2a102.js"></script>
   
-<script type="text/javascript">(function(){window['__CF$cv$params']={r:'66dd10199b54076a',m:'093da0f7d1a982bdbc8351552f806a2cf25c938b-1626122177-1800-AYraKmM6ONRHvy0L+L9TbrDl0aPZ6QkZgN8jjzvl7tRRBcWjXgNhQaOeGb+2nBPTZOZxDSlJhfXPKqreiQzX7oULmBkWoIbOLghk2xyd5EFSao/+gY2C4+LPoeF7gOl4uC59YnySGUg6za438YraMZ2FqHPLG7HALJ0tOb0Ce/c5lmev72E1W/X4HVcwL5EKsQ==',s:[0xf0ad0a9bf3,0x28d7a0a2d6],}})();</script></body>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'66ddc669f9b04058',m:'2d41a62a439ed63aa722b6663cde7d58ee2738c4-1626129645-1800-AZZACCGrz+TYmKe4IcL1mxqWS5h6MoTH0vzFhvLhf9dgfPn0gaZLsvBMb3djXCR19Q4p1nrRk2fRzRrfQIHm7aa64Ydich6C2ARNSQQFaToU3ONlxztHCXgUxlbjdhNcAI38hPkLuiJ13GuJK19Ae79pKp8G3rJI7W2NNnT08KMeAsmH/rRmsL/j+mwoeH4BQA==',s:[0xfc209dcfd5,0x45229f923d],}})();</script></body>
 </html>

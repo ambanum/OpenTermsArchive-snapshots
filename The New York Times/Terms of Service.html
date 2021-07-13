@@ -22,7 +22,7 @@ This page describes the terms and conditions that govern your use of certain New
   <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/application-79172500fb4dbec2484043d570946543.css" id="stylesheet" />
     <!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
     <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/theming_v1_support-cf937686d5b6669242017892da7bad78.css" />
-  <link rel="stylesheet" type="text/css" href="//p20.zdassets.com/hc/theming_assets/968999/987838/style.css?digest=4403558023188">
+  <link rel="stylesheet" type="text/css" href="//p20.zdassets.com/hc/theming_assets/968999/987838/style.css?digest=4403554280980">
 
   <link rel="shortcut icon" type="image/x-icon" href="//theme.zdassets.com/theme_assets/968999/1965f56573cfa15ed817f84bf2248be1e2feee32.ico" />
 
@@ -72,7 +72,56 @@ This page describes the terms and conditions that govern your use of certain New
 <!-- END AWS Chat pilot -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-  <script type="text/javascript" src="//p20.zdassets.com/hc/theming_assets/968999/987838/script.js?digest=4403558023188"></script>
+
+<!-- START: Cancel Page tracking hook -->
+<script type="text/javascript">
+const trackingModulesMap = {
+  "go-to-sub-overview-hc-referral": {
+    "name": "go-to-sub-overview-hc-referral",
+    "region": "help-center-cancel",
+    "element": {
+      "name": "go-to-sub-overview-hc-referral"
+    }
+  },
+  "go-to-account-home-hc-referral": {
+    "name": "go-to-account-home-hc-referral",
+    "region": "help-center-cancel",
+    "element": {
+      "name": "go-to-account-home-hc-referral"
+    }
+  }
+};
+
+$(document).delegate('a.track-it', 'click', function(event) {
+  const tId = this.id;
+  if (tId && trackingModulesMap[tId]) {
+    const url = this.href;
+    const label = this.text;
+    const interaction = trackingModulesMap[tId];
+
+    if (url && label && interaction) {
+      dataLayer.push({
+        "event": "moduleInteraction",
+        "eventData": {
+          "trigger": "module",
+          "type": "click"
+        },
+        "module": {
+          "name": interaction.name,
+          "region": interaction.region,
+          "label": label,
+          "element": {
+            "name": interaction.element.name,
+            "url": url
+          }
+        }
+      });
+    }
+  }
+});
+</script>
+<!-- END: Cancel Page tracking hook -->
+  <script type="text/javascript" src="//p20.zdassets.com/hc/theming_assets/968999/987838/script.js?digest=4403554280980"></script>
 <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
 <body class="">
   
@@ -348,5 +397,5 @@ This page describes the terms and conditions that govern your use of certain New
   <script src="//static.zdassets.com/hc/assets/moment-f6f8513da6ab17eadada59a1a4edb536.js"></script>
   <script src="//static.zdassets.com/hc/assets/hc_enduser-94432d150121fd68d4b696ee07d2a102.js"></script>
   
-<script type="text/javascript">(function(){window['__CF$cv$params']={r:'66e49cfaab6a40fb',m:'d5263ccd22ac92d2641ba88c8d071dcd8e5363b9-1626201348-1800-ASHd/mRHQj8bKequc9QiD5V+B+7JIRgd9SgEb52IzPGAMQVzli4NRbQSuAtWuy2IiJdUjivln0F2OaycpaDF0opGwBjilRvDKbX3QfC3zRwyN+TWEmnozhI4/eRP+uyE+wJL1R2tEXNw1MiUnkbSoWWgAYnvS+ZL7Cxt4irJnuVKT/n4l0A5AT1HRkSvIx9iHA==',s:[0x7b4188f2a5,0x45c7e8b10c],}})();</script></body>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'66e54cc3285b40bf',m:'1b6ee7c1522085086dc0f83178dd473ff0b267bf-1626208548-1800-AQC2/CkWgtbHtenep63JEBA00MPzHkINWcWZkeMBNceRXZP1TNZ81tTF9hcdZ1LaLPxxZ9cLQUDeaddfHDU2EkMYTl2DJ4tvyLmYsjYqQSsZ9JCqR3A39oTUBovGnQeHbpihYlSYiMj6f4MhlV74C50DGsK5OBSTAYnsSLrLBALGwK5P7UzPmyG66IOf8ejhxg==',s:[0xc5f76477fd,0x98053dd8bf],}})();</script></body>
 </html>

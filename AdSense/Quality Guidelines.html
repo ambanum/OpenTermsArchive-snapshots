@@ -2979,10 +2979,10 @@
     <h3 id="help-google-find-your-pages" data-text="Help Google find your pages">Help Google find your pages</h3>
     <ul>
       <li>Ensure that all pages on the site can be reached by a link from another findable page.
-        The referring link should include either text or, for images, an alt attribute, that is
+        The referring link should include either text or, for images, an <code translate="no" dir="ltr">alt</code> attribute, that is
         relevant to the target page. Crawlable links are <a href="/search/docs/advanced/guidelines/links-crawlable"><code translate="no" dir="ltr">&lt;a&gt;</code>
-        tags with an href attribute</a>.</li>
-      <li>Provide a <a href="http://sitemaps.org" class="external">sitemap file</a> with links that
+        tags with an <code translate="no" dir="ltr">href</code> attribute</a>.</li>
+      <li>Provide a <a href="/search/docs/advanced/sitemaps/overview">sitemap file</a> with links that
         point to the important pages on your site. Also provide a page with a human-readable list
         of links to these pages (sometimes called a site index or site map page).</li>
       <li>Limit the number of links on a page to a reasonable number (a few thousand at most).</li>
@@ -2991,7 +2991,7 @@
         since we last crawled your site. Supporting this feature saves you bandwidth and overhead.</li>
       <li>Use the robots.txt file on your web server to manage your crawling budget by preventing
         crawling of infinite spaces such as search result pages. Keep your robots.txt file up to
-        date. <a href="/search/docs/advanced/robots/robots-faq">Learn how to manage crawling with
+        date. <a href="/search/docs/advanced/robots/intro">Learn how to manage crawling with
         the robots.txt file</a>. Test the coverage and syntax of your robots.txt file using the
         <a href="https://www.google.com/webmasters/tools/robots-testing-tool" class="external">robots.txt Tester</a>.</li>
     </ul>
@@ -3019,8 +3019,8 @@
         significantly affect page rendering to be crawled: for example, CSS and JavaScript files
         that affect the understanding of the pages. The Google indexing system renders a web page
         as the user would see it, including images, CSS, and JavaScript files. To see which page
-        assets that Googlebot cannot crawl use the <a href="https://support.google.com/webmasters/answer/9012289" class="external">URL
-        Inspection tool</a>; to debug directives in your robots.txt file, use the
+        assets that Googlebot cannot crawl, use the <a href="https://support.google.com/webmasters/answer/9012289" class="external">URL
+        Inspection tool</a>. To debug directives in your robots.txt file, use the
         <a href="https://support.google.com/webmasters/answer/6062598" class="external">robots.txt
           Tester</a> tool.</li>
       <li>Allow search bots to crawl your site without session IDs or URL parameters that track
@@ -3029,7 +3029,7 @@
         result in incomplete indexing of your site, as bots may not be able to eliminate URLs that
         look different but actually point to the same page.</li>
       <li>Make your site's important content visible by default. Google is able to crawl HTML
-        content hidden inside navigational elements such as tabs or expanding sections, however
+        content hidden inside navigational elements such as tabs or expanding sections. However,
         we consider this content less accessible to users, and believe that you should make your
         most important information visible in the default page view.</li>
       <li>Make a reasonable effort to ensure that advertisement links on your pages do not affect
@@ -3253,7 +3253,7 @@
 
 <devsite-content-footer class="nocontent">
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2021-07-12 UTC.</p>
+  <p>Last updated 2021-07-15 UTC.</p>
 </devsite-content-footer>
 
 
@@ -3895,7 +3895,7 @@
     <devsite-heading-link></devsite-heading-link>
     <devsite-analytics enable-analytics-iframe>
       
-        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension1": "Signed out", "dimension4": "Search Central", "dimension3": false, "dimension6": "en", "dimension5": "en", "dimension11": false}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}, {"gaid": "UA-24532603-6", "dimensions": {"dimension1": "Signed out", "dimension4": "Search Central", "dimension3": false, "dimension6": "en", "dimension5": "en", "dimension11": false}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}]</script>
+        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension11": false, "dimension4": "Search Central", "dimension1": "Signed out", "dimension6": "en", "dimension3": false, "dimension5": "en"}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}, {"gaid": "UA-24532603-6", "dimensions": {"dimension11": false, "dimension4": "Search Central", "dimension1": "Signed out", "dimension6": "en", "dimension3": false, "dimension5": "en"}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}]</script>
 <script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "Search Central", "signedIn": "False", "tenant": "developers", "recommendations": {"sourcePage": "", "sourceType": 0, "sourceRank": 0, "sourceIdenticalDescriptions": 0, "sourceTitleWords": 0, "sourceDescriptionWords": 0, "experiment": ""}}}</script>
       
     </devsite-analytics>
@@ -3903,12 +3903,12 @@
       <devsite-badger></devsite-badger>
     
     
-    <script nonce="JcOANQxlEvEWRNO9ep7BBQnXl88lsD">
+    <script nonce="50SteElWdCiu9yDKFwSajYxAMup5dY">
   
   (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
     t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
     E.parentNode.insertBefore(t,E);})(window, document, 'script',
-    'https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118","https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,40,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,104,105,107,108,111,112,113,115,116,117,118,120,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,138],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg"]')
+    'https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118","https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vb06d4bce6b32c84cf01c36dffa546f7ea4ff7fc8fcd295737b014c1412e4d118/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,40,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,104,105,107,108,111,112,113,115,117,118,120,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,138],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg"]')
   
 </script>
     <devsite-a11y-announce></devsite-a11y-announce>

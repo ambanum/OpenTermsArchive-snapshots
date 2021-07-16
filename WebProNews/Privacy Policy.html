@@ -6,7 +6,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name='robots' content='noindex, nofollow' />
 
-	<!-- This site is optimized with the Yoast SEO plugin v16.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<!-- This site is optimized with the Yoast SEO plugin v16.7 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Privacy Policy - WebProNews</title>
 	<meta name="description" content="&nbsp; Privacy Policy The iEntry Network (ientry.com) website and email newsletter network which also includes WebProNews (webpronews.com), Twellow" />
 	<meta property="og:locale" content="en_US" />
@@ -35,10 +35,10 @@
 <link rel='dns-prefetch' href='//i1.wp.com' />
 <link rel='dns-prefetch' href='//i2.wp.com' />
 <link rel="alternate" type="application/rss+xml" title="WebProNews &raquo; Feed" href="https://www.webpronews.com/feed/" />
-<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>		<!-- This site uses the Google Analytics by ExactMetrics plugin v6.7.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
-							<script src="//www.googletagmanager.com/gtag/js?id=UA-10133450-43"  type="text/javascript" data-cfasync="false"></script>
+<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>		<!-- This site uses the Google Analytics by ExactMetrics plugin v6.8.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=UA-10133450-43"  type="text/javascript" data-cfasync="false" async></script>
 			<script type="text/javascript" data-cfasync="false">
-				var em_version = '6.7.0';
+				var em_version = '6.8.0';
 				var em_track_user = true;
 				var em_no_track_reason = '';
 				
@@ -114,16 +114,25 @@
 												}
 											}
 										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
 										if ( typeof arguments[2] === 'object' ) {
 											hitObject = arguments[2];
 										}
 										if ( typeof arguments[5] === 'object' ) {
 											Object.assign( hitObject, arguments[5] );
 										}
-										if ( 'undefined' !== typeof (
-											arguments[1].hitType
-										) ) {
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
 											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
 										}
 										if ( hitObject ) {
 											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
@@ -135,7 +144,7 @@
 								}
 
 								function mapArgs( args ) {
-									var gaKey, hit = {};
+									var arg, hit = {};
 									var gaMap = {
 										'eventCategory': 'event_category',
 										'eventAction': 'event_action',
@@ -146,10 +155,15 @@
 										'timingVar': 'name',
 										'timingValue': 'value',
 										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
 									};
-									for ( gaKey in gaMap ) {
-										if ( 'undefined' !== typeof args[gaKey] ) {
-											hit[gaMap[gaKey]] = args[gaKey];
+									for ( arg in args ) {
+										if ( args.hasOwnProperty(arg) && gaMap.hasOwnProperty(arg) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
 										}
 									}
 									return hit;
@@ -227,7 +241,7 @@ body {font-family:PT Sans, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucid
 var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,mp3,mpeg,pdf,docx,pptx,xlsx,rar","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/out\\\/\",\"label\":\"Affiliate\"}]","home_url":"https:\/\/www.webpronews.com","hash_tracking":"true","ua":"UA-10133450-43"};
 /* ]]> */
 </script>
-<script src='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=6.7.0' id='exactmetrics-frontend-script-js'></script>
+<script src='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=6.8.0' id='exactmetrics-frontend-script-js'></script>
 <link rel="https://api.w.org/" href="https://www.webpronews.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.webpronews.com/wp-json/wp/v2/pages/480559" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.webpronews.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.webpronews.com/wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 5.7.2" />
@@ -858,7 +872,7 @@ oneSignal_options['notifyButton']['colors'] = {};
 <p>You may occasionally get cookies from our advertisers. These cookies are sent from third-party computers and are subject to such third parties’ policies. Most browsers are initially set to accept cookies. If you’d prefer, you can set yours to refuse cookies. However, it is likely that most areas of the site will not function properly if you do so.</p>
 <p>&nbsp;</p>
 <h2>Removal from our Database</h2>
-<p>Should you ever wish to be removed from our database, simply contact us and we will be happy to fulfill your request. Additionally, should you wish further clarification of this policy, please do not hesitate to email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="55262025253a27211502303705273a1b3022267b363a387b">[email&#160;protected]</a></p>
+<p>Should you ever wish to be removed from our database, simply contact us and we will be happy to fulfill your request. Additionally, should you wish further clarification of this policy, please do not hesitate to email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e0d0b0e0e110c0a3e291b1c2e0c11301b090d501d111350">[email&#160;protected]</a></p>
 <p>&nbsp;</p>
 				</div>
 							</div>
@@ -1106,7 +1120,7 @@ var themeajax = {"url":"https:\/\/www.webpronews.com\/wp-admin\/admin-ajax.php",
 var wpcf7_recaptcha = {"sitekey":"6LcYaacUAAAAAGyRFQ7eLu2yaHfIHS_bhcmFTA-o","actions":{"homepage":"homepage","contactform":"contactform"}};
 /* ]]> */
 </script>
-<script src='https://www.webpronews.com/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.4.1' id='wpcf7-recaptcha-js'></script>
+<script src='https://www.webpronews.com/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.4.2' id='wpcf7-recaptcha-js'></script>
 <script src='https://c0.wp.com/c/5.7.2/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
 <script src='https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=5.7.2' async='async' id='remote_sdk-js'></script>
 	<aside id="thb-login" class="mfp-hide thb-login-form light">

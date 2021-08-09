@@ -598,7 +598,7 @@ table-layout: fixed;
 
 
 
-<p><h3>Last Modified: September 30, 2019</h3></p>
+<p><h3>Last Modified: August 9, 2021</h3></p>
 
 <p>
   <span class="textBold">
@@ -646,7 +646,7 @@ table-layout: fixed;
         </p>
         <p>
             “<span class="textBold">Beta Product</span>” means any product that is designated by Provider or its
-            Affiliates as beta, pilot, limited
+            Affiliates as beta, alpha, pilot, early access, UI Labs, limited
             release, developer preview, non-production, evaluation or by a similar description.
         </p>
         <p>
@@ -654,13 +654,11 @@ table-layout: fixed;
             class="textBold">Section 9.1</span>.
         </p>
         <p>
-            “<span class="textBold">Coverage Period</span>” means, with respect to a Covered Product, the period begins
-            when Customer purchases a
-            subscription for the Services and ends on the expiration date of the applicable subscription.
+            “<span class="textBold">Coverage Period</span>” means, with respect to a Service, the period begins
+            when Customer first uses or subscribes to such Service and ends on the expiration or termination of such Service in accordance with this Agreement.
         </p>
         <p>
-            “<span class="textBold">Covered Product</span>” means an eligible Provider Product with an active
-            subscription for the Services.
+            “<span class="textBold">Covered Product</span>” means an eligible Provider Product associated with an active Service.
         </p>
         <p>
             “<span class="textBold">Customer</span>” has the meaning set forth in the preamble.
@@ -720,6 +718,10 @@ table-layout: fixed;
             Customer or any Authorized User from accessing or using the Services or Provider Systems as intended by this
             Agreement. Harmful Code does not include any Provider Disabling Device.
         </p>
+      	<p>
+           “<span class="textBold">IdP</span>” means compatible third party online service or website that authenticates users on the Internet by means of publicly available API’s, such as Google, LinkedIn or Facebook.
+
+      	</p>
         <p>
             “<span class="textBold">Indemnitee</span>” has the meaning set forth in <span
             class="textBold">Section 12.2</span>.
@@ -770,9 +772,8 @@ table-layout: fixed;
             correlative meanings.
         </p>
         <p>
-            “<span class="textBold">Provider</span>” means Ubiquiti Labs, LLC or another entity that Ubiquiti Labs, LLC
-            may designate from time to
-            time.
+            “<span class="textBold">Provider</span>” means Ubiquiti Labs, LLC or another entity that Ubiquiti Inc.
+            may designate from time to time.
         </p>
         <p>
             “<span class="textBold">Provider Disabling Device</span>” means any software, hardware or other technology,
@@ -834,8 +835,7 @@ table-layout: fixed;
             Provider or its Affiliates provide remote access to and use of as part of the Services.
         </p>
         <p>
-            “<span class="textBold">Services</span>” has the meaning set forth in <span
-            class="textBold">Section 2</span>.
+            “<span class="textBold">Services</span>” means any service by Provider to which Customer subscribes.
         </p>
         <p>
             “<span class="textBold">Service Description</span>” means the description of the Service as published by
@@ -863,10 +863,10 @@ table-layout: fixed;
             <li>
                 <span style="text-decoration: underline;">Services</span>.
                 Subject to and conditioned on Customer's and its Authorized Users' compliance with the terms and
-                conditions of this Agreement, for each Covered Product and during the applicable Coverage Period,
+                conditions of this Agreement, during the applicable Coverage Period,
                 Provider shall, and shall cause its Affiliates or Subcontractors to, use commercially reasonable efforts
-                to provide to Customer and its Authorized Users the applicable services for such Covered Product in
-                accordance with the applicable Service Description (the “<span class="textBold">Services</span>”).
+                to provide to Customer and its Authorized Users the Services in
+                accordance with the applicable Service Description.
             </li>
             <li>
                 <span style="text-decoration: underline;">Exclusions from Services</span>. The Services do not apply to:
@@ -876,12 +876,12 @@ table-layout: fixed;
                         related software is not intended to be used or modified;
                     </li>
                     <li>Third party products or software or their effects on or interactions with the Covered Product or
-                        related software;
+                        the Services;
                     </li>
                     <li>Damages caused by (a) accident, abuse, misuse, liquid contact, fire, earthquake or other
                         external cause, or (b) operating the Covered Product outside the permitted or intended uses; or
                     </li>
-                    <li>oftware which is not the latest release.</li>
+                    <li>Software which is not the latest release.</li>
                 </ul>
             </li>
             <li>
@@ -907,7 +907,7 @@ table-layout: fixed;
                 to comply with, any material term of this Agreement, or accessed or used the Services beyond the scope
                 of the rights granted or for a purpose not authorized under this Agreement; (ii) Customer or any
                 Authorized User is, has been, or is likely to be involved in any fraudulent, misleading or unlawful
-                activities; or (iii) this Agreement or the Coverage Period of any Covered Product expires or is
+                activities; or (iii) this Agreement or the Coverage Period of any Service expires or is
                 terminated; (c) Provider believes that Customer has taken any action that involves the use of abusive,
                 derogatory, insulting, threatening, vulgar or similarly unreasonable language or behavior directed at
                 any of Provider’s or its Affiliates’ employees or representatives whether it be in person, over the
@@ -922,6 +922,9 @@ table-layout: fixed;
                 <span class="textBold">Section 2.5</span> does not limit any of Provider's other rights or remedies,
                 whether at law, in equity or under this Agreement.
             </li>
+          	<li>
+              	<span style="text-decoration: underline;">Identity Provider</span>. The Services may include functionality that enables Customer, at Customer’s option, to connect with certain IdP services or sites, via public facing APIs provided and controlled by the IdP. If an IdP modifies its APIs or equivalents so that they no longer interoperate with the Services, or imposes requirements on interoperability that are unreasonable for the Provider, and if after applying reasonable efforts Provider is unable to overcome such modifications or requirements then, Provider may cease or suspend its provision of interoperability between the Services and the affected IdP services or sites, without liability to Customer. Customer agrees that Provider has no responsibility for the acquisition, development, implementation, operation, support, maintenance or security of any IdP.
+          	</li>
             <li>
                 <span style="text-decoration: underline;">Operational Products Only</span>. Provider Products that are
                 damaged, defective, or otherwise non-operational prior to the start of the Coverage Period are not
@@ -935,8 +938,8 @@ table-layout: fixed;
             <li>
                 <span style="text-decoration: underline;">Authorization</span>. Subject to and conditioned on Customer's
                 payment of the Fees and compliance and performance in accordance with all other terms and conditions of
-                this Agreement, Provider hereby authorizes Customer to access and use, for each Covered Product and
-                during its Coverage Period, the Services and such Provider Materials as Provider may supply or make
+                this Agreement, Provider hereby authorizes Customer to access and use, during the applicable Coverage Periods, the 
+              	Services and such Provider Materials as Provider may supply or make
                 available to Customer solely for the Permitted Use by and through Authorized Users in accordance with
                 the conditions and limitations set forth in this Agreement. This authorization is non-exclusive and
                 non-transferable.
@@ -1014,8 +1017,12 @@ table-layout: fixed;
                     </li>
                     <li>
                         otherwise access or use the Services or Provider Materials beyond the scope of the authorization
-                        granted under <span class="textBold">Section 3.1</span>.
+                        granted under <span class="textBold">Section 3.1</span>; or
                     </li>
+                  	<li>
+						send or store in the Services any personal health data, credit card data, personal financial data or other such sensitive data which may be, without limitation, subject to the Health Insurance Portability and Accountability Act, Gramm-Leach-Bliley Act, or the Payment Card Industry Data Security Standards.
+
+                  	</li>
                 </ul>
             </li>
             <li>
@@ -1027,9 +1034,9 @@ table-layout: fixed;
                 Regulations (ITAR) administered by the U.S. State Department’s Directorate of Defense Trade Controls
                 (DDTC) and the economic sanctions administered by the U.S. Treasury Department’s Office of Foreign
                 Assets Control (OFAC). Additional information on these regulations may be found at
-                <a href="http://www.bis.doc.gov" target="_blank">http://www.bis.doc.gov</a>,
-                <a href="https://www.pmddtc.state.gov/index.html" target="_blank">https://www.pmddtc.state.gov/index.html</a>,
-                and <a href="http://www.ustreas.gov/ofac" target="_blank">http://www.ustreas.gov/ofac</a>,
+                <a href="https://www.bis.doc.gov" target="_blank">https://www.bis.doc.gov</a>,
+                <a href="https://www.pmddtc.state.gov/ddtc_public" target="_blank">https://www.pmddtc.state.gov/ddtc_public</a>,
+                and <a href="https://home.treasury.gov/policy-issues/office-of-foreign-assets-control-sanctions-programs-and-information" target="_blank">https://home.treasury.gov/policy-issues/office-of-foreign-assets-control-sanctions-programs-and-information</a>,
                 respectively. Customer represents and warrants that its access and use of the Provider Products or
                 Provider Materials are not prohibited by the export control laws and regulations of the United States
                 and other applicable countries. Customer agrees to comply with all applicable export and re-export
@@ -1055,7 +1062,7 @@ table-layout: fixed;
                 <ul class="listAlpha">
                     <li>
                         Customer shall at all times during the Term: (a) set up, maintain and operate in good repair all
-                        Covered Products; (b) provide Provider Personnel with such access to Customer Systems as is
+                        Covered Products and Customer Systems; (b) provide Provider Personnel with such access to Customer Systems as is
                         necessary for Provider to perform the Services; and (c) provide all cooperation and assistance
                         as Provider may reasonably request to enable Provider to exercise its rights and perform its
                         obligations under and in connection with this Agreement;
@@ -1095,6 +1102,9 @@ table-layout: fixed;
                 which any of them have gained unauthorized access); and (b) notify Provider of any such actual or
                 threatened activity.
             </li>
+          	<li>
+              	<span style="text-decoration: underline;">Internet Connection</span>. The Services require the use of an Internet connection. Customer is responsible for any service charges for Customer’s internet connection, including any data plan, incurred as a result of using or accessing the Services and acknowledges and agrees that Customer will be solely responsible for all disputes with any internet service or cell phone provider relating to the same. In particular, streaming and viewing videos may incur extra and substantial charges on devices that use a data plan. Provider is not responsible for and does not make any assurances about the availability, functionality, or cost of any internet connection or other data plan.
+          	</li>
         </ul>
     </li>
     <li>
@@ -1120,13 +1130,17 @@ table-layout: fixed;
                 including all results obtained from, and all conclusions, decisions and actions based on, such access or
                 use.
             </li>
+          	<li>
+				<span style="text-decoration: underline;">Authorized Users</span>. Customer represents and warrants to Provider that its provision of Customer Data to Provider and instructions for processing such Customer Data in connection with the Services shall comply with all applicable laws, including any privacy and data protection laws. Customer acknowledges that the Services will require Authorized Users to share with Provider certain information which may include Personal Information regarding the Authorized Users solely for the purposes of providing and improving the Services. Prior to authorizing an individual to become an Authorized User, Customer is fully responsible for obtaining the consent of that individual, in accordance with applicable law, to the use of his/her information by Provider in accordance with the <a target="_blank" href="https://www.ui.com/legal/privacypolicy/">Privacy Policy</a>. Customer represents and warrants that all such consents have been or will be obtained prior to authorizing any individual to become an Authorized User. Customer will be fully responsible for Authorized Users’ compliance with this Agreement and any breach of this Agreement by an Authorized User shall be deemed to be a breach by Customer. Provider’s relationship is with Customer and not Authorized Users or third parties using the Services through Customer, and Customer will address all claims raised by its Authorized Users, and third parties using the Services through Customer, directly with Provider. Customer must ensure that all third parties that utilize the Services through Customer agree (a) to use the Services in full compliance with this Agreement, and (b) to the extent permitted by applicable law, to waive any and all claims directly against Provider and its Affiliates related to the Services.
+
+          	</li>
             <li>
                 <span style="text-decoration: underline;">Privacy, EULA and Terms of Use</span>. Customer agrees that
                 Provider’s <a href="https://www.ui.com/legal/privacypolicy/" target="_blank">Privacy Policy</a>, 
               	<a href="https://www.ui.com/eula/" target="_blank">End User License Agreement</a> and
                 website
                 <a href="https://www.ui.com/legal/termsofservice/" target="_blank">Terms of Use</a>, which are listed on
-                Provider’s official website, are hereby
+                the official Ubiquiti website, are hereby
                 incorporated into this Agreement by reference. Customer agrees that the Service is provided from the
                 United States. Customer agrees that its continued use of the Services hereunder constitutes (a)
                 acceptance of the Privacy Policy, End User License Agreement and website Terms of Use, which include additional terms and conditions
@@ -1143,6 +1157,10 @@ table-layout: fixed;
                 Customer Data, including the uploading or other provision of Customer Data for Processing by the
                 Services.
             </li>
+          	<li>
+              	<span style="text-decoration: underline;">Third Party Integration.</span>. Customer may enable integrations between the Services and certain of third party services (each, an “<span class="textBold">Integration</span>”). By enabling an Integration between the Services and any third party services, Customer is expressly instructing Provider to share the Customer Data necessary to facilitate the Integration. Customer is responsible for providing any and all instructions to such third party service provider about the use and protection of Customer Data. Provider and such third party service providers are not sub-processors of each other.
+
+          	</li>
         </ul>
     </li>
     <li>
@@ -1166,7 +1184,8 @@ table-layout: fixed;
                 under this Agreement are exclusive of taxes and similar assessments. Customer is responsible for all
                 sales, use and excise taxes, and any other similar taxes, duties and charges of any kind imposed by any
                 federal, state or local governmental or regulatory authority on any amounts payable by Customer
-                hereunder, other than any taxes imposed on Provider's income.
+                hereunder, other than any taxes imposed on Provider's income. If Customer is required to withhold taxes imposed upon Provider for any payment under this Agreement by virtue of the statutes, laws, codes or governmental regulations of a country in which any Services are delivered or obtained, then such payments will be made by Customer on behalf of Provider by deducting them from the payment then due Provider and remitting such taxes to the proper authorities on a timely basis, and the payments provided for under this Agreement will be adjusted upwards appropriately so that Provider actually receives the full amount of the Fees. Customer will provide Provider with official documentation or tax receipts on such withholdings supporting such taxes and such payments as may be required by Provider for its tax records as soon as reasonably possible following payment to the applicable tax authority, and in any event no later than when required by applicable law.
+
             </li>
             <li>
                 <span style="text-decoration: underline;">Payment</span>. Customer shall pay all Fees on or prior to the
@@ -1209,7 +1228,7 @@ table-layout: fixed;
         <ul>
             <li>
                 <span style="text-decoration: underline;">Services and Provider Materials</span>. All right, title and
-                interest in and to the Services and Provider Materials, including all Intellectual Property Rights
+                interest in and to the Services and Provider Materials and all enhancements, improvements to, or derivative works of the foregoing, including all Intellectual Property Rights
                 therein, are and will remain with Provider, its Affiliates and the respective rights holders in the
                 Third Party Materials. Customer has no right, license or authorization with respect to any of the
                 Services or Provider Materials (including Third Party Materials) except as expressly set forth in
@@ -1344,7 +1363,7 @@ table-layout: fixed;
             <li>
                 <span style="text-decoration: underline;">Term</span>. The term of this Agreement commences as of the
                 Effective Date and, unless terminated earlier pursuant to any of the Agreement's express provisions,
-                will continue in effect until Customer no longer has any Covered Product registered for the Services
+                will continue in effect until Provider no longer provides any Service to Customer
                 (the “<span class="textBold">Term</span>”).
             </li>
             <li>
@@ -1352,7 +1371,7 @@ table-layout: fixed;
                 termination right set forth elsewhere in this Agreement:
                 <ul class="listAlpha">
                     <li>
-                        Provider may terminate this Agreement or the Services for any Covered Product, effective on
+                        Provider may terminate this Agreement or  the Coverage Period of any Services, effective on
                         written notice to Customer, if Customer: (i) fails to pay any amount when due hereunder, and
                         such failure continues more than thirty (30) days after Provider's delivery of written notice
                         thereof; or (ii) breaches any of its obligations under <span class="textBold">Section 3</span>
@@ -1360,13 +1379,13 @@ table-layout: fixed;
                         Restrictions) or <span class="textBold">Section 9</span> (Confidentiality).
                     </li>
                     <li>
-                        Provider may terminate this Agreement or the Services for any Covered Product, effective on
+                        Provider may terminate this Agreement or the Coverage Period of any Service, effective on
                         written notice to Customer, if Customer breaches this Agreement, and such breach: (i) is
                         incapable of cure; or (ii) being capable of cure, remains uncured thirty (30) days after
                         Provider provides the breaching party with written notice of such breach;
                     </li>
                     <li>
-                        Provider may terminate this Agreement or the Services for any Covered Product at any time and
+                        Provider may terminate this Agreement or the Coverage Period of any Service at any time and
                         for any reason by giving at least thirty (30) days’ written notice to Customer or immediately if
                         Provider ceases to provide the applicable Service; and
                     </li>
@@ -1385,8 +1404,8 @@ table-layout: fixed;
             </li>
             <li>
                 <span style="text-decoration: underline;">Effect of Expiration or Termination</span>. Upon any
-                expiration or termination of this Agreement or the Coverage Period for any Covered Product, except as
-                expressly otherwise provided in this Agreement, with respect to all affected Covered Products:
+                expiration or termination of this Agreement or the Coverage Period for any Service, except as
+                expressly otherwise provided in this Agreement, with respect to all affected Services:
                 <ul class="listAlpha">
                     <li>
                         all rights, licenses, consents and authorizations granted by Provider to Customer hereunder will
@@ -1479,7 +1498,7 @@ table-layout: fixed;
                 have the necessary rights and consents in and relating to the Customer Data so that, as received by
                 Provider and Processed in accordance with this Agreement, they do not and will not infringe,
                 misappropriate or otherwise violate any Intellectual Property Rights, or any privacy or other rights of
-                any third party or violate any applicable Law.
+                any third party or violate any applicable Law. Customer agrees that its use of the Services is neither contingent upon the delivery of any future functionality or features nor dependent upon any oral or written public comments made by Provider with respect to future functionality or features.
             </li>
             <li>
                 <span style="text-decoration: underline;">DISCLAIMER OF WARRANTIES</span>. TO THE MAXIMUM EXTENT
@@ -1577,6 +1596,9 @@ table-layout: fixed;
                 CONNECTION WITH THIS AGREEMENT OCCURS. THE FOREGOING LIMITATION APPLIES NOTWITHSTANDING THE FAILURE OF
                 ANY AGREED OR OTHER REMEDY OF ITS ESSENTIAL PURPOSE.
             </li>
+          	<li>
+               <span style="text-decoration: underline;">Exclusive Remedy</span>. If the Services fail to conform to the Service Descriptions and Customer provides written notice of the non-conformance to Provider, then, as Customer’s exclusive remedy and Provider’s sole obligation: Provider will either repair or, at its option, replace the non-conforming Service or, if Provider is unable to correct the non-conformance within (45) forty-five days of receipt of such written notice from Customer, Customer may terminate the applicable Services.
+          	</li>
         </ul>
     </li>
     <li>
@@ -1590,8 +1612,8 @@ table-layout: fixed;
                 Affiliates’ reasonable control (a “<span class="textBold">Force Majeure Event</span>”), including but
                 not limited to, acts of God,
                 flood, fire, earthquake or explosion, war, terrorism, invasion, riot or other civil unrest, embargoes or
-                blockades, interruptions or failures of telecommunication links due to hostile network attacks, denial
-                of service attacks, or other network congestion, national or regional emergency, strikes, labor
+                blockades, interruptions or failures of telecommunication links due to hostile network attacks, cyberattacks, malware attacks,  denial
+                of service attacks or other computer related attacks, or other network congestion, national or regional emergency, strikes, labor
                 stoppages or slowdowns or other industrial disturbances, passage of Law or any action taken by a
                 governmental or public authority, including imposing an embargo, export or import restriction, quota or
                 other restriction or prohibition or any complete or partial government shutdown, or national or regional
@@ -1603,7 +1625,7 @@ table-layout: fixed;
     </li>
     <li>
         <span style="text-decoration: underline;">Dispute Resolution</span>.
-        <h3 class="textBold">PLEASE READ THIS CAREFULLY. IT AFFECTS YOUR RIGHTS.</h3>
+        <h6 class="textBold">PLEASE READ THIS CAREFULLY. IT AFFECTS YOUR RIGHTS.</h6>
         <ul>
             <li>
                 <span style="text-decoration: underline;">Summary</span>. Most customer concerns can be resolved quickly
@@ -1656,7 +1678,7 @@ table-layout: fixed;
                         A party who intends to seek arbitration must first send to the other, by certified mail, a
                         written Notice of Dispute. The Notice of Dispute to Provider should be addressed to: Ubiquiti Inc., 
                       	Customer Arbitration Demand, 685 Third Ave, 27th Fl, New York, NY 10017 with a
-                        copy sent to legal@ui.com. The Notice of Dispute must (a) describe the nature and basis of the
+                        copy sent to <a href="mailto:legal@ui.com">legal@ui.com</a>. The Notice of Dispute must (a) describe the nature and basis of the
                         claim or dispute; and (b) set forth the specific relief sought ("<span
                         class="textBold">Demand</span>"). If Provider and
                         Customer do not reach an agreement to resolve the claim within 30 days after the Notice of
@@ -1844,6 +1866,10 @@ table-layout: fixed;
                 AGREEMENT, CUSTOMER MUST STOP ACCEPTING SERVICES FROM PROVIDER, AND PROVIDE WRITTEN NOTICE TO PROVIDER
                 IMMEDIATELY.
             </li>
+          	<li>
+              	<span style="text-decoration: underline;">Government End User</span>. If Customer is a U.S. government entity or if this Agreement otherwise becomes subject to the Federal Acquisition Regulations (FAR), Customer acknowledges that elements of the Services constitute software and documentation and are provided as “Commercial Items” as defined in 48 C.F.R. 2.101 and are being licensed to U.S. government Customers as commercial computer software subject to restricted rights described in 48 C.F.R. 2.101, 12.211 and 12.212. If acquired by or on behalf of any agency within the Department of Defense ("DOD"), the U.S. Government acquires this commercial computer software and/or commercial computer software documentation subject to the terms of the Agreement as specified in 48 C.F.R. 227.7202-3 of the DOD FAR Supplement ("DFARS") and its successors. This Section is in lieu of, and supersedes, any other FAR, DFARS, or other clause or provision that addresses government rights in computer software or technical data.
+
+            </li>
             <li>
                 <span style="text-decoration: underline;">Schedules</span>. Customer will comply with this Agreement and
                 the terms, conditions, policies and guidelines, rules and other information attached as schedules
@@ -1953,7 +1979,7 @@ table-layout: fixed;
 
 <div class="comNewsletterSignup">
     <form class="comNewsletterSignup__form js-form-newsletter-global" action="/newsletters/" >
-        <input type='hidden' name='csrfmiddlewaretoken' value='xcZ98vNvF2VqQByjaFXgdyUqqbGg9m48oEf1EPefDFSt66OEyc2rth4YXUixiu6G' />
+        <input type='hidden' name='csrfmiddlewaretoken' value='bXZwIAdyvA1kvO0UsFo9KOOzJzVVY3Ckn0hb3nPCnQU4XkDTnqKOxwj00Li8FgXO' />
         <h4 class="comGlobalFooter__title">Stay In Touch</h4>
       	<div class="comGlobalFooter__input">
         	<input type="email" placeholder="Email Address" required="required" name="email" class="comNewsletterSignup__input"/>

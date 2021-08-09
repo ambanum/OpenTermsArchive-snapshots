@@ -59,7 +59,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <img src="https://x.tagstat.com/im/icons/social/fb.png" alt="fb.png" />            </a>
                     </div>
         <div id="logo_container" class="nav pull-left pbl ptl">
-            <a href="http://www.tagged.com/home.html" id="tagged_logo" class="header_content">
+            <a href="https://secure.tagged.com/index.html" id="tagged_logo" class="header_content">
             <img class="png logo" src="https://x.tagstat.com/im/headers/refresh/tagged/tagged_logo.png" width="190" height="65" />
             </a>
         </div>
@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="fb-root"></div>
 <script>
   tagged.loadData(
-    {"fbSDKInitData":{"appId":"123049054388972","status":true,"cookie":true,"xfbml":true,"channelUrl":"http:\/\/www.tagged.com\/channel.html"},"fbSDKLocale":"en_US","fbScope":"email,user_location,user_birthday,user_photos,user_gender","isFacebookConnected":false,"googleApiScopes":["https:\/\/www.googleapis.com\/auth\/userinfo.profile","https:\/\/www.googleapis.com\/auth\/userinfo.email","https:\/\/www.googleapis.com\/auth\/contacts.readonly"],"googleApiClientID":"1034081759906-a3hhdigo2hcd3pfhqbemlch46biaiuso.apps.googleusercontent.com","googleApppackageName":"com.taggedapp","isGoogleConnected":false,"googleAuthUrl":"https:\/\/accounts.google.com\/o\/oauth2\/auth?response_type=code&access_type=online&client_id=1034081759906-a3hhdigo2hcd3pfhqbemlch46biaiuso.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fsecure.tagged.com%2Fpartners%2Fgplus_callback.html&state&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcontacts.readonly&approval_prompt=auto"}  );
+    {"fbSDKInitData":{"appId":"123049054388972","status":true,"cookie":true,"xfbml":true},"fbSDKLocale":"en_US","fbScope":"email,user_location,user_birthday,user_photos,user_gender","isFacebookConnected":false,"googleApiScopes":["https:\/\/www.googleapis.com\/auth\/userinfo.profile","https:\/\/www.googleapis.com\/auth\/userinfo.email","https:\/\/www.googleapis.com\/auth\/contacts.readonly"],"googleApiClientID":"1034081759906-a3hhdigo2hcd3pfhqbemlch46biaiuso.apps.googleusercontent.com","googleApppackageName":"com.taggedapp","isGoogleConnected":false,"googleAuthUrl":"https:\/\/accounts.google.com\/o\/oauth2\/auth?response_type=code&access_type=online&client_id=1034081759906-a3hhdigo2hcd3pfhqbemlch46biaiuso.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fsecure.tagged.com%2Fpartners%2Fgplus_callback.html&state&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcontacts.readonly&approval_prompt=auto"}  );
 </script>
 
 <div id="logged_out_banner_container">
@@ -969,10 +969,16 @@ zPlay</p>
 </div>
         </div> <!-- closing tag for #outer_container  -->
 
-<script type="text/javascript"  src="https://x.tagstat.com/dyn/js/p/d7Kx9qqRr_cl.js"></script>
+    <script type="text/javascript">
+    tagged.loadData({"hostname":"web009.tagged.com"});
+    window.setTimeout(function() {
+        tagged.web_timing.logTiming();
+    }, 2000);
+    </script>
+    <script type="text/javascript"  src="https://x.tagstat.com/dyn/js/p/d7Kx9qqRr_cl.js"></script>
 <!-- Begin google_connect -->
 <script type="text/javascript">
-  tagged.loadData({"useGoogleHybridLogin":true,"googleApiScopes":["https:\/\/www.googleapis.com\/auth\/userinfo.profile","https:\/\/www.googleapis.com\/auth\/userinfo.email","https:\/\/www.googleapis.com\/auth\/contacts.readonly"],"googleApiClientID":"1034081759906-a3hhdigo2hcd3pfhqbemlch46biaiuso.apps.googleusercontent.com","googleApppackageName":"com.taggedapp","csrftoken":"f6a36d130662334517e1608a80daa9ebbc5dd79403a10766a5f0594ec0c97f41dee6e08db688621ec822e49567071d8060cac74f9760f8d5bcac569cbe37b6e4","gplusContinueLoginUrl":"partners\/gplus_hybrid_callback.html"});
+  tagged.loadData({"useGoogleHybridLogin":true,"googleApiScopes":["https:\/\/www.googleapis.com\/auth\/userinfo.profile","https:\/\/www.googleapis.com\/auth\/userinfo.email","https:\/\/www.googleapis.com\/auth\/contacts.readonly"],"googleApiClientID":"1034081759906-a3hhdigo2hcd3pfhqbemlch46biaiuso.apps.googleusercontent.com","googleApppackageName":"com.taggedapp","csrftoken":"2744d8c0ca64ca5cce44c93ca4d8c133794cda10723a639b1bce156d74ec27deb042be87cee1bf997fd9286d3365e731a98b936406f3d9d0260574b164b20999","gplusContinueLoginUrl":"partners\/gplus_hybrid_callback.html"});
 </script>
 
 <!-- End google_connect -->
@@ -982,7 +988,7 @@ zPlay</p>
     tagged.video_url = "http://video.tagged.com";
     tagged.static_uri = "https://x.tagstat.com";
     tagged.profile_path = "/profile.html";
-    tagged.guid = "_ZzmiJNlND";
+    tagged.guid = "_4IiYBZ3CY";
     tagged.secure_url = "https://secure.tagged.com";
     tagged.reg_url = "https://secure.tagged.com/register.html";
 
@@ -990,9 +996,10 @@ zPlay</p>
     tagged.currentUserStatus = null;
 tagged.loadData({"brand":"Tagged","gold_balance":0,"page_id":"default","user_id":0,"needsValidation":false,"needsSafetyTips":false,"remove_gift_tags_winks":"0","nav":{"alertsPlaceholder":"You have no alerts"}});</script>
 
-<link rel="stylesheet" type="text/css"  href="https://x.tagstat.com/dyn/css/q/nh2XoZKkh.css"></link>
 <script type="text/javascript"  src="https://x.tagstat.com/dyn/js/M/Y9JsaMrX__cl.js"></script>
-<script type="text/javascript"  src="https://x.tagstat.com/dyn/js/L/IztQjdidJ_cl.js"></script>
+<script type="text/javascript"  src="https://x.tagstat.com/dyn/js/S/zD-0jG88z_cl.js"></script>
+<link rel="stylesheet" type="text/css"  href="https://x.tagstat.com/dyn/css/a/U1QRAnV1P.css"></link>
+<link rel="stylesheet" type="text/css"  href="https://x.tagstat.com/dyn/css/H/s-BYpKi-0.css"></link>
 <script type="text/javascript" >tagged.required('alert_lightbox','https://x.tagstat.com/dyn/js/U/EejNcIhos_cl.js')</script>
 <!-- Begin quantserve -->
 <script type="text/javascript" src="//edge.quantserve.com/quant.js"></script>

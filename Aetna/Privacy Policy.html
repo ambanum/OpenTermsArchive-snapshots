@@ -44,6 +44,16 @@
     
 
 
+    <link rel="preload" href="/content/dam/aetna/fonts/icons/regular/Icons.woff" as="font" crossorigin/>
+<link rel="preload" href="/content/dam/aetna/fonts/cvs-open-sans/bold/CVSHealthSans_W_Bd.woff" as="font" crossorigin/>
+<link rel="preload" href="/content/dam/aetna/fonts/cvs-open-sans/semibold/CVSHealthSans_W_Md.woff" as="font" crossorigin/>
+<link rel="preload" href="/content/dam/aetna/fonts/cvs-open-sans/regular/CVSHealthSans_W_Rg.woff" as="font" crossorigin/>
+<link rel="preload" href="/content/dam/aetna/fonts/cvs-open-sans/light/CVSHealthSans_W_Lt.woff" as="font" crossorigin/>
+<link rel="preload" href="/content/dam/aetna/fonts/domaine/bold/DomaineDisplayWeb-Bold.woff" as="font" crossorigin/>
+
+
+
+
     
 <script src="/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
 <script src="/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
@@ -62,7 +72,7 @@
 
 
     
-<link rel="stylesheet" href="/etc.clientlibs/aethfe/clientlibs/themes/dxp-mlp.min.ACSHASH0211d865008d7b11ce9af1253c118d4c.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/aethfe/clientlibs/themes/dxp-mlp.min.ACSHASH0a634d02c9900b271a70ed031b1b3661.css" type="text/css">
 
 
 
@@ -156,7 +166,7 @@
     <div class="megamenu__container container">
         <a class="megamenu__logo logo--default" href="/index.html" target="_self">
             
-    <img class="logo" src="/content/dam/aetna/images/logos/Aetna_Logo_ss_Violet_RGB_Coated.svg" alt="Aetna - Health Insurance Plans &amp; Dental Coverage"/>
+    <img class="logo lazyload" data-src="/content/dam/aetna/images/logos/Aetna_Logo_ss_Violet_RGB_Coated.svg" alt/>
 
             <span class="link__text--inline"></span>
         </a>
@@ -763,7 +773,7 @@
         <div class="megamenumobile__logo--wrapper">
             <a class="megamenumobile--logo" href="/index.html" target="_self">
                 
-    <img class="logo" src="/content/dam/aetna/images/logos/Aetna_Logo_ss_Violet_RGB_Coated.svg" alt="Aetna - Health Insurance Plans &amp; Dental Coverage"/>
+    <img class="logo lazyload" data-src="/content/dam/aetna/images/logos/Aetna_Logo_ss_Violet_RGB_Coated.svg" alt/>
 
                 
             </a>
@@ -1882,7 +1892,7 @@
             <div class="media__image ">
                 <div class="media__content" data-mediasrc="/content/dam/aetna/asset-libraries/photos/GettyImages-1209719323_1184x786.jpg">
                     
-    <img class="class" src="/content/dam/aetna/asset-libraries/photos/GettyImages-1209719323_1184x786.jpg" alt/>
+    <img class="class lazyload" data-src="/content/dam/aetna/asset-libraries/photos/GettyImages-1209719323_1184x786.jpg" alt width="1184" height="786"/>
 
                 </div>
               
@@ -1938,7 +1948,7 @@
         </div>
         <div class="content__section ">
             <section class="content tab__panel tab__panel--active">
-                <div class="title--secondary" role="heading" aria-level="3" aria-controls="content_section_responsivegrid_copy_responsivegrid_tabs_panel_1">
+                <div class="title--secondary tab__panel--mobile-btn" role="heading" aria-level="3" aria-controls="content_section_responsivegrid_copy_responsivegrid_tabs_panel_1">
                     <button type="button" aria-expanded="true">Web &amp; mobile privacy statement</button>
                 </div>
                 
@@ -2551,7 +2561,7 @@
             </section>
         
             <section class="content tab__panel ">
-                <div class="title--secondary" role="heading" aria-level="3" aria-controls="content_section_responsivegrid_copy_responsivegrid_tabs_panel_2">
+                <div class="title--secondary tab__panel--mobile-btn" role="heading" aria-level="3" aria-controls="content_section_responsivegrid_copy_responsivegrid_tabs_panel_2">
                     <button type="button" aria-expanded="false">Notice of privacy practices</button>
                 </div>
                 
@@ -5305,7 +5315,7 @@ Lexington, KY 40512-4079</p>
             </section>
         
             <section class="content tab__panel ">
-                <div class="title--secondary" role="heading" aria-level="3" aria-controls="content_section_responsivegrid_copy_responsivegrid_tabs_panel_3">
+                <div class="title--secondary tab__panel--mobile-btn" role="heading" aria-level="3" aria-controls="content_section_responsivegrid_copy_responsivegrid_tabs_panel_3">
                     <button type="button" aria-expanded="false">Security highlights</button>
                 </div>
                 
@@ -5595,7 +5605,7 @@ Lexington, KY 40512-4079</p>
             </section>
         
             <section class="content tab__panel ">
-                <div class="title--secondary" role="heading" aria-level="3" aria-controls="content_section_responsivegrid_copy_responsivegrid_tabs_panel_4">
+                <div class="title--secondary tab__panel--mobile-btn" role="heading" aria-level="3" aria-controls="content_section_responsivegrid_copy_responsivegrid_tabs_panel_4">
                     <button type="button" aria-expanded="false">Frequently asked questions</button>
                 </div>
                 
@@ -6145,7 +6155,7 @@ Lexington, KY 40512-4079<br />
                 <div class="footer__logo default">
                     <a class="logo__link" href="/index.html" target="_self">
                         <div class="logo__wrapper">
-    <img src="/content/dam/aetna/images/logos/Aetna_Logo_ss_Violet_RGB_Coated.svg" alt="Aetna logo"/>
+    <img class=" lazyload" data-src="/content/dam/aetna/images/logos/Aetna_Logo_ss_Violet_RGB_Coated.svg" alt/>
 </div>
                         
                     </a>
@@ -7683,12 +7693,13 @@ Links to various non-Aetna sites are provided for your convenience only. Aetna I
 
       // Check if I can initialize it in every loop or if i need an addtional list.
       var gvphonebycookie = document.getElementsByClassName('gvphonebycookie');
-      for (let i = 0; i < gvphonebycookie.length; i++) {
+      for (var i = 0; i < gvphonebycookie.length; i++) {
         window.AETH.Global.loadModuleManually('gvphonebycookie', gvphonebycookie[i]);
       }
     }
 
 </script>
+
 
 <div  data-aeth-script="delayaction"
   data-delay="5"
@@ -7742,6 +7753,8 @@ Links to various non-Aetna sites are provided for your convenience only. Aetna I
 
     
 
+    
+    
     
 
             

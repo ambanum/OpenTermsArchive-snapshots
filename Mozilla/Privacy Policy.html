@@ -6,9 +6,9 @@
   <head>
     <meta charset="utf-8">
 
-    <script type="text/javascript" src="https://www.mozilla.org/media/js/BUNDLES/site.4c944a07e872.js" charset="utf-8"></script>
-
     <!--[if !IE]><!-->
+    <script type="text/javascript" src="https://www.mozilla.org/media/js/BUNDLES/site.301fc9465511.js" charset="utf-8"></script>
+
     
     <!--<![endif]-->
 
@@ -110,13 +110,13 @@ help support Mozilla.
 
     <!--[if lt IE 9]>
       
-      <script src="https://www.mozilla.org/media/js/libs/html5shiv.98460818858d.js"></script>
+      <script type="text/javascript" src="https://www.mozilla.org/media/js/ie/libs/html5shiv.98460818858d.js"></script>
     <![endif]-->
 
     <!--[if IE]>
       
       
-      <link href="https://www.mozilla.org/media/css/BUNDLES/common-old-ie.44bf6e30ca2d.css" rel="stylesheet" type="text/css" />
+        <link href="https://www.mozilla.org/media/css/BUNDLES/common-old-ie.9b7b8737bf1d.css" rel="stylesheet" type="text/css" />
       
     <![endif]-->
 
@@ -172,6 +172,7 @@ help support Mozilla.
     
       
         <div id="protocol-nav-download-firefox" class="mzp-c-button-download-container c-button-download-thanks">
+  <!--[if !IE]><!-->
   <a href="/firefox/download/thanks/"
      class="download-link mzp-c-button mzp-t-product mzp-t-secondary mzp-t-md"
      data-direct-link="https://download.mozilla.org/?product=firefox-stub&amp;os=win&amp;lang=en-US"
@@ -181,6 +182,20 @@ help support Mozilla.
       Download Firefox
     
   </a>
+  <!--<![endif]-->
+
+  
+  <!--[if IE]>
+    <a href="https://download.mozilla.org/?product=firefox-stub&amp;os=win&amp;lang=en-US"
+      class="download-link mzp-c-button mzp-t-product mzp-t-secondary mzp-t-md"
+      data-link-type="download" data-download-os="Desktop" data-display-name="Windows 32-bit" data-download-version="win"
+      data-download-location="nav">
+      
+        Download Firefox
+      
+    </a>
+  <![endif]-->
+
   <small class="mzp-c-button-download-privacy-link">
     <a href="/en-US/privacy/firefox/">
       Firefox Privacy Notice
@@ -960,20 +975,20 @@ help support Mozilla.
         <script type="text/javascript" src="https://www.mozilla.org/media/js/BUNDLES/ui.2d688abe648b.js" charset="utf-8"></script>
         <script type="text/javascript" src="https://www.mozilla.org/media/js/BUNDLES/data.a862c84fd719.js" charset="utf-8"></script>
       <!--<![endif]-->
-
-      <!--[if IE]>
-        <script type="text/javascript" src="https://www.mozilla.org/media/js/BUNDLES/common-ie.e4e4d0e6d39f.js" charset="utf-8"></script>
-      <![endif]-->
     
 
-    <!--[if !lte IE 7]><!-->
     
     
       
-        <script type="text/javascript" src="https://www.mozilla.org/media/js/BUNDLES/stub-attribution.9646f9ff49f6.js" charset="utf-8"></script>
+        <!--[if !IE]><!-->
+          <script type="text/javascript" src="https://www.mozilla.org/media/js/BUNDLES/stub-attribution.9646f9ff49f6.js" charset="utf-8"></script>
+        <!--<![endif]-->
+
+        <!--[if gte IE 8]>
+          <script type="text/javascript" src="https://www.mozilla.org/media/js/BUNDLES/stub-attribution-ie.d681273bd562.js" charset="utf-8"></script>
+        <![endif]-->
       
     
-    <!--<![endif]-->
 
     <!--[if !IE]><!-->
     

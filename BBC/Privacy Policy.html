@@ -140,7 +140,7 @@
     <!-- navid Web Module: 0.2.0-75.850ba2e -->
     
     
-    <!-- searchbox Web Module: 3.0.0-317.07c081d -->
+    <!-- searchbox Web Module: 3.0.0-322.3c689ea -->
     
     
     <!-- navpromo Web Module: 3.0.0-255.aa77cce -->
@@ -160,7 +160,7 @@
 
     
     
-<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/25ecdffd2e7f68fe845ce2368dd8ebca/css/box.css">
+<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/ef054f5549cdb02f4468fd830264e4c7/css/box.css">
 
     
     
@@ -853,18 +853,28 @@
             window.bbcuser.isUKCombined().then(function(isUK) {
                 loadNotifications(isUK);
             });
-        });</script>     <script type="module">if (bbcuser && bbcuser.isUKCombined) {
-    bbcuser.isUKCombined().then(function (isUK) {
-        if (isUK) {
-            const script = document.createElement('script');
-            script.src = 'https://nav.files.bbci.co.uk/searchbox/25ecdffd2e7f68fe845ce2368dd8ebca//js/search-suggest.js';
-            script.async = true;
-            script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/25ecdffd2e7f68fe845ce2368dd8ebca/');
-            script.setAttribute('data-variant', 'default');
-            document.head.appendChild(script);
-        }
-    });
-}</script>     <script type="text/javascript" src="https://nav.files.bbci.co.uk/navpromo/3c09a7995f4fbdcbb6ae65394d122b0c/js/footerpromo.js" data-base="https://navpromo.api.bbci.co.uk" data-variant="" async=""></script>    <script type="text/javascript">window.COOKIES_STATIC_HOST="https://static.files.bbci.co.uk/cookies/5fd5880410e68d69e119dc73567d206e/cookie-banner/cookie-prompt/"</script><script src="https://static.files.bbci.co.uk/cookies/5fd5880410e68d69e119dc73567d206e/cookie-banner/cookie-banners.bundle.js" async=""></script>  <script src="https://nav.files.bbci.co.uk//user-activity-helper/7f7e3cfe8ed2cbcec7e57473d0ed5809/js/detectview.bundle.js" async=""></script><script type="text/javascript">"use strict";window.__reverb.__reverbLoadedPromise.then(function(e){return e.initialise().then(function(){return e.viewEvent()})},function(){console.log("Failed to load reverb. No event sent")});</script><script type="text/javascript" src="https://static.files.bbci.co.uk/orbit/ebd948b6090504d3f9a74b26eaba3e9e//js/performance.bundle.js" data-release="3.0.0-1558.040334e8" async=""></script>
+        });</script>     <script type="module">if (window.bbcuser && window.bbcuser.isUKCombined) {
+        bbcuser.isUKCombined().then(function (isUK) {
+            if (isUK) {
+                const isOrbUx = !!document.querySelector('.orb-nav-pri-container');
+                if (isOrbUx) {
+                    const script = document.createElement('script');
+                    script.src = 'https://nav.files.bbci.co.uk/searchbox/ef054f5549cdb02f4468fd830264e4c7//js/old-search-suggest.js';
+                    script.async = true;
+                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/ef054f5549cdb02f4468fd830264e4c7/');
+                    script.setAttribute('data-variant', 'default');
+                    document.head.appendChild(script);
+                } else {
+                    import('https://nav.files.bbci.co.uk/searchbox/ef054f5549cdb02f4468fd830264e4c7//js/search-suggest.js').then(drawer => {
+                        drawer.default().run({
+                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/ef054f5549cdb02f4468fd830264e4c7/',
+                            variant: 'default',
+                        });
+                    });
+                }
+            }
+        });
+    }</script>     <script type="text/javascript" src="https://nav.files.bbci.co.uk/navpromo/3c09a7995f4fbdcbb6ae65394d122b0c/js/footerpromo.js" data-base="https://navpromo.api.bbci.co.uk" data-variant="" async=""></script>    <script type="text/javascript">window.COOKIES_STATIC_HOST="https://static.files.bbci.co.uk/cookies/5fd5880410e68d69e119dc73567d206e/cookie-banner/cookie-prompt/"</script><script src="https://static.files.bbci.co.uk/cookies/5fd5880410e68d69e119dc73567d206e/cookie-banner/cookie-banners.bundle.js" async=""></script>  <script src="https://nav.files.bbci.co.uk//user-activity-helper/7f7e3cfe8ed2cbcec7e57473d0ed5809/js/detectview.bundle.js" async=""></script><script type="text/javascript">"use strict";window.__reverb.__reverbLoadedPromise.then(function(e){return e.initialise().then(function(){return e.viewEvent()})},function(){console.log("Failed to load reverb. No event sent")});</script><script type="text/javascript" src="https://static.files.bbci.co.uk/orbit/ebd948b6090504d3f9a74b26eaba3e9e//js/performance.bundle.js" data-release="3.0.0-1558.040334e8" async=""></script>
 
 
 </body>

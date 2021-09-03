@@ -35,29 +35,41 @@
 <link rel='dns-prefetch' href='//i1.wp.com' />
 <link rel='dns-prefetch' href='//i2.wp.com' />
 <link rel="alternate" type="application/rss+xml" title="WebProNews &raquo; Feed" href="https://www.webpronews.com/feed/" />
-<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>		<!-- This site uses the Google Analytics by ExactMetrics plugin v6.8.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>		<!-- This site uses the Google Analytics by ExactMetrics plugin v7.0.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
 							<script src="//www.googletagmanager.com/gtag/js?id=UA-10133450-43"  type="text/javascript" data-cfasync="false" async></script>
 			<script type="text/javascript" data-cfasync="false">
-				var em_version = '6.8.0';
+				var em_version = '7.0.0';
 				var em_track_user = true;
 				var em_no_track_reason = '';
 				
-								var disableStr = 'ga-disable-UA-10133450-43';
+								var disableStrs = [
+															'ga-disable-UA-10133450-43',
+									];
 
 				/* Function to detect opted out users */
 				function __gtagTrackerIsOptedOut() {
-					return document.cookie.indexOf( disableStr + '=true' ) > - 1;
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						if ( document.cookie.indexOf( disableStrs[ index ] + '=true' ) > -1 ) {
+							return true;
+						}
+					}
+
+					return false;
 				}
 
 				/* Disable tracking if the opt-out cookie exists. */
 				if ( __gtagTrackerIsOptedOut() ) {
-					window[disableStr] = true;
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						window[ disableStrs[ index ] ] = true;
+					}
 				}
 
 				/* Opt-out function */
 				function __gtagTrackerOptout() {
-					document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-					window[disableStr] = true;
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						document.cookie = disableStrs[ index ] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[ disableStrs[ index ] ] = true;
+					}
 				}
 
 				if ( 'undefined' === typeof gaOptout ) {
@@ -66,14 +78,30 @@
 					}
 				}
 								window.dataLayer = window.dataLayer || [];
+
+				window.ExactMetricsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
 				if ( em_track_user ) {
-					function __gtagTracker() {dataLayer.push( arguments );}
+					function __gtagDataLayer() {
+						dataLayer.push( arguments );
+					}
+
+					function __gtagTracker( type, name, parameters ) {
+						if ( type === 'event' ) {
+							
+															parameters.send_to = exactmetrics_frontend.ua;
+								__gtagDataLayer.apply( null, arguments );
+													} else {
+							__gtagDataLayer.apply( null, arguments );
+						}
+					}
 					__gtagTracker( 'js', new Date() );
 					__gtagTracker( 'set', {
 						'developer_id.dNDMyYj' : true,
-						                    });
-					__gtagTracker( 'config', 'UA-10133450-43', {
-						forceSSL:true,page_path:location.pathname + location.search + location.hash,					} );
+											} );
+															__gtagTracker( 'config', 'UA-10133450-43', {"forceSSL":"true","page_path":"location.pathname + location.search + location.hash"} );
 										window.gtag = __gtagTracker;										(
 						function () {
 							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
@@ -160,7 +188,7 @@
 										'title' : 'page_title',
 									};
 									for ( arg in args ) {
-										if ( args.hasOwnProperty(arg) && gaMap.hasOwnProperty(arg) ) {
+																				if ( ! ( ! args.hasOwnProperty(arg) || ! gaMap.hasOwnProperty(arg) ) ) {
 											hit[gaMap[arg]] = args[arg];
 										} else {
 											hit[arg] = args[arg];
@@ -238,10 +266,10 @@ body {font-family:PT Sans, 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucid
 <script src='https://c0.wp.com/c/5.8/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
 <script type='text/javascript' id='exactmetrics-frontend-script-js-extra'>
 /* <![CDATA[ */
-var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,mp3,mpeg,pdf,docx,pptx,xlsx,rar","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/out\\\/\",\"label\":\"Affiliate\"}]","home_url":"https:\/\/www.webpronews.com","hash_tracking":"true","ua":"UA-10133450-43"};
+var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,mp3,mpeg,pdf,docx,pptx,xlsx,rar","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/out\\\/\",\"label\":\"Affiliate\"}]","home_url":"https:\/\/www.webpronews.com","hash_tracking":"true","ua":"UA-10133450-43","v4_id":""};
 /* ]]> */
 </script>
-<script src='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=6.8.0' id='exactmetrics-frontend-script-js'></script>
+<script src='https://www.webpronews.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=7.0.0' id='exactmetrics-frontend-script-js'></script>
 <link rel="https://api.w.org/" href="https://www.webpronews.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.webpronews.com/wp-json/wp/v2/pages/480559" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.webpronews.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.webpronews.com/wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 5.8" />
@@ -1139,7 +1167,7 @@ var wpcf7_recaptcha = {"sitekey":"6LcYaacUAAAAAGyRFQ7eLu2yaHfIHS_bhcmFTA-o","act
 						<input type="hidden" name="action" value="thb_reset_password"/>
 						<button class="btn " type="submit">Get new password</button>
 					</div>
-					<input type="hidden" id="password-security" name="password-security" value="66464596ae" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" />				</form>
+					<input type="hidden" id="password-security" name="password-security" value="06867df797" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" />				</form>
 			</div>
 			<div class="thb-login">
 				<form id="thb_login_form" action="https://www.webpronews.com/" method="post">
@@ -1157,7 +1185,7 @@ var wpcf7_recaptcha = {"sitekey":"6LcYaacUAAAAAGyRFQ7eLu2yaHfIHS_bhcmFTA-o","act
 						<input type="hidden" name="action" value="thb_login_member"/>
 						<button class="btn " type="submit">Login</button>
 					</div>
-					<input type="hidden" id="login-security" name="login-security" value="66464596ae" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" />				</form>
+					<input type="hidden" id="login-security" name="login-security" value="06867df797" /><input type="hidden" name="_wp_http_referer" value="/privacy-policy/" />				</form>
 
 			</div>
 			<div class="thb-register">
@@ -1185,8 +1213,8 @@ var wpcf7_recaptcha = {"sitekey":"6LcYaacUAAAAAGyRFQ7eLu2yaHfIHS_bhcmFTA-o","act
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 1793/1926 objects using disk
+Object Caching 1818/1945 objects using disk
 Page Caching using disk: enhanced 
 
-Served from: www.webpronews.com @ 2021-09-03 02:31:03 by W3 Total Cache
+Served from: www.webpronews.com @ 2021-09-03 08:06:45 by W3 Total Cache
 -->

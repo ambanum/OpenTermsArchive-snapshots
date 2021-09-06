@@ -107,7 +107,7 @@
 window.ue_ihb = (window.ue_ihb || window.ueinit || 0) + 1;
 if (window.ue_ihb === 1) {
 var ue_hob=+new Date();
-var ue_id='F3J34WF249RTDYHHP7PZ',
+var ue_id='MMMW4DME1CTK1C3B9VB1',
 ue_csm = window,
 ue_err_chan = 'jserr-rw',
 ue = {};
@@ -121,14 +121,14 @@ pec:0,ts:0,erl:[],ter:[],mxe:50,startTimer:function(){a.ts++;setInterval(functio
 ue.stub(ue,"event");ue.stub(ue,"onSushiUnload");ue.stub(ue,"onSushiFlush");
 
 var ue_url='/rd/uedata',
-ue_sid='145-1915924-7032238',
+ue_sid='135-7068071-1689528',
 ue_mid='ATVPDKIKX0DER',
 ue_sn='www.amazon.com',
 ue_furl='fls-na.amazon.com',
 ue_surl='https://unagi-na.amazon.com/1/events/com.amazon.csm.nexusclient.prod',
 ue_navtiming=1,
 ue_fcsn=1,
-ue_fpf='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:145-1915924-7032238:F3J34WF249RTDYHHP7PZ$uedata=s:',
+ue_fpf='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:135-7068071-1689528:MMMW4DME1CTK1C3B9VB1$uedata=s:',
 ue_qsl=2000,
 ue_rpl_ns=0,
 ue_orct=1,
@@ -148,19 +148,18 @@ if (!window.ue_csm) {var ue_csm = window;}
 var ue_viz=function(){(function(b,e,a){function k(c){if(b.ue.viz.length<p&&!l){var a=c.type;c=c.originalEvent;/^focus./.test(a)&&c&&(c.toElement||c.fromElement||c.relatedTarget)||(a=e[m]||("blur"==a||"focusout"==a?"hidden":"visible"),b.ue.viz.push(a+":"+(+new Date-b.ue.t0)),"visible"==a&&(b.ue.isl&&q("at"),l=1))}}for(var l=0,q=b.uex,f,g,m,n=["","webkit","o","ms","moz"],d=0,p=20,h=0;h<n.length&&!d;h++)if(a=n[h],f=(a?a+"H":"h")+"idden",d="boolean"==typeof e[f])g=a+"visibilitychange",m=(a?a+"V":"v")+
 "isibilityState";k({});d&&e.addEventListener(g,k,0);b.ue&&d&&(b.ue.pageViz={event:g,propHid:f})})(ue_csm,ue_csm.document,ue_csm.window)};
 
-(function(d,k,K){function G(a){return a&&a.replace&&a.replace(/^\s+|\s+$/g,"")}function q(a){return"undefined"===typeof a}function C(a,b){for(var c in b)b[t](c)&&(a[c]=b[c])}function L(a){try{var b=K.cookie.match(RegExp("(^| )"+a+"=([^;]+)"));if(b)return b[2].trim()}catch(c){}}function M(n,b,c){var e=(x||{}).type;if("device"!==c||2!==e&&1!==e)n&&(d.ue_id=a.id=a.rid=n,y=y.replace(/((.*?:){2})(\w+)/,function(a,b){return b+n})),b&&(y=y.replace(/(.*?:)(\w|-)+/,function(a,c){return c+b}),d.ue_sid=b),c&&
-a.tag("page-source:"+c),d.ue_fpf=y}function O(){var a={};return function(b){b&&(a[b]=1);b=[];for(var c in a)a[t](c)&&b.push(c);return b}}function u(d,b,c,e){if(0<v&&0<=(aa||[]).indexOf(d)&&!b){for(var g=z.now(),k=0;z.now()-g<v;)k++;a.tag("marker-delayed:"+d)}e=e||+new z;var w;if(b||q(c)){if(d)for(w in g=b?h("t",b)||h("t",b,{}):a.t,g[d]=e,c)c[t](w)&&h(w,b,c[w]);return e}}function h(d,b,c){var e=b&&b!=a.id?a.sc[b]:a;e||(e=a.sc[b]={});"id"===d&&c&&(P=1);return e[d]=c||e[d]}function Q(d,b,c,e,g){c="on"+
-c;var h=b[c];"function"===typeof h?d&&(a.h[d]=h):h=function(){};b[c]=function(a){g?(e(a),h(a)):(h(a),e(a))};b[c]&&(b[c].isUeh=1)}function R(n,b,c,e){function r(b,c){var d=[b],e=0,f={},g,k;c?(d.push("m=1"),f[c]=1):f=a.sc;for(k in f)if(f[t](k)){var r=h("wb",k),l=h("t",k)||{},p=h("t0",k)||a.t0,m;if(c||2==r){r=r?e++:"";d.push("sc"+r+"="+k);for(m in l)q(l[m])||null===l[m]||d.push(m+r+"="+(l[m]-p));d.push("t"+r+"="+l[n]);if(h("ctb",k)||h("wb",k))g=1}}!v&&g&&d.push("ctb=1");return d.join("&")}function N(b,
-c,f,e){if(b){var g=d.ue_err;d.ue_url&&!e&&b&&0<b.length&&(e=new Image,a.iel.push(e),e.src=b,a.count&&a.count("postbackImageSize",b.length));if(y){var h=k.encodeURIComponent;h&&b&&(e=new Image,b=""+d.ue_fpf+h(b)+":"+(+new z-d.ue_t0),a.iel.push(e),e.src=b)}else a.log&&(a.log(b,"uedata",{n:1}),a.ielf.push(b));g&&!g.ts&&g.startTimer();a.b&&(g=a.b,a.b="",N(g,c,f,1))}}function w(b){var c=x?x.type:D,d=2==c||a.isBFonMshop,c=c&&!d,e=a.bfini;P||(e&&1<e&&(b+="&bfform=1",c||(a.isBFT=e-1)),d&&(b+="&bfnt=1",a.isBFT=
-a.isBFT||1),a.ssw&&a.isBFT&&(a.isBFonMshop&&(a.isNRBF=0),q(a.isNRBF)&&(d=a.ssw(a.oid),d.e||q(d.val)||(a.isNRBF=1<d.val?0:1)),q(a.isNRBF)||(b+="&nrbf="+a.isNRBF)),a.isBFT&&!a.isNRBF&&(b+="&bft="+a.isBFT));return b}if(!a.paused&&(b||q(c))){for(var p in c)c[t](p)&&h(p,b,c[p]);a.isBFonMshop||u("pc",b,c);p=h("id",b)||a.id;var s=h("id2",b),f=a.url+"?"+n+"&v="+a.v+"&id="+p,v=h("ctb",b)||h("wb",b),A;v&&(f+="&ctb="+v);s&&(f+="&id2="+s);1<d.ueinit&&(f+="&ic="+d.ueinit);if(!("ld"!=n&&"ul"!=n||b&&b!=p)){if("ld"==
-n){try{k[H]&&k[H].isUeh&&(k[H]=null)}catch(F){}if(k.chrome)for(s=0;s<I.length;s++)S(E,I[s]);(s=K.ue_backdetect)&&s.ue_back&&s.ue_back.value++;d._uess&&(A=d._uess());a.isl=1}a._bf&&(f+="&bf="+a._bf());d.ue_navtiming&&g&&(h("ctb",p,"1"),a.isBFonMshop||u("tc",D,D,J));!B||a.isBFonMshop||T||(g&&C(a.t,{na_:g.navigationStart,ul_:g.unloadEventStart,_ul:g.unloadEventEnd,rd_:g.redirectStart,_rd:g.redirectEnd,fe_:g.fetchStart,lk_:g.domainLookupStart,_lk:g.domainLookupEnd,co_:g.connectStart,_co:g.connectEnd,
-sc_:g.secureConnectionStart,rq_:g.requestStart,rs_:g.responseStart,_rs:g.responseEnd,dl_:g.domLoading,di_:g.domInteractive,de_:g.domContentLoadedEventStart,_de:g.domContentLoadedEventEnd,_dc:g.domComplete,ld_:g.loadEventStart,_ld:g.loadEventEnd,ntd:("function"!==typeof B.now||q(J)?0:new z(J+B.now())-new z)+a.t0}),x&&C(a.t,{ty:x.type+a.t0,rc:x.redirectCount+a.t0}),T=1);a.isBFonMshop||C(a.t,{hob:d.ue_hob,hoe:d.ue_hoe});a.ifr&&(f+="&ifr=1")}u(n,b,c,e);c="ld"==n&&b&&h("wb",b);var m,l;c||b&&b!==p||ba(b);
-c||p==a.oid||ca(p,(h("t",b)||{}).tc||+h("t0",b),+h("t0",b));(e=d.ue_mbl)&&e.cnt&&!c&&(f+=e.cnt());c?h("wb",b,2):"ld"==n&&(a.lid=G(p));for(m in a.sc)if(1==h("wb",m))break;if(c){if(a.s)return;f=r(f,null)}else e=r(f,null),e!=f&&(e=w(e),a.b=e),A&&(f+=A),f=r(f,b||a.id);f=w(f);if(a.b||c)for(m in a.sc)2==h("wb",m)&&delete a.sc[m];A=0;a._rt&&(f+="&rt="+a._rt());e=k.csa;if(!c&&e)for(l in m=h("t",b)||{},e=e("PageTiming"),m)m[t](l)&&e("mark",da[l]||l,m[l]);c||(a.s=0,(l=d.ue_err)&&0<l.ec&&l.pec<l.ec&&(l.pec=
-l.ec,f+="&ec="+l.ec+"&ecf="+l.ecf),A=h("ctb",b),"ld"!==n||b||a.markers||(a.markers={},C(a.markers,h("t",b))),h("t",b,{}));a.tag&&a.tag().length&&(f+="&csmtags="+a.tag().join("|"),a.tag=O());l=a.viz||[];(m=l.length)&&(f+="&viz="+l.splice(0,m).join("|"));q(d.ue_pty)||(f+="&pty="+d.ue_pty+"&spty="+d.ue_spty+"&pti="+d.ue_pti);a.tabid&&(f+="&tid="+a.tabid);a.aftb&&(f+="&aftb=1");!a._ui||b&&b!=p||(f+=a._ui());a.a=f;N(f,n,A,c)}}function ba(a){var b=k.ue_csm_markers||{},c;for(c in b)b[t](c)&&u(c,a,D,b[c])}
-function F(a,b,c){c=c||k;if(c[U])c[U](a,b,!1);else if(c[V])c[V]("on"+a,b)}function S(a,b,c){c=c||k;if(c[W])c[W](a,b,!1);else if(c[X])c[X]("on"+a,b)}function Y(){function a(){d.onUl()}function b(a){return function(){c[a]||(c[a]=1,R(a))}}var c={},e,g;d.onLd=b("ld");d.onLdEnd=b("ld");d.onUl=b("ul");e={stop:b("os")};k.chrome?(F(E,a),I.push(a)):e[E]=d.onUl;for(g in e)e[t](g)&&Q(0,k,g,e[g]);d.ue_viz&&ue_viz();F("load",d.onLd);u("ue")}function ca(g,b,c){var e=d.ue_mbl,h=k.csa,q=h&&h("SPA"),h=h&&h("PageTiming");
-e&&e.ajax&&e.ajax(b,c);q&&h&&(q("newPage",{requestId:g,transitionType:"soft"}),h("mark","transitionStart",b));a.tag("ajax-transition")}d.ueinit=(d.ueinit||0)+1;var a=d.ue=d.ue||{};a.t0=k.aPageStart||d.ue_t0;a.id=d.ue_id;a.url=d.ue_url;a.rid=d.ue_id;a.a="";a.b="";a.h={};a.s=1;a.t={};a.sc={};a.iel=[];a.ielf=[];a.viz=[];a.v="0.217749.0";a.paused=!1;var t="hasOwnProperty",E="beforeunload",H="on"+E,U="addEventListener",W="removeEventListener",V="attachEvent",X="detachEvent",da={cf:"criticalFeature",af:"aboveTheFold",
-fn:"functional",fp:"firstPaint",fcp:"firstContentfulPaint",bb:"bodyBegin",be:"bodyEnd",ld:"loaded"},z=k.Date,B=k.performance||k.webkitPerformance,g=(B||{}).timing,x=(B||{}).navigation,J=(g||{}).navigationStart,y=d.ue_fpf,aa=d.ue_tx_md,v=d.ue_tx_ad,P=0,T=0,I=[],D;a.oid=G(a.id);a.lid=G(a.id);a._t0=a.t0;a.tag=O();a.ifr=k.top!==k.self||k.frameElement?1:0;a.markers=null;a.attach=F;a.detach=S;if("000-0000000-8675309"===d.ue_sid){var Z=L("cdn-rid"),$=L("session-id");Z&&$&&M(Z,$,"cdn")}d.uei=Y;d.ueh=Q;d.ues=
-h;d.uet=u;d.uex=R;a.reset=M;a.pause=function(d){a.paused=d};Y();0<v&&u("ho")})(ue_csm,ue_csm.window,ue_csm.document);
+(function(d,k,L){function F(a){return a&&a.replace&&a.replace(/^\s+|\s+$/g,"")}function t(a){return"undefined"===typeof a}function B(a,b){for(var c in b)b[u](c)&&(a[c]=b[c])}function G(a){try{var b=L.cookie.match(RegExp("(^| )"+a+"=([^;]+)"));if(b)return b[2].trim()}catch(c){}}function M(n,b,c){var e=(v||{}).type;if("device"!==c||2!==e&&1!==e)n&&(d.ue_id=a.id=a.rid=n,w=w.replace(/((.*?:){2})(\w+)/,function(a,b){return b+n})),b&&(w=w.replace(/(.*?:)(\w|-)+/,function(a,c){return c+b}),d.ue_sid=b),c&&
+a.tag("page-source:"+c),d.ue_fpf=w}function N(){var a={};return function(b){b&&(a[b]=1);b=[];for(var c in a)a[u](c)&&b.push(c);return b}}function x(d,b,c,e){e=e||+new C;var h,p;if(b||t(c)){if(d)for(p in h=b?g("t",b)||g("t",b,{}):a.t,h[d]=e,c)c[u](p)&&g(p,b,c[p]);return e}}function g(d,b,c){var e=b&&b!=a.id?a.sc[b]:a;e||(e=a.sc[b]={});"id"===d&&c&&(O=1);return e[d]=c||e[d]}function P(d,b,c,e,h){c="on"+c;var g=b[c];"function"===typeof g?d&&(a.h[d]=g):g=function(){};b[c]=function(a){h?(e(a),g(a)):(g(a),
+e(a))};b[c]&&(b[c].isUeh=1)}function Q(n,b,c,e){function r(b,c){var d=[b],e=0,f={},h,k;c?(d.push("m=1"),f[c]=1):f=a.sc;for(k in f)if(f[u](k)){var r=g("wb",k),l=g("t",k)||{},p=g("t0",k)||a.t0,m;if(c||2==r){r=r?e++:"";d.push("sc"+r+"="+k);for(m in l)t(l[m])||null===l[m]||d.push(m+r+"="+(l[m]-p));d.push("t"+r+"="+l[n]);if(g("ctb",k)||g("wb",k))h=1}}!H&&h&&d.push("ctb=1");return d.join("&")}function p(b,c,f,e){if(b){var g=d.ue_err;d.ue_url&&!e&&b&&0<b.length&&(e=new Image,a.iel.push(e),e.src=b,a.count&&
+a.count("postbackImageSize",b.length));if(w){var h=k.encodeURIComponent;h&&b&&(e=new Image,b=""+d.ue_fpf+h(b)+":"+(+new C-d.ue_t0),a.iel.push(e),e.src=b)}else a.log&&(a.log(b,"uedata",{n:1}),a.ielf.push(b));g&&!g.ts&&g.startTimer();a.b&&(g=a.b,a.b="",p(g,c,f,1))}}function z(b){var c=v?v.type:D,d=2==c||a.isBFonMshop,c=c&&!d,e=a.bfini;O||(e&&1<e&&(b+="&bfform=1",c||(a.isBFT=e-1)),d&&(b+="&bfnt=1",a.isBFT=a.isBFT||1),a.ssw&&a.isBFT&&(a.isBFonMshop&&(a.isNRBF=0),t(a.isNRBF)&&(d=a.ssw(a.oid),d.e||t(d.val)||
+(a.isNRBF=1<d.val?0:1)),t(a.isNRBF)||(b+="&nrbf="+a.isNRBF)),a.isBFT&&!a.isNRBF&&(b+="&bft="+a.isBFT));return b}if(!a.paused&&(b||t(c))){for(var m in c)c[u](m)&&g(m,b,c[m]);a.isBFonMshop||x("pc",b,c);m=g("id",b)||a.id;var s=g("id2",b),f=a.url+"?"+n+"&v="+a.v+"&id="+m,H=g("ctb",b)||g("wb",b),y;H&&(f+="&ctb="+H);s&&(f+="&id2="+s);1<d.ueinit&&(f+="&ic="+d.ueinit);if(!("ld"!=n&&"ul"!=n||b&&b!=m)){if("ld"==n){try{k[I]&&k[I].isUeh&&(k[I]=null)}catch(G){}if(k.chrome)for(s=0;s<J.length;s++)R(E,J[s]);(s=L.ue_backdetect)&&
+s.ue_back&&s.ue_back.value++;d._uess&&(y=d._uess());a.isl=1}a._bf&&(f+="&bf="+a._bf());d.ue_navtiming&&h&&(g("ctb",m,"1"),a.isBFonMshop||x("tc",D,D,K));!A||a.isBFonMshop||S||(h&&B(a.t,{na_:h.navigationStart,ul_:h.unloadEventStart,_ul:h.unloadEventEnd,rd_:h.redirectStart,_rd:h.redirectEnd,fe_:h.fetchStart,lk_:h.domainLookupStart,_lk:h.domainLookupEnd,co_:h.connectStart,_co:h.connectEnd,sc_:h.secureConnectionStart,rq_:h.requestStart,rs_:h.responseStart,_rs:h.responseEnd,dl_:h.domLoading,di_:h.domInteractive,
+de_:h.domContentLoadedEventStart,_de:h.domContentLoadedEventEnd,_dc:h.domComplete,ld_:h.loadEventStart,_ld:h.loadEventEnd,ntd:("function"!==typeof A.now||t(K)?0:new C(K+A.now())-new C)+a.t0}),v&&B(a.t,{ty:v.type+a.t0,rc:v.redirectCount+a.t0}),S=1);a.isBFonMshop||B(a.t,{hob:d.ue_hob,hoe:d.ue_hoe});a.ifr&&(f+="&ifr=1")}x(n,b,c,e);c="ld"==n&&b&&g("wb",b);var q,l;c||b&&b!==m||$(b);c||m==a.oid||aa(m,(g("t",b)||{}).tc||+g("t0",b),+g("t0",b));(e=d.ue_mbl)&&e.cnt&&!c&&(f+=e.cnt());c?g("wb",b,2):"ld"==n&&
+(a.lid=F(m));for(q in a.sc)if(1==g("wb",q))break;if(c){if(a.s)return;f=r(f,null)}else e=r(f,null),e!=f&&(e=z(e),a.b=e),y&&(f+=y),f=r(f,b||a.id);f=z(f);if(a.b||c)for(q in a.sc)2==g("wb",q)&&delete a.sc[q];y=0;a._rt&&(f+="&rt="+a._rt());e=k.csa;if(!c&&e)for(l in q=g("t",b)||{},e=e("PageTiming"),q)q[u](l)&&e("mark",ba[l]||l,q[l]);c||(a.s=0,(l=d.ue_err)&&0<l.ec&&l.pec<l.ec&&(l.pec=l.ec,f+="&ec="+l.ec+"&ecf="+l.ecf),y=g("ctb",b),"ld"!==n||b||a.markers||(a.markers={},B(a.markers,g("t",b))),g("t",b,{}));
+a.tag&&a.tag().length&&(f+="&csmtags="+a.tag().join("|"),a.tag=N());l=a.viz||[];(q=l.length)&&(f+="&viz="+l.splice(0,q).join("|"));t(d.ue_pty)||(f+="&pty="+d.ue_pty+"&spty="+d.ue_spty+"&pti="+d.ue_pti);a.tabid&&(f+="&tid="+a.tabid);a.aftb&&(f+="&aftb=1");!a._ui||b&&b!=m||(f+=a._ui());a.a=f;p(f,n,y,c)}}function $(a){var b=k.ue_csm_markers||{},c;for(c in b)b[u](c)&&x(c,a,D,b[c])}function z(a,b,c){c=c||k;if(c[T])c[T](a,b,!1);else if(c[U])c[U]("on"+a,b)}function R(a,b,c){c=c||k;if(c[V])c[V](a,b,!1);else if(c[W])c[W]("on"+
+a,b)}function X(){function a(){d.onUl()}function b(a){return function(){c[a]||(c[a]=1,Q(a))}}var c={},e,g;d.onLd=b("ld");d.onLdEnd=b("ld");d.onUl=b("ul");e={stop:b("os")};k.chrome?(z(E,a),J.push(a)):e[E]=d.onUl;for(g in e)e[u](g)&&P(0,k,g,e[g]);d.ue_viz&&ue_viz();z("load",d.onLd);x("ue")}function aa(g,b,c){var e=d.ue_mbl,h=k.csa,p=h&&h("SPA"),h=h&&h("PageTiming");e&&e.ajax&&e.ajax(b,c);p&&h&&(p("newPage",{requestId:g,transitionType:"soft"}),h("mark","transitionStart",b));a.tag("ajax-transition")}
+d.ueinit=(d.ueinit||0)+1;var a=d.ue=d.ue||{};a.t0=k.aPageStart||d.ue_t0;a.id=d.ue_id;a.url=d.ue_url;a.rid=d.ue_id;a.a="";a.b="";a.h={};a.s=1;a.t={};a.sc={};a.iel=[];a.ielf=[];a.viz=[];a.v="0.218498.0";a.paused=!1;var u="hasOwnProperty",E="beforeunload",I="on"+E,T="addEventListener",V="removeEventListener",U="attachEvent",W="detachEvent",ba={cf:"criticalFeature",af:"aboveTheFold",fn:"functional",fp:"firstPaint",fcp:"firstContentfulPaint",bb:"bodyBegin",be:"bodyEnd",ld:"loaded"},C=k.Date,A=k.performance||
+k.webkitPerformance,h=(A||{}).timing,v=(A||{}).navigation,K=(h||{}).navigationStart,w=d.ue_fpf,O=0,S=0,J=[],D;a.oid=F(a.id);a.lid=F(a.id);a._t0=a.t0;a.tag=N();a.ifr=k.top!==k.self||k.frameElement?1:0;a.markers=null;a.attach=z;a.detach=R;if("000-0000000-8675309"===d.ue_sid){var Y=G("cdn-rid"),Z=G("session-id");Y&&Z&&M(Y,Z,"cdn")}d.uei=X;d.ueh=P;d.ues=g;d.uet=x;d.uex=Q;a.reset=M;a.pause=function(d){a.paused=d};X()})(ue_csm,ue_csm.window,ue_csm.document);
 
 
 
@@ -170,11 +169,11 @@ h;d.uet=u;d.uex=R;a.reset=M;a.pause=function(d){a.paused=d};Y();0<v&&u("ho")})(u
 var ue_hoe=+new Date();
 }
 </script>
-<!-- vnyc50n4t1xd504jtqcq32o6qarnf0d6uax7xywsr144oxtvd3c82rq22y3em7v5fg98sxu0wx17bfu15g3bt7pzzrgflvic13rckaqx3pjeq7hqhzjjrp4d1wvpxa8bmxtz1vfonprepxo23luemno24mateexzas4tz4bnrhsq5ctwofxq1hq7fkar8mrjrr2htcfpybelltszv0yax86mzqo5yl1mz5coo6agtaxkog -->
+<!-- wx5pr0y6pmp5hnzy1q8l4r7t0gfdq3nn1zbi3wpbvoz2wgxg2m462pv0a5ywf39hztu1nocv976p49oc6nk4enxmp75mfz6e5nndxcjperasdspa3 -->
 
 
 
-<link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/11EIQ5IGqaL._RC|01ZTHTZObnL.css,41SIz69qHYL.css,31qGOnSAToL.css,013z33uKh2L.css,017DsKjNQJL.css,0131vqwP5UL.css,41EWOOlBJ9L.css,11TIuySqr6L.css,01ElnPiDxWL.css,11bGSgD5pDL.css,01Dm5eKVxwL.css,01IdKcBuAdL.css,01y-XAlI+2L.css,21N4kUH7pxL.css,01oDR3IULNL.css,41-PwE7+H0L.css,21j0IlW7xKL.css,01XPHJk60-L.css,014OeDQisGL.css,21aPhFy+riL.css,11gneA3MtJL.css,21fecG8pUzL.css,01RddH8vm-L.css,01CFUgsA-YL.css,31C80IiXalL.css,11qour3ND0L.css,11tRp6+0HHL.css,11061HxnEvL.css,11oHt2HYxnL.css,013RDhw9hoL.css,11JQtnL-6eL.css,11RKoGSb-gL.css,11jtXRmppwL.css,01QrWuRrZ-L.css,21pIv-yKhaL.css,11QyqG8yiqL.css,11kwKGWmBfL.css,11F2+OBzLyL.css,11Y05DTEL6L.css,01cbS3UK11L.css,21F85am0yFL.css,01giMEP+djL.css_.css?AUIClients/AmazonUI&AsKgpqKH#us.not-trident.359679-T1.353724-T1.353720-T1" />
+<link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/11EIQ5IGqaL._RC|01ZTHTZObnL.css,41SIz69qHYL.css,31qGOnSAToL.css,013z33uKh2L.css,017DsKjNQJL.css,0131vqwP5UL.css,41EWOOlBJ9L.css,11TIuySqr6L.css,01ElnPiDxWL.css,11bGSgD5pDL.css,01Dm5eKVxwL.css,01IdKcBuAdL.css,01y-XAlI+2L.css,21N4kUH7pxL.css,01oDR3IULNL.css,41-PwE7+H0L.css,21j0IlW7xKL.css,01XPHJk60-L.css,014OeDQisGL.css,21aPhFy+riL.css,11gneA3MtJL.css,21fecG8pUzL.css,01RddH8vm-L.css,01CFUgsA-YL.css,31C80IiXalL.css,11qour3ND0L.css,11tRp6+0HHL.css,11061HxnEvL.css,11oHt2HYxnL.css,013RDhw9hoL.css,11JQtnL-6eL.css,11RKoGSb-gL.css,11jtXRmppwL.css,01QrWuRrZ-L.css,21pIv-yKhaL.css,11QyqG8yiqL.css,01890+Vwk8L.css,11kwKGWmBfL.css,11F2+OBzLyL.css,11Y05DTEL6L.css,01cbS3UK11L.css,21F85am0yFL.css,01giMEP+djL.css_.css?AUIClients/AmazonUI&K6pFcJz8#us.not-trident.359679-T1.353724-T1.353720-T1.307064-T1.307061-T1" />
 
 <script>
 (function(f,h,Q,F){function z(a){v&&v.tag&&v.tag(q(":","aui",a))}function t(a,b){v&&v.count&&v.count("aui:"+a,0===b?0:b||(v.count("aui:"+a)||0)+1)}function p(a){try{return a.test(navigator.userAgent)}catch(b){return!1}}function y(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)}function q(a,b,c,e){b=b&&c?b+a+c:b||c;return e?q(a,b,e):b}function G(a,b,c){try{Object.defineProperty(a,b,{value:c,writable:!1})}catch(e){a[b]=c}return c}function ta(a,b){var c=a.length,
@@ -197,7 +196,7 @@ tablet:function(){return ra},rtl:function(){return"rtl"===n.dir}};for(m in k)k.h
 b)}catch(c){}}};n.className=X(n,"a-no-js");D(n,"a-js");!p(/OS [1-8](_[0-9]*)+ like Mac OS X/i)||f.navigator.standalone||p(/safari/i)||D(n,"a-ember");l=[];for(m in k)k.hasOwnProperty(m)&&k[m]&&l.push("a-"+m.replace(/([A-Z])/g,function(a){return"-"+a.toLowerCase()}));D(n,l.join(" "));n.setAttribute("data-aui-build-date","3.21.6-2021-07-16");r.register("p-detect",function(){return{capabilities:k,localStorage:k.localStorage&&sa,toggleResponsiveGrid:xa,responsiveGridEnabled:ya}});p(/UCBrowser/i)||k.localStorage&&
 D(n,sa.getItem("a-font-class"));r.declare("a-event-revised-handling",!1);try{var x=navigator.serviceWorker}catch(a){z("sw:nav_err")}x&&(y(x,"message",function(a){a&&a.data&&t(a.data.k,a.data.v)}),x.controller&&x.controller.postMessage("MSG-RDY"));var E=[];l={reg:{},unreg:{}};l.unreg.browser={action:function(a,b){try{x.getRegistrations().then(function(c){c.forEach(function(c){c.unregister().then(function(){t(a+"success")}).catch(function(c){r.logError(c,"[AUI SW] Failed to "+b+" service worker: ");
 t(a+"failure")})})})}catch(c){z("sw:api_error")}}};(function(a){var b=a.reg,c=a.unreg;x&&x.getRegistrations?(O.when("A").execute(function(a){na(a,c,"unregister")}),y(f,"load",function(){O.when("A").execute(function(a){na(a,b,"register");ma()})})):(b&&b.browser&&E.push("sw:browser:register:unsupported"),c&&c.browser&&E.push("sw:browser:unregister:unsupported"),ma())})(l);r.declare("a-fix-event-off",!1);t("pagejs:pkgExecTime",w()-N)})(window,document,Date);
-  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/61XKxrBtDVL._RC|11Y+5x+kkTL.js,51106gSDnJL.js,11-zXBZR6KL.js,11giXtZCwVL.js,01+z+uIeJ-L.js,01VRMV3FBdL.js,01O9dYORveL.js,21SDJtBU-PL.js,11rRjDLdAVL.js,51X-X0x2aRL.js,11kWu3cNjYL.js,11g2BPXNlrL.js,11OREnu1epL.js,11wcWdhrnDL.js,21r53SJg7LL.js,0190vxtlzcL.js,511VNbag2QL.js,31ask0y-LBL.js,01Gf12ogmOL.js,01ezj5Rkz1L.js,11+RxVdhNcL.js,31o2NGTXThL.js,01rpauTep4L.js,01QpMWJ3CSL.js_.js?AUIClients/AmazonUI&IFFrnA4/#359679-T1.348458-T1.354901-T1.351411-T1.353724-T1.353720-T1');
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/61XKxrBtDVL._RC|11Y+5x+kkTL.js,51106gSDnJL.js,11-zXBZR6KL.js,11giXtZCwVL.js,01+z+uIeJ-L.js,01VRMV3FBdL.js,01O9dYORveL.js,21SDJtBU-PL.js,11rRjDLdAVL.js,51X-X0x2aRL.js,11kWu3cNjYL.js,11g2BPXNlrL.js,11OREnu1epL.js,11KbZymw5ZL.js,21r53SJg7LL.js,0190vxtlzcL.js,511VNbag2QL.js,31NShmNbJyL.js,01Gf12ogmOL.js,01ezj5Rkz1L.js,11+RxVdhNcL.js,31o2NGTXThL.js,01rpauTep4L.js,01QpMWJ3CSL.js_.js?AUIClients/AmazonUI&wxLzuBOc#359679-T1.348458-T1.351411-T1.353724-T1.353720-T1.307064-T1.307061-T1');
 </script>
 
 
@@ -352,7 +351,7 @@ csHelpOmniture.event = function(omnitureObjJson, jQuery) {
     }
     s.list1 = s.prop15;
 
-    s.prop38 = '145-1915924-7032238'; // session id
+    s.prop38 = '135-7068071-1689528'; // session id
     s.eVar38 = s.prop38;
 
     s.prop41 = 'en_US';  // TO-DO: find correct variable name.
@@ -607,7 +606,7 @@ ue.stub(ue,"trigger");
 </script>
 </head>
 <body><div style='display:none;visibility:hidden;'>
-    <img src='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:145-1915924-7032238:F3J34WF249RTDYHHP7PZ$uedata=s:%2Frd%2Fuedata%3Fstaticb%26id%3DF3J34WF249RTDYHHP7PZ%26pty%3DError%26spty%3DPageNotFound%26pti%3D:1000' />
+    <img src='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:135-7068071-1689528:MMMW4DME1CTK1C3B9VB1$uedata=s:%2Frd%2Fuedata%3Fstaticb%26id%3DMMMW4DME1CTK1C3B9VB1%26pty%3D%26spty%3D%26pti%3D:1000' />
 
 
 </div>
@@ -617,15 +616,15 @@ if (window.csa) {csa('Config', {'Application': 'Retail:Prod:www.amazon.com'});} 
             'Events.Namespace': 'csa',
             'ObfuscatedMarketplaceId': 'ATVPDKIKX0DER',
             'Events.SushiEndpoint': 'https://unagi.amazon.com/1/events/com.amazon.csm.csa.prod',
-            'CacheDetection.RequestID': "F3J34WF249RTDYHHP7PZ",
+            'CacheDetection.RequestID': "MMMW4DME1CTK1C3B9VB1",
             'CacheDetection.Callback': window.ue && ue.reset
         });
 
         csa("Events")("setEntity", {
             page: {
-                requestId: "F3J34WF249RTDYHHP7PZ"
+                requestId: "MMMW4DME1CTK1C3B9VB1"
             },
-            session: {id: "145-1915924-7032238"}
+            session: {id: "135-7068071-1689528"}
          });
     }
 !function(r){var i,e,o="splice",u=r.csa,f={},c={},a=r.csa._s,s=0,l=0,g=-1,h={},v={},d={},n=Object.keys,p=function(){};function t(n,t){return u(n,t)}function m(n,t){var r=c[n]||{};k(r,t),c[n]=r,l++,S(U,0)}function w(n,t,r){var i=!0;return t=D(t),r&&r.buffered&&(i=(d[n]||[]).every(function(n){return!1!==t(n)})),i?(h[n]||(h[n]=[]),h[n].push(t),function(){!function(n,t){var r=h[n];r&&r[o](r.indexOf(t),1)}(n,t)}):p}function b(n,t){if(t=D(t),n in v)return t(v[n]),p;return w(n,function(n){return t(n),!1})}function y(n,t){if(u("Errors")("logError",n),f.DEBUG)throw t||n}function E(){return Math.abs(4294967295*Math.random()|0).toString(36)}function D(n,t){return function(){try{return n.apply(this,arguments)}catch(n){y(n.message||n,n)}}}function S(n,t){return r.setTimeout(D(n),t)}function U(){for(var n=0;n<a.length;){var t=a[n],r=t[0]in c;if(!r&&!e)return void(s=t.length);r?(a[o](s=n,1),I(t)):n++}g=l}function I(n){var arguments,t=c[n[0]],r=(arguments=n[1])[0];if(!t||!t[r])return y("Undefined function: "+t+"/"+r);i=n[3],c[n[2]]=t[r].apply(t,arguments.slice(1))||{},i=0}function O(){e=1,U()}function k(t,r){n(r).forEach(function(n){t[n]=r[n]})}b("$beforeunload",O),m("Config",{instance:function(n){k(f,n)}}),u.plugin=D(function(n){n(t)}),t.config=f,t.register=m,t.on=w,t.once=b,t.blank=p,t.emit=function(n,t,r){for(var i=h[n]||[],e=0;e<i.length;)!1===i[e](t)?i[o](e,1):e++;v[n]=t||{},r&&r.buffered&&(d[n]||(d[n]=[]),100<=d[n].length&&d[n].shift(),d[n].push(t||{}))},t.UUID=function(){return[E(),E(),E(),E()].join("-")},t.time=function(n){var t=i?new Date(i.time):new Date;return"ISO"===n?t.toISOString():t.getTime()},t.error=y,t.warn=function(n,t){if(u("Errors")("logWarn",n),f.DEBUG)throw t||n},t.exec=D,t.timeout=S,t.interval=function(n,t){return r.setInterval(D(n),t)},(t.global=r).csa._s.push=function(n){n[0]in c&&(!a.length||e)?(I(n),a.length&&g!==l&&U()):a[o](s++,0,n)},U(),S(function(){S(O,f.SkipMissingPluginsTimeout||5e3)},1)}("undefined"!=typeof window?window:global);
@@ -634,7 +633,7 @@ csa.plugin(function(o){var t,n,r={},e="localStorage",c="sessionStorage",a="local
 csa.plugin(function(o){function r(n){return function(r){o("Metrics",{producerId:"csa",dimensions:{message:r}})("recordMetric",n,1)}}o.register("Errors",{logError:r("jsError"),logWarn:r("jsWarn")})});
 csa.plugin(function(r){var o,e=r.global,i=r("Events"),f=e.location,d=e.document,a=((e.performance||{}).navigation||{}).type,t=r.on,u=r.emit,g={};function n(a,e){var t=!!o,n=(e=e||{}).keepPageAttributes;t&&(u("$beforePageTransition"),u("$pageTransition")),t&&!n&&i("removeEntity","page"),o=r.UUID(),n?g.id=o:g={schemaId:"<ns>.PageEntity.1",id:o,url:f.href,server:f.hostname,path:f.pathname,referrer:d.referrer,title:d.title},Object.keys(a||{}).forEach(function(e){g[e]=a[e]}),i("setEntity",{page:g}),u("$pageChange",g,{buffered:1}),t&&u("$afterPageTransition")}function l(){u("$load"),u("$ready"),u("$afterload")}function s(){u("$ready"),u("$beforeunload"),u("$unload"),u("$afterunload")}f&&d&&(t(e,"beforeunload",s),t(e,"pagehide",s),"complete"===d.readyState?l():t(e,"load",l),r.register("SPA",{newPage:n}),n({transitionType:{0:"hard",1:"refresh",2:"back-button"}[a]||"unknown"}))});
 csa.plugin(function(c){var t="Events",e="UNKNOWN",a="id",u="all",n="messageId",i="timestamp",f="producerId",o="application",r="obfuscatedMarketplaceId",s="entities",d="schemaId",l="version",p="attributes",v="<ns>",g=c.config,h=(c.global.location||{}).host,m=g[t+".Namespace"]||"csa_other",I=g.Application||"Other"+(h?":"+h:""),b=c("Transport"),y={},O=function(t,e){Object.keys(t).forEach(e)};function E(n,i,o){O(i,function(t){var e=o===u||(o||{})[t];t in n||(n[t]={version:1,id:i[t][a]||c.UUID()}),U(n[t],i[t],e)})}function U(e,n,i){O(n,function(t){!function(t,e,n){return"string"!=typeof e&&t!==l?c.error("Attribute is not of type string: "+t):!0===n||1===n||(t===a||!!~(n||[]).indexOf(t))}(t,n[t],i)||(e[t]=n[t])})}function N(o,t,r){O(t,function(t){var e=o[t];if(e[d]){var n={},i={};n[a]=e[a],n[f]=e[f]||r,n[d]=e[d],n[l]=e[l]++,n[p]=i,S(n),U(i,e,1),k(i),b("log",n)}})}function S(t){t[i]=function(t){return"number"==typeof t&&(t=new Date(t).toISOString()),t||c.time("ISO")}(t[i]),t[n]=t[n]||c.UUID(),t[o]=I,t[r]=g.ObfuscatedMarketplaceId||e,t[d]=t[d].replace(v,m)}function k(t){delete t[l],delete t[d],delete t[f]}function w(o){var r={};this.log=function(t,e){var n={},i=(e||{}).ent;return t?"string"!=typeof t[d]?c.error("A valid schema id is required for the event"):(S(t),E(n,y,i),E(n,r,i),E(n,t[s]||{},i),O(n,function(t){k(n[t])}),t[f]=o[f],t[s]=n,void b("log",t)):c.error("The event cannot be undefined")},this.setEntity=function(t){E(r,t,u),N(r,t,o[f])}}g["KillSwitch."+t]||c.register(t,{setEntity:function(t){E(y,t,u),N(y,t,"csa")},removeEntity:function(t){delete y[t]},instance:function(t){return new w(t)}})});
-csa.plugin(function(s){var c,g="Transport",l="post",f="preflight",r="csa.cajun.",i="store",a="deleteStored",u="sendBeacon",t="__merge",e="messageId",n=".FlushInterval",o=0,d=s.config[g+".BufferSize"]||2e3,h=s.config[g+".RetryDelay"]||1500,p={},v=0,y=[],m=s.global,E=m.document,b=s.timeout,k=m.Object.keys,I=s.config[g+n]||5e3,O=I,R=s.config[g+n+".BackoffFactor"]||1,S=s.config[g+n+".BackoffLimit"]||3e4,w=0;function B(n){if(864e5<s.time()-+new Date(n.timestamp))return s.warn("Event is too old: "+n);v<d&&(n[e]in p||(p[n[e]]=n,v++),"function"==typeof n[t]&&n[t](p[n[e]]),!w&&o&&(w=b(T,function(){var n=O;return O=Math.min(n*R,S),n}())))}function T(){y.forEach(function(e){var o=[];k(p).forEach(function(n){var t=p[n];e.accepts(t)&&o.push(t)}),o.length&&(e.chunks?e.chunks(o).forEach(function(n){D(e,n)}):D(e,o))}),p={},w=0}function D(t,e){function o(){s[a](r+n)}var n=s.UUID();s[i](r+n,JSON.stringify(e)),[function(n,t,e){var o=m.navigator||{},r=m.cordova||{};if(!o[u]||!n[l])return 0;n[f]&&r&&"ios"===r.platformId&&!c&&((new Image).src=n[f]().url,c=1);var i=n[l](t);if(!i.type&&o[u](i.url,i.body))return e(),1},function(n,t,e){if(!n[l])return 0;var o=n[l](t),r=o.url,i=o.body,c=o.type,f=new XMLHttpRequest,a=0;function u(n,t,e){f.open("POST",n),e&&f.setRequestHeader("Content-Type",e),f.send(t)}return f.onload=function(){f.status<299?e():s.config[g+".XHRRetries"]&&a<3&&b(function(){u(r,i,c)},++a*h)},u(r,i,c),1}].some(function(n){try{return n(t,e,o)}catch(n){}})}k&&(s.once("$afterload",function(){o=1,function(e){(s[i]()||[]).forEach(function(n){if(!n.indexOf(r))try{var t=s[i](n);s[a](n),JSON.parse(t).forEach(e)}catch(n){s.error(n)}})}(B),s.on(E,"visibilitychange",T,!1),T()}),s.once("$afterunload",function(){o=1,T()}),s.on("$afterPageTransition",function(){v=0,O=I}),s.register(g,{log:B,register:function(n){y.push(n)}}))});
+csa.plugin(function(s){var c,g="Transport",l="post",f="preflight",r="csa.cajun.",i="store",a="deleteStored",u="sendBeacon",t="__merge",e="messageId",n=".FlushInterval",o=0,d=s.config[g+".BufferSize"]||2e3,h=s.config[g+".RetryDelay"]||1500,p={},v=0,y=[],m=s.global,E=m.document,b=s.timeout,k=m.Object.keys,w=s.config[g+n]||5e3,I=w,O=s.config[g+n+".BackoffFactor"]||1,R=s.config[g+n+".BackoffLimit"]||3e4,S=0;function B(n){if(864e5<s.time()-+new Date(n.timestamp))return s.warn("Event is too old: "+n);v<d&&(n[e]in p||(p[n[e]]=n,v++),"function"==typeof n[t]&&n[t](p[n[e]]),!S&&o&&(S=b(T,function(){var n=I;return I=Math.min(n*O,R),n}())))}function T(){y.forEach(function(e){var o=[];k(p).forEach(function(n){var t=p[n];e.accepts(t)&&o.push(t)}),o.length&&(e.chunks?e.chunks(o).forEach(function(n){D(e,n)}):D(e,o))}),p={},S=0}function D(t,e){function o(){s[a](r+n)}var n=s.UUID();s[i](r+n,JSON.stringify(e)),[function(n,t,e){var o=m.navigator||{},r=m.cordova||{};if(!o[u]||!n[l])return 0;n[f]&&r&&"ios"===r.platformId&&!c&&((new Image).src=n[f]().url,c=1);var i=n[l](t);if(!i.type&&o[u](i.url,i.body))return e(),1},function(n,t,e){if(!n[l])return 0;var o=n[l](t),r=o.url,i=o.body,c=o.type,f=new XMLHttpRequest,a=0;function u(n,t,e){f.open("POST",n),f.withCredentials=!0,e&&f.setRequestHeader("Content-Type",e),f.send(t)}return f.onload=function(){f.status<299?e():s.config[g+".XHRRetries"]&&a<3&&b(function(){u(r,i,c)},++a*h)},u(r,i,c),1}].some(function(n){try{return n(t,e,o)}catch(n){}})}k&&(s.once("$afterload",function(){o=1,function(e){(s[i]()||[]).forEach(function(n){if(!n.indexOf(r))try{var t=s[i](n);s[a](n),JSON.parse(t).forEach(e)}catch(n){s.error(n)}})}(B),s.on(E,"visibilitychange",T,!1),T()}),s.once("$afterunload",function(){o=1,T()}),s.on("$afterPageTransition",function(){v=0,I=w}),s.register(g,{log:B,register:function(n){y.push(n)}}))});
 csa.plugin(function(n){var r=n.config["Events.SushiEndpoint"];n("Transport")("register",{accepts:function(n){return n.schemaId},post:function(n){var t=n.map(function(n){return{data:n}});return{url:r,body:JSON.stringify({events:t})}},preflight:function(){var n,t=/\/\/(.*?)\//.exec(r);return t&&t[1]&&(n="https://"+t[1]+"/ping"),{url:n}},chunks:function(n){for(var t=[];500<n.length;)t.push(n.splice(0,500));return t.push(n),t}})});
 csa.plugin(function(n){var t,a,o,r,e=n.config,i="PageViews",d=e[i+".ImpressionMinimumTime"]||1e3,s="hidden",c="innerHeight",g="innerWidth",l="renderedTo",f=l+"Viewed",m=l+"Meaningful",u=l+"Impressed",p=1,v=2,h=3,w=4,y=5,P="loaded",I=7,T=8,b=n.global,E=n.on,V=n("Events",{producerId:"csa"}),$=b.document,M={},S={},H=y;function K(e){if(!M[I]){var i;if(M[e]=n.time(),e!==h&&e!==P||(t=t||M[e]),t&&H===w)a=a||M[e],(i={})[m]=t-o,i[f]=a-o,R("PageView.4",i),r=r||n.timeout(j,d);if(e!==y&&e!==p&&e!==v||(clearTimeout(r),r=0),e!==p&&e!==v||R("PageRender.3",{transitionType:e===p?"hard":"soft"}),e===I)(i={})[m]=t-o,i[f]=a-o,i[u]=M[e]-o,R("PageImpressed.2",i)}}function R(e,i){S[e]||(i.schemaId="<ns>."+e,V("log",i,{ent:"all"}),S[e]=1)}function W(){0===b[c]&&0===b[g]?(H=T,n("Events")("setEntity",{page:{viewport:"hidden-iframe"}})):H=$[s]?y:w,K(H)}function j(){K(I),r=0}function k(){var e=o?v:p;M={},S={},a=t=0,o=n.time(),K(e),W()}function q(){var e=$.readyState;"interactive"===e&&K(h),"complete"===e&&K(P)}e["KillSwitch."+i]||($&&void 0!==$[s]?(k(),E($,"visibilitychange",W,!1),E($,"readystatechange",q,!1),E("$afterPageTransition",k),E("$timing:loaded",q),n.once("$load",q)):n.warn("Page visibility not supported"))});
 csa.plugin(function(c){var s=c.config["Interactions.ParentChainLength"]||15,e="click",r="touches",f="timeStamp",o="length",u="pageX",g="pageY",p="pageXOffset",h="pageYOffset",m=250,v=5,d=200,l=.5,t={capture:!0,passive:!0},X=c.global,Y=c.emit,n=c.on,x=X.Math.abs,a=(X.document||{}).documentElement||{},y={x:0,y:0,t:0,sX:0,sY:0},N={x:0,y:0,t:0,sX:0,sY:0};function b(t){if(t.id)return"//*[@id='"+t.id+"']";var e=function(t){var e,n=1;for(e=t.previousSibling;e;e=e.previousSibling)e.nodeName===t.nodeName&&(n+=1);return n}(t),n=t.nodeName;return 1!==e&&(n+="["+e+"]"),t.parentNode&&(n=b(t.parentNode)+"/"+n),n}function I(t,e,n){var a=c("Content",{target:n}),i={schemaId:"<ns>.ContentInteraction.1",interaction:t,interactionData:e,messageId:c.UUID()};if(n){var r=b(n);r&&(i.attribution=r);var o=function(t){for(var e=t,n=e.tagName,a=!1,i=t?t.href:null,r=0;r<s;r++){if(!e||!e.parentElement){a=!0;break}n=(e=e.parentElement).tagName+"/"+n,i=i||e.href}return a||(n=".../"+n),{pc:n,hr:i}}(n);o.pc&&(i.interactionData.parentChain=o.pc),o.hr&&(i.interactionData.href=o.hr)}a("log",i),Y("$content.interaction",i)}function i(t){I(e,{interactionX:""+t.pageX,interactionY:""+t.pageY},t.target)}function C(t){if(t&&t[r]&&1===t[r][o]){var e=t[r][0];N=y={e:t.target,x:e[u],y:e[g],t:t[f],sX:X[p],sY:X[h]}}}function D(t){if(t&&t[r]&&1===t[r][o]&&y&&N){var e=t[r][0],n=t[f],a=n-N.t,i={e:t.target,x:e[u],y:e[g],t:n,sX:X[p],sY:X[h]};N=i,d<=a&&(y=i)}}function E(t){if(t){var e=x(y.x-N.x),n=x(y.y-N.y),a=x(y.sX-N.sX),i=x(y.sY-N.sY),r=t[f]-y.t;if(m<1e3*e/r&&v<e||m<1e3*n/r&&v<n){var o=n<e;o&&a&&e*l<=a||!o&&i&&n*l<=i||I((o?"horizontal":"vertical")+"-swipe",{interactionX:""+y.x,interactionY:""+y.y,endX:""+N.x,endY:""+N.y},y.e)}}}n(a,e,i,t),n(a,"touchstart",C,t),n(a,"touchmove",D,t),n(a,"touchend",E,t)});
@@ -662,7 +661,7 @@ csa.plugin(function(t){var n,r,i,s="MutationObserver",e="PerformanceObserver",u=
   background-repeat: no-repeat;
 }
 </style>
-<link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/41KBYOkTjIL._RC|71NrZBodoOL.css,41SQAND6G3L.css,31Hjtf6W1wL.css,31YZpDCYJPL.css,21MKjoYL8wL.css,41OiMQkB+EL.css,01yCq3WXEcL.css,11kO7yAgiQL.css,31OvHRW+XiL.css,01XHMOHpK1L.css,01ucgi+I44L.css,31IrUp1HMlL.css_.css?AUIClients/NavDesktopUberAsset&p27p/3HG#desktop.269915-T2" />
+<link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/41KBYOkTjIL._RC|71NrZBodoOL.css,41SQAND6G3L.css,31ZjzeSAHqL.css,31YZpDCYJPL.css,21MKjoYL8wL.css,41OiMQkB+EL.css,01yCq3WXEcL.css,11kO7yAgiQL.css,31OvHRW+XiL.css,01XHMOHpK1L.css,01ucgi+I44L.css,31jJwAF+yLL.css_.css?AUIClients/NavDesktopUberAsset&eRSuagD1#desktop.310484-T1" />
 <!-- NAVYAAN JS -->
 <script type="text/javascript">!function(n){function e(n,e){return{m:n,a:function(n){return[].slice.call(n)}(e)}}document.createElement("header");var r=function(n){function u(n,r,u){n[u]=function(){a._replay.push(r.concat(e(u,arguments)))}}var a={};return a._sourceName=n,a._replay=[],a.getNow=function(n,e){return e},a.when=function(){var n=[e("when",arguments)],r={};return u(r,n,"run"),u(r,n,"declare"),u(r,n,"publish"),u(r,n,"build"),r},u(a,[],"declare"),u(a,[],"build"),u(a,[],"publish"),u(a,[],"importEvent"),r._shims.push(a),a};r._shims=[],n.$Nav||(n.$Nav=r("rcx-nav")),n.$Nav.make||(n.$Nav.make=r)}(window)</script><script type="text/javascript">
 $Nav.importEvent('navbarJS-beaconbelt');
@@ -680,7 +679,7 @@ $Nav.declare('img.pixel', 'https://images-na.ssl-images-amazon.com/images/G/01/x
 <script type="text/javascript">var nav_t_after_preload_sprite = + new Date();</script>
 <script>
 (window.AmazonUIPageJS ? AmazonUIPageJS : P).when('navCF').execute(function() {
-  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/41cyy9szMwL._RC|71Fw8hoU8VL.js,016tgkOMMNL.js,611gYbMp1dL.js,41gNKoK0s7L.js,11xzSqjDFVL.js,212Gxk35NhL.js,11k47yUMOjL.js,41SZNgvX4oL.js,51pktuVkksL.js,31Tyru520KL.js,01KW1GJCT1L.js,31SNsrS+UrL.js_.js?AUIClients/NavDesktopUberAsset&jrXrtsPV#desktop.language-en.us.377261-T1.269915-T2');
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/41cyy9szMwL._RC|71Fw8hoU8VL.js,016tgkOMMNL.js,61ePhKKwRRL.js,41gNKoK0s7L.js,11xzSqjDFVL.js,212Gxk35NhL.js,11k47yUMOjL.js,41SZNgvX4oL.js,51pktuVkksL.js,31Tyru520KL.js,01KW1GJCT1L.js,31QuvjdSFaL.js_.js?AUIClients/NavDesktopUberAsset&TOMSXx0a#desktop.language-en.us.310484-T1.377261-T1');
 });
 </script>
 
@@ -850,7 +849,7 @@ $Nav.declare('img.pixel', 'https://images-na.ssl-images-amazon.com/images/G/01/x
 <script type='text/javascript'>window.navmet.push({key:'Logo',end:+new Date(),begin:window.navmet.tmp});</script>
         
 <div id="nav-global-location-slot">
-    <span id="nav-global-location-data-modal-action" class="a-declarative nav-progressive-attribute" data-a-modal='{&quot;width&quot;:375, &quot;closeButton&quot;:&quot;false&quot;,&quot;popoverLabel&quot;:&quot;Choose your location&quot;, &quot;ajaxHeaders&quot;:{&quot;anti-csrftoken-a2z&quot;:&quot;gFXlJehPw647odG92cXuPfrn1rL7abz18RqijLMAAAAMAAAAAGE1tdRyYXcAAAAA&quot;}, &quot;name&quot;:&quot;glow-modal&quot;, &quot;url&quot;:&quot;/gp/glow/get-address-selections.html?deviceType&#x3D;desktop&amp;pageType&#x3D;GPHelp&amp;storeContext&#x3D;help&amp;actionSource&#x3D;desktop-modal&quot;, &quot;footer&quot;:&quot;&lt;span class&#x3D;\&quot;a-declarative\&quot; data-action&#x3D;\&quot;a-popover-close\&quot; data-a-popover-close&#x3D;\&quot;{}\&quot;&gt;&lt;span class&#x3D;\&quot;a-button a-button-primary\&quot;&gt;&lt;span class&#x3D;\&quot;a-button-inner\&quot;&gt;&lt;button name&#x3D;\&quot;glowDoneButton\&quot; class&#x3D;\&quot;a-button-text\&quot; type&#x3D;\&quot;button\&quot;&gt;Done&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;header&quot;:&quot;Choose your location&quot;}' data-action="a-modal">
+    <span id="nav-global-location-data-modal-action" class="a-declarative nav-progressive-attribute" data-a-modal='{&quot;width&quot;:375, &quot;closeButton&quot;:&quot;false&quot;,&quot;popoverLabel&quot;:&quot;Choose your location&quot;, &quot;ajaxHeaders&quot;:{&quot;anti-csrftoken-a2z&quot;:&quot;gFORoEWDVIaui1udorOK7ynUXKaaT/qDyBe8+EEAAAAMAAAAAGE2CsVyYXcAAAAA&quot;}, &quot;name&quot;:&quot;glow-modal&quot;, &quot;url&quot;:&quot;/gp/glow/get-address-selections.html?deviceType&#x3D;desktop&amp;pageType&#x3D;GPHelp&amp;storeContext&#x3D;help&amp;actionSource&#x3D;desktop-modal&quot;, &quot;footer&quot;:&quot;&lt;span class&#x3D;\&quot;a-declarative\&quot; data-action&#x3D;\&quot;a-popover-close\&quot; data-a-popover-close&#x3D;\&quot;{}\&quot;&gt;&lt;span class&#x3D;\&quot;a-button a-button-primary\&quot;&gt;&lt;span class&#x3D;\&quot;a-button-inner\&quot;&gt;&lt;button name&#x3D;\&quot;glowDoneButton\&quot; class&#x3D;\&quot;a-button-text\&quot; type&#x3D;\&quot;button\&quot;&gt;Done&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;header&quot;:&quot;Choose your location&quot;}' data-action="a-modal">
         <a id="nav-global-location-popover-link" class="nav-a nav-a-2 a-popover-trigger a-declarative nav-progressive-attribute" tabindex="0">
             <div class="nav-sprite nav-progressive-attribute" id="nav-packard-glow-loc-icon"></div>
             <div id="glow-ingress-block">
@@ -865,7 +864,7 @@ $Nav.declare('img.pixel', 'https://images-na.ssl-images-amazon.com/images/G/01/x
         </span>
         <input data-addnewaddress="add-new" id="unifiedLocation1ClickAddress" name="dropdown-selection" type="hidden" value="add-new" class="nav-progressive-attribute" />
         <input data-addnewaddress="add-new" id="ubbShipTo" name="dropdown-selection-ubb" type="hidden" value="add-new" class="nav-progressive-attribute"/>
-        <input id="glowValidationToken" name="glow-validation-token" type="hidden" value="gFXlJehPw647odG92cXuPfrn1rL7abz18RqijLMAAAAMAAAAAGE1tdRyYXcAAAAA" class="nav-progressive-attribute"/>
+        <input id="glowValidationToken" name="glow-validation-token" type="hidden" value="gFORoEWDVIaui1udorOK7ynUXKaaT/qDyBe8+EEAAAAMAAAAAGE2CsVyYXcAAAAA" class="nav-progressive-attribute"/>
 </div>
 
 <div id="nav-global-location-toaster-script-container" class="nav-progressive-content">
@@ -1154,7 +1153,7 @@ $Nav.declare('img.pixel', 'https://images-na.ssl-images-amazon.com/images/G/01/x
       <div class='nav-right'>
           <script type='text/javascript'>window.navmet.tmp=+new Date();</script><!-- Navyaan SWM -->
 <div id="nav-swmslot" class="nav-swm-text-widget">
-  <a href="/gcx/Ready-for-school/gfhz/events/?_encoding=UTF8&categoryId=happy-school-year&ref_=nav_swm_BTS21_P4_GW_Desk_SWM_V2_ENES&pf_rd_p=0b92631d-d98b-46f0-8efc-15a3f7a3f115&pf_rd_s=nav-sitewide-msg-text&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=F3J34WF249RTDYHHP7PZ" id="swm-link" class="nav_a nav-swm-text nav-progressive-attribute nav-progressive-content">Get your school supplies, fast</a>
+  <a href="/gcx/Ready-for-school/gfhz/events/?_encoding=UTF8&categoryId=happy-school-year&ref_=nav_swm_BTS21_P4_GW_Desk_SWM_V2_ENES&pf_rd_p=0b92631d-d98b-46f0-8efc-15a3f7a3f115&pf_rd_s=nav-sitewide-msg-text&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=MMMW4DME1CTK1C3B9VB1" id="swm-link" class="nav_a nav-swm-text nav-progressive-attribute nav-progressive-content">Get your school supplies, fast</a>
 </div><script type='text/javascript'>window.navmet.push({key:'SWM',end:+new Date(),begin:window.navmet.tmp});</script>
       </div>
     </div>
@@ -1180,7 +1179,7 @@ $Nav.declare('img.pixel', 'https://images-na.ssl-images-amazon.com/images/G/01/x
   if (typeof uet === 'function') {  uet('x1', 'ewc', {wb: 1}); }
 
   window.$Nav && $Nav.declare('config.ewc', (function() {
-    var config = {"enablePersistent":true,"viewportWidthForPersistent":1400,"isEWCLogging":1,"isEWCStateExpanded":true,"EWCStateReason":"fixed","isSmallScreenEnabled":true,"isFreshCustomer":false,"errorContent":{"html":"<div class='nav-ewc-error'><span class='nav-title'>Oops!</span><p class='nav-paragraph'>There's a problem loading your cart right now.</p><a href='/gp/cart/view.html?ref_=nav_err_ewc_timeout' class='nav-action-button'><span class='nav-action-inner'>Your Cart</span></a></div>"},"url":"/cart/ewc/compact?hostPageType=GPHelp&hostSubPageType=Help&hostPageRID=F3J34WF249RTDYHHP7PZ&prerender=0&storeName=help","cartCount":0,"freshCartCount":0,"almCartCount":0,"isCompactViewEnabled":true,"isCompactEWCRendered":true};
+    var config = {"enablePersistent":true,"viewportWidthForPersistent":1400,"isEWCLogging":1,"isEWCStateExpanded":true,"EWCStateReason":"fixed","isSmallScreenEnabled":true,"isFreshCustomer":false,"errorContent":{"html":"<div class='nav-ewc-error'><span class='nav-title'>Oops!</span><p class='nav-paragraph'>There's a problem loading your cart right now.</p><a href='/gp/cart/view.html?ref_=nav_err_ewc_timeout' class='nav-action-button'><span class='nav-action-inner'>Your Cart</span></a></div>"},"url":"/cart/ewc/compact?hostPageType=GPHelp&hostSubPageType=Help&hostPageRID=MMMW4DME1CTK1C3B9VB1&prerender=0&storeName=help","cartCount":0,"freshCartCount":0,"almCartCount":0,"isCompactViewEnabled":true,"isCompactEWCRendered":true};
     var hasAui = window.P && window.P.AUI_BUILD_DATE;
     var isRTLEnabled = (document.dir === 'rtl');
     config.pinnable = config.pinnable && hasAui;
@@ -1481,8 +1480,8 @@ window.$Nav && $Nav.when("util.templates").run("FlyoutErrorTemplate", function(t
   , searchAliases: ["aps","amazon-custom-products","amazon-devices","amazonbasics","amazonfresh","amazon-pharmacy","wholefoods","allthebestpets","bartelldrugs","bristolfarms","freshthyme","kegnbottle","missionwinespirits","petfoodexpress","sousaswineliquors","surdyksliquorcheeseshop","unionsquarewine","vintagegrape","westsidemarket","stripbooks","popular","apparel","electronics","sporting","sports-and-fitness","outdoor-recreation","fan-shop","garden","videogames","toys-and-games","jewelry","digital-text","digital-music","prime-digital-music","watches","grocery","hpc","instant-video","handmade","handmade-jewelry","handmade-home-and-kitchen","prime-instant-video","shop-instant-video","baby-products","office-products","software","smart-home","magazines","tools","automotive","misc","industrial","mi","pet-supplies","digital-music-track","digital-music-album","mobile","mobile-apps","movies-tv","music-artist","music-album","music-song","stripbooks-spanish","electronics-accessories","photo","audio-video","computers","furniture","kitchen","audible","audiobooks","beauty","shoes","arts-crafts","appliances","gift-cards","pets","outdoor","lawngarden","collectibles","replacement-parts","financial","fine-art","fashion","fashion-womens","fashion-womens-clothing","fashion-womens-jewelry","fashion-womens-shoes","fashion-womens-watches","fashion-womens-handbags","fashion-mens","fashion-mens-clothing","fashion-mens-jewelry","fashion-mens-shoes","fashion-mens-watches","fashion-girls","fashion-girls-clothing","fashion-girls-jewelry","fashion-girls-shoes","fashion-girls-watches","fashion-boys","fashion-boys-clothing","fashion-boys-jewelry","fashion-boys-shoes","fashion-boys-watches","fashion-baby","fashion-baby-boys","fashion-baby-girls","fashion-luggage","3d-printing","tradein-aps","todays-deals","live-explorations","local-services","vehicles","video-shorts","warehouse-deals","luxury-beauty","banjo-apps","black-friday","cyber-monday","alexa-skills","subscribe-with-amazon","courses","edu-alt-content","amazon-global-store","prime-wardrobe","under-ten-dollars","tempo","specialty-aps-sns","luxury"]
   , filterAliases: []
   , pageType: "GPHelp"
-  , requestId: "F3J34WF249RTDYHHP7PZ"
-  , sessionId: "145-1915924-7032238"
+  , requestId: "MMMW4DME1CTK1C3B9VB1"
+  , sessionId: "135-7068071-1689528"
   , language: "en_US"
   , customerId: ""
   , b2b: 0
@@ -1678,14 +1677,14 @@ window.$Nav && $Nav.declare('config.isSubnavFlyoutMigrationEnabled',true);
 
 window.$Nav && $Nav.declare('config.recordEvUrl','\x2Fgp\x2Fnavigation\x2Fajax\x2Frecordevent.html');
 window.$Nav && $Nav.declare('config.recordEvInterval',15000);
-window.$Nav && $Nav.declare('config.sessionId','145\x2D1915924\x2D7032238');
-window.$Nav && $Nav.declare('config.requestId','F3J34WF249RTDYHHP7PZ');
+window.$Nav && $Nav.declare('config.sessionId','135\x2D7068071\x2D1689528');
+window.$Nav && $Nav.declare('config.requestId','MMMW4DME1CTK1C3B9VB1');
 
 window.$Nav && $Nav.declare('config.alexaListEnabled',true);
 
 window.$Nav && $Nav.declare('config.readyOnATF',false);
 
-window.$Nav && $Nav.declare('config.dynamicMenuArgs',{"rid":"F3J34WF249RTDYHHP7PZ","isFullWidthPrime":0,"isPrime":0,"dynamicRequest":1,"weblabs":"","isFreshRegionAndCustomer":"","primeMenuWidth":310});
+window.$Nav && $Nav.declare('config.dynamicMenuArgs',{"rid":"MMMW4DME1CTK1C3B9VB1","isFullWidthPrime":0,"isPrime":0,"dynamicRequest":1,"weblabs":"","isFreshRegionAndCustomer":"","primeMenuWidth":310});
 
 window.$Nav && $Nav.declare('config.customerName',false);
 
@@ -1791,7 +1790,7 @@ window.$Nav && $Nav.declare('config.isPrimeTooltipMigrated',false);
 
 window.$Nav && $Nav.declare('config.isDynamicWishListMigrationEnabled',false);
 
-window.$Nav && $Nav.declare('config.hashCustomerAndSessionId','f56764d15015c50788f23c6b6a10e30a6df32ea3');
+window.$Nav && $Nav.declare('config.hashCustomerAndSessionId','4c5dd275eedfbcb27b647251592c3db999510914');
 
 window.$Nav && $Nav.declare('config.isExportMode',false);
 
@@ -1861,7 +1860,7 @@ window.$Nav && $Nav.declare('configComplete');
 
 <div class="a-row a-spacing-top-small">
     <div class="a-column a-span9">
-         <a class="cs-help-title" href="/gp/help/customer/display.html/ref=hp_bc_anchor/145-1915924-7032238?ie=UTF8&nodeId=508510">Help & Customer Service</a>
+         <a class="cs-help-title" href="/gp/help/customer/display.html/ref=hp_bc_anchor/135-7068071-1689528?ie=UTF8&nodeId=508510">Help & Customer Service</a>
     </div>
 </div>
 
@@ -1904,7 +1903,7 @@ window.$Nav && $Nav.declare('configComplete');
             <!-- Change small to large for section spacing as the former has bottom margin overlap with its bottom element in mobile browser. -->
         <div id="csg-search-cu" class="a-section a-spacing-large">
 		<div class="a-row">
-	    <form id="search-help" name="search-help" method="get" action="/gp/help/customer/display.html/ref=hp_articles_search_rd/145-1915924-7032238?ie=UTF8&nodeId=">
+	    <form id="search-help" name="search-help" method="get" action="/gp/help/customer/display.html/ref=hp_articles_search_rd/135-7068071-1689528?ie=UTF8&nodeId=">
 	        <input type="hidden" name="__mk_en_US" value="ÅMÅŽÕÑ" />
 	        <div class="a-column a-span12">
 	                <div class="a-row">
@@ -1942,7 +1941,7 @@ window.$Nav && $Nav.declare('configComplete');
 
 
 <div class="cs-help-breadcrumb">
-  <a href="/gp/help/customer/display.html/ref=hp_bc_nav/145-1915924-7032238?ie=UTF8&amp;nodeId=200127470">Digital Services and Device Support</a><span class="a-list-item">&nbsp;&rsaquo;&nbsp;</span><a href="/gp/help/customer/display.html/ref=hp_bc_nav/145-1915924-7032238?ie=UTF8&amp;nodeId=G9MH4UGLBQYFVA7Z">Amazon Device and Digital Services Terms, Warranties, and Notices</a><span class="a-list-item">&nbsp;&rsaquo;&nbsp;</span><a href="/gp/help/customer/display.html/ref=hp_bc_nav/145-1915924-7032238?ie=UTF8&amp;nodeId=201608280">Amazon Device Terms</a><span>&rsaquo;</span>
+  <a href="/gp/help/customer/display.html/ref=hp_bc_nav/135-7068071-1689528?ie=UTF8&amp;nodeId=200127470">Digital Services and Device Support</a><span class="a-list-item">&nbsp;&rsaquo;&nbsp;</span><a href="/gp/help/customer/display.html/ref=hp_bc_nav/135-7068071-1689528?ie=UTF8&amp;nodeId=G9MH4UGLBQYFVA7Z">Amazon Device and Digital Services Terms, Warranties, and Notices</a><span class="a-list-item">&nbsp;&rsaquo;&nbsp;</span><a href="/gp/help/customer/display.html/ref=hp_bc_nav/135-7068071-1689528?ie=UTF8&amp;nodeId=201608280">Amazon Device Terms</a><span>&rsaquo;</span>
 </div>
 
 
@@ -2176,7 +2175,7 @@ window.$Nav && $Nav.declare('configComplete');
   <div class="inner">
     <span>
       <span class="a-color-state">&lsaquo;</span>
-      <a href="/gp/help/customer/display.html/145-1915924-7032238?ie=UTF8&amp;nodeId=508510">All Help Topics</a>
+      <a href="/gp/help/customer/display.html/135-7068071-1689528?ie=UTF8&amp;nodeId=508510">All Help Topics</a>
     </span>
   </div>
   <div class="inner">
@@ -2187,7 +2186,7 @@ window.$Nav && $Nav.declare('configComplete');
 
 
  <h3>Amazon Device and Digital Services Terms, Warranties, and Notices</h3>
-    <ul class="nav-topics"><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/145-1915924-7032238?ie=UTF8&amp;nodeId=GQFYXZHZB2H629WN">Privacy Settings FAQs for Fire Tablets and Kindle E-Readers</a></li><li class="selected">Amazon Device Terms of Use</li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/145-1915924-7032238?ie=UTF8&amp;nodeId=201818950">Amazon Device Return Policies</a></li></ul>
+    <ul class="nav-topics"><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/135-7068071-1689528?ie=UTF8&amp;nodeId=GQFYXZHZB2H629WN">Privacy Settings FAQs for Fire Tablets and Kindle E-Readers</a></li><li class="selected">Amazon Device Terms of Use</li><li><a href="/gp/help/customer/display.html/ref=hp_left_v4_sib/135-7068071-1689528?ie=UTF8&amp;nodeId=201818950">Amazon Device Return Policies</a></li></ul>
 
 
   </div>
@@ -2210,7 +2209,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/digital/fiona/manage/145-1915924-7032238?ie=UTF8&ref_=hp_ss_qs_v3_dv_dc">
+            <a class="a-link-normal quick-solution-action" href="/gp/digital/fiona/manage/135-7068071-1689528?ie=UTF8&ref_=hp_ss_qs_v3_dv_dc">
                 <img alt="Devices &amp; Content" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/Devices_clear-bg._CB485925802_.png" title="Devices &amp; Content">
                 <div style="display: none;">
                     Devices & Content
@@ -2219,7 +2218,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/digital/fiona/manage/145-1915924-7032238?ie=UTF8&ref_=hp_ss_qs_v3_dv_dc">
+            <a class="a-link-normal quick-solution-action" href="/gp/digital/fiona/manage/135-7068071-1689528?ie=UTF8&ref_=hp_ss_qs_v3_dv_dc">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Devices & Content
                 </p>
@@ -2233,7 +2232,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/css/order-history/145-1915924-7032238?ie=UTF8&ref_=hp_ss_qs_v3_dv_dp&unifiedOrders=0">
+            <a class="a-link-normal quick-solution-action" href="/gp/css/order-history/135-7068071-1689528?ie=UTF8&ref_=hp_ss_qs_v3_dv_dp&unifiedOrders=0">
                 <img alt="Digital Purchases" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/digital-purchases-qs._CB485927774_.png" title="Digital Purchases">
                 <div style="display: none;">
                     Digital Purchases
@@ -2242,7 +2241,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/css/order-history/145-1915924-7032238?ie=UTF8&ref_=hp_ss_qs_v3_dv_dp&unifiedOrders=0">
+            <a class="a-link-normal quick-solution-action" href="/gp/css/order-history/135-7068071-1689528?ie=UTF8&ref_=hp_ss_qs_v3_dv_dp&unifiedOrders=0">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Digital Purchases
                 </p>
@@ -2256,7 +2255,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/yoursubscriptions/145-1915924-7032238?ie=UTF8&ref_=hp_ss_qs_v3_dv_ys">
+            <a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/yoursubscriptions/135-7068071-1689528?ie=UTF8&ref_=hp_ss_qs_v3_dv_ys">
                 <img alt="Your Subscriptions" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/subscribe-qs._CB441573237_.png" title="Your Subscriptions">
                 <div style="display: none;">
                     Your Subscriptions
@@ -2265,7 +2264,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/yoursubscriptions/145-1915924-7032238?ie=UTF8&ref_=hp_ss_qs_v3_dv_ys">
+            <a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/yoursubscriptions/135-7068071-1689528?ie=UTF8&ref_=hp_ss_qs_v3_dv_ys">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Your Subscriptions
                 </p>
@@ -2279,7 +2278,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="/gp/css/account/address/view.html/145-1915924-7032238?ie=UTF8&ref_=hp_ss_qs_v3_dv_oc">
+            <a class="a-link-normal quick-solution-action" href="/gp/css/account/address/view.html/135-7068071-1689528?ie=UTF8&ref_=hp_ss_qs_v3_dv_oc">
                 <img alt="1-Click Settings" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/1-click-qs._CB485925002_.png" title="1-Click Settings">
                 <div style="display: none;">
                     1-Click Settings
@@ -2288,7 +2287,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="/gp/css/account/address/view.html/145-1915924-7032238?ie=UTF8&ref_=hp_ss_qs_v3_dv_oc">
+            <a class="a-link-normal quick-solution-action" href="/gp/css/account/address/view.html/135-7068071-1689528?ie=UTF8&ref_=hp_ss_qs_v3_dv_oc">
                 <p class="a-spacing-none a-size-base a-color-base">
                     1-Click Settings
                 </p>
@@ -2302,7 +2301,7 @@ window.$Nav && $Nav.declare('configComplete');
                  
     <div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
         <div class="a-column a-span4">
-            <a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html/145-1915924-7032238?_encoding=UTF8&location=https%3A%2F%2Fwww.amazonforum.com%2F%3Fref_%3Dhp_ss_qs_v3_dv_forum&source=standards&token=1B2BF8495B6C1F75BDBF3D5CAB38EDF4356878D6">
+            <a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html/135-7068071-1689528?_encoding=UTF8&location=https%3A%2F%2Fwww.amazonforum.com%2F%3Fref_%3Dhp_ss_qs_v3_dv_forum&source=standards&token=1B2BF8495B6C1F75BDBF3D5CAB38EDF4356878D6">
                 <img alt="Digital &amp; Device Forum" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/digital-device-forum-bw-qs._CB485936142_.png" title="Digital &amp; Device Forum">
                 <div style="display: none;">
                     Digital & Device Forum
@@ -2311,7 +2310,7 @@ window.$Nav && $Nav.declare('configComplete');
             </a>
         </div>
         <div class="a-column a-span8 a-span-last">
-            <a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html/145-1915924-7032238?_encoding=UTF8&location=https%3A%2F%2Fwww.amazonforum.com%2F%3Fref_%3Dhp_ss_qs_v3_dv_forum&source=standards&token=1B2BF8495B6C1F75BDBF3D5CAB38EDF4356878D6">
+            <a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html/135-7068071-1689528?_encoding=UTF8&location=https%3A%2F%2Fwww.amazonforum.com%2F%3Fref_%3Dhp_ss_qs_v3_dv_forum&source=standards&token=1B2BF8495B6C1F75BDBF3D5CAB38EDF4356878D6">
                 <p class="a-spacing-none a-size-base a-color-base">
                     Digital & Device Forum
                 </p>
@@ -2324,7 +2323,7 @@ window.$Nav && $Nav.declare('configComplete');
 
                  <hr class="a-divider-normal">
                  
-    <span class="a-button a-button-base"><span class="a-button-inner"><a href="/gp/help/customer/contact-us/ref=hp_ss_qs_v3_dv_cu_t2&initialIssue=asin-order/145-1915924-7032238?ie=UTF8&ref_=hp_ss_qs_v3_dv_forum" class="a-button-text" role="button">
+    <span class="a-button a-button-base"><span class="a-button-inner"><a href="/gp/help/customer/contact-us/ref=hp_ss_qs_v3_dv_cu_t2&initialIssue=asin-order/135-7068071-1689528?ie=UTF8&ref_=hp_ss_qs_v3_dv_forum" class="a-button-text" role="button">
         Contact Us
     </a></span></span>
 
@@ -2600,7 +2599,7 @@ window.$Nav && $Nav.declare('configComplete');
   
 </div>
 
-<div id="sis_pixel_r2" aria-hidden="true" style="height:1px; position: absolute; left: -1000000px; top: -1000000px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=010138843034fe7c1066052920af61651072ee0df48f3eb4ca2c7072209535fb84a3&old_oo=0&ts=1630909908654&s=ASqHHuHYt1pMHnlEPrrI2Wxb94fqYPi_rCraA984o2uW&cb=1630909908654" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>')},300)});</script>
+<div id="sis_pixel_r2" aria-hidden="true" style="height:1px; position: absolute; left: -1000000px; top: -1000000px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=010180ad5f7b01743972402acd6bba1a8ceaf4d29a413c490bd4b8a7c0db7f1a7a38&old_oo=0&ts=1630931654077&s=AceGgdKL5Wqu8Xz8rMweJQUQTpzQLRYfNDFkB1Ppw66u&cb=1630931654077" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>')},300)});</script>
 
   <!-- NAVYAAN FOOTER END -->
 
@@ -3055,7 +3054,7 @@ $Nav.when('$', 'data', 'flyout.yourAccount', 'sidepanel.csYourAccount',
     yaFlyout.onRender(function() {
             $.ajax({
                 url: '/gp/bia/external/bia-hcb-ajax-handler.html',
-                data: {"biaHcbRid":"F3J34WF249RTDYHHP7PZ"},
+                data: {"biaHcbRid":"MMMW4DME1CTK1C3B9VB1"},
                 dataType: 'json',
                 timeout: 4*1000,
                 success: renderBuyItAgain,
@@ -3181,14 +3180,14 @@ $Nav.when('$', 'data', 'flyout.yourAccount', 'sidepanel.csYourAccount',
                     marketplaceId: 'ATVPDKIKX0DER',
                     localCountryCode: 'US',
                     customerId: null,
-                    sessionId: '145-1915924-7032238',
+                    sessionId: '135-7068071-1689528',
                     deviceType: 'DESKTOP',
                     referrer: '/',
                     url: '/gp/help/customer/display.html',
                     pageType: 'unknown',
                     languageOfPreference: 'en_US',
                     queryParams: {},
-                    weblabTreatmentMap: {"CROSS_BORDER_INTERSTITIAL_ES_US_340017":"C","CROSS_BORDER_INTERSTITIAL_MX_US_341718":"C","NARX_INTERSTITIAL_MOBILE_DP_REDIRECTION_336249":"T1","NARX_INTERSTITIAL_NEW_CX_372291":"C","CROSS_BORDER_INTERSTITIAL_EG_302080":"C","NARX_INTERSTITIAL_DP_REDIRECTION_320915":"T1","NARX_GOLDBOX_REDIRECTION_319969":"T1","CROSS_BORDER_INTERSTITIAL_SEARCH_REDIRECTION_355157":"C","NARX_INTERSTITIAL_LOCAL_CONFIG_354049":"T1","CROSS_BORDER_INTERSTITIAL_FR_CA_332704":"C"}
+                    weblabTreatmentMap: {"CROSS_BORDER_INTERSTITIAL_ES_US_340017":"C","CROSS_BORDER_INTERSTITIAL_MX_US_341718":"C","NARX_INTERSTITIAL_MOBILE_DP_REDIRECTION_336249":"T1","NARX_INTERSTITIAL_NEW_CX_372291":"C","CROSS_BORDER_INTERSTITIAL_EG_302080":"T1","NARX_INTERSTITIAL_DP_REDIRECTION_320915":"T1","NARX_GOLDBOX_REDIRECTION_319969":"T1","CROSS_BORDER_INTERSTITIAL_SEARCH_REDIRECTION_355157":"C","NARX_INTERSTITIAL_LOCAL_CONFIG_354049":"T1","CROSS_BORDER_INTERSTITIAL_FR_CA_332704":"C"}
                 }),
                 contentType: "application/json",
                 dataType: "html",
@@ -3219,14 +3218,14 @@ $Nav.when('$', 'data', 'flyout.yourAccount', 'sidepanel.csYourAccount',
                     marketplaceId: 'ATVPDKIKX0DER',
                     localCountryCode: 'US',
                     customerId: null,
-                    sessionId: '145-1915924-7032238',
+                    sessionId: '135-7068071-1689528',
                     deviceType: 'DESKTOP',
                     referrer: '/',
                     url: '/gp/help/customer/display.html',
                     pageType: 'unknown',
                     languageOfPreference: 'en_US',
                     queryParams: {},
-                    weblabTreatmentMap: {"CROSS_BORDER_INTERSTITIAL_ES_US_340017":"C","CROSS_BORDER_INTERSTITIAL_MX_US_341718":"C","NARX_INTERSTITIAL_MOBILE_DP_REDIRECTION_336249":"T1","NARX_INTERSTITIAL_NEW_CX_372291":"C","CROSS_BORDER_INTERSTITIAL_EG_302080":"C","NARX_INTERSTITIAL_DP_REDIRECTION_320915":"T1","NARX_GOLDBOX_REDIRECTION_319969":"T1","CROSS_BORDER_INTERSTITIAL_SEARCH_REDIRECTION_355157":"C","NARX_INTERSTITIAL_LOCAL_CONFIG_354049":"T1","CROSS_BORDER_INTERSTITIAL_FR_CA_332704":"C"}
+                    weblabTreatmentMap: {"CROSS_BORDER_INTERSTITIAL_ES_US_340017":"C","CROSS_BORDER_INTERSTITIAL_MX_US_341718":"C","NARX_INTERSTITIAL_MOBILE_DP_REDIRECTION_336249":"T1","NARX_INTERSTITIAL_NEW_CX_372291":"C","CROSS_BORDER_INTERSTITIAL_EG_302080":"T1","NARX_INTERSTITIAL_DP_REDIRECTION_320915":"T1","NARX_GOLDBOX_REDIRECTION_319969":"T1","CROSS_BORDER_INTERSTITIAL_SEARCH_REDIRECTION_355157":"C","NARX_INTERSTITIAL_LOCAL_CONFIG_354049":"T1","CROSS_BORDER_INTERSTITIAL_FR_CA_332704":"C"}
                 }),
                 contentType: "application/json",
                 dataType: "html",
@@ -3262,7 +3261,7 @@ $Nav.when('$', 'data', 'flyout.yourAccount', 'sidepanel.csYourAccount',
   <input type="hidden" id="rwol-display-called" value="0">
 </form>
 
-    <script type="a-state" data-a-state="{&quot;key&quot;:&quot;rw-dynamic-modal-bootstrap&quot;}">{"origSessionId":"145-1915924-7032238","subPageType":null,"pageType":"unknown","ASIN":null,"path":"/gp/help/customer/display.html","isAUI":"1"}</script>
+    <script type="a-state" data-a-state="{&quot;key&quot;:&quot;rw-dynamic-modal-bootstrap&quot;}">{"origSessionId":"135-7068071-1689528","subPageType":null,"pageType":"unknown","ASIN":null,"path":"/gp/help/customer/display.html","isAUI":"1"}</script>
       
 
       
@@ -3459,10 +3458,10 @@ var ue_pty='GPHelp', ue_spty='Help', ue_pti='202002080';
 
 </script>
 
-<a href='/rd/uedata?tepes=1&amp;id=F3J34WF249RTDYHHP7PZ'>v</a>
+<a href='/rd/uedata?tepes=1&amp;id=MMMW4DME1CTK1C3B9VB1'>v</a>
 <noscript>
-     <img src='/rd/uedata?noscript&amp;id=F3J34WF249RTDYHHP7PZ&amp;pty=GPHelp&amp;spty=Help&amp;pti=202002080' />
-     <img src='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:145-1915924-7032238:F3J34WF249RTDYHHP7PZ$uedata=s:%2Frd%2Fuedata%3Fnoscript%26id%3DF3J34WF249RTDYHHP7PZ%26pty%3DGPHelp%26spty%3DHelp%26pti%3D202002080:2000' />
+     <img src='/rd/uedata?noscript&amp;id=MMMW4DME1CTK1C3B9VB1&amp;pty=GPHelp&amp;spty=Help&amp;pti=202002080' />
+     <img src='//fls-na.amazon.com/1/batch/1/OP/ATVPDKIKX0DER:135-7068071-1689528:MMMW4DME1CTK1C3B9VB1$uedata=s:%2Frd%2Fuedata%3Fnoscript%26id%3DMMMW4DME1CTK1C3B9VB1%26pty%3DGPHelp%26spty%3DHelp%26pti%3D202002080:2000' />
 
 </noscript>
 </div>
@@ -3577,7 +3576,7 @@ d.trigger.isStub&&d.trigger.replay(function(a){v.apply(this,a)})}function y(){z|
 b.open("GET",a,!0);G&&(b.withCredentials=!0);b.send()}else throw"";}}}(),q=function(){return{send:function(a){(new Image).src=a}}}();e.encodeURIComponent&&(d.attach&&(d.attach("beforeunload",y),d.attach("pagehide",y)),F(),d.trigger=v)},"client-wbl-trg")(ue_csm,window);
 
 if (ue.trigger) {
-    ue.trigger("UEDATA_AA_SERVERSIDE_ASSIGNMENT_CLIENTSIDE_TRIGGER_190249", "T1");
+    ue.trigger("UEDATA_AA_SERVERSIDE_ASSIGNMENT_CLIENTSIDE_TRIGGER_190249", "C");
 }
 </script><script type="text/javascript">
 (function(f,b){function g(){try{b.PerformanceObserver&&"function"===typeof b.PerformanceObserver&&(a=new b.PerformanceObserver(function(b){c(b.getEntries())}),a.observe(d))}catch(h){k()}}function m(){for(var h=d.entryTypes,a=0;a<h.length;a++)c(b.performance.getEntriesByType(h[a]))}function c(a){if(a&&Array.isArray(a)){for(var c=0,e=0;e<a.length;e++){var d=l.indexOf(a[e].name);if(-1!==d){var g=Math.round(b.performance.timing.navigationStart+a[e].startTime);f.uet(n[d],void 0,void 0,g);c++}}l.length===
@@ -3615,6 +3614,7 @@ csa.plugin(function(e){e.config["KillSwitch.ContentLatency"]||e.emit("$content.e
 
 csa.plugin(function(o){var t,n,i="normal",s="reload",e="history",d="new-tab",a="ajax",r=1,c=2,u="lastActive",l="lastInteraction",f="used",p="csa-tabbed-browsing",g="visibilityState",v={"back-memory-cache":1,"tab-switch":1,"history-navigation-page-cache":1},b="<ns>.TabbedBrowsing.2",m="visible",y=o.global,I=o("Events",{producerId:"csa"}),h=y.location||{},T=y.document,w=y.JSON,z=((y.performance||{}).navigation||{}).type,P=o.store,S=o.on,k=o.storageSupport(),x=!1,A={},C={},O={},$={},j=!1,q=!1,B=!1;function E(i){try{return w.parse(P(p,void 0,{session:i})||"{}")||{}}catch(i){o.error('Could not parse storage value for key "'+p+'": '+i)}return{}}function J(i,t){P(p,w.stringify(t||{}),{session:i})}function N(i){var t=C.tid||i.id,n=A[u]||{};n.tid===t&&(n.pid=i.id),$={pid:i.id,tid:t,lastInteraction:C[l]||{},initialized:!0},O={lastActive:n,lastInteraction:A[l]||{},time:o.time()}}function D(i){var t=i===d,n=T.referrer,e=!(n&&n.length)||!~n.indexOf(h.origin||""),a=t&&e,r={type:i,toTabId:$.tid,toPageId:$.pid,transitTime:o.time()-A.time||null};a||function(i,t,n){var e=i===s,a=t?A[u]||{}:C,r=A[l]||{},o=C[l]||{},d=t?r:o;n.fromTabId=a.tid,n.fromPageId=a.pid,e||!d.id||d[f]||(n.interactionId=d.id||null,r.id===d.id&&(r[f]=!0),o.id===d.id&&(o[f]=!0))}(i,t,r),I("log",{navigation:r,schemaId:b},{ent:{page:["pageType","subPageType","requestId"]}})}function F(i){B=function(i){return i&&i in v}(i.transitionType),function(){A=E(!1),C=E(!0);var i=A[l],t=C[l],n=!1,e=!1;i&&t&&i.id===t.id&&i[f]!==t[f]&&(n=!i[f],e=!t[f],t[f]=i[f]=!0,n&&J(!1,A),e&&J(!0,C))}(),N(i),j=!0,function(i){var t,n;t=H(),n=K(),(t||n)&&N(i)}(i)}function G(){x&&!B?D(a):(x=!0,D(z===c||B?e:z===r?C.initialized?s:d:C.initialized?i:d))}function H(){return!(!j||!t)&&(C[l]={id:t.messageId,used:!(A[l]={id:t.messageId,used:!1})},!(t=null))}function K(){var i=!1;if(q=T[g]===m,j){var t=A[u]||{};i=function(i,t,n){var e=!1,a=i[u];return q?a&&a.tid===$.tid&&a[m]&&a.pid===n||(i[u]={visible:!0,pid:n,tid:t},e=!0):a&&a.tid===$.tid&&a[m]&&(e=!(a[m]=!1)),e}(A,C.tid||t.tid||$.tid,C.pid||t.pid||$.pid)}return i}k.local&&k.session&&w&&T&&g in T&&(n=function(){try{return y.self!==y.top}catch(i){return!0}}(),S("$pageChange",function(i){n||(F(i),G(),J(!1,O),J(!0,$),C=$,A=O)},{buffered:1}),S("$content.interaction",function(i){t=i,H()&&(J(!1,A),J(!0,C))}),S(T,"visibilitychange",function(){!n&&K()&&J(!1,A)},{capture:!1,passive:!0}))});
 csa.plugin(function(c){var e=c("Metrics",{producerId:"csa"});c.on(c.global,"pageshow",function(c){c&&c.persisted&&e("recordMetric","bfCache",1)})});
+
 
 csa.plugin(function(t){var a,f="length",u="parentElement",i="target",r="getEntriesByName",o="_osrc",c="_elt",d="_eid",l=10,h=5,g=10,s=100,m=t.global,n=t.timeout,e=m.Math,v=e.max,p=e.floor,E=e.ceil,y=m.document,x=m.performance||{},w=(x.timing||{}).navigationStart,O=Date.now,S=Object.values,T=t("PageTiming"),b=t("SpeedIndexBuffers"),I=[],N=[],B=[],H=[],L=[],W=.1,_=.1,k=0,C=0,P=!0,R=0,X=0,Y=0,$=0,F=1,V=0,j=[],D=0;function M(){for(var e=O(),n=0;a;){if(0!==a[f]){if(!1!==a.h(a[0])&&a.shift(),n++,!Y&&n%l==0&&O()-e>h)break}else a=a.n}k=0,a&&0<a[f]&&(k=k||t.raf(M))}function q(e,n,t,i){V=p(e),I=n,N=t,L=i;var r=y.createTreeWalker(y.body,NodeFilter.SHOW_TEXT,null,null),o={w:m.innerWidth,h:m.innerHeight,x:m.pageXOffset,y:m.pageYOffset};y.body[c]=e,B.push({w:r,vp:o}),H.push({img:y.images,iter:0}),I.h=z,(I.n=N).h=A,(N.n=B).h=G,(B.n=H).h=J,(H.n=L).h=K,a=I,M()}function z(e){e.m.forEach(function(e){var n=e[i];o in n||(n[o]=e.oldValue)})}function A(n){n.m.forEach(function(e){e[i][c]=n.t-w})}function G(e){for(var n,t=e.vp,i=e.w,r=l;(n=i.nextNode())&&0<r;){r-=1;var o=(n[u]||{}).nodeName;"SCRIPT"!==o&&"STYLE"!==o&&"NOSCRIPT"!==o&&0!==(n.nodeValue||"").trim()[f]&&Z(n[u],Q(n),t)}return!n}function J(e){for(var n,t={w:m.innerWidth,h:m.innerHeight,x:m.pageXOffset,y:m.pageYOffset},i=l;e.iter<e.img[f]&&0<i;){var r=e.img[e.iter];Z(r,U((n=r)[o],n)||U(n.currentSrc,n)||U(n.src,n),t),e.iter+=1,i-=1}return e.img[f]<=e.iter}function K(e){var n=[],i=0,r=0,o=C,t=p(e.y/s),a=E((e.y+m.innerHeight)/s);j.slice(t,a).forEach(function(e){(e.elems||[]).forEach(function(e){e.lt in n||(n[e.lt]={}),e.id in n[e.lt]||(i+=(n[e.lt][e.id]=e).a)})}),S(n).forEach(function(e){S(e).forEach(function(e){var n=1-r/i,t=v(e.lt,o);D+=n*(t-o),o=t,function(e,n){for(;W<=1&&W-.01<=e;)ee("visuallyLoaded"+(100*W).toFixed(0),n),W+=_}((r+=e.a)/i,e.lt)})}),C=e.t-w,L[f]<=1&&(ee("speedIndex",D),ee("visuallyLoaded0",V)),P&&(P=!1,ee("atfSpeedIndex",D))}function Q(e){for(var n=e[u],t=g;n&&0<t;){if(n[c]||0===n[c])return v(n[c],V);n=n.parentElement,t-=1}}function U(e,n){if(e){if(!e.indexOf("data:"))return Q(n);var t=x[r](e)||[];if(0<t[f])return v(E(t[0].responseEnd||0),V)}}function Z(e,n,t){if((n||0===n)&&!e[d]){var i=e.getBoundingClientRect(),r=i.width*i.height,o=i.width/2,a=F++;if(0!=r&&!(o<i.right-t.w||i.right<o)){for(var f={e:e,lt:n,a:r,id:a},u=p((i.top+t.y)/s),c=E((i.top+t.y+i.height)/s),l=u;l<=c;l++)l in j||(j[l]={elems:[],lt:0}),j[l].elems.push(f);e[d]=a}}}function ee(e,n){T("mark",e,w+E(n||0))}function ne(){$||(b("getBuffers",q),$=1)}w&&S&&x[r]&&(b("registerListener",function(e){X&&(clearTimeout(R),R=n(ne,2500))}),t.once("$unload",function(){Y=1,ne()}),t.once("$load",function(){X=1,R=n(ne,2500)}),t.once("$timing:functional",ne))});
 </script><script type="text/javascript">

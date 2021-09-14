@@ -57,9 +57,9 @@ img.emoji {
 }
 </style>
 <link rel='stylesheet' id='wp-block-library-css' href='/wp-includes/css/dist/block-library/style.min.css?ver=5.1.10' type='text/css' media='all' />
-<link rel='stylesheet' id='mailchimp-for-wp-checkbox-css' href='/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.min.css?ver=2.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='gdm-gutenberg-block-backend-js-css' href='/wp-content/plugins/google-drive-embedder/css/gdm-blocks.css?ver=5.1.10' type='text/css' media='all' />
+<link rel='stylesheet' id='mc4wp-form-basic-css' href='/wp-content/plugins/mailchimp-for-wp/assets/css/form-basic.css?ver=4.8.6' type='text/css' media='all' />
 <link rel='stylesheet' id='infolinks-style-css' href='/wp-content/themes/infolinks/style.css?ver=20201110' type='text/css' media='all' />
-<link rel='stylesheet' id='mailchimp-for-wp-form-css' href='/wp-content/plugins/mailchimp-for-wp/assets/css/form.min.css?ver=2.3.6' type='text/css' media='all' />
 <script type='text/javascript' src='https://publishers.infolinks.com/script/login-status.js?ver=1'></script>
 <script type='text/javascript' src='/wp-content/themes/infolinks/js/infolinks.js?ver=20161229'></script>
 <link rel='https://api.w.org/' href='https://www.infolinks.com/wp-json/' />
@@ -72,7 +72,7 @@ img.emoji {
 <meta name="generator" content="WPML ver:3.2.2 stt:1,2;" />
 <link rel="alternate" hreflang="en-US" href="/service-agreement/" />
 <link rel="alternate" hreflang="es-ES" href="/es/service-agreement/" />
-<!--[if lt IE 9]><script src="/wp-content/themes/infolinks/js/html5shiv.min.js?ver=20161229"></script><![endif]--><style type="text/css">.mc4wp-form input[name="_mc4wp_required_but_not_really"] { display: none !important; }</style>
+<!--[if lt IE 9]><script src="/wp-content/themes/infolinks/js/html5shiv.min.js?ver=20161229"></script><![endif]-->
 <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -117,10 +117,7 @@ img.emoji {
 <body class="page-template page-template-legal_ page-template-legal_docs page page-id-1093 group-blog" data-page="Service Agreement">
 
 <div id="subscribe-to-newsletter" class="white-popup mfp-hide">
-<div id="mc4wp-form-1" class="form mc4wp-form"><form method="post" role="form"><p>Our newsletter is a great place to receive updates, useful tips and the latest news! Subscribe now:</p>
-<label class="screen-reader-text" for="EMAIL"></label>
-<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Your email address" required class="left" />
-<button type="submit" class="left mc4wp_submit" value=""><i class="fa fa-envelope-o"></i></button><input type="text" name="_mc4wp_required_but_not_really" value="" /><input type="hidden" name="_mc4wp_timestamp" value="1631561782" /><input type="hidden" name="_mc4wp_form_id" value="0" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><input type="hidden" name="_mc4wp_form_submit" value="1" /><input type="hidden" name="_mc4wp_form_nonce" value="ae11e590cb" /></form></div></div>
+</div>
 <div id="fb-root"></div>
 
 <script>(function(d, s, id) {
@@ -220,7 +217,7 @@ Infolinks</div>
 <div class="social-icon facebook">
 <a href="https://www.facebook.com/infolinks?ref=hl" target="_blank">
 <i class="fa fa-facebook"></i>
- </a>
+</a>
 </div>
 <div class="social-icon twitter">
 <a href="https://twitter.com/InfolinksInc" target="_blank">
@@ -237,6 +234,7 @@ Infolinks</div>
 <i class="fa fa-youtube"></i>
 </a>
 </div>
+
 <div class="social-icon instagram">
 <a href="https://www.instagram.com/infolinksmedia/" target="_blank">
 <i class="fa fa-instagram"></i>
@@ -541,7 +539,7 @@ Notwithstanding the foregoing, without limiting rights and remedies available to
 </a>
 </div>
 <div class="social-icon linkedin">
- <a href="https://www.linkedin.com/company/927241?trk=prof-exp-company-name" target="_blank">
+<a href="https://www.linkedin.com/company/927241?trk=prof-exp-company-name" target="_blank">
 <i class="fa fa-linkedin"></i>
 </a>
 </div>
@@ -600,45 +598,5 @@ var icl_vars = {"current_language":"en","icl_home":"http:\/\/www.infolinks.com\/
 /* ]]> */
 </script>
 <script type='text/javascript' src='/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js?ver=5.1.10'></script>
-<script type="text/javascript">
-			(function() {
-				function addSubmittedClassToFormContainer(e) {
-					var form = e.target.form.parentNode;
-					var className = 'mc4wp-form-submitted';
-					(form.classList) ? form.classList.add(className) : form.className += ' ' + className;
-				}
-
-				function hideHoneypot(h) {
-					var n = document.createElement('input');
-					n.type = 'hidden';
-					n.name = h.name;
-					n.style.display = 'none';
-					n.value = h.value;
-					h.parentNode.replaceChild(n,h);
-				}
-
-				var forms = document.querySelectorAll('.mc4wp-form');
-				for (var i = 0; i < forms.length; i++) {
-					(function(f) {
-
-						// make sure honeypot is hidden
-						var h = f.querySelector('input[name="_mc4wp_required_but_not_really"]');
-						if(h) {
-							hideHoneypot(h);
-						}
-
-						// add class on submit
-						var b = f.querySelector('[type="submit"]');
-						if(b.addEventListener) {
-							b.addEventListener('click', addSubmittedClassToFormContainer);
-						} else {
-							b.attachEvent('click', addSubmittedClassToFormContainer);
-						}
-
-					})(forms[i]);
-				}
-			})();
-
-					</script>
 </body>
 </html>

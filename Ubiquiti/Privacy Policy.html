@@ -87,7 +87,7 @@
             <link rel="stylesheet" href="https://prd-www-cdn.ubnt.com/static/styles/css/main.min.css?v=3" type="text/css">
         
         <link rel="stylesheet" href="//dl.ui.com/media/css-assets/ubnt-icon/v1.131.5/style.css?v=3" type="text/css">
-        <style>.comWrapper--basic, .comWrapper--basic footer{background-color: #fafafa;} </style>
+        <style>.comWrapper--basic, .comWrapper--basic footer{background-color:#fafafa;}.collapsible{cursor:pointer;padding:18px;width:100%;border:0;text-align:left;outline:0}.collapsible div{color:#00a0df}.collapsible div:hover,.active div{color:#17191d}.active div:hover{color:#00a0df}.content{padding:0;list-style:none;display:none;overflow:hidden;list-style:none;margin:0 0 10px 10px}.collapsible .arrow{width:0;height:0;border-style:solid;border-width:3.5px 0 3.5px 6.1px;border-color:transparent transparent transparent #00a0df;display:inline-block;margin:0 5px 2px 0}.active .arrow{border-width:6.1px 3.5px 0 3.5px;border-color:#17191d transparent transparent transparent}</style>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       
       	<!-- OneTrust Cookies Consent Notice start -->
@@ -525,12 +525,15 @@
   <li><a  href="/support/warranty/">Limited Warranty</a></li>
   <li><a  href="/legal/services-terms/">Ubiquiti Services General Terms and Conditions</a></li>
   <li><a  href="/legal/unifi-elite/termsandconditions/">UniFi Elite Terms and Conditions</a></li>
+  <li class="collapsible"><div><span class="arrow"></span>Store T&C</div></li>
+   <ul class="content">
   <li><a  href="/legal/ui-store/termsandconditions/">UI US and AmpliFi Store Terms and Conditions</a></li>
 	<li><a  href="/legal/ui-store/itmarketplace/">UI US IT Marketplace Store Terms and Conditions</a></li>
   <li><a  href="/legal/ui-eu-store/termsandconditions/">UI Europe Store Terms and Conditions</a></li>
   <li><a  href="/legal/ui-ca-store/termsandconditions/">UI Canada Store Terms and Conditions</a></li>
   <li><a  href="/legal/ui-mx-store/termsandconditions/">UI Mexico Store Terms and Conditions</a></li>
   <li><a  href="/legal/ui-br-store/termsandconditions/">UI Brazil Store Terms and Conditions</a></li>
+  </ul>
   <li><a  href="/legal/unifi-ios-app-licenses/">UniFi IOS App License</a></li>
   <li><a  href="/compliance/">Compliance Information</a></li>
 </ul>
@@ -542,7 +545,7 @@
 
 
 
-<h3>OUR PRIVACY POLICY WAS UPDATED ON SEPTEMBER 25, 2020</h3>
+<h3>OUR PRIVACY POLICY WAS UPDATED ON SEPTEMBER 25, 2021</h3>
 <h5>Privacy Policy of Ubiquiti Inc.</h5>
 <p>
     This Privacy Policy (the “<span class="textBold">Policy</span>”) describes how Ubiquiti Inc. and its subsidiaries
@@ -582,7 +585,7 @@
     <li><a href="#c5" class="js-anchor-link">Cookies and Other Tracking Technology</a></li>
     <li><a href="#c6" class="js-anchor-link">Your Choices</a></li>
     <li><a href="#c7" class="js-anchor-link">Data Security</a></li>
-    <li><a href="#c8" class="js-anchor-link">Third-Party Links</a></li>
+    <li><a href="#c8" class="js-anchor-link">Third-Party Services</a></li>
     <li><a href="#c9" class="js-anchor-link">Children's Privacy</a></li>
     <li><a href="#c10" class="js-anchor-link">Special Note to International Users</a></li>
     <li><a href="#c11" class="js-anchor-link">California Privacy Rights</a></li>
@@ -882,13 +885,15 @@
     </li>
     <a href="" name="c8" id="c8"></a>
     <li class="textBold" style="margin-bottom: 1em;">
-        Third-Party Links.
-        <span style="font-weight: normal">
-          Our Services may contain links to third-party websites and products and services offered by third parties. Any
-            access to and use of such linked websites or third-party products and services is not governed by this Policy,
-            but instead is governed by the privacy policies of those third-parties. We are not responsible for the privacy
-            or security practices of such third-parties.
-        </span>
+        Third-Party Services.
+         <ul style="list-style-type: lower-alpha;">
+           <li>
+             <i>Third-Party Services Used</i>. In general, the Services may access third party information (such as your Facebook or Twitter account information) and third-party services through application interfaces. Certain Services utilize YouTube Application Program Interface (API) Services. We may provide links to third-party Web sites, such as Facebook or YouTube, as a service to you. The Services may also carry advertisements from other companies. When you click on links of third parties from any Service, you may leave that Service. Some of these third party sites may be co-branded with our name/logo or our affiliated entity’s name/logo, even though they are not operated or maintained by us. For more information on privacy practices of such third parties, please visit YouTube’s <a href="https://www.youtube.com/t/terms" title="Terms of Service" target="_blank">Terms of Service</a> and Google’s <a href="https://policies.google.com/privacy" title="Privacy Policy" target="_blank">Privacy Policy</a>. This Policy does not address, and we are not responsible for, the privacy practices of websites operated by third parties, whether they are linked to or otherwise accessible from a Service. 
+           </li>
+           <li>
+			<i>Restricting Access to Third-Party Services</i>.  If you would like to revoke access to your data from application interfaces that Ubiquiti uses, including YouTube’s Application Program Interface, please contact us at <a href="mailto:dataprotection@ui.com">dataprotection@ui.com</a>. You may also visit the Google security settings page in your account to revoke access to third-party applications. The inclusion of a link or accessibility of third party websites does not imply endorsement of such third party website by us.
+           </li>
+         </ul>
     </li>
     <a href="" name="c9" id="c9"></a>
     <li class="textBold" style="margin-bottom: 1em;">
@@ -1104,7 +1109,7 @@ Copyright © 2021 Ubiquiti Inc. All rights reserved.
 
 <div class="comNewsletterSignup">
     <form class="comNewsletterSignup__form js-form-newsletter-global" action="/newsletters/" >
-        <input type='hidden' name='csrfmiddlewaretoken' value='Qe2udft1UNccScbm8VcCVkWHZeNEXSmLauQ7JGmjlO55U4dsGvhz9nEQIm5yLNeY' />
+        <input type='hidden' name='csrfmiddlewaretoken' value='wsKEJIlgT3m2WLTO0Lkstu1wWeba1RVWQT3Cx3Tj3fAN29kXdeWDVlEJbQoF6QWb' />
         <h4 class="comGlobalFooter__title">Stay In Touch</h4>
       	<div class="comGlobalFooter__input">
         	<input type="email" placeholder="Email Address" required="required" name="email" class="comNewsletterSignup__input"/>
@@ -1196,6 +1201,38 @@ Copyright © 2021 Ubiquiti Inc. All rights reserved.
 
     <script src="//prd-www-cdn.ubnt.com/static/scripts/min/privacypolicy.min.js"></script>
 
+<script>
+var coll = document.getElementsByClassName("collapsible"),
+ 	content = document.getElementsByClassName("content"),
+ 	winLoc = window.location.href,
+    urlArr = ['ui-store', 'ui-eu-store', 'ui-ca-store', 'ui-mx-store', 'ui-br-store'];
+
+coll[0].addEventListener("click", function() {
+	active();
+});
+
+if(isSelected()){
+	active();
+}
+
+function active(){
+	coll[0].classList.toggle("active");
+    if (content[0].style.display === "block") {
+      content[0].style.display = "none";
+    } else {
+      content[0].style.display = "block";
+    }
+}
+
+function isSelected(){
+	for (var i = 0; i < urlArr.length; i++) {
+		if(winLoc.includes(urlArr[i])){
+        	return true;
+        }
+	}
+    return false;
+}
+</script>
 
               
   </body>

@@ -141,7 +141,7 @@
     <!-- navid Web Module: 0.2.0-80.bc5da8d -->
     
     
-    <!-- searchbox Web Module: 3.0.0-346.7719051 -->
+    <!-- searchbox Web Module: 3.0.0-347.1dc6052 -->
     
     
     <!-- navpromo Web Module: 3.0.0-267.9437957 -->
@@ -161,7 +161,7 @@
 
     
     
-<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/5a5f2c64d9596418040b59dfeed62f88/css/box.css">
+<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/d3c099a283f4be8102b8b0bba5796dd7/css/box.css">
 
     
     
@@ -860,15 +860,15 @@
                 const isOrbUx = !!document.querySelector('.orb-nav-pri-container');
                 if (isOrbUx) {
                     const script = document.createElement('script');
-                    script.src = 'https://nav.files.bbci.co.uk/searchbox/5a5f2c64d9596418040b59dfeed62f88//js/old-search-suggest.js';
+                    script.src = 'https://nav.files.bbci.co.uk/searchbox/d3c099a283f4be8102b8b0bba5796dd7//js/old-search-suggest.js';
                     script.async = true;
-                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/5a5f2c64d9596418040b59dfeed62f88/');
+                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/d3c099a283f4be8102b8b0bba5796dd7/');
                     script.setAttribute('data-variant', 'default');
                     document.head.appendChild(script);
                 } else {
-                    import('https://nav.files.bbci.co.uk/searchbox/5a5f2c64d9596418040b59dfeed62f88//js/search-suggest.js').then(drawer => {
+                    import('https://nav.files.bbci.co.uk/searchbox/d3c099a283f4be8102b8b0bba5796dd7//js/search-suggest.js').then(drawer => {
                         drawer.setupSearchDrawer({
-                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/5a5f2c64d9596418040b59dfeed62f88/',
+                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/d3c099a283f4be8102b8b0bba5796dd7/',
                             variant: 'default',
                         });
                     });

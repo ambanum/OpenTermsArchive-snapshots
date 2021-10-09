@@ -36,7 +36,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Criteo - ">
     <meta name="facebook-domain-verification" content="xv6868m44g7agcmimk59r7pnvwng34">
-        <link rel="icon" href="/wp-content/themes/criteo2017/img/favicon.ico">
+        <link rel="icon" id="lightico" href="/wp-content/themes/criteo2017/img/lightico.svg" >
+    <link rel="icon" id="darkico" href="/wp-content/themes/criteo2017/img/darkico.svg" >
+    <link rel="icon" href="/wp-content/themes/criteo2017/img/defaultico.ico">
+    <link rel="icon" href="/wp-content/themes/criteo2017/img/defaultico.png">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="">
     <link rel="alternate" href="https://www.criteo.com/de/privacy/" hreflang="de_DE" /><link rel="alternate" href="https://www.criteo.com/privacy/" hreflang="en_US" /><link rel="alternate" href="https://www.criteo.com/es/privacy/" hreflang="es_ES" /><link rel="alternate" href="https://www.criteo.com/fr/privacy/" hreflang="fr_FR" /><link rel="alternate" href="https://www.criteo.com/it/privacy/" hreflang="it_IT" /><link rel="alternate" href="https://www.criteo.com/br/privacy/" hreflang="pt_PT" /><link rel="alternate" href="https://www.criteo.com/ru/privacy/" hreflang="ru_RU" /><link rel="alternate" href="https://www.criteo.com/kr/privacy/" hreflang="ko_KR" /><link rel="alternate" href="https://www.criteo.com/jp/privacy/" hreflang="ja" />    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -63,7 +66,7 @@
 <link rel='dns-prefetch' href='//www.criteo.com' />
 <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
-<link rel='stylesheet preload' as='style' id='Criteo2017-styles-css'  href='https://www.criteo.com/wp-content/themes/criteo2017/css/theme.min.css?ver=2021100827' type='text/css' media='all' />
+<link rel='stylesheet preload' as='style' id='Criteo2017-styles-css'  href='https://www.criteo.com/wp-content/themes/criteo2017/css/theme.min.css?ver=2021100927' type='text/css' media='all' />
 <script type='text/javascript' src='https://www.criteo.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
 <script type='text/javascript' src='https://www.criteo.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
 <script type='text/javascript' src='https://www.criteo.com/wp-content/themes/criteo2017/js/cookies.js' id='cookieManagement-js'></script>
@@ -74,6 +77,22 @@
 <body class="page-template page-template-page-templates page-template-basic page-template-page-templatesbasic-php page page-id-22082 page-parent page-parent-privacy group-blog privacy" data-country="" data-whitelist="UK,GB,IE,US,AU,NZ" data-site="https://www.criteo.com">
     <script>
         var $ = jQuery.noConflict();
+        const lightSchemeIcon = document.querySelector('link#lightico');
+        const darkSchemeIcon = document.querySelector('link#darkico');
+        matcher = window.matchMedia('(prefers-color-scheme: dark)');
+        matcher.addListener(onUpdate);
+        onUpdate();
+
+
+        function onUpdate() {
+            if (matcher.matches) {
+                lightSchemeIcon.remove();
+                document.head.append(darkSchemeIcon);
+            } else {
+                document.head.append(lightSchemeIcon);
+                darkSchemeIcon.remove();
+            }
+        }
     </script>
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4Z343H" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -879,7 +898,7 @@ var qpprFrontData = {"linkData":{"https:\/\/www.criteo.com\/blog\/omnichannel-gl
 <script type='text/javascript' src='https://www.criteo.com/wp-content/plugins/rw-quick-page-and-post-redirects/js/qppr_frontend_script.min.js?ver=1.0.1' id='qppr_frontend_scripts-js'></script>
 <script type='text/javascript' src='https://www.criteo.com/wp-content/themes/criteo2017/js/bs4.min.js' id='criteoBootstrap4-js'></script>
 <script type='text/javascript' src='https://www.criteo.com/wp-content/themes/criteo2017/js/iframe.min.js' id='iframe-resizer-js'></script>
-<script type='text/javascript' src='https://www.criteo.com/wp-content/themes/criteo2017/js/theme.min.js?ver=2021100827' id='Criteo2017-scripts-js'></script>
+<script type='text/javascript' src='https://www.criteo.com/wp-content/themes/criteo2017/js/theme.min.js?ver=2021100927' id='Criteo2017-scripts-js'></script>
 <script type='text/javascript' src='https://www.criteo.com/wp-content/themes/criteo2017/js/scrolllock.min.js' id='scrolllock-js'></script>
 <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js' id='match-height-js'></script>
 <script type='text/javascript' src='https://www.criteo.com/wp-content/themes/criteo2017/js/jquery.sticky-kit.min.js?ver=0.6.2' id='sticky-kit-js'></script>
@@ -888,5 +907,5 @@ var qpprFrontData = {"linkData":{"https:\/\/www.criteo.com\/blog\/omnichannel-gl
 <script type='text/javascript' src='https://www.criteo.com/wp-includes/js/wp-embed.min.js?ver=5.8' id='wp-embed-js'></script>
 <div style="display: none">
 </div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bb94583995","applicationID":"72531584","transactionName":"b1YBYkFZWBBYBURaDVYcIlVHUVkNFgRRQAtb","queueTime":0,"applicationTime":605,"atts":"QxECFAlDSx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bb94583995","applicationID":"72531584","transactionName":"b1YBYkFZWBBYBURaDVYcIlVHUVkNFgRRQAtb","queueTime":0,"applicationTime":520,"atts":"QxECFAlDSx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

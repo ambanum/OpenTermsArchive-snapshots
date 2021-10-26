@@ -1312,6 +1312,11 @@ While using W3Schools, you agree to have read and accepted our <a href="/about/a
 loadUser();
 //activateElse();
 function loadUser() {
+  if (!MyLearning.userIsLoggedIn()) {
+    console.log("CAT");
+    activateElse();
+    return false;
+  }
   var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
   if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
   pos = pathname.indexOf("/");
@@ -1328,22 +1333,26 @@ function loadUser() {
   }
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 0) {
-      console.log("ZZ");
-      activateElse();
-    }
-    if (this.readyState == 4 && this.status == 200) {
-      y = this.responseText;
-      x = y.substr(0, 1);
-      if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
-        console.log(x);
+    if (this.readyState == 4) {
+      if (this.status == 0) {
+        console.log("ZZ");
         activateElse();
-      } else if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K"  || x == "L" || x == "M" || x == "Q") {
-        console.log(x);
-        activateMYPAGE(x, y);
-      } else {
+      } else if (this.status == 401) {
+        console.log("A2");
         activateElse();
-        console.log("Z");
+ } else if (this.status == 200) {
+        y = this.responseText;
+        x = y.substr(0, 1);
+        if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
+          console.log(x);
+          activateElse();
+        } else if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K"  || x == "L" || x == "M" || x == "Q") {
+          console.log(x);
+          activateMYPAGE(x, y);
+        } else {
+          activateElse();
+          console.log("Z");
+        }
       }
     }
   };
@@ -1354,6 +1363,9 @@ function loadUser() {
   xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0");
 }
 function finishedPage() {
+  if (!MyLearning.userIsLoggedIn()) {
+    return false;
+  }
   var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
   if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
   pos = pathname.indexOf("/");

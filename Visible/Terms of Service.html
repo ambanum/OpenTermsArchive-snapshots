@@ -7,7 +7,7 @@
 
   <head>
   <link rel="stylesheet" href="/css/footer.css?t=8db93cb682e89d829c77b65de37b51d5">
-  <link rel="stylesheet" href="/css/header_redesign.css?t=8f99ac4fe959e7b9b03f7b221f97ca12">
+  <link rel="stylesheet" href="/css/header_redesign.css?t=93c7f76c1769349ec5bb39b9aa61e47d">
   <link href='/images/favicon.ico' rel='icon'>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,7 @@
   <link rel="dns-prefetch" href="https://bid.g.doubleclick.net">
   <link rel="dns-prefetch" href="https://bat.bing.com">
   <link rel="dns-prefetch" href="https://collect-us-east-1.tealiumiq.com">
-  <link rel="stylesheet" href="/css/hp.min.css?t=8ffea70863e9198ace57ec5062a57eed">
+  <link rel="stylesheet" href="/css/hp.min.css?t=b2ab0a139aad606ffec39094d0e5b5ab">
   <link href="/css/privacy.css?t=0a72f34604b2470688fbc6483c439798" rel="stylesheet">
   <link href="/css/search.css?t=719b8764310086b699e490898ac818d1" rel="stylesheet">
   <script async src='//tags.tiqcdn.com/utag/flanker/main/prod/utag.sync.js'></script>
@@ -63,173 +63,195 @@
       <div class="row">
 
         <header id=header>
-    <div id="esim-notice-bar">
-        <div class="esim-notice-bar-body">
-            <div class="esim-details">
-                <div class="esim-details-body">
-                    <p class="header">You have an eSIM order in progress: </p>
-                    <p class="description">Please resume your order on Visible's iOS app or contact Care for help.</p>
-                    <a class="learn-more" href="/eSIM/error">Learn more
-                        <hr></a>
-                </div>
-            </div>
-        </div>
-		<script type="text/javascript" async src="/js/esim-notice-bar.js?t=39e489b3265e9da7e525342c116120aa">
-			var currentPage =  sessionStorage.getItem('pageName')
+	<div id="esim-notice-bar">
+		<div class="esim-notice-bar-body">
+			<div class="esim-details">
+				<div class="esim-details-body">
+					<p class="header">You have an eSIM order in progress: </p>
+					<p class="description">Please resume your order on Visible's iOS app or contact Care for help.</p>
+					<a class="learn-more" href="/eSIM/error">Learn more
+						<hr>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" async src="/js/esim-notice-bar.js?t=8643ee1c06d074885f5ddbfcddd0190b">
+			var currentPage = sessionStorage.getItem('pageName')
 		</script>
-    </div>
-    <div class="fp-notice-container" id="fpNoticeContainer" style="display:none;">
-        <div class="fp-notice-details">
-            <p class="fp-notice-text">
-                <span id="fpNoticeText" class="fp-notice-main-text"></span><span class="fp-notice-colon"
-                    style="display:none;">:&nbsp;</span>
-                <span id="fpNoticeSubText" class="fp-notice-sub-text" style="display:none;"></span>
-                <span id="fpNoticeBtn" class="fp-notice-btn" style="display:none;"></span>
-            </p>
-        </div>
-    </div>
-    <div class="notice-container" id="cancellationNoticeContainer" style="display:none;">
-        <div class="notice-details">
-            <p class="notice-text">
-                <span id="cancelNoticeText" class="notice-main-text"></span><span class="cancel-notice-colon"
-                    style="display:none;">:&nbsp;</span>
-                <span id="cancelNoticeSubText" class="notice-sub-text" style="display:none;"></span>
-                <span id="cancelNoticeBtn" class="notice-btn" style="display:none;"></span>
-                <span id="cancelNoticeSubText2" class="notice-sub-text" style="display:none;"></span>
-            </p>
-        </div>
-    </div>
-    <div class="notice-container" id="noticeContainer" style="display:none;">
-        <div class="notice-details">
-            <p class="notice-text">
-                <span id="noticeText" class="notice-main-text"></span><span class="notice-colon"
-                    style="display:none;">:&nbsp;</span>
-                <span id="notice-sub-text" class="notice-sub-text" style="display:none;"></span>
-                <span id="notice-btn" class="notice-btn" style="display:none;"></span>
+	</div>
+	<div class="fp-notice-container" id="fpNoticeContainer" style="display:none;">
+		<div class="fp-notice-details">
+			<p class="fp-notice-text">
+				<span id="fpNoticeText" class="fp-notice-main-text"></span><span class="fp-notice-colon"
+					style="display:none;">:&nbsp;</span>
+				<span id="fpNoticeSubText" class="fp-notice-sub-text" style="display:none;"></span>
+				<span id="fpNoticeBtn" class="fp-notice-btn" style="display:none;"></span>
+			</p>
+		</div>
+	</div>
+	<div class="notice-container" id="cancellationNoticeContainer" style="display:none;">
+		<div class="notice-details">
+			<p class="notice-text">
+				<span id="cancelNoticeText" class="notice-main-text"></span><span class="cancel-notice-colon"
+					style="display:none;">:&nbsp;</span>
+				<span id="cancelNoticeSubText" class="notice-sub-text" style="display:none;"></span>
+				<span id="cancelNoticeBtn" class="notice-btn" style="display:none;"></span>
+				<span id="cancelNoticeSubText2" class="notice-sub-text" style="display:none;"></span>
+			</p>
+		</div>
+	</div>
+	<div class="notice-container" id="noticeContainer" style="display:none;">
+		<div class="notice-details">
+			<p class="notice-text">
+				<span id="noticeText" class="notice-main-text"></span><span class="notice-colon"
+					style="display:none;">:&nbsp;</span>
+				<span id="notice-sub-text" class="notice-sub-text" style="display:none;"></span>
+				<span id="notice-btn" class="notice-btn" style="display:none;"></span>
 			</p>
 			<img id="notification-close-icon" src="../images/svgs/close_icon_header.svg" />
-        </div>
+		</div>
 	</div>
 	<div class="notice-container" id="groupnoticeContainer" style="display:none;">
-        <div class="notice-details">
-            <p class="notice-text">
-                <span id="group-noticeText" class="group-notice-sub-text" style="display:none;"></span>
-                    <span id="group-notice-btn" class="group-notice-btn" style="display:none;"></span>
-                <span id="group-notice-sub-text" class="group-notice-sub-text" style="display:none;"></span>
-            </p>
-            <img id="groups-close-icon" src="../images/svgs/close_icon_header.svg" />
-        </div>
-    </div>
-    <nav alt="navigational menu" class="navbar navbar-default navbar-fixed-top top-nav-collapse" id=main-menu style=padding:0>
-        <a href="#main-content" class="skip-link">Skip to main content</a>
-        <div id="headerWrapper" class='container-fullwidth'>
-            <div class=navbar-header>
-                <div class=col-xs-2>
-                    <button class="navbar-toggle header-toggle" data-target=.navbar-collapse data-toggle=collapse type=button>
-                        <span class=sr-only>Toggle navigation</span>
-													<!-- <svg id="menuClosed" height=26 viewBox="0 0 33 26" width=33 xmlns=http://www.w3.org/2000/svg>
+		<div class="notice-details">
+			<p class="notice-text">
+				<span id="group-noticeText" class="group-notice-sub-text" style="display:none;"></span>
+				<span id="group-notice-btn" class="group-notice-btn" style="display:none;"></span>
+				<span id="group-notice-sub-text" class="group-notice-sub-text" style="display:none;"></span>
+			</p>
+			<img id="groups-close-icon" src="../images/svgs/close_icon_header.svg" />
+		</div>
+	</div>
+	<nav alt="navigational menu" class="navbar navbar-default navbar-fixed-top top-nav-collapse" id=main-menu
+		style=padding:0>
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+		<div id="headerWrapper" class='container-fullwidth'>
+			<div class=navbar-header>
+				<div class=col-xs-2>
+					<button class="navbar-toggle header-toggle" data-target=.navbar-collapse data-toggle=collapse
+						type=button>
+						<span class=sr-only>Toggle navigation</span>
+						<!-- <svg id="menuClosed" height=26 viewBox="0 0 33 26" width=33 xmlns=http://www.w3.org/2000/svg>
 															<g fill=none fill-rule=evenodd stroke=#0F15D4 stroke-linecap=square stroke-width=3.5>
 																<path d="M0 0H22V2.5H0V0Z" fill="#1800FF"/>
 																<path d="M0 7H14V9.5H0V7Z" fill="#1800FF"/>
 																<path d="M0 14H22V16.5H0V14Z" fill="#1800FF"/>
 															</g>
 													</svg> -->
-													<svg id="menuClosed" width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M0 0H22V2.5H0V0Z" fill="#1800FF"/>
-														<path d="M0 7H14V9.5H0V7Z" fill="#1800FF"/>
-														<path d="M0 14H22V16.5H0V14Z" fill="#1800FF"/>
-													</svg>
-														
-													<svg id="menuOpened" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M21.2761 1.27612L11.4014 11.1508M11.4014 11.1508L1.27612 21.2761M11.4014 11.1508L1.52675 1.27612M11.4014 11.1508L21.5268 21.2761" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-													</svg>
-                    </button>
-                </div>
-                <div class="col-xs-10 logo-area" style=padding:0>
-                    <a data-link=/ aria-label="Visible Logo"
-                        data-tracking-name="tealium_event,visible_logo,link_location,top_navigation" href=/
-                        id=visible_logo>
-                        <div class=visible-logo-fixed>
+						<svg id="menuClosed" width="33" height="26" viewBox="0 0 33 26" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0H22V2.5H0V0Z" fill="#1800FF" />
+							<path d="M0 7H14V9.5H0V7Z" fill="#1800FF" />
+							<path d="M0 14H22V16.5H0V14Z" fill="#1800FF" />
+						</svg>
+
+						<svg id="menuOpened" width="23" height="23" viewBox="0 0 23 23" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M21.2761 1.27612L11.4014 11.1508M11.4014 11.1508L1.27612 21.2761M11.4014 11.1508L1.52675 1.27612M11.4014 11.1508L21.5268 21.2761"
+								stroke="#0F15D4" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</button>
+				</div>
+				<div class="col-xs-10 logo-area" style=padding:0>
+					<a data-link=/ aria-label="Visible Logo"
+						data-tracking-name="tealium_event,visible_logo,link_location,top_navigation" href=/
+						id=visible_logo>
+						<div class=visible-logo-fixed>
 							<!-- <img alt="visiblelogo" src="/images/svgs/visible-logo.svg?t=7bb2a0c1997ef524153226235b23948c"> -->
 							<div class="visiblelogo"></div>
-                        </div>
-                        <div class="visible-logo-mobile" style="display: none">
-                            <img height=32 src=/images/visible-logo-mobile.svg?t=51d392fabc4c9bffa5ca002c7de5a6aa alt="Visible logo" width=88>
-                        </div>
-                    </a>
-                    <a id="cart-id-div" data-tracking-name="tealium_event,cart,link_location,top_navigation,link_type,icon"
-                        href="/shop/cart" class="mobile-shop-cart">
+						</div>
+						<div class="visible-logo-mobile" style="display: none">
+							<img height=32 src=/images/visible-logo-mobile.svg?t=51d392fabc4c9bffa5ca002c7de5a6aa alt="Visible logo" width=88>
+						</div>
+					</a>
+					<a id="cart-id-div"
+						data-tracking-name="tealium_event,cart,link_location,top_navigation,link_type,icon"
+						href="/shop/cart" class="mobile-shop-cart">
 						<img id="cart-img" class="cartIcon cartIconMobile" src="images/cart.svg" alt="cart-icon">
-						<div id="cart-circle" class="bagiconcircle" >
+						<div id="cart-circle" class="bagiconcircle">
 							<span id="cart-circle-text" class="bagicontext"></span>
 						</div>
-						
-                    </a>
-                </div>
-            </div>
-            <div id="headerContainer" class="collapse float-left navbar-collapse">
-                <ul class="nav navbar-nav nav_links" id="mobileContainer" align=center>
-                    
-                    <li id="searchMobBox">
-                        <form class="navbar-form mobile-search" id="searchForm" role="search">
-                            <div class="search-icon input-control">
-                                <input type="text" class="form-control search-box" id="searchText1" required
-                                    name="search-mobile" autocomplete="off" maxlenght="30"
-                                    onfocus="handleSearchInputFocus()">
-                                <label for="search-mobile">Search</label>
-                            </div>
-                            <div class="serach-logo-wrapper">
-                                <span class="search-logo-pad">
-                                    <div class="search-logo"><img alt="Search-icon" src="/images/svgs/search_icon.svg?t=1b6ad4eb14ba272d5c91a2f6fcac9f3f">
-                                    </div>
-                                </span>
+
+					</a>
+				</div>
+			</div>
+			<div id="headerContainer" class="collapse float-left navbar-collapse">
+				<ul class="nav navbar-nav nav_links" id="mobileContainer" align=center>
+
+					<li id="searchMobBox">
+						<form class="navbar-form mobile-search" id="searchForm" role="search">
+							<div class="search-icon input-control">
+								<input type="text" class="form-control search-box" id="searchText1" required
+									name="search-mobile" autocomplete="off" maxlenght="30"
+									onfocus="handleSearchInputFocus()">
+								<label for="search-mobile">Search</label>
+							</div>
+							<div class="serach-logo-wrapper">
+								<span class="search-logo-pad">
+									<div class="search-logo"><img alt="Search-icon" src="/images/svgs/search_icon.svg?t=1b6ad4eb14ba272d5c91a2f6fcac9f3f">
+									</div>
+								</span>
 							</div>
 						</form>
-                    </li>
-                    
-                    <li class="scroll menu-link navLink" id="shopLink">
-											<a class=desktop-menu-link id="shopDeskLink" data-link=/shop/smartphones>
-												Shop
-												<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-												</svg>
-											</a>
-											<div class=mobile-menu-link id="shopMobLink">
-													<a class=mobile-submenu-anchor data-link=/shop/smartphones>
-															Shop
-													</a>
-													<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-													</svg>
-											</div>
-											<ul class="submenu navItem" id="shopSubMenu">
-												<li class="submenu-item">
-														<a class="subMenuItems" data-link=/shop/smartphones data-tracking-name=tealium_event,shop_all_phones,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/shop/smartphones>
-																Shop all phones
-														</a>
-												</li>
-												<li class="submenu-item" id="shopSubMenuWearables">
-													<a class="subMenuItems" data-link=/shop/wearables data-tracking-name=tealium_event,shop_all_wearables,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/shop/wearables>
-														Shop all wearables
-													</a>
-												</li>
+					</li>
 
-												<li class="submenu-item" id="shopSubMenuBYAW">
-													<a class="subMenuItems" data-link=/shop/bring-your-own-apple-watch data-tracking-name=tealium_event,bring_your_apple_watch,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/shop/bring-your-own-apple-watch>
-														Bring your Apple Watch 
-													</a>
-											</li>
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/shop/bring-your-own-device data-tracking-name=tealium_event,bring_your_own_device,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/shop/bring-your-own-device>
-															Bring your own phone 
-													</a>
-											</li>
-											<li class="submenu-item">
-													<a class="subMenuItems" data-link=/esim data-tracking-name=tealium_event,sign_up_with_esim,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/esim>
-															Sign up with eSIM
-													</a>
-											</li>
-											<!-- <li class="submenu-item">
+					<li class="scroll menu-link navLink" id="shopLink">
+						<a class=desktop-menu-link id="shopDeskLink" data-link=/shop/smartphones>
+							Shop
+							<svg width="10" height="7" viewBox="0 0 10 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4"
+									stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</a>
+						<div class=mobile-menu-link id="shopMobLink">
+							<a class=mobile-submenu-anchor data-link=/shop/smartphones>
+								Shop
+							</a>
+							<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4"
+									stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</div>
+						<ul class="submenu navItem" id="shopSubMenu">
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/shop/smartphones
+									data-tracking-name=tealium_event,shop_all_phones,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/shop/smartphones>
+									Shop all phones
+								</a>
+							</li>
+							<li class="submenu-item" id="shopSubMenuWearables">
+								<a class="subMenuItems" data-link=/shop/wearables
+									data-tracking-name=tealium_event,shop_all_wearables,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/shop/wearables>
+									Shop all wearables
+								</a>
+							</li>
+
+							<li class="submenu-item" id="shopSubMenuBYAW">
+								<a class="subMenuItems" data-link=/shop/bring-your-own-apple-watch
+									data-tracking-name=tealium_event,bring_your_apple_watch,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/shop/bring-your-own-apple-watch>
+									Bring your Apple Watch
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/shop/bring-your-own-device
+									data-tracking-name=tealium_event,bring_your_own_device,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/shop/bring-your-own-device>
+									Bring your own phone
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/esim
+									data-tracking-name=tealium_event,sign_up_with_esim,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/esim>
+									Sign up with eSIM
+								</a>
+							</li>
+							<!-- <li class="submenu-item">
 												<a class="subMenuItems" data-link=/shop/cell-phone-financing/affirm data-tracking-name=tealium_event,finance_your_device,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/shop/cell-phone-financing/affirm>
 														Finance your phone 
 												</a>
@@ -239,286 +261,345 @@
 													Protect your phone 
 												</a>
 										</li> -->
-											</ul>
-										</li>
-										<li class="scroll menu-link navLink" id="planLink">
-											<a class=desktop-menu-link id="planDeskLink" data-link=/plan/>
-												Plan
-												<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-												</svg>
-													</a>
-													<div class=mobile-menu-link id="planMobLink">
-															<a class=mobile-submenu-anchor data-link=/plan/>
-																	Plan
-															</a>
-															<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-															</svg>
-													</div>
-											<ul class="submenu navItem" id="planSubMenu">
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/plan/ data-tracking-name=tealium_event,check_out_our_plan,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/plan/>
-															Check out our plan 
-													</a>
-												</li>
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/plan/coverage data-tracking-name=tealium_event,see_our_coverage,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/plan/coverage>
-															See our coverage
-													</a>
-												</li>
-												<li class="submenu-item">
-														<a class="subMenuItems" data-link=/plan/party-pay data-tracking-name=tealium_event,save_with_party_pay,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/plan/party-pay>
-																Save with Party Pay 
-														</a>
-												</li>
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/plan/bring-a-friend data-tracking-name=tealium_event,save_when_you_bring_a_friend,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/plan/bring-a-friend>
-														Save when you Bring a Friend
-													</a>
-												</li>		
-											</ul>
-										</li>
-                    <li class="scroll menu-link navLink" id="dealsLink">
-											<a class=desktop-menu-link id="dealsDeskLink" data-link=/deals/>
-												Deals
-												<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-												</svg>
-													</a>
-													<div class=mobile-menu-link id="dealsMobLink">
-															<a class=mobile-submenu-anchor data-link=/deals/>
-																	Deals
-															</a>
-															<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-															</svg>
-													</div>
-											<ul class="submenu navItem" id="dealsSubMenu">
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/deals/ data-tracking-name=tealium_event,see_deals,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/deals/>
-															See our deals 
-													</a>
-												</li>
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/deals/upgrade-program data-tracking-name=tealium_event,upgrade_program,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/deals/upgrade-program>
-														Upgrade Program
-													</a>
-												</li>											
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/deals/swap data-tracking-name=tealium_event,swap_program,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/deals/swap>
-														Swap program 
-													</a>
-												</li>
-											</ul>
-										</li>
-						<li class="scroll menu-link navLink" id="aboutUsLink">
-											<a class=desktop-menu-link id="aboutUsDeskLink" data-link=/about-us>
-												About Us
-												<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-												</svg>
-													</a>
-													<div class=mobile-menu-link id="aboutUsMobLink">
-															<a class=mobile-submenu-anchor data-link=/about-us>
-															About Us
-															</a>
-															<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-															</svg>
-													</div>
-											<ul class="submenu navItem" id="aboutUsSubMenu">
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/about-us data-tracking-name=tealium_event,about_us,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/about-us>
-														Learn more about Visible
-													</a>
-												</li>	
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/about-us/reviews data-tracking-name=tealium_event,reviews_landing_page,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/about-us/reviews>
-														Reviews
-													</a>
-												</li>	
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/connect data-tracking-name=tealium_event,visible_connect,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/connect>
-														Visible Connect
-													</a>
-												</li>											
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/newsroom data-tracking-name=tealium_event,press,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/newsroom>
-														Newsroom
-													</a>
-												</li>
-											</ul>
-										</li>
-                    <li class="scroll cursor menu-link navLink" id="helpLink">
-											<a class=desktop-menu-link id="helpDeskLink" data-link=/help tabindex="0">
-												Help
-												<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-												</svg>
-												</a>
-												<div class=mobile-menu-link id="helpMobLink">
-														<a class=mobile-submenu-anchor data-link=/help tabindex="0">
-																Help
-														</a>
-														<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2" stroke-linecap="round"/>
-														</svg>
-												</div>
-											<ul class="submenu navItem" id="helpSubMenu">
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/help data-tracking-name=tealium_event,help_center,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/help>
-														Help Center
-													</a>
-											</li>
-										</li>
-											<li class="submenu-item">
-													<a class="subMenuItems" data-link=http://community.visible.com data-tracking-name=tealium_event,community,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=http://community.visible.com>
-														<div class="community-link">
-															Community <div>beta</div>
-														</div>
-													</a>
-												</li>
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/help/category?name=About_Visible data-tracking-name=tealium_event,about_visible,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/help/category?name=About_Visible>
-														About Visible 
-													</a>
-												</li>
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/help/category?name=Getting_Started data-tracking-name=tealium_event,getting_started,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/help/category?name=Getting_Started>
-														Getting Started
-													</a>
-												</li>
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/help/category?name=Setup_Activation data-tracking-name=tealium_event,setup_and_activation,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/help/category?name=Setup_Activation>
-														Setup & Activation
-													</a>
-												</li>
-												<li class="submenu-item">
-													<a class="subMenuItems" data-link=/help/category?name=Your_Account data-tracking-name=tealium_event,your_account,link_location,top_navigation,link_type,text_link,page_name, ${currentPage} href=/help/category?name=Your_Account>
-														Your Account
-													</a>
-												</li>
-											</ul>
-										</li>
-                    <li class="scroll register_links_mob signedIn" id="signIn">
-                        <div class="mobile-menu-link signIn">
-                            <a class="mobile-submenu-anchor signInLink"  data-link=/sign-in data-tracking-name=tealium_event,sign_in,link_location,top_navigation href=/sign-in>
-                                Sign in
-                            </a>
-                            <svg id=loginIcon width="18" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0008 4.38724C8.75161 4.38724 6.91386 6.21804 6.91386 8.46721C6.91386 10.7231 8.75161 12.554 11.0008 12.554C13.2499 12.554 15.0808 10.7231 15.0808 8.46721C15.0808 6.21804 13.2499 4.38724 11.0008 4.38724ZM11.0008 10.6546C9.79391 10.6546 8.82017 9.67407 8.82017 8.46721C8.82017 7.26721 9.79391 6.28651 11.0008 6.28651C12.2008 6.28651 13.1814 7.26721 13.1814 8.46721C13.1814 9.67407 12.2008 10.6546 11.0008 10.6546ZM11.0008 0.725464C5.33677 0.725464 0.721924 5.33344 0.721924 10.9974C0.721924 16.6683 5.33677 21.2763 11.0008 21.2763C16.6648 21.2763 21.2728 16.6683 21.2728 10.9974C21.2728 5.33344 16.6648 0.725464 11.0008 0.725464ZM11.0008 19.3769C8.6556 19.3769 6.5299 18.4101 5.0145 16.8466C5.87843 16.2362 7.78473 15.2283 11.0145 15.2283C14.2373 15.2283 16.1299 16.2294 16.987 16.8466C15.4716 18.4101 13.346 19.3769 11.0008 19.3769ZM18.1528 15.3516C17.0487 14.5425 14.7516 13.322 11.0145 13.322C7.27732 13.322 4.96654 14.5494 3.85561 15.3587C3.07397 14.09 2.62815 12.5951 2.62815 10.9974C2.62815 6.38261 6.38594 2.62491 11.0008 2.62491C15.6156 2.62491 19.3733 6.38261 19.3733 10.9974C19.3733 12.5951 18.9276 14.0832 18.1528 15.3516Z" fill="#0F15D4"/>
-                            </svg>
-                        </div>
-                    </li>
-                    <li class="scroll register_links_mob signedOut" id="mob_logoutLink">
-											<a data-tracking-name="tealium_event,account_clicked,link_type,text_link" data-link="/account" href="/account">
-												Account
-											</a>
-											<a data-link="/" data-tracking-name=tealium_event,log_out,link_location,top_navigation href='#' onclick="userSignOut()">
-												Sign Out
-											</a>
-										</li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right register_links">
-									<li>
-										<form id="searchBar" class="navbar-form" role="search" id="desktopSearch">
-											<div id="searchLogo" class="serach-logo-wrapper">
-												<div id="search-logo" class="search-logo">
-													<!-- <img alt="Search-icon" src="/images/svgs/search_icon.svg?t=1b6ad4eb14ba272d5c91a2f6fcac9f3f"> -->
-												</div>
-											</div>
-											<div id="searchInput" class="search-icon input-control">
-													<input type="text" class="form-control search-box" id="searchText" required
-															name="search" autocomplete="off" maxlenght="30" onfocus="handleSearchInputFocus()">
-													<label for="search">Search</label>
-											</div>
-											<div id="searchContents" style="display:none;">
-												<div class="row">
-													<button id="gnavCloseSearch" aria-label="close search results" class="" onclick="">
-														<svg focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M16.707 1.70703L9.30102 9.11304M9.30102 9.11304L1.70703 16.707M9.30102 9.11304L1.895 1.70703M9.30102 9.11304L16.895 16.707" stroke="#1800FF" stroke-width="2" stroke-linecap="round"/>
-															</svg>
-															
-													</button>
-													<div class="col-md-12 register_links1" id="searchDetails" >
-														<div class="ProductListTitlesContent">
-															<ul class="ProductListTitles">
-															</ul>
-														</div>
-													</div>
-													<div class="col-md-6 noPad register_links1" id="searchDetails">
-														<ul class="gnav-submenu-productlist">
-														</ul>
-													</div>
-													<div class="col-md-6 register_links1">
-														<div class="gnav-right-menu floatLeft">
-															<div class="gnav-right-menu-item">
-															<span class="listHeading">Articles:</span>
-															<ul class="articleUL">
-															</ul>
-															</div>
-														</div>
-													
-														<div class="gnav-right-menu floatLeft">
-															<div class="gnav-right-menu-item">
-															<span class="listHeadingFaq">Help:</span>
-															<ul class="faqUL">
-															</ul>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</form>
-									</li>
-									<li>
-										<ul class="login-menu" id="loggedInMenu" style="padding:10px 0px;">
-													<li class="dropdown" id="UserNameWrapper" style="margin:8px 32px 0px 6px;">
-															<a class="btn btn-secondary dropdown-toggle" id="currentUserName" type="button"
-																	id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-																	aria-expanded="false" tabindex="0" style="margin:0px;"></a>
-															<ul class="dropdown-menu" id="loggenInSubMenu"  aria-labelledby="dropdownMenuButton">
-																	<li class="scroll"><a id="loggedInMenuItems"
-																					data-tracking-name="tealium_event,account_clicked,link_type,text_link"
-																					href="/account">Account</a></li>
-																	<li><a class="dropdown-item" id="loggedInMenuItems" href="#" onclick="userSignOut()">Sign Out</a>
-																	</li>
-															</ul>
-													</li>
-													<li>
-															<a data-link="/shop/cart" id="cart-id-div"
-																	data-tracking-name="tealium_event,cart,link_location,top_navigation,link_type,icon"
-																	href="/shop/cart">
-																	<img src="images/cart.svg" id="cart-img" alt="cart-icon"
-																			class="cartIcon img-responsive">
-																	<div id="cart-circle" class="bagiconcircle" >
-																		<span id="cart-circle-text" class="bagicontext"></span>
-																	</div>
-															</a>
-													</li>
-											</ul>
-									</li>
-										<!-- search, login, cart for web view -->
-									<li class=scroll id="loggedOutMenu" style="display:none">
-									
-										<a id=signIn data-link=/sign-in data-tracking-name=tealium_event,sign_in,link_location,top_navigation href=/sign-in>
-											<!-- <img src="/images/svgs/login-icon.svg?t=5602d460bb89c6c782c4a604a35c6ed1" id="login-img" alt="login-icon"> -->
-											<div class="login-img"></div>
-										</a>
-										<a data-link="/shop/cart" id="cart-id-div" data-tracking-name=tealium_event,cart,link_location,top_navigation,link_type,icon href="/shop/cart">
-											<img src="images/cart.svg" id="cart-img" alt="cart-icon" class="cartIcon img-responsive">
-											<div id="cart-circle" class="bagiconcircle" >
-												<span id="cart-circle-text" class="bagicontext"></span>
-											</div>
-										</a>
-									</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+						</ul>
+					</li>
+					<li class="scroll menu-link navLink" id="planLink">
+						<a class=desktop-menu-link id="planDeskLink" data-link=/plan />
+						Plan
+						<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2"
+								stroke-linecap="round" />
+						</svg>
+						</a>
+						<div class=mobile-menu-link id="planMobLink">
+							<a class=mobile-submenu-anchor data-link=/plan />
+							Plan
+							</a>
+							<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4"
+									stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</div>
+						<ul class="submenu navItem" id="planSubMenu">
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/plan/
+									data-tracking-name=tealium_event,check_out_our_plan,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/plan />
+								Check out our plan
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/plan/coverage
+									data-tracking-name=tealium_event,see_our_coverage,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/plan/coverage>
+									See our coverage
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/plan/party-pay
+									data-tracking-name=tealium_event,save_with_party_pay,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/plan/party-pay>
+									Save with Party Pay
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/plan/bring-a-friend
+									data-tracking-name=tealium_event,save_when_you_bring_a_friend,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/plan/bring-a-friend>
+									Save when you Bring a Friend
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="scroll menu-link navLink" id="dealsLink">
+						<a class=desktop-menu-link id="dealsDeskLink" data-link=/deals />
+						Deals
+						<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4" stroke-width="2"
+								stroke-linecap="round" />
+						</svg>
+						</a>
+						<div class=mobile-menu-link id="dealsMobLink">
+							<a class=mobile-submenu-anchor data-link=/deals />
+							Deals
+							</a>
+							<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4"
+									stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</div>
+						<ul class="submenu navItem" id="dealsSubMenu">
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/deals/
+									data-tracking-name=tealium_event,see_deals,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/deals />
+								See our deals
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/deals/upgrade-program
+									data-tracking-name=tealium_event,upgrade_program,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/deals/upgrade-program>
+									Upgrade Program
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/deals/swap
+									data-tracking-name=tealium_event,swap_program,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/deals/swap>
+									Swap program
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="scroll menu-link navLink" id="aboutUsLink">
+						<a class=desktop-menu-link id="aboutUsDeskLink" data-link=/about-us>
+							About Us
+							<svg width="10" height="7" viewBox="0 0 10 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4"
+									stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</a>
+						<div class=mobile-menu-link id="aboutUsMobLink">
+							<a class=mobile-submenu-anchor data-link=/about-us>
+								About Us
+							</a>
+							<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4"
+									stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</div>
+						<ul class="submenu navItem" id="aboutUsSubMenu">
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/about-us
+									data-tracking-name=tealium_event,about_us,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/about-us>
+									Learn more about Visible
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/about-us/reviews
+									data-tracking-name=tealium_event,reviews_landing_page,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/about-us/reviews>
+									Reviews
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/connect
+									data-tracking-name=tealium_event,visible_connect,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/connect>
+									Visible Connect
+								</a>
+							</li>
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/newsroom
+									data-tracking-name=tealium_event,press,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/newsroom>
+									Newsroom
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="scroll cursor menu-link navLink" id="helpLink">
+						<a class=desktop-menu-link id="helpDeskLink" data-link=/help tabindex="0">
+							Help
+							<svg width="10" height="7" viewBox="0 0 10 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4"
+									stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</a>
+						<div class=mobile-menu-link id="helpMobLink">
+							<a class=mobile-submenu-anchor data-link=/help tabindex="0">
+								Help
+							</a>
+							<svg class=mobile-svg width="30" height="7" viewBox="0 0 10 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.66671 1.66663L5.00008 5.32348L1.33337 1.66663" stroke="#0F15D4"
+									stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</div>
+						<ul class="submenu navItem" id="helpSubMenu">
+							<li class="submenu-item">
+								<a class="subMenuItems" data-link=/help
+									data-tracking-name=tealium_event,help_center,link_location,top_navigation,link_type,text_link,page_name,
+									${currentPage} href=/help>
+									Help Center
+								</a>
+							</li>
+					</li>
+					<li class="submenu-item">
+						<a class="subMenuItems" data-link=http://community.visible.com
+							data-tracking-name=tealium_event,community,link_location,top_navigation,link_type,text_link,page_name,
+							${currentPage} href=http://community.visible.com>
+							<div class="community-link">
+								Community <div>beta</div>
+							</div>
+						</a>
+					</li>
+					<li class="submenu-item">
+						<a class="subMenuItems" data-link=/help/category?name=About_Visible
+							data-tracking-name=tealium_event,about_visible,link_location,top_navigation,link_type,text_link,page_name,
+							${currentPage} href=/help/category?name=About_Visible>
+							About Visible
+						</a>
+					</li>
+					<li class="submenu-item">
+						<a class="subMenuItems" data-link=/help/category?name=Getting_Started
+							data-tracking-name=tealium_event,getting_started,link_location,top_navigation,link_type,text_link,page_name,
+							${currentPage} href=/help/category?name=Getting_Started>
+							Getting Started
+						</a>
+					</li>
+					<li class="submenu-item">
+						<a class="subMenuItems" data-link=/help/category?name=Setup_Activation
+							data-tracking-name=tealium_event,setup_and_activation,link_location,top_navigation,link_type,text_link,page_name,
+							${currentPage} href=/help/category?name=Setup_Activation>
+							Setup & Activation
+						</a>
+					</li>
+					<li class="submenu-item">
+						<a class="subMenuItems" data-link=/help/category?name=Your_Account
+							data-tracking-name=tealium_event,your_account,link_location,top_navigation,link_type,text_link,page_name,
+							${currentPage} href=/help/category?name=Your_Account>
+							Your Account
+						</a>
+					</li>
+				</ul>
+				</li>
+				<li class="scroll register_links_mob signedIn" id="signIn">
+					<div class="mobile-menu-link signIn">
+						<a class="mobile-submenu-anchor signInLink" data-link=/sign-in
+							data-tracking-name=tealium_event,sign_in,link_location,top_navigation href=/sign-in>
+							Sign in
+						</a>
+						<svg id=loginIcon width="18" height="22" viewBox="0 0 22 22" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M11.0008 4.38724C8.75161 4.38724 6.91386 6.21804 6.91386 8.46721C6.91386 10.7231 8.75161 12.554 11.0008 12.554C13.2499 12.554 15.0808 10.7231 15.0808 8.46721C15.0808 6.21804 13.2499 4.38724 11.0008 4.38724ZM11.0008 10.6546C9.79391 10.6546 8.82017 9.67407 8.82017 8.46721C8.82017 7.26721 9.79391 6.28651 11.0008 6.28651C12.2008 6.28651 13.1814 7.26721 13.1814 8.46721C13.1814 9.67407 12.2008 10.6546 11.0008 10.6546ZM11.0008 0.725464C5.33677 0.725464 0.721924 5.33344 0.721924 10.9974C0.721924 16.6683 5.33677 21.2763 11.0008 21.2763C16.6648 21.2763 21.2728 16.6683 21.2728 10.9974C21.2728 5.33344 16.6648 0.725464 11.0008 0.725464ZM11.0008 19.3769C8.6556 19.3769 6.5299 18.4101 5.0145 16.8466C5.87843 16.2362 7.78473 15.2283 11.0145 15.2283C14.2373 15.2283 16.1299 16.2294 16.987 16.8466C15.4716 18.4101 13.346 19.3769 11.0008 19.3769ZM18.1528 15.3516C17.0487 14.5425 14.7516 13.322 11.0145 13.322C7.27732 13.322 4.96654 14.5494 3.85561 15.3587C3.07397 14.09 2.62815 12.5951 2.62815 10.9974C2.62815 6.38261 6.38594 2.62491 11.0008 2.62491C15.6156 2.62491 19.3733 6.38261 19.3733 10.9974C19.3733 12.5951 18.9276 14.0832 18.1528 15.3516Z"
+								fill="#0F15D4" />
+						</svg>
+					</div>
+				</li>
+				<li class="scroll register_links_mob signedOut" id="mob_logoutLink">
+					<a data-tracking-name="tealium_event,account_clicked,link_type,text_link" data-link="/account"
+						href="/account">
+						Account
+					</a>
+					<a data-link="/" data-tracking-name=tealium_event,log_out,link_location,top_navigation href='#'
+						onclick="userSignOut()">
+						Sign Out
+					</a>
+				</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right register_links">
+					<li>
+						<form id="searchBar" class="navbar-form" role="search" id="desktopSearch">
+							<div id="searchLogo" class="serach-logo-wrapper">
+								<div id="search-logo" class="search-logo">
+									<!-- <img alt="Search-icon" src="/images/svgs/search_icon.svg?t=1b6ad4eb14ba272d5c91a2f6fcac9f3f"> -->
+								</div>
+							</div>
+							<div id="searchInput" class="search-icon input-control">
+								<input type="text" class="form-control search-box" id="searchText" required
+									name="search" autocomplete="off" maxlenght="30" onfocus="handleSearchInputFocus()">
+								<label for="search">Search</label>
+							</div>
+							<div id="searchContents" style="display:none;">
+								<div class="row">
+									<button id="gnavCloseSearch" aria-label="close search results" class="" onclick="">
+										<svg focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M16.707 1.70703L9.30102 9.11304M9.30102 9.11304L1.70703 16.707M9.30102 9.11304L1.895 1.70703M9.30102 9.11304L16.895 16.707"
+												stroke="#1800FF" stroke-width="2" stroke-linecap="round" />
+										</svg>
 
+									</button>
+									<div class="col-md-12 register_links1" id="searchDetails">
+										<div class="ProductListTitlesContent">
+											<ul class="ProductListTitles">
+											</ul>
+										</div>
+									</div>
+									<div class="col-md-6 noPad register_links1" id="searchDetails">
+										<ul class="gnav-submenu-productlist">
+										</ul>
+									</div>
+									<div class="col-md-6 register_links1">
+										<div class="gnav-right-menu floatLeft">
+											<div class="gnav-right-menu-item">
+												<span class="listHeading">Articles:</span>
+												<ul class="articleUL">
+												</ul>
+											</div>
+										</div>
+
+										<div class="gnav-right-menu floatLeft">
+											<div class="gnav-right-menu-item">
+												<span class="listHeadingFaq">Help:</span>
+												<ul class="faqUL">
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</li>
+					<li>
+						<ul class="login-menu" id="loggedInMenu" style="padding:10px 0px;">
+							<li class="dropdown" id="UserNameWrapper" style="margin:8px 32px 0px 6px;">
+								<a class="btn btn-secondary dropdown-toggle" id="currentUserName" type="button"
+									id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false" tabindex="0" style="margin:0px;"></a>
+								<ul class="dropdown-menu" id="loggenInSubMenu" aria-labelledby="dropdownMenuButton">
+									<li class="scroll"><a id="loggedInMenuItems"
+											data-tracking-name="tealium_event,account_clicked,link_type,text_link"
+											href="/account">Account</a></li>
+									<li><a class="dropdown-item" id="loggedInMenuItems" href="#"
+											onclick="userSignOut()">Sign Out</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a data-link="/shop/cart" id="cart-id-div"
+									data-tracking-name="tealium_event,cart,link_location,top_navigation,link_type,icon"
+									href="/shop/cart">
+									<img src="images/cart.svg" id="cart-img" alt="cart-icon"
+										class="cartIcon img-responsive">
+									<div id="cart-circle" class="bagiconcircle">
+										<span id="cart-circle-text" class="bagicontext"></span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- search, login, cart for web view -->
+					<li class=scroll id="loggedOutMenu" style="display:none">
+						<a id=signIn data-link=/sign-in
+							data-tracking-name=tealium_event,sign_in,link_location,top_navigation href=/sign-in>
+							<!-- <img src="/images/svgs/login-icon.svg?t=5602d460bb89c6c782c4a604a35c6ed1" id="login-img" alt="login-icon"> -->
+							<div class="login-img"></div>
+						</a>
+						<a data-link="/shop/cart" id="cart-id-div"
+							data-tracking-name=tealium_event,cart,link_location,top_navigation,link_type,icon
+							href="/shop/cart">
+							<img src="images/cart.svg" id="cart-img" alt="cart-icon" class="cartIcon img-responsive">
+							<div id="cart-circle" class="bagiconcircle">
+								<span id="cart-circle-text" class="bagicontext"></span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
         
 <div id="searchContents" style=" display:none;">
   <div class="row">
@@ -836,6 +917,18 @@
                     </li>
                     <li class="footer-list-item">
                       <a
+                      data-link="/motorola"
+                      data-tracking-name="tealium_event,motorola,link_location,footer,link_type,text_link"
+                      href="/motorola"
+                      target="_blank"
+                      class="footerAnchorRight"
+                      rel="noopener noreferrer"
+                    >
+                      Motorola
+                    </a>
+                    </li>
+                    <li class="footer-list-item">
+                      <a
                       data-link="https://www.visiblemerch.com/"
                       data-tracking-name="tealium_event,merch_store,link_location,footer,link_type,text_link"
                       href="https://www.visiblemerch.com/"
@@ -1052,6 +1145,9 @@
                       <a data-link="/samsung" data-tracking-name="tealium_event,samsung,link_location,footer,link_type,text_link" href="/samsung" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Samsung</a>
                     </li>
                     <li class="footer-list-item">
+                      <a data-link="/motorola" data-tracking-name="tealium_event,motorola,link_location,footer,link_type,text_link" href="/motorola" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Motorola</a>
+                    </li>
+                    <li class="footer-list-item">
                       <a data-link="https://www.visiblemerch.com/" data-tracking-name="tealium_event,merch_store,link_location,footer,link_type,text_link" href="https://www.visiblemerch.com/" tabindex="-1" target="_blank" class="footerAnchorRight" rel="noopener noreferrer">Merch Store</a>
                     </li>
                   </div>
@@ -1167,13 +1263,13 @@
     display: block
   }
 </style>
-<script src="/js/firebase-app.js?t=bd4b880921c100e8e75454ccfbe02be9"></script>
-<script src="/js/firebase-auth.js?t=44a41b6b4115ccc31cabbc2d30291eab"></script>
-<script src="/js/device-details.js?t=cf0c6a0b19620e8a923a00405d9089df"></script>
-<script src="/js/hp.min.js?t=3f484d8ddca54c42c46af0e5287dfcbb"></script>
+<script src="/js/firebase-app.js?t=8cfd12ba0107c22e0bbb313be403e2c0"></script>
+<script src="/js/firebase-auth.js?t=7e22bebbc31688bc587ccc6780ae45f2"></script>
+<script src="/js/device-details.js?t=fa5f45497163ca1b5d9a10776fc36b7d"></script>
+<script src="/js/hp.min.js?t=bf0d2a39cc854e219f7ffb20ee60e8c7"></script>
 <script src="/js/minified/jquery.minified.js?t=1a9e30bdce90a8a3fb6e1c3224041302"></script>
-<script src="/js/intersection-observer.js?t=ccf3134e37e433cd14245184fc58bafa"></script>
-<script src="/js/common.js?t=a8bea7b9cdbf903e02d9fe00fec52e75"></script>
+<script src="/js/intersection-observer.js?t=9c3767f815657bd40743b51eb9ff2ac0"></script>
+<script src="/js/common.js?t=3bcdb80460e5d9da391e660a5d6c136d"></script>
 
     <!-- Use in page footer for search -->
 <script>
@@ -1195,7 +1291,7 @@
   }
 </style>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-<script type="text/javascript" src="/js/liveChat.js?t=c37df3739c7689c8212b1d9f1ecb81fb"></script>
+<script type="text/javascript" src="/js/liveChat.js?t=7f99e2d756993b6ce66749318d09173e"></script>
 
 
 

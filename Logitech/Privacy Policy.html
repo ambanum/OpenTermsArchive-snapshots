@@ -9,6 +9,74 @@
    
 
     
+        <script src="https://cdn.yottaa.com/rapid.min.js?key=_z6s40u8df_6mA"></script>
+
+        <script type="text/javascript">
+            const ONETRUST_COOKIE = 'OptanonConsent';
+            const yottaaUnsubscribe = function() {
+                Yo.pubsub.subscribe({
+                    topic: 'rum/beforeSend',
+                    callback: function(message, topic) {
+                        return false;
+                    }
+                });
+            }
+
+            const hasCookie = function(cookieName) {
+                if (document.cookie.split(';').some(function(item) {
+                    return item.trim().indexOf(cookieName + '=') === 0;
+                })) {
+                    return true;
+                }
+                return false;
+            }
+
+            const acceptedCookieGroups = function() {
+                let groups = [];
+                if(hasCookie(ONETRUST_COOKIE)) {
+                    let cookieValue = document.cookie
+                        .split('; ')
+                        .find(row => row.startsWith(ONETRUST_COOKIE + '='))
+                        .substr(ONETRUST_COOKIE.length+1);
+                    cookieValue = decodeURIComponent(cookieValue);
+
+                    // get just the 'groups' aspect of it
+                    cookieValue.split('&')
+                        .find(row => row.startsWith('groups='))
+                        .split('=')[1]
+                        .split(',')
+                        .forEach(elm => {
+                            const elmArray = elm.split(':');
+                            if(elmArray[1] === '1') {
+                                groups.push(elmArray[0]);
+                            }
+                        });
+                }
+
+                return groups;
+            }
+
+            // Unsubscribe if user opted out only
+            if (!acceptedCookieGroups().includes('C0002')) {
+                yottaaUnsubscribe();
+            }
+        </script>
+
+        
+            <script type="text/javascript">
+                // Unsubscribe if no cookie or user opted out
+                if (!hasCookie(ONETRUST_COOKIE) || !acceptedCookieGroups().includes('C0002')) {
+                    yottaaUnsubscribe();
+                }
+            </script>
+        
+
+        <script type="text/javascript">
+            Yo.configure(
+                "https://qoe-1.yottaa.net/api/v1/configure.rapid.js?key=_z6s40u8df_6mA"
+            );
+        </script>
+    
 
 
     <meta charset="utf-8"/>
@@ -366,7 +434,7 @@
 <!-- <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call=""/> -->
 
     
-<link rel="stylesheet" href="/etc.clientlibs/logitech/clientlibs/logitech-pagelibs.min.1a7b49f31d120d80ad994dc8c277ba28.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/logitech/clientlibs/logitech-pagelibs.min.00449c51b669df389c31f4b770535354.css" type="text/css">
 
 
 
@@ -987,9 +1055,9 @@
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/keyboards.html" target="_self">Keyboards</a></li>
 	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/ipad-keyboards" target="_self">iPad Keyboards</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/products/ipad-keyboards.html" target="_self">iPad Keyboards</a></li>
 	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/mobile/keyboards" target="_self">Tablet Keyboards</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/products/tablet-keyboards.html" target="_self">Tablet Keyboards</a></li>
 	                                                </ul>
 	                                            </div>
 	                                        </li>
@@ -1011,21 +1079,21 @@
 	                                            <div class="mp-level">
 	                                                <a tabindex="-1" href="javascript:;" class="mp-back"><span class="aem-logi-icon-chevron-left" aria-hidden="true"></span>Mobile Devices</a>
 	                                                <ul class="sub-menu third-level">
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/devices/accessories-for-ipad.html" target="_self">Shopping Guide for iPad</a></li>
+	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/ipad-keyboards.html" target="_self">iPad Keyboards</a></li>
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/ipad-accessories.html" target="_self">iPad Accessories</a></li>
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/tablet-keyboards.html" target="_self">Tablet Keyboards</a></li>
-	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/phone-accessories.html" target="_self">Smartphone Accessories</a></li>
 	                                                </ul>
 	                                            </div>
 	                                        </li>
 	                                    
 	                                        <li>
-	                                            <a tabindex="-1" title="Menu item 2" href="javascript:;">Wireless Charging<span class="aem-logi-icon-chevron-right" aria-hidden="true"></span></a>
+	                                            <a tabindex="-1" title="Menu item 2" href="javascript:;">Smartphone Accessories<span class="aem-logi-icon-chevron-right" aria-hidden="true"></span></a>
 	                                            <div class="mp-level">
-	                                                <a tabindex="-1" href="javascript:;" class="mp-back"><span class="aem-logi-icon-chevron-left" aria-hidden="true"></span>Wireless Charging</a>
+	                                                <a tabindex="-1" href="javascript:;" class="mp-back"><span class="aem-logi-icon-chevron-left" aria-hidden="true"></span>Smartphone Accessories</a>
 	                                                <ul class="sub-menu third-level">
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/chargers.html" target="_self">Wireless Phone Chargers</a></li>
 	                                                </ul>
@@ -1050,8 +1118,6 @@
 	                                                <a tabindex="-1" href="javascript:;" class="mp-back"><span class="aem-logi-icon-chevron-left" aria-hidden="true"></span>Smart Home</a>
 	                                                <ul class="sub-menu third-level">
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/harmony.html" target="_self">Harmony Remotes</a></li>
-	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/product/base-ipad-pro-stand.html" target="_self">Base Charging Stand</a></li>
 	                                                </ul>
 	                                            </div>
 	                                        </li>
@@ -1109,7 +1175,7 @@
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/products/webcams.html?filters=video-conferencing" target="_self">Webcams</a></li>
 	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/services-and-software.html" target="_self">Software &amp; Services</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/services-and-software.html" target="_self">Services &amp; Software</a></li>
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/software/logi-tune-software.html" target="_self">Logi Tune</a></li>
 	                                                </ul>
@@ -1367,10 +1433,12 @@
 	                                        </li>
 	                                    
 	                                        <li>
-	                                            <a tabindex="-1" title="Menu item 2" href="javascript:;">Software &amp; Services<span class="aem-logi-icon-chevron-right" aria-hidden="true"></span></a>
+	                                            <a tabindex="-1" title="Menu item 2" href="javascript:;">Services &amp; Software<span class="aem-logi-icon-chevron-right" aria-hidden="true"></span></a>
 	                                            <div class="mp-level">
-	                                                <a tabindex="-1" href="javascript:;" class="mp-back"><span class="aem-logi-icon-chevron-left" aria-hidden="true"></span>Software &amp; Services</a>
+	                                                <a tabindex="-1" href="javascript:;" class="mp-back"><span class="aem-logi-icon-chevron-left" aria-hidden="true"></span>Services &amp; Software</a>
 	                                                <ul class="sub-menu third-level">
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/products/video-conferencing/room-solutions/select-premium-service-plan.html" target="_self">Logitech Select</a></li>
+	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/products/extended-warranty.html" target="_self">Extended Warranty</a></li>
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/collabos.html" target="_self">CollabOS</a></li>
@@ -1728,7 +1796,7 @@
             
                 
     <li>
-        <a class="" href="/en-gb/ipad-keyboards">
+        <a class="" href="/products/ipad-keyboards.html">
             iPad Keyboards
         </a>
     </li>
@@ -1736,7 +1804,7 @@
             
                 
     <li>
-        <a class="" href="/en-gb/mobile/keyboards">
+        <a class="" href="/products/tablet-keyboards.html">
             Tablet Keyboards
         </a>
     </li>
@@ -1823,7 +1891,7 @@
         
         
             
-                <a href="/en-gb/products/ipad-keyboards.html">Mobile Devices</a>
+                <a href="/en-gb/mobile">Mobile Devices</a>
             
             
         
@@ -1831,6 +1899,14 @@
 
     
         <ul>
+            
+                
+    <li>
+        <a class="" href="/en-gb/devices/accessories-for-ipad.html">
+            Shopping Guide for iPad
+        </a>
+    </li>
+
             
                 
     <li>
@@ -1856,14 +1932,6 @@
     </li>
 
             
-                
-    <li>
-        <a class="" href="/en-gb/products/phone-accessories.html">
-            Smartphone Accessories
-        </a>
-    </li>
-
-            
         </ul>
     
 
@@ -1873,7 +1941,7 @@
         
         
             
-                <a href="/en-gb/products/chargers.html">Wireless Charging</a>
+                <a href="/en-gb/products/phone-accessories.html">Smartphone Accessories</a>
             
             
         
@@ -1984,14 +2052,6 @@
     <li>
         <a class="" href="/en-gb/products/harmony.html">
             Harmony Remotes
-        </a>
-    </li>
-
-            
-                
-    <li>
-        <a class="" href="/en-gb/product/base-ipad-pro-stand.html">
-            Base Charging Stand
         </a>
     </li>
 
@@ -2243,7 +2303,7 @@
                 
     <li>
         <a class="" href="/en-gb/video-collaboration/services-and-software.html">
-            Software &amp; Services
+            Services &amp; Software
         </a>
     </li>
 
@@ -3383,7 +3443,7 @@
         
         
             
-                <a href="/en-gb/video-collaboration/services-and-software.html">Software &amp; Services</a>
+                <a href="/en-gb/video-collaboration/services-and-software.html">Services &amp; Software</a>
             
             
         
@@ -3391,6 +3451,14 @@
 
     
         <ul>
+            
+                
+    <li>
+        <a class="" href="/en-gb/products/video-conferencing/room-solutions/select-premium-service-plan.html">
+            Logitech Select
+        </a>
+    </li>
+
             
                 
     <li>
@@ -3781,7 +3849,7 @@
     
 
      
-	<div class="commerce-config" data-productinfo-path="/bin/logitech/productinfo.json" data-enable-paypal="true" data-page-path="/content/logitech-com/emea/live/en_gb/legal/web-privacy-policy" data-hcaptcha-site-key="c5192344-47cc-46c6-9561-d94dc893366f" data-extend-enabled="false" data-session-get="https://buy.logitech.com/store/logib2c/SessionToken?format=json" data-commerce-provider="digitalriver" data-free-shipping-threshold="39" data-special-message="Free shipping on orders GBP39.00 and over." data-enable-googlepay="true" data-dr-locale="en-gb" data-privacy-policy="https://buy.logitech.com/store/defaults/en_GB/DisplayDRPrivacyPolicyPage/eCommerceProvider.DR+globalTech+Inc." data-api-domain="https://api.digitalriver.com" data-about-dr-link="https://buy.logitech.com/store/defaults/en_GB/DisplayDRAboutDigitalRiverPage/eCommerceProvider.DR+globalTech+Inc." data-price-disclaimer-pos="below" data-sf-disabled="true" data-enable-applepay="true" data-klarna-enabled="false" data-cte-enabled="false" data-session-set="/content/logitech-com/emea/live/en_gb/legal/web-privacy-policy.logitechtoken.json" data-terms-of-sale="https://buy.logitech.com/store/defaults/en_GB/DisplayDRTermsAndConditionsPage/eCommerceProvider.DR+globalTech+Inc." data-docked-cart-enabled="true"></div>
+	<div class="commerce-config" data-productinfo-path="/bin/logitech/productinfo.json" data-enable-paypal="true" data-page-path="/content/logitech-com/emea/live/en_gb/legal/web-privacy-policy" data-hcaptcha-site-key="c5192344-47cc-46c6-9561-d94dc893366f" data-extend-enabled="false" data-session-get="https://buy.logitech.com/store/logib2c/SessionToken?format=json" data-commerce-provider="digitalriver" data-free-shipping-threshold="39" data-special-message="Free shipping on orders GBP39.00 and over." data-enable-googlepay="true" data-dr-locale="en-gb" data-privacy-policy="https://buy.logitech.com/store/defaults/en_GB/DisplayDRPrivacyPolicyPage/eCommerceProvider.DR+globalTech+Inc." data-api-domain="https://api.digitalriver.com" data-about-dr-link="https://buy.logitech.com/store/defaults/en_GB/DisplayDRAboutDigitalRiverPage/eCommerceProvider.DR+globalTech+Inc." data-price-disclaimer-pos="below" data-sf-disabled="true" data-enable-applepay="true" data-klarna-enabled="true" data-cte-enabled="false" data-session-set="/content/logitech-com/emea/live/en_gb/legal/web-privacy-policy.logitechtoken.json" data-terms-of-sale="https://buy.logitech.com/store/defaults/en_GB/DisplayDRTermsAndConditionsPage/eCommerceProvider.DR+globalTech+Inc." data-docked-cart-enabled="true"></div>
 
     
     <div class="lids-config" data-domain="logitech" data-api-endpoint="https://accounts.logi.com" data-client-id="6dc58bae-28c8-f4e3-ade8-73d0deb8e76d" data-redirect-uri="https://www.logitech.com/bin/accesstoken" data-websso-url="https://id.logi.com" data-brand-theme-id="29753D92-34CC-4706-9973-1832CFA11E78" data-websso-locale="en-gb" data-drsession-logout="https://buy.logitech.com/store/logib2c/LogoutSSO" data-page-path="/content/logitech-com/emea/live/en_gb/legal/web-privacy-policy" data-logout-path="/en-gb/my-account.html" data-locale="en_gb" data-fb-sdk="https://connect.facebook.net/en_US/sdk.js" data-amazon-sdk="https://api-cdn.amazon.com/sdk/login1.js" data-google-sdk="https://apis.google.com/js/platform.js?onload=initializeGoogleApi" data-google-captcha-sdk="https://www.google.com/recaptcha/api.js?onload=captchaLibsReady&amp;render=explicit"></div>
@@ -5069,7 +5137,7 @@ summary {
 
     
 <script src="/etc.clientlibs/clientlibs/granite/jquery/granite/csrf.min.652a558c3774088b61b0530c184710d1.js"></script>
-<script src="/etc.clientlibs/logitech/clientlibs/logitech-pagelibs.min.16f92cfbe5294a78c5dd9c20a8c1ae26.js"></script>
+<script src="/etc.clientlibs/logitech/clientlibs/logitech-pagelibs.min.baa270344274e86622096aef30cf2bc9.js"></script>
 
 
 

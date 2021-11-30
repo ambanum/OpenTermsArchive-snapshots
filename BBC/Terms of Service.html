@@ -145,7 +145,7 @@
     <!-- navid Web Module: 0.2.0-84.10b4a16 -->
     
     
-    <!-- searchbox Web Module: 3.0.0-366.1f0b4bf -->
+    <!-- searchbox Web Module: 3.0.0-369.4dc804c -->
     
     
     <!-- navpromo Web Module: 3.0.0-276.c4d3505 -->
@@ -165,7 +165,7 @@
 
     
     
-<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/1f2d694d7cc72b8b2bd665360235d334/css/box.css">
+<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/763294d66de75efa15cd1c55e0e8dac1/css/box.css">
 
     
     
@@ -1193,15 +1193,15 @@ Version 1.6" />
                 const isOrbUx = !!document.querySelector('.orb-nav-pri-container');
                 if (isOrbUx) {
                     const script = document.createElement('script');
-                    script.src = 'https://nav.files.bbci.co.uk/searchbox/1f2d694d7cc72b8b2bd665360235d334//js/old-search-suggest.js';
+                    script.src = 'https://nav.files.bbci.co.uk/searchbox/763294d66de75efa15cd1c55e0e8dac1//js/old-search-suggest.js';
                     script.async = true;
-                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/1f2d694d7cc72b8b2bd665360235d334/');
+                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/763294d66de75efa15cd1c55e0e8dac1/');
                     script.setAttribute('data-variant', 'default');
                     document.head.appendChild(script);
                 } else {
-                    import('https://nav.files.bbci.co.uk/searchbox/1f2d694d7cc72b8b2bd665360235d334//js/search-suggest.js').then(drawer => {
+                    import('https://nav.files.bbci.co.uk/searchbox/763294d66de75efa15cd1c55e0e8dac1//js/search-suggest.js').then(drawer => {
                         drawer.setupSearchDrawer({
-                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/1f2d694d7cc72b8b2bd665360235d334/',
+                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/763294d66de75efa15cd1c55e0e8dac1/',
                             variant: 'default',
                         });
                     });

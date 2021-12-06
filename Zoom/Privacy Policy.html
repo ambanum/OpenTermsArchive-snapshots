@@ -42,14 +42,6 @@
     })
       (window, document, 'script', 'dataLayer', 'GTM-PJN2K3Z');
   </script>
-<script>
-window.addEventListener("load", function() {
-    if(window.location.href.indexOf("onlycontent=1") > -1) {
-       document.getElementById('ada-entry').remove();
-       document.getElementById('onetrust-consent-sdk').remove();
-     }
-});
-</script>
                 <!--<link type="text/css" rel="stylesheet" href="https://zoom.us/docs/css/all.min_d320247_20210304.css">-->
 <!-- converted with https://www.safetoconvert.com/less-to-css-converter -->
 <!-- all relative path starting from "../fonts" are changed to start with "https://zoom.us/docs/fonts" -->
@@ -148,6 +140,13 @@ window.addEventListener("load", function() {
 .FormStandard__fields .FormStandard__field:nth-last-child(2){
 display:none;
 }
+.main_header .navbar-default .navbar-right>li>a:hover {
+    color: #0e71eb !important;
+}
+.main_header .navbar-default .navbar-right>li>div>a.hostmeeting:hover {
+    color: #0e71eb !important;
+}
+
 		</style>
 		
             </head>
@@ -303,10 +302,22 @@ display:none;
                         <h3>Healthcare</h3>
                         <p>Collaborative telehealth technology & workflows</p>
                       </a></div>
-                  </li>
+<div class="textwidget">
+<hr class="solution-dropdown-divider">
+</div>
+<h4 class="mega-block-title">SERVICES</h4>
+<div class="textwidget"><a role="menuitem" href="https://explore.zoom.us/global-services" data-on-event="send,event,product,click-nav-services-global-services,Header Nav Services Global Services">
+<h3>Global Services</h3>
+<p>Expert consultation, Implementation, & support</p>
+<a role="menuitem" href="https://explore.zoom.us/hardware-as-a-service/" data-on-event="send,event,product,click-nav-services-hardware-as-a-service,Header Nav Services Hardware as a Service">
+<h3>Hardware as a Service</h3>
+<p>Flexible subscription plans for hardware</p>
+</a>
+</div>
+</li>
                   <li id="promo-col-nav" class="mega-menu-4-of-12 third-col nav-promo"
                     style="background: url(&quot;https://zoom.us/docs/image/bf-mega-nav.svg&quot;) right bottom no-repeat; position: absolute; height: 100%; display: inline-block; width: 318px !important;">
-                    <div style="padding-left:40px;padding-right:40px;height:85%;border-left:#f2f2f2 1px solid"><p style="text-align:left;margin-top:19px;line-height:1.5;font-weight:600;color:#6b6565;font-size:16px">Supporting a Hybrid-friendly Work Environment</p><p style="text-align:left;line-height:20px;">Explore products and tools for seamless collaboration across office and home working spaces.</p><p style="text-align:left;line-height:2.5;font-weight:600"><a href="https://explore.zoom.us/docs/en-us/hybrid-workforce.html?utm_source=nav&amp;utm_medium=web&amp;utm_campaign=zfwd&amp;zcid=4585&amp;_ga=2.150765942.1164773652.1636372092-1140885548.1632361272">Discover hybrid solutions</a></p></div>
+                    <div style="padding-left:40px;padding-right:40px;height:85%;border-left:#f2f2f2 1px solid"><p style="text-align:left;margin-top:19px;line-height:1.5;font-weight:600;color:#6b6565;font-size:16px">Supporting a Hybrid-friendly Work Environment</p><p style="text-align:left;line-height:20px;">Explore products and tools for seamless collaboration across office and home working spaces.</p><p style="text-align:left;line-height:2.5;font-weight:600"><a href="https://explore.zoom.us/hybrid-workforce">Discover hybrid solutions</a></p></div>
                   </li>
                 </ul>
               </li>
@@ -751,6 +762,8 @@ Support Center</a>
 <li class=""><a href="javascript:;" data-locale="ko-KO">한국어</a></li>
 <li class=""><a href="javascript:;" data-locale="it-IT">Italiano</a></li>
 <li class=""><a href="javascript:;" data-locale="vi-VN">Tiếng Việt</a></li>
+<li class=""><a href="javascript:;" data-locale="pl-PL">Polski</a></li>
+<li class=""><a href="javascript:;" data-locale="tr-TR">Türkçe</a></li>
 </ul>
 </div>
 </li>
@@ -851,6 +864,13 @@ Copyright &copy;2021 Zoom Video Communications, Inc. All rights reserved. <a hre
     margin: 10px 10px 10px 10px !important;
 }
 </style>
+<script>
+ if(window.location.href.indexOf("onlycontent=1") > -1) {
+                var sheet = document.createElement('style')
+                sheet.innerHTML = "#ada-entry{ display:none !important; }";
+                document.body.appendChild(sheet);
+}
+</script>
 
 <script nonce="yPRF_vzwRSGDFXiUTV5jxg" id="__ada" data-handle="zoom" src="https://static.ada.support/embed2.js"></script>
 
@@ -933,6 +953,8 @@ Copyright &copy;2021 Zoom Video Communications, Inc. All rights reserved. <a hre
           'ko-KO': 'ko',
           'it-IT': 'it',
           'vi-VN': 'vi',
+ 'pl-PL':'pl',
+          'tr-TR':'tr',
         }
         var zmLangCode = langCodeArray[targetLang] || 'en'
         var pName = location.pathname
@@ -940,7 +962,7 @@ Copyright &copy;2021 Zoom Video Communications, Inc. All rights reserved. <a hre
           .replace(/.html$/, '') //      "/docs/en/team.html" => /en/team
 
         pName = pName.replace(
-          /^\/(en-us|es-es|de-de|zh-cn|zh-tw|fr-fr|pt-pt|jp-jp|ru-ru|ko-ko|it-it|vi-vn|en|es|de|fr|pt|ja|ru|ko|it|vi)\//,
+          /^\/(en-us|es-es|de-de|zh-cn|zh-tw|fr-fr|pt-pt|jp-jp|ru-ru|ko-ko|it-it|vi-vn|pl-pl|tr-tr|en|es|de|fr|pt|ja|ru|ko|it|vi|pl|tr)\//,
           '/'
         )
         var pageURL = location.origin + '/' + zmLangCode + pName + location.search

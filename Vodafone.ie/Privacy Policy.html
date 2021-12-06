@@ -25,7 +25,7 @@
 
 
     
-<link rel="stylesheet" href="/etc.clientlibs/settings/wcm/designs/gowingmyself/clientlib-all.min.ACSHASH145440a2eb216ce605cbaf1d05c05743.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/settings/wcm/designs/gowingmyself/clientlib-all.min.ACSHASH49127613f17bc3362383ce2629d0c3c0.css" type="text/css">
 
 
 
@@ -2851,14 +2851,14 @@
 
         
         
-            <source data-srcset="/content/gowingmyself/en/privacy/privacy-and-you/jcr:content/pagetopsubmodule.img.640.medium.jpg/1517331086719.jpg" media="(max-width: 640px)"/>
-            <source data-srcset="/content/gowingmyself/en/privacy/privacy-and-you/jcr:content/pagetopsubmodule.img.950.medium.jpg/1517331086719.jpg" media="(max-width: 950px)"/>
-            <img data-srcset="/content/gowingmyself/en/privacy/privacy-and-you/jcr:content/pagetopsubmodule.img.full.medium.jpg/1517331086719.jpg" class="lazyload hello__image"/>
+            <source data-srcset="/content/gowingmyself/en/privacy/privacy-and-you/jcr:content/pagetopsubmodule.img.640.medium.jpg/1629113028534.jpg" media="(max-width: 640px)"/>
+            <source data-srcset="/content/gowingmyself/en/privacy/privacy-and-you/jcr:content/pagetopsubmodule.img.950.medium.jpg/1629113028534.jpg" media="(max-width: 950px)"/>
+            <img data-srcset="/content/gowingmyself/en/privacy/privacy-and-you/jcr:content/pagetopsubmodule.img.full.medium.jpg/1629113028534.jpg" class="lazyload hello__image"/>
         
 
     </picture>
     <noscript>
-        <img src="/content/gowingmyself/en/privacy/privacy-and-you/_jcr_content/pagetopsubmodule.img.jpg/1517331086719.jpg" class="hello__image"/>
+        <img src="/content/gowingmyself/en/privacy/privacy-and-you/_jcr_content/pagetopsubmodule.img.jpg/1629113028534.jpg" class="hello__image"/>
     </noscript>
 
 
@@ -3078,7 +3078,7 @@
 	
     
     
-<script src="/etc.clientlibs/settings/wcm/designs/gowingmyself/angularjs.min.ACSHASH9d22d54d3dd4dd2030488f29c724f307.js"></script>
+<script src="/etc.clientlibs/settings/wcm/designs/gowingmyself/angularjs.min.ACSHASH18552a2d94eac60ec00462bda8857ac3.js"></script>
 <script src="/etc.clientlibs/gowingmyself/components/content/authored/vf_accordion/vf_accordionBase/clientlib.min.ACSHASHb99a961a2aae612784c954a41be09a5c.js"></script>
 
 
@@ -6398,7 +6398,7 @@ The call detail element of your standard bill will be severed and deleted after 
 
 
     
-<script src="/etc.clientlibs/settings/wcm/designs/gowingmyself/clientlib-all.min.ACSHASHe23a1723caf15bb32b5089e7159e0f50.js"></script>
+<script src="/etc.clientlibs/settings/wcm/designs/gowingmyself/clientlib-all.min.ACSHASH77cb5e4648508b4ed210687157973dd4.js"></script>
 
 
 
@@ -6814,6 +6814,11 @@ The call detail element of your standard bill will be severed and deleted after 
             return;
         }
 
+        if (sessionStorage.getItem("broadBandRedirect") && omnichannelControllerScope.user.isLogged) {
+            sessionStorage.removeItem("broadBandRedirect");
+            window.location.replace('/shop/broadband.html');
+        }
+
         omnichannelDataServices.user.getUser().then(function (user) {
             if(user.passwordSet){
                 loginParent.slideDownOverlay(loginAuthenticatedConstants.MAP_FORM.DEFINE_PASSWORD_FORM);
@@ -6827,7 +6832,7 @@ The call detail element of your standard bill will be severed and deleted after 
     
     
     
-<script src="/etc.clientlibs/gowingmyself/components/content/hidden/vf_login/vf_loginAnonymousNoReCaptcha/clientlibs.min.ACSHASH9cc95d1b7e44c55232355b93af9ec50a.js"></script>
+<script src="/etc.clientlibs/gowingmyself/components/content/hidden/vf_login/vf_loginAnonymousNoReCaptcha/clientlibs.min.ACSHASH4f0c83f81e71156d0d33552446da149f.js"></script>
 
 
 
@@ -7359,7 +7364,7 @@ The call detail element of your standard bill will be severed and deleted after 
     </div>
 </div>
 </div>
-<script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=820173508"></script>
+<script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=577995047"></script>
 </body>
 
 </html>

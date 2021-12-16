@@ -4349,6 +4349,7 @@ Washington, DC 20005</p></div>
 jQuery('.menu--cybersecurity-glossary li a').each(function( index2 ) {
   if(window.location.href.toLowerCase().indexOf(jQuery(this).attr('href').toLowerCase())  != -1 || window.location.href.toLowerCase().replace('/privacy', '').indexOf(jQuery(this).attr('href').toLowerCase())  != -1 || window.location.href.toLowerCase().replace('/privacy', '').indexOf(jQuery(this).attr('href').toLowerCase().replace('https://www.verizon.com/about', ''))  != -1) {
     //console.log(jQuery(this).attr('href'));
+    jQuery(this).parent().addClass('menu-item--active-trail');
     jQuery(this).addClass('is-active');
   }
 });

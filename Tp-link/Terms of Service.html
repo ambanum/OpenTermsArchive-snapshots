@@ -2535,6 +2535,13 @@
         return $("body").hasClass("b2b") || (location.pathname.indexOf('/exhibition/bbwf-2021/') != -1)
       }
     });
+    typeof tp != 'undefined' && tp.fixedView.add({
+      position: 'top',
+      dom: '<script src="/assets/diff/en/widgets/ces-2022/top-banner.js"><\/script>',
+      excludeUrls: [
+        /\/exhibition\/ces-2022\//
+      ]
+    });
   </script>
 <script>
 if(!(/modeltype=/i.test(location.search) || /type=iframe/.test(location.search)) && typeof tp != 'undefined'){

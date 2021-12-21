@@ -49,9 +49,9 @@
 
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="9Smna/Vhm4Vy7zD/bJ+vsE4ns1CZsMFwZRbXJBf89rQ/OVtUbsTeJyErgyn1Opgiw5/MWcjc7p2q9QQGxQqJNQ==" />
+<meta name="csrf-token" content="RjtUxrH0c89+uNY6QyM6FqyCCUSZ34qCzqdXqXDrakgUyUBT4FWuH1pevXCUCQ0ACQ8cvAsAl6DsLhN1MVUCRA==" />
 
-<link rel="stylesheet" media="screen" href="https://assets.whicdn.com/assets/application-8c00fececfea329ebe372656fffead0a289b4301442582826397c8f933b46b49.css" />
+<link rel="stylesheet" media="screen" href="https://assets.whicdn.com/assets/application-b85ccd7df211a66d110fc5e925a5a2d9026de4e3f223fa599c3b39866ec57d3b.css" />
 
 <script type="text/javascript">
 
@@ -79,6 +79,7 @@
 
     pagePath: 'static_pages/privacy',
     authenticated : 'no',
+    cookies_accepted: false,
     article_features : '',
     disable_anonymous_registration : false,
     user_authenticated : false,
@@ -117,6 +118,8 @@
     sampleRate: 50
   });
 
+
+    ga('set', 'anonymizeIp', true);
 
 
   if (!window.whiConfig.uid) {
@@ -268,7 +271,7 @@
          <div class="grid-flex">
             <!-- sign up button -->
             <div class="col no-wrap text-right pad-right">
-              <a class="js-sign-up btn btn-small bg-primary js-sign-up" href="/join">Join</a>
+              <a class="btn btn-small bg-primary js-sign-up" href="/join">Join</a>
             </div>
 
             <!-- login button -->
@@ -416,16 +419,20 @@
   </div>
 </div>
 
-<!-- Cookie warning -->
-<div class="panel position-bottom-left position-fixed push-around text-center js-cookie-warning" style="left: 110px; max-width:25em; display:none;">
-  <p>
-    This website uses cookies to ensure you get the best experience on our website.
-    <a class="text-underline" target="_blank" href="/about/privacy-policy">Learn more</a>
+<div class="panel position-bottom-left position-fixed push-around text-center cookie-acceptance-modal js-cookie-acceptance" style="display:none;">
+  <p class="text-left">
+    This website uses cookies to provide you the best experience.
+    Review our <a class="text-underline" target="_blank" href="/about/privacy-policy">Privacy Policy</a> and <a class="text-underline" target="_blank" href="/about/terms-of-service">Terms of Service</a> to learn more.
   </p>
   <p>
-    <a href="#" class="btn btn-mini btn-wide bg-primary js-cookie-warning-dismiss">
-      Got it!
-    </a>
+    <button type="button" class="btn btn-mini btn-wide bg-primary js-cookie-acceptance-accept">
+      Accept Cookies
+    </button>
+  </p>
+  <p>
+    <small class="text-gray">
+      Only users 16 years or older may use We Heart It. 
+    </small>
   </p>
 </div>
 
@@ -996,43 +1003,16 @@
       <img alt="" src="https://assets.whicdn.com/assets/ajax-heart-white-fda8a547384de31097feeb795bb1ee9bc135ad7bb4725f3d858fefc6c83e3586.gif" />
     </div>
 
-    <!-- Quantcast Tag Part 1 -->
-<script type="text/javascript">
-var _qevents = _qevents || [];
-(function() {
-var elem = document.createElement('script');
-elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
-elem.async = true;
-elem.type = "text/javascript";
-var scpt = document.getElementsByTagName('script')[0];
-scpt.parentNode.insertBefore(elem, scpt);
-})();
-</script>
-<!-- End Quantcast Tag Part 1 -->
-
-<!-- Quantcast Tag Part 2-->
-<script type="text/javascript" data-ajaxscript>
-_qevents.push({
-  qacct:"p-fBh533QDgpSsR"
-});
-</script>
-<noscript>
-<div style="display:none;">
-<img src="//pixel.quantserve.com/pixel/p-45nh8QKbsf2Xk.gif" border="0" height="1" width="1" alt="Quantcast"/>
-</div>
-</noscript>
-<!-- End Quantcast Tag Part 2 -->
+    
 
 
-  <script type="text/javascript" src="//b-code.liadm.com/a-028f.min.js" async="true" charset="utf-8"></script>
 
 
 <img id="watermark" style="display:none;" crossorigin="anonymous" alt="" src="https://assets.whicdn.com/assets/watermark-56ebdee3706e83465e91b7edbb43ffd898582f7c9ad14b3fddd2e67c24aea6ba.svg" />
 
-<script src="https://assets.whicdn.com/assets/application-ccbda4f0dcf3d2f004b3a8291210dcd6d06a8eefa9f126cff24fb377a67b0d0e.js"></script>
+<script src="https://assets.whicdn.com/assets/application-616359315adc3de658813e31e23fb704b58311be19d43a4bdd5dbc5d545ef38f.js"></script>
 
 
-  <script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js"></script>
 
 
 <script src="https://assets.whicdn.com/assets/i18n/en-6d11721d1f5d0a915e78dead84011204adb566343a1af3eaa9ae2b5bf7b9f08e.js"></script>
@@ -1045,7 +1025,7 @@ _qevents.push({
 <script>
 var WeHeartIt = require('/modules/whi')
 new WeHeartIt({
-  views : ["follow_button", "inspirations/inspirations", "click_out", "article_draft", "registration/testimonials", "registration/login", "registration/join_tracker", "registration/registration", "registration/email_signup", "reactions", "admin_tools", "floating_window", "new_account/new_confirmation", "prompts/app_promo_ad", "prompts/premium_account_promo", "static/postcards_gallery", "static/left_share_buttons", "static/popular", "static/app", "static/postcards", "static/facebook_timeline", "static/download_heart_button", "static/contact", "doubleclick_ads", "activation", "onboarding_inspirations", "interstitial", "catalog/vimeo_thumbs", "catalog/catalog", "email_bounced", "modals/add_to_collection_modal", "modals/create_new_collection_modal", "modals/collections_modal", "user_set", "heart_button", "inbox", "share_modal", "branchio", "text_preview", "sidebar", "entry/entry_group", "entry/entry", "entry/tag_form", "entry/entry_ftue", "entry/add_to_collection", "entry/youtube_autoplay", "entry/create_entry_set", "entry/share_buttons", "entry/report_button", "dummy_ads", "postcard_button", "navbar/navbar", "navbar/topbar_touches", "navbar/notifications", "modal", "user_account/edit_notices", "user_account/find_friends", "user_account/verify_age", "user_account/edit_profile", "user_account/facebook_timeline", "user_account/email_suggestion", "user_account/link_account", "heart_button_container", "article_preview", "block_warning", "facebook_widget", "recaptcha", "actions/add_image", "actions/too_many_tags", "actions/new_entry_form", "actions/new_entry_form_sign_in", "actions/heart_success", "banner_join", "follow_collection_button", "widgets", "download_image", "heart_button_new_entry", "toggle_element", "file_preview", "postcard", "collaborate", "dashboard/userFilter", "dashboard/box_contacts", "cookie_warning", "dropdown", "user_profile/profile"],
+  views : ["follow_button", "inspirations/inspirations", "click_out", "article_draft", "registration/testimonials", "registration/login", "registration/join_tracker", "registration/registration", "registration/email_signup", "reactions", "admin_tools", "floating_window", "new_account/new_confirmation", "prompts/app_promo_ad", "prompts/premium_account_promo", "static/postcards_gallery", "static/left_share_buttons", "static/popular", "static/app", "static/postcards", "static/facebook_timeline", "static/download_heart_button", "static/contact", "doubleclick_ads", "activation", "onboarding_inspirations", "interstitial", "catalog/vimeo_thumbs", "catalog/catalog", "email_bounced", "modals/add_to_collection_modal", "modals/create_new_collection_modal", "modals/collections_modal", "user_set", "heart_button", "inbox", "share_modal", "branchio", "text_preview", "sidebar", "entry/entry_group", "entry/entry", "entry/tag_form", "entry/entry_ftue", "entry/add_to_collection", "entry/youtube_autoplay", "entry/create_entry_set", "entry/share_buttons", "entry/report_button", "dummy_ads", "postcard_button", "navbar/navbar", "navbar/topbar_touches", "navbar/notifications", "modal", "user_account/edit_notices", "user_account/find_friends", "user_account/verify_age", "user_account/edit_profile", "user_account/facebook_timeline", "user_account/email_suggestion", "user_account/link_account", "heart_button_container", "article_preview", "block_warning", "facebook_widget", "recaptcha", "actions/add_image", "actions/too_many_tags", "actions/new_entry_form", "actions/new_entry_form_sign_in", "actions/heart_success", "banner_join", "follow_collection_button", "widgets", "download_image", "heart_button_new_entry", "toggle_element", "file_preview", "postcard", "collaborate", "cookie_acceptance", "dashboard/userFilter", "dashboard/box_contacts", "dropdown", "user_profile/profile"],
   modules : [
     'notifications',
     'search',

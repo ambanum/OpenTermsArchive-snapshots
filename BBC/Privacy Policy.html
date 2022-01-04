@@ -145,7 +145,7 @@
     <!-- navid Web Module: 0.2.0-90.8ce78a3 -->
     
     
-    <!-- searchbox Web Module: 3.0.0-378.2980b55 -->
+    <!-- searchbox Web Module: 3.0.0-382.02a5966 -->
     
     
     <!-- navpromo Web Module: 3.0.0-278.c4d3505 -->
@@ -165,7 +165,7 @@
 
     
     
-<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/2cd6a3726054d3497a75216cad71fe85/css/box.css">
+<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/91efd3b2b3fdf453252fa44387306234/css/box.css">
 
     
     
@@ -865,15 +865,15 @@
                 const isOrbUx = !!document.querySelector('.orb-nav-pri-container');
                 if (isOrbUx) {
                     const script = document.createElement('script');
-                    script.src = 'https://nav.files.bbci.co.uk/searchbox/2cd6a3726054d3497a75216cad71fe85//js/old-search-suggest.js';
+                    script.src = 'https://nav.files.bbci.co.uk/searchbox/91efd3b2b3fdf453252fa44387306234//js/old-search-suggest.js';
                     script.async = true;
-                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/2cd6a3726054d3497a75216cad71fe85/');
+                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/91efd3b2b3fdf453252fa44387306234/');
                     script.setAttribute('data-variant', 'default');
                     document.head.appendChild(script);
                 } else {
-                    import('https://nav.files.bbci.co.uk/searchbox/2cd6a3726054d3497a75216cad71fe85//js/search-suggest.js').then(drawer => {
+                    import('https://nav.files.bbci.co.uk/searchbox/91efd3b2b3fdf453252fa44387306234//js/search-suggest.js').then(drawer => {
                         drawer.setupSearchDrawer({
-                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/2cd6a3726054d3497a75216cad71fe85/',
+                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/91efd3b2b3fdf453252fa44387306234/',
                             variant: 'default',
                         });
                     });

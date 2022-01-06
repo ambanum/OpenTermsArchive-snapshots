@@ -2535,6 +2535,14 @@
         return $("body").hasClass("b2b") || (location.pathname.indexOf('/exhibition/bbwf-2021/') != -1)
       }
     });
+    typeof tp != 'undefined' && tp.fixedView.add({
+      position: 'right-middle',
+      dom: '<script src="/assets/diff/en/widgets/2022-customer-feedback-survey/script.js"><\/script>',
+      excludeUrls: [
+        /\/exhibition\/ces/,
+        /2022-customer-feedback-survey/
+      ]
+    });
   </script>
 <script>
 typeof tp != 'undefined' && tp.fixedView.add({

@@ -1315,7 +1315,6 @@ loadUser();
 //activateElse();
 function loadUser() {
   if (!MyLearning.userIsLoggedIn()) {
-    console.log("CAT");
     activateElse();
     return false;
   }
@@ -1336,13 +1335,7 @@ function loadUser() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4) {
-      if (this.status == 0) {
-        console.log("ZZ");
-        activateElse();
-      } else if (this.status == 401) {
-        console.log("A2");
-        activateElse();
- } else if (this.status == 200) {
+      if (this.status == 200) {
         y = this.responseText;
         x = y.substr(0, 1);
         if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
@@ -1355,6 +1348,8 @@ function loadUser() {
           activateElse();
           console.log("Z");
         }
+      } else {
+        activateElse();
       }
     }
   };
@@ -1362,7 +1357,7 @@ function loadUser() {
 //xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
   xhttp.withCredentials = true;
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0&p=" + encodeURIComponent(window.location.pathname));
 }
 function finishedPage() {
   if (!MyLearning.userIsLoggedIn()) {
@@ -1393,7 +1388,7 @@ function finishedPage() {
 //xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
   xhttp.withCredentials = true;
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1&p=" + encodeURIComponent(window.location.pathname));
 }
 function activateElse() {
   var a = document.getElementById("mypagediv");
@@ -1409,7 +1404,7 @@ function activateMYPAGE(cc, obj) {
   var c = document.getElementById("mypagediv2");
   if (a) a.style.display = "none";
   if (b) {
-    if (cc == "I" || cc == "J" || cc == "O" || cc == "Q") {
+    if (cc == "I" || cc == "J" || cc == "H" || cc == "G" || cc == "O" || cc == "Q") {
       jsonobj = JSON.parse(obj.substr(1));
       mp_pagesread = jsonobj.b;
       mp_totalpages = jsonobj.a;
@@ -1437,7 +1432,7 @@ function activateMYPAGE(cc, obj) {
       txt2 += '<path id="mypage2_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
       txt2 += '</svg>';
     }
-    if (cc == "J") {
+    if (cc == "J" || cc == "H" || cc == "G") {
       checkIfMypage2IsInView();
       window.addEventListener("scroll", checkIfMypage2IsInView);
     }

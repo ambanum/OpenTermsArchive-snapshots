@@ -3934,6 +3934,7 @@ breadcrumbs not clickable
         	<div class="aem-padding-options " id="if76202d588cf58fde24360b57aba0210-padding-options">
             <!-- HTML -->
 <div class="author-instructions">Pangea temporary hotfixes here</div>
+
             
 
 
@@ -4013,6 +4014,112 @@ breadcrumbs not clickable
  
     waitUntilReady(init);
 })();
+
+// // -- Adobe Docked Cart Offer Messaging
+// const commerceData = $('.commerce-config').data();
+// const dockedCartEnabled = commerceData.dockedCartEnabled;
+
+// // -- Only run on pages with the docked cart enabled.
+// if (dockedCartEnabled) {
+    
+//     // Wait until DOM is ready and dependencies are loaded
+//     function waitUntilReady(callback) {
+//     	if(document.readyState != 'loading' && window.pangea && window.pangea.dockedCart) { // add dependencies here
+//     		callback.call(this);
+//     	} else {
+//     		setTimeout(() => {
+//     			waitUntilReady(callback);
+//     		}, 50);
+//     	}
+//     }
+    
+// 	waitUntilReady(adobeDockedCartOffer);
+	
+//     function adobeDockedCartOffer() {
+//     	// -- We're using the page name from Utag to decide if we show the message, so grab that for later.
+// 		const utagData = window.utag_data;
+//     	const pageName = utagData.page_name;
+// 		const pageLocale = utagData.site_locale;
+// 		const siteLanguage = utagData.site_language
+    
+//     	// -- Need a list of where this should run. All of these array items are `page_name`'s that are in the `window.utag_data.page_name`.
+//     	const pagesToInclude = [
+//     		'mx-master-3',
+//     		'mx-master-3-mac-wireless-mouse',
+//     		'mx-anywhere-3',
+//     		'mx-anywhere-3-mac',
+//     		'mx-keys-wireless-keyboard',
+//     		'mx-keys-mac-wireless-keyboard',
+//     		'mx-keys-mini',
+//     		'mx-keys-mini-for-mac',
+//     		'craft',
+//     		'mx-vertical-ergonomic-mouse',
+//     		'mx-ergo-wireless-trackball-mouse',
+//     	];	
+    
+//     	// -- Message content per locale.
+//     	const adobeOffers = {
+//     		'en': {
+// 				offerText: 'To enjoy complimentary Adobe Creative Cloud subscription with your eligible MX & ERGO product purchase, please <a href="/bin/cart/view">click here to checkout</a>.',
+// 				linkText: 'Offer details'
+// 			},
+//     		'de': {
+// 				offerText: '',
+// 				linkText: ''
+// 			},
+//     		'fr': {
+// 				offerText: 'french',
+// 				linkText: 'french link text'
+// 			},
+//     		'it': {
+// 				offerText: '',
+// 				linkText: ''
+// 			},
+//     		'es': {
+// 				offerText: '',
+// 				linkText: ''
+// 			},
+//     		'nl': {
+// 				offerText: '',
+// 				linkText: ''
+// 			},
+//     		'sv': {
+// 				offerText: '',
+// 				linkText: ''
+// 			},
+//     		'da': {
+// 				offerText: '',
+// 				linkText: ''
+// 			},
+//     		'no': {
+// 				offerText: '',
+// 				linkText: ''
+// 			},
+//     		'fi': {
+// 				offerText: '',
+// 				linkText: ''
+// 			},
+//     		'hu': {
+// 				offerText: '',
+// 				linkText: ''
+// 			},
+//     		'pl': {
+// 				offerText: '',
+// 				linkText: ''
+// 			}
+//     	}
+    
+//     	// -- Only run if we're on a certain product page.
+//     	if (pagesToInclude.includes(pageName)) {
+//     		const offer = adobeOffers[siteLanguage];
+//     		const offerURL = 'https://www.logitech.com/' + pageLocale + '/mx/adobe-creative-cloud-subscription.html'
+//     		const details = '<div class="banner-ctn"><div class="banner-msg js-banner-msg"><p style="color: #FF2947;">' + offer.offerText + '<br /><a href="'+ offerURL +'">' + offer.linkText +'</a></p></div></div>';
+    
+			
+//     		$('.pangea-docked-cart .footer-content').append(details)
+//     	}
+//     }
+// }
         </script>
     </div>
 
@@ -4867,7 +4974,7 @@ This site is owned and operated by Logitech.</h5>
     
 <script src="/etc.clientlibs/logitech/clientlibs/logitech-dependencies.min.669a5c8af979e693dcb3206e2df8adcd.js"></script>
 <script src="/etc.clientlibs/clientlibs/granite/jquery/granite/csrf.min.652a558c3774088b61b0530c184710d1.js"></script>
-<script src="/etc.clientlibs/logitech/clientlibs/replatform.min.6c779e92db2a0fbd7df29cf46bdb4440.js"></script>
+<script src="/etc.clientlibs/logitech/clientlibs/replatform.min.9c45bfe1ce051a86e8dc9720803ecaf5.js"></script>
 
 
 

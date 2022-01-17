@@ -2535,31 +2535,8 @@
         return $("body").hasClass("b2b") || (location.pathname.indexOf('/exhibition/bbwf-2021/') != -1)
       }
     });
-    typeof tp != 'undefined' && tp.fixedView.add({
-      position: 'right-middle',
-      dom: '<script src="/assets/diff/en/widgets/2022-customer-feedback-survey/script.js"><\/script>',
-      excludeUrls: [
-        /\/exhibition\/ces/,
-        /2022-customer-feedback-survey/
-      ]
-    });
   </script>
 <script>
-typeof tp != 'undefined' && tp.fixedView.add({
-  position: 'top',
-  dom: '<script src="/assets/diff/en/widgets/ces-2022/top-banner.js"><\/script>',
-  excludeUrls: [
-    /\/exhibition\/ces-2022\//,
-    /\/exhibition\/ces/
-  ]
-});
-typeof tp != 'undefined' && tp.fixedView.add({
-  position: 'right-bottom',
-  dom: '<script src="/assets/diff/en/widgets/ces-contact-us/script.js"><\/script>',
-  urls: [
-    /\/exhibition\/ces/
-  ]
-});
 if(!(/modeltype=/i.test(location.search) || /type=iframe/.test(location.search)) && typeof tp != 'undefined'){
   tp.fixedView.show()
 }

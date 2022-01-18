@@ -145,10 +145,10 @@
     <!-- navid Web Module: 0.2.0-91.8ce78a3 -->
     
     
-    <!-- searchbox Web Module: 3.1.0-394.5565f9a -->
+    <!-- searchbox Web Module: 3.1.0-402.9dc192f -->
     
     
-    <!-- navpromo Web Module: 3.0.0-286.75fae8d -->
+    <!-- navpromo Web Module: 3.0.0-287.1cda04c -->
     
     
     <!-- cookies Web Module: 0.0.3-700.c8b7bd5 -->
@@ -165,7 +165,7 @@
 
     
     
-<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/c341e7d71d358d3bff8caf11581ee18e/css/box.css">
+<link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/2432a71c53a3b82accd4f32608cae098/css/box.css">
 
     
     
@@ -870,15 +870,15 @@
                 const isOrbUx = !!document.querySelector('.orb-nav-pri-container');
                 if (isOrbUx) {
                     const script = document.createElement('script');
-                    script.src = 'https://nav.files.bbci.co.uk/searchbox/c341e7d71d358d3bff8caf11581ee18e//js/old-search-suggest.js';
+                    script.src = 'https://nav.files.bbci.co.uk/searchbox/2432a71c53a3b82accd4f32608cae098//js/old-search-suggest.js';
                     script.async = true;
-                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/c341e7d71d358d3bff8caf11581ee18e/');
+                    script.setAttribute('data-static-prefix', 'https://nav.files.bbci.co.uk/searchbox/2432a71c53a3b82accd4f32608cae098/');
                     script.setAttribute('data-variant', 'default');
                     document.head.appendChild(script);
                 } else {
-                    import('https://nav.files.bbci.co.uk/searchbox/c341e7d71d358d3bff8caf11581ee18e//js/search-suggest.js').then(drawer => {
+                    import('https://nav.files.bbci.co.uk/searchbox/2432a71c53a3b82accd4f32608cae098//js/search-suggest.js').then(drawer => {
                         drawer.setupSearchDrawer({
-                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/c341e7d71d358d3bff8caf11581ee18e/',
+                            searchboxAppStaticPrefix: 'https://nav.files.bbci.co.uk/searchbox/2432a71c53a3b82accd4f32608cae098/',
                             variant: 'default',
                         });
                     });
